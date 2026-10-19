@@ -2,20 +2,26 @@ import React, { useState, useEffect } from 'react';
 import { api } from '../services/api.js';
 import { TiltCard } from '../components/TiltCard.js';
 import { X, ZoomIn, Image as ImageIcon, Camera, Crown } from 'lucide-react';
+import { defaultGallery } from '../data/defaultData.js';
 
 export const Gallery: React.FC = () => {
-  const [gallery, setGallery] = useState<any[]>([]);
+  const [gallery, setGallery] = useState<any[]>(defaultGallery);
   const [activeCategory, setActiveCategory] = useState<string>('ALL');
   const [selectedPhoto, setSelectedPhoto] = useState<any | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     async function loadGallery() {
       try {
-        const res = await api.getGallery();
-        if (res.gallery) setGallery(res.gallery);
+        const res = await api.getGallery().catch(() => null);
+        if (res) {
+          const items = Array.isArray(res) ? res : (res.gallery || res.data);
+          if (Array.isArray(items) && items.length > 0) {
+            setGallery(items);
+          }
+        }
       } catch (err) {
-        console.error('Failed to load gallery:', err);
+        console.warn('Live gallery sync notice:', err);
       } finally {
         setLoading(false);
       }

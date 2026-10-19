@@ -15,18 +15,24 @@ import {
   ShieldCheck,
   Flame,
 } from 'lucide-react';
+import { defaultPackages } from '../data/defaultData.js';
 
 export const Packages: React.FC = () => {
-  const [packages, setPackages] = useState<any[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [packages, setPackages] = useState<any[]>(defaultPackages);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     async function loadPackages() {
       try {
-        const res = await api.getPackages();
-        if (res.packages) setPackages(res.packages);
+        const res = await api.getPackages().catch(() => null);
+        if (res) {
+          const items = Array.isArray(res) ? res : (res.packages || res.data);
+          if (Array.isArray(items) && items.length > 0) {
+            setPackages(items);
+          }
+        }
       } catch (err) {
-        console.error('Failed to load packages:', err);
+        console.warn('Live packages sync notice:', err);
       } finally {
         setLoading(false);
       }

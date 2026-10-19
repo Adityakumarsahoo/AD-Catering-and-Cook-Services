@@ -3,22 +3,26 @@ import { Link } from 'react-router-dom';
 import { api } from '../services/api.js';
 import { TiltCard } from '../components/TiltCard.js';
 import { CheckCircle2, ArrowRight, X, Sparkles, ChefHat, Crown } from 'lucide-react';
+import { defaultServices } from '../data/defaultServices.js';
 
 export const Services: React.FC = () => {
-  const [services, setServices] = useState<any[]>([]);
+  const [services, setServices] = useState<any[]>(defaultServices);
   const [selectedService, setSelectedService] = useState<any | null>(null);
   const [filter, setFilter] = useState<'all' | 'catering' | 'cook'>('all');
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     async function fetchServices() {
       try {
-        const res = await api.getServices();
-        if (res.services) {
-          setServices(res.services);
+        const res = await api.getServices().catch(() => null);
+        if (res) {
+          const items = Array.isArray(res) ? res : (res.services || res.data);
+          if (Array.isArray(items) && items.length > 0) {
+            setServices(items);
+          }
         }
       } catch (err) {
-        console.error('Failed to fetch services:', err);
+        console.warn('Failed to fetch services:', err);
       } finally {
         setLoading(false);
       }
