@@ -188,6 +188,10 @@ export const Packages: React.FC = () => {
                     <img
                       src={pkg.image}
                       alt={`${pkg.cleanName} Package Catering spread`}
+                      onError={(e) => {
+                        e.currentTarget.onerror = null;
+                        e.currentTarget.src = 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80';
+                      }}
                       className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-108"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#020D08]/80 via-transparent to-transparent" />

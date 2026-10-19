@@ -511,7 +511,7 @@ export async function initDatabase(): Promise<DatabaseSchema> {
       description: 'Complete royal wedding food experience with live cooking stations, opulent buffet decor, welcoming drinks, and multi-course royal feasts.',
       startingPrice: 449,
       category: 'catering',
-      image: 'https://images.unsplash.com/photo-1519225424982-127db8e8a604?auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1200&q=80',
       icon: 'Crown',
       features: ['Live Counter Stalls', 'Uniformed Banquet Staff', 'Full Cutlery & Crockery Setup', 'Custom Bride & Groom Menu'],
     },
@@ -751,7 +751,7 @@ export async function initDatabase(): Promise<DatabaseSchema> {
       id: 'gal_1',
       title: 'Grand Royal Wedding Buffet',
       category: 'Weddings',
-      image: 'https://images.unsplash.com/photo-1519225424982-127db8e8a604?auto=format&fit=crop&w=1200&q=80',
+      image: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1200&q=80',
       description: 'Exquisite evening banquet setup for a 1,200-guest wedding reception in Bhubaneswar.',
     },
     {

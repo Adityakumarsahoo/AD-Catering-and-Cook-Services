@@ -647,6 +647,12 @@ export const Menu: React.FC = () => {
                         <img
                           src={dish.image}
                           alt={dish.name}
+                          onError={(e) => {
+                            e.currentTarget.onerror = null;
+                            e.currentTarget.src = dish.isVeg
+                              ? 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80'
+                              : 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80';
+                          }}
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-[#041810]/70 via-transparent to-transparent" />
@@ -1127,6 +1133,12 @@ export const Menu: React.FC = () => {
                               <img
                                 src={dish.image}
                                 alt={dish.name}
+                                onError={(e) => {
+                                  e.currentTarget.onerror = null;
+                                  e.currentTarget.src = dish.isVeg
+                                    ? 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80'
+                                    : 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80';
+                                }}
                                 className="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-700 ease-out"
                                 loading="lazy"
                               />
