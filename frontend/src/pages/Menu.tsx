@@ -4,6 +4,7 @@ import { api } from '../services/api.js';
 import { useMenuCart } from '../context/MenuCartContext.js';
 import { TiltCard } from '../components/TiltCard.js';
 import { FoodDetailModal } from '../components/FoodDetailModal.js';
+import { defaultMenuItems, defaultMenuSummary } from '../data/defaultMenu.js';
 import {
   Search,
   Check,
@@ -40,14 +41,14 @@ import {
 export const Menu: React.FC = () => {
   const { selectedDishes, toggleDish, isDishSelected, clearSelection } = useMenuCart();
   const [searchParams] = useSearchParams();
-  const [menuItems, setMenuItems] = useState<any[]>([]);
+  const [menuItems, setMenuItems] = useState<any[]>(defaultMenuItems);
   const [activeTier, setActiveTier] = useState<'ALL' | 'NORMAL' | 'DELUXE' | 'PREMIUM'>('ALL');
   const [activeCategory, setActiveCategory] = useState<string>('ALL');
   const [dietFilter, setDietFilter] = useState<'ALL' | 'VEG' | 'NON-VEG' | 'POPULAR' | 'CHEF_SPECIAL'>('ALL');
   const [searchQuery, setSearchQuery] = useState<string>('');
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(false);
   const [activeModalItem, setActiveModalItem] = useState<any | null>(null);
-  const [menuSummary, setMenuSummary] = useState<any | null>(null);
+  const [menuSummary, setMenuSummary] = useState<any | null>(defaultMenuSummary);
   const [mobileCategoryDrawerOpen, setMobileCategoryDrawerOpen] = useState<boolean>(false);
   const [compactItemSize, setCompactItemSize] = useState<boolean>(true);
 
@@ -89,17 +90,25 @@ export const Menu: React.FC = () => {
     async function fetchMenuData() {
       try {
         const [menuRes, summaryRes] = await Promise.all([
-          api.getMenu(),
+          api.getMenu().catch((err) => {
+            console.warn('Backend API getMenu notice:', err);
+            return null;
+          }),
           api.getMenuSummary().catch(() => null),
         ]);
-        if (menuRes.menuItems) {
-          setMenuItems(menuRes.menuItems);
+        if (menuRes) {
+          const items = Array.isArray(menuRes)
+            ? menuRes
+            : (menuRes.menuItems || menuRes.data);
+          if (Array.isArray(items) && items.length > 0) {
+            setMenuItems(items);
+          }
         }
-        if (summaryRes) {
+        if (summaryRes && summaryRes.totalDishes) {
           setMenuSummary(summaryRes);
         }
       } catch (err) {
-        console.error('Failed to load menu data:', err);
+        console.warn('Failed to load menu data:', err);
       } finally {
         setLoading(false);
       }
@@ -135,7 +144,24 @@ export const Menu: React.FC = () => {
 
       // 2. Category Filter
       if (activeCategory !== 'ALL') {
-        const matchCat = item.category?.toUpperCase() === activeCategory.toUpperCase();
+        const catUpper = activeCategory.toUpperCase();
+        const itemCatUpper = (item.category || '').toUpperCase();
+        let matchCat = itemCatUpper === catUpper;
+        if (!matchCat) {
+          if (catUpper === 'FISH' && (itemCatUpper === 'FISH' || itemCatUpper === 'RIVER & SEA FISH')) matchCat = true;
+          else if (catUpper === 'PANEER' && itemCatUpper.includes('PANEER')) matchCat = true;
+          else if (catUpper === 'CHICKEN' && itemCatUpper.includes('CHICKEN')) matchCat = true;
+          else if (catUpper === 'MUTTON' && itemCatUpper.includes('MUTTON')) matchCat = true;
+          else if (catUpper === 'PRAWN' && (itemCatUpper.includes('PRAWN') || itemCatUpper.includes('CRAB'))) matchCat = true;
+          else if (catUpper === 'STARTER - VEG' && itemCatUpper === 'STARTER - VEG') matchCat = true;
+          else if (catUpper === 'STARTER - NON-VEG' && itemCatUpper === 'STARTER - NON-VEG') matchCat = true;
+          else if (catUpper === 'SWEET DESSERT' && (itemCatUpper.includes('DESSERT') || itemCatUpper.includes('SWEET'))) matchCat = true;
+          else if (catUpper === 'WELCOME DRINKS' && (itemCatUpper.includes('DRINK') || itemCatUpper.includes('COOLER'))) matchCat = true;
+          else if (catUpper === 'ODISSY SPECIAL' && (item.isOdiaSpecialty || itemCatUpper.includes('ODIA') || itemCatUpper.includes('ODISSY'))) matchCat = true;
+          else if (catUpper === 'VEGETABLE' && (itemCatUpper.includes('VEGETABLE') || itemCatUpper === 'VEGETARIAN')) matchCat = true;
+          else if (catUpper === 'DAL' && itemCatUpper.includes('DAL')) matchCat = true;
+          else if (catUpper === 'RICE / PULAO / BIRYANI' && (itemCatUpper.includes('RICE') || itemCatUpper.includes('BIRYANI') || itemCatUpper.includes('PULAO'))) matchCat = true;
+        }
         if (!matchCat) return false;
       }
 
@@ -182,14 +208,31 @@ export const Menu: React.FC = () => {
   // Real Category item counts
   const categoryCounts = useMemo(() => {
     const counts: Record<string, number> = { ALL: menuItems.length };
-    menuItems.forEach((item) => {
-      const cat = item.category?.toUpperCase();
-      if (cat) {
-        counts[cat] = (counts[cat] || 0) + 1;
-      }
+    categories.forEach((cat) => {
+      if (cat.id === 'ALL') return;
+      const catUpper = cat.id.toUpperCase();
+      const count = menuItems.filter((item) => {
+        const itemCatUpper = (item.category || '').toUpperCase();
+        if (itemCatUpper === catUpper) return true;
+        if (catUpper === 'FISH' && (itemCatUpper === 'FISH' || itemCatUpper === 'RIVER & SEA FISH')) return true;
+        if (catUpper === 'PANEER' && itemCatUpper.includes('PANEER')) return true;
+        if (catUpper === 'CHICKEN' && itemCatUpper.includes('CHICKEN')) return true;
+        if (catUpper === 'MUTTON' && itemCatUpper.includes('MUTTON')) return true;
+        if (catUpper === 'PRAWN' && (itemCatUpper.includes('PRAWN') || itemCatUpper.includes('CRAB'))) return true;
+        if (catUpper === 'STARTER - VEG' && itemCatUpper === 'STARTER - VEG') return true;
+        if (catUpper === 'STARTER - NON-VEG' && itemCatUpper === 'STARTER - NON-VEG') return true;
+        if (catUpper === 'SWEET DESSERT' && (itemCatUpper.includes('DESSERT') || itemCatUpper.includes('SWEET'))) return true;
+        if (catUpper === 'WELCOME DRINKS' && (itemCatUpper.includes('DRINK') || itemCatUpper.includes('COOLER'))) return true;
+        if (catUpper === 'ODISSY SPECIAL' && (item.isOdiaSpecialty || itemCatUpper.includes('ODIA') || itemCatUpper.includes('ODISSY'))) return true;
+        if (catUpper === 'VEGETABLE' && (itemCatUpper.includes('VEGETABLE') || itemCatUpper === 'VEGETARIAN')) return true;
+        if (catUpper === 'DAL' && itemCatUpper.includes('DAL')) return true;
+        if (catUpper === 'RICE / PULAO / BIRYANI' && (itemCatUpper.includes('RICE') || itemCatUpper.includes('BIRYANI') || itemCatUpper.includes('PULAO'))) return true;
+        return false;
+      }).length;
+      counts[cat.id] = count;
     });
     return counts;
-  }, [menuItems]);
+  }, [menuItems, categories]);
 
   const scrollToGrid = () => {
     dishesGridRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -1102,6 +1145,9 @@ export const Menu: React.FC = () => {
                       setActiveTier('ALL');
                       setDietFilter('ALL');
                       setSearchQuery('');
+                      if (menuItems.length === 0) {
+                        setMenuItems(defaultMenuItems);
+                      }
                     }}
                     className="px-6 py-2.5 rounded-xl gold-gradient-btn text-xs font-black text-[#041810]"
                   >
