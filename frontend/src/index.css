@@ -1,0 +1,315 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  html, body {
+    font-family: var(--font-sans);
+    background-color: #03160E;
+    color: #FAF8F5;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  #root {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-serif);
+    word-break: break-word;
+  }
+}
+
+/* Custom scrollbar in Royal Emerald Green & Gold */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #020F09;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #D4AF37 0%, #059669 100%);
+  border-radius: 5px;
+  border: 1px solid rgba(212, 175, 55, 0.5);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #F5CE68 0%, #10B981 100%);
+}
+
+/* ====================================================
+   ROYAL EMERALD GREEN + LIQUID GOLD DESIGN SYSTEM
+   ==================================================== */
+
+/* Glass Light - Emerald Ambient Frosted Surface */
+.glass-light {
+  background: rgba(6, 35, 25, 0.65);
+  backdrop-filter: blur(24px) saturate(170%);
+  -webkit-backdrop-filter: blur(24px) saturate(170%);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+  color: #FAF8F5;
+}
+
+/* Glass Medium - Standard Royal Emerald Panel */
+.glass-medium {
+  background: rgba(6, 35, 25, 0.78);
+  backdrop-filter: blur(28px) saturate(175%);
+  -webkit-backdrop-filter: blur(28px) saturate(175%);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.5), inset 0 1px 2px rgba(255, 255, 255, 0.18);
+  color: #FAF8F5;
+}
+
+/* Glass Strong - Highlighted Emerald & Gold Luxury Panel */
+.glass-strong {
+  background: rgba(6, 35, 25, 0.88);
+  backdrop-filter: blur(34px) saturate(180%);
+  -webkit-backdrop-filter: blur(34px) saturate(180%);
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.65), 0 0 30px rgba(16, 185, 129, 0.12), inset 0 1px 2.5px rgba(255, 255, 255, 0.22);
+  color: #FAF8F5;
+}
+
+/* Glass Dark - Deep Vignette Glass */
+.glass-dark {
+  background: rgba(2, 14, 9, 0.94);
+  backdrop-filter: blur(30px) saturate(170%);
+  -webkit-backdrop-filter: blur(30px) saturate(170%);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+  color: #FAF8F5;
+}
+
+/* Backward compatibility alias */
+.glass-panel {
+  background: rgba(6, 35, 25, 0.82);
+  backdrop-filter: blur(28px) saturate(170%);
+  -webkit-backdrop-filter: blur(28px) saturate(170%);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.55), inset 0 1px 1.5px rgba(255, 255, 255, 0.18);
+  color: #FAF8F5;
+}
+
+/* Emerald Liquid Glass Card with Smooth Hover Elevation */
+.glass-card {
+  background: rgba(6, 35, 25, 0.78);
+  backdrop-filter: blur(28px) saturate(175%);
+  -webkit-backdrop-filter: blur(28px) saturate(175%);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.45), inset 0 1px 2px rgba(255, 255, 255, 0.15);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  color: #FAF8F5;
+}
+
+.glass-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  border-color: rgba(245, 206, 104, 0.85);
+  box-shadow: 0 30px 75px -10px rgba(0, 0, 0, 0.7), 0 0 35px rgba(212, 175, 55, 0.35), inset 0 1px 3px rgba(255, 255, 255, 0.25);
+}
+
+/* Frosted Glass Pill */
+.glass-pill {
+  background: rgba(6, 35, 25, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  color: #FAF8F5;
+}
+
+/* Liquid Sheen Shimmer Reflection on hover */
+.liquid-shine {
+  position: relative;
+  overflow: hidden;
+}
+.liquid-shine::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) 25%,
+    rgba(255, 223, 115, 0.35) 50%,
+    rgba(255, 255, 255, 0.05) 75%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  transition: none;
+  pointer-events: none;
+  z-index: 5;
+}
+.liquid-shine:hover::before {
+  left: 200%;
+  transition: left 0.85s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Subtle Emerald Foliage Texture */
+.bg-grain {
+  background-image: radial-gradient(rgba(16, 185, 129, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* 3D Perspective Card Container */
+.perspective-1000 {
+  perspective: 1000px;
+}
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+/* Animated Border Glow for Luxury Deluxe Package */
+@keyframes border-glow {
+  0%, 100% {
+    border-color: rgba(212, 175, 55, 0.65);
+    box-shadow: 0 0 25px rgba(16, 185, 129, 0.3), inset 0 0 15px rgba(212, 175, 55, 0.3);
+  }
+  50% {
+    border-color: rgba(245, 206, 104, 0.95);
+    box-shadow: 0 0 45px rgba(212, 175, 55, 0.5), 0 0 30px rgba(52, 211, 153, 0.35), inset 0 0 25px rgba(245, 206, 104, 0.4);
+  }
+}
+.animate-luxury-border {
+  animation: border-glow 4s ease-in-out infinite;
+}
+
+/* Royal Gold & Emerald Typography Gradients */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFF1B8 0%, #FFDF73 30%, #D4AF37 70%, #AA7C11 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.emerald-gradient-text {
+  background: linear-gradient(135deg, #A7F3D0 0%, #34D399 40%, #059669 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Liquid & Gold Buttons */
+.gold-gradient-btn {
+  background: linear-gradient(135deg, #FFF1B8 0%, #F5CE68 25%, #D4AF37 60%, #B8860B 100%);
+  color: #041810;
+  font-weight: 800;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.45), inset 0 1px 2px rgba(255, 255, 255, 0.8);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.gold-gradient-btn:hover {
+  background: linear-gradient(135deg, #FFFFFF 0%, #FFDF73 25%, #E5C04A 60%, #C98B18 100%);
+  box-shadow: 0 12px 35px rgba(212, 175, 55, 0.65), inset 0 1px 2px rgba(255, 255, 255, 1);
+  transform: translateY(-2px);
+}
+
+.emerald-btn, .ice-btn {
+  background: linear-gradient(135deg, #0A2E20 0%, #062319 55%, #041810 100%);
+  color: #F5CE68;
+  font-weight: 700;
+  border: 1px solid rgba(212, 175, 55, 0.6);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.15);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.emerald-btn:hover, .ice-btn:hover {
+  background: linear-gradient(135deg, #0D3B2A 0%, #0A2E20 55%, #062319 100%);
+  border-color: rgba(245, 206, 104, 0.9);
+  color: #FFFFFF;
+  box-shadow: 0 12px 35px rgba(212, 175, 55, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Emerald Frosted Glass Inputs */
+.glass-input {
+  background: rgba(4, 24, 16, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  color: #FAF8F5;
+  transition: all 0.25s ease;
+}
+.glass-input:focus {
+  outline: none;
+  background: rgba(6, 35, 25, 0.95);
+  border-color: rgba(245, 206, 104, 0.9);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+/* Background Steam and Floating Animations */
+@keyframes steam-rise {
+  0% { transform: translateY(0px) scaleX(1); opacity: 0.15; }
+  50% { transform: translateY(-30px) scaleX(1.12); opacity: 0.35; }
+  100% { transform: translateY(-60px) scaleX(1.25); opacity: 0; }
+}
+
+@keyframes leaf-sway {
+  0%, 100% {
+    transform: rotate(0deg) translateY(0);
+  }
+  50% {
+    transform: rotate(8deg) translateY(-8px);
+  }
+}
+
+.animate-steam {
+  animation: steam-rise 8s ease-in-out infinite;
+}
+
+.animate-leaf-sway {
+  animation: leaf-sway 6s ease-in-out infinite;
+}
+
+/* ====================================================
+   SMARTPHONE RESPONSIVE UTILITIES & TOUCH OPTIMIZATION
+   ==================================================== */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.mobile-touch-scroll {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+/* Fluid responsive image and media boundaries */
+img, video, canvas, svg {
+  max-width: 100%;
+}
+
+/* Safe area inset support for modern smartphones with notches */
+.pb-safe {
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom, 0.75rem));
+}
+.pt-safe {
+  padding-top: max(0.75rem, env(safe-area-inset-top, 0.75rem));
+}
+
+@media (max-width: 640px) {
+  /* Prevent tap zoom and enhance tap touch targets */
+  button, input, select, textarea {
+    touch-action: manipulation;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "AD Catering and Cook Services",
+  "description": "Delicious Moments, Perfectly Served. Premium catering and professional cook services for weddings, parties, corporate events, and traditional Odia feasts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
