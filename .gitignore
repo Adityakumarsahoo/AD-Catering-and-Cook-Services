@@ -27,6 +27,13 @@ backend/.env.*
 
 # Internal & System
 .jetro/
+.agents/
+.cursor/
+.github/
+.mcp.json
+.windsurfrules
+AGENT.md
+CLAUDE.md
 .DS_Store
 Thumbs.db
 .vscode/

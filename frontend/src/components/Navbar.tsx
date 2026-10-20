@@ -10,7 +10,6 @@ import {
   User,
   LogOut,
   ShieldCheck,
-  ShoppingBag,
   Sparkles,
   LayoutGrid,
   Phone,
@@ -151,14 +150,15 @@ export const Navbar: React.FC = () => {
               3. RIGHT ACTION CONTROLS (All Options: Cart, Phone, Auth, Book Event)
               ==================================================== */}
           <div className="hidden md:flex items-center gap-1.5 xl:gap-2 shrink-0">
-            {/* Custom Menu Tray Counter Badge */}
+            {/* Custom Event Feast Menu Tray Counter Badge */}
             {selectedDishes.length > 0 && (
               <Link
                 to="/booking"
-                className="relative px-2.5 xl:px-3 py-1 xl:py-1.5 rounded-full bg-gradient-to-r from-emerald-950 to-[#041A12] border border-emerald-400/80 text-emerald-300 hover:text-white hover:border-emerald-300 transition-all flex items-center gap-1 text-[11px] xl:text-xs font-bold shadow-[0_0_15px_rgba(16,185,129,0.35)] animate-pulse shrink-0"
-                title="Review your curated custom dishes"
+                className="relative px-2.5 xl:px-3 py-1 xl:py-1.5 rounded-full bg-gradient-to-r from-emerald-950 to-[#041A12] border border-emerald-400/80 text-emerald-300 hover:text-white hover:border-emerald-300 transition-all flex items-center gap-1.5 text-[11px] xl:text-xs font-bold shadow-[0_0_15px_rgba(16,185,129,0.35)] animate-pulse shrink-0"
+                title="Review your curated catering event menu"
               >
-                <ShoppingBag className="w-3 h-3 xl:w-3.5 xl:h-3.5 text-emerald-400" />
+                <UtensilsCrossed className="w-3 h-3 xl:w-3.5 xl:h-3.5 text-emerald-400" />
+                <span className="text-[10px] uppercase font-bold text-emerald-200 hidden xl:inline">Feast Menu</span>
                 <span className="tabular-nums font-black">{selectedDishes.length}</span>
               </Link>
             )}
@@ -269,14 +269,15 @@ export const Navbar: React.FC = () => {
               4. MOBILE HEADER CONTROLS (< md)
               ==================================================== */}
           <div className="flex md:hidden items-center gap-1.5 shrink-0">
-            {/* Mobile Tray Counter if selected */}
+            {/* Mobile Feast Tray Counter if selected */}
             {selectedDishes.length > 0 && (
               <Link
                 to="/booking"
-                className="p-1.5 rounded-xl bg-gradient-to-r from-emerald-950 to-[#041A12] border border-emerald-400 text-emerald-300 text-xs shadow-[0_0_10px_rgba(16,185,129,0.3)] animate-pulse"
-                title="View selected dishes"
+                className="p-1.5 rounded-xl bg-gradient-to-r from-emerald-950 to-[#041A12] border border-emerald-400 text-emerald-300 text-xs shadow-[0_0_10px_rgba(16,185,129,0.3)] animate-pulse flex items-center gap-1"
+                title="View catering menu tray"
               >
-                <ShoppingBag className="w-3.5 h-3.5 text-emerald-400" />
+                <UtensilsCrossed className="w-3.5 h-3.5 text-emerald-400" />
+                <span className="text-[10px] font-black">{selectedDishes.length}</span>
               </Link>
             )}
 

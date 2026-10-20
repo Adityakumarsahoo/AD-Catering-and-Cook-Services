@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useMenuCart } from '../context/MenuCartContext.js';
-import { Phone, MessageCircle, Calendar, ShoppingBag, X, Sparkles, ChevronUp, ChevronDown } from 'lucide-react';
+import { Phone, MessageCircle, Calendar, UtensilsCrossed, X, Sparkles, ChevronUp, ChevronDown } from 'lucide-react';
 
 export const QuickActionFloatingBar: React.FC = () => {
   const { selectedDishes } = useMenuCart();
@@ -28,15 +28,15 @@ export const QuickActionFloatingBar: React.FC = () => {
           {/* Top gold edge */}
           <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />
 
-          {/* Tray Counter if dishes selected */}
+          {/* Feast Menu Tray Counter if dishes selected */}
           {selectedDishes.length > 0 && (
             <Link
               to="/booking"
               className="px-3 py-2 rounded-2xl bg-emerald-950/90 border border-emerald-500/60 text-emerald-300 hover:bg-emerald-900 transition-all flex items-center gap-1.5 text-xs font-bold shrink-0 shadow-sm"
-              title="Review your curated custom dishes"
+              title="Review your curated catering event menu"
             >
-              <ShoppingBag className="w-3.5 h-3.5 text-emerald-400 animate-bounce" />
-              <span>{selectedDishes.length} Dishes</span>
+              <UtensilsCrossed className="w-3.5 h-3.5 text-emerald-400 animate-bounce" />
+              <span>{selectedDishes.length} {selectedDishes.length === 1 ? 'Dish' : 'Dishes'}</span>
             </Link>
           )}
 

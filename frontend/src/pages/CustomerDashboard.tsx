@@ -12,7 +12,7 @@ import {
   CheckCircle2,
   XCircle,
   AlertCircle,
-  ShoppingBag,
+  UtensilsCrossed,
   Bell,
   User,
   Settings,
@@ -206,8 +206,8 @@ export const CustomerDashboard: React.FC = () => {
                 : 'bg-emerald-950/80 text-[#CBD5E1] hover:text-white border border-[#D4AF37]/30 hover:border-[#D4AF37]/60'
             }`}
           >
-            <ShoppingBag className="w-4 h-4" />
-            <span>Saved Custom Menu ({selectedDishes.length})</span>
+            <UtensilsCrossed className="w-4 h-4" />
+            <span>Curated Feast Menu ({selectedDishes.length})</span>
           </button>
           <button
             onClick={() => setActiveTab('notifications')}

@@ -9,6 +9,9 @@ import { FoodDetailModal } from '../components/FoodDetailModal.js';
 import { BanquetCalculator } from '../components/BanquetCalculator.js';
 import { CateringHeroBanner } from '../components/CateringHeroBanner.js';
 import { ADBrandEmblem } from '../components/ADBrandEmblem.js';
+import { defaultServices } from '../data/defaultServices.js';
+import { defaultMenuItems } from '../data/defaultMenu.js';
+import { defaultPackages } from '../data/defaultData.js';
 import {
   Sparkles,
   ArrowRight,
@@ -31,28 +34,38 @@ import {
 
 export const Home: React.FC = () => {
   const { toggleDish, isDishSelected } = useMenuCart();
-  const [featuredMenu, setFeaturedMenu] = useState<any[]>([]);
-  const [featuredServices, setFeaturedServices] = useState<any[]>([]);
-  const [packages, setPackages] = useState<any[]>([]);
+  const defaultCateringList = defaultServices.filter((s) => s.category === 'catering').slice(0, 4);
+  const [featuredMenu, setFeaturedMenu] = useState<any[]>(defaultMenuItems.slice(0, 6));
+  const [featuredServices, setFeaturedServices] = useState<any[]>(defaultCateringList);
+  const [packages, setPackages] = useState<any[]>(defaultPackages);
   const [reviews, setReviews] = useState<any[]>([]);
   const [activeModalItem, setActiveModalItem] = useState<any | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     async function loadData() {
       try {
         const [menuRes, srvRes, pkgRes, revRes] = await Promise.all([
-          api.getMenu({ category: 'ALL' }),
-          api.getServices(),
-          api.getPackages(),
-          api.getReviews(),
+          api.getMenu({ category: 'ALL' }).catch(() => null),
+          api.getServices().catch(() => null),
+          api.getPackages().catch(() => null),
+          api.getReviews().catch(() => null),
         ]);
-        if (menuRes.menuItems) setFeaturedMenu(menuRes.menuItems.slice(0, 6));
-        if (srvRes.services) setFeaturedServices(srvRes.services.slice(0, 4));
-        if (pkgRes.packages) setPackages(pkgRes.packages);
-        if (revRes.reviews) setReviews(revRes.reviews.slice(0, 3));
+        if (menuRes?.menuItems && menuRes.menuItems.length > 0) {
+          setFeaturedMenu(menuRes.menuItems.slice(0, 6));
+        }
+        if (srvRes?.services && srvRes.services.length > 0) {
+          const catOnly = srvRes.services.filter((s: any) => s.category === 'catering');
+          setFeaturedServices(catOnly.length > 0 ? catOnly.slice(0, 4) : srvRes.services.slice(0, 4));
+        }
+        if (pkgRes?.packages && pkgRes.packages.length > 0) {
+          setPackages(pkgRes.packages);
+        }
+        if (revRes?.reviews && revRes.reviews.length > 0) {
+          setReviews(revRes.reviews.slice(0, 3));
+        }
       } catch (err) {
-        console.error('Failed to load homepage data:', err);
+        console.warn('Live homepage data sync notice:', err);
       } finally {
         setLoading(false);
       }
@@ -337,7 +350,7 @@ export const Home: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredServices.map((srv) => (
+            {(featuredServices && featuredServices.length > 0 ? featuredServices : defaultCateringList).map((srv) => (
               <TiltCard key={srv.id} maxTilt={4}>
                 <div className="group rounded-[32px] glass-card border border-[#D4AF37]/40 overflow-hidden flex flex-col justify-between h-full liquid-shine">
                   <div>
@@ -387,6 +400,160 @@ export const Home: React.FC = () => {
                 </div>
               </TiltCard>
             ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* ====================================================
+          2B. TWO PRIMARY OFFERINGS: CATERING BANQUETS VS MASTER COOK HIRE
+          ==================================================== */}
+      <section className="py-16 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#041810]/90 border border-[#D4AF37]/50 text-xs font-bold text-[#F5CE68] uppercase tracking-wider">
+              <Crown className="w-3.5 h-3.5 text-[#F5CE68]" />
+              <span>Two Distinct Service Models • Zero Restaurant Meals</span>
+            </div>
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
+              Full Banquet Catering <span className="text-[#F5CE68]">or</span> Master Cook Hire?
+            </h2>
+            <p className="text-sm text-[#CBD5E1] leading-relaxed">
+              We cater to your celebration based on your exact logistics. Choose our complete turnkey banquet catering or hire our verified master cooks to prepare fresh meals in your kitchen.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            {/* Model A: Full-Service Banquet Catering */}
+            <TiltCard maxTilt={3}>
+              <div className="rounded-[36px] bg-[#06291C]/90 backdrop-blur-2xl border-2 border-[#D4AF37]/60 p-8 sm:p-10 flex flex-col justify-between h-full liquid-shine shadow-[0_24px_70px_rgba(0,0,0,0.6)] relative overflow-hidden group">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+                
+                <div className="space-y-6">
+                  <div className="flex items-center justify-between">
+                    <span className="px-3.5 py-1 rounded-full bg-[#041810] border border-[#D4AF37] text-xs font-black text-[#F5CE68] uppercase tracking-wider">
+                      Turnkey Banquet Service
+                    </span>
+                    <span className="text-xs text-[#CBD5E1] font-semibold">25 to 5,000+ Guests</span>
+                  </div>
+
+                  <div>
+                    <h3 className="font-display text-2xl sm:text-3xl font-black text-white flex items-center gap-2.5">
+                      <UtensilsCrossed className="w-7 h-7 text-[#F5CE68]" />
+                      <span>Full-Service Banquet Catering</span>
+                    </h3>
+                    <p className="text-xs sm:text-sm text-[#CBD5E1] mt-2 leading-relaxed font-normal">
+                      Complete end-to-end event feast management. We bring the complete royal multi-course menu, live cooking stalls, gold chafing warmers, premium cutlery, and uniformed banquet stewards.
+                    </p>
+                  </div>
+
+                  <div className="space-y-2.5 pt-2">
+                    <div className="flex items-center gap-2 text-xs text-[#FAF8F5]">
+                      <CheckCircle2 className="w-4 h-4 text-[#F5CE68] shrink-0" />
+                      <span><strong>Buffet & Chafers:</strong> Polished brass/gold warmers with continuous flame heating</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-xs text-[#FAF8F5]">
+                      <CheckCircle2 className="w-4 h-4 text-[#F5CE68] shrink-0" />
+                      <span><strong>Live Master Counters:</strong> Chaat, Tandoori BBQ, Dosa, Jalebi, Mocktail Bar & Paan</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-xs text-[#FAF8F5]">
+                      <CheckCircle2 className="w-4 h-4 text-[#F5CE68] shrink-0" />
+                      <span><strong>Crockery & Cutlery:</strong> Full bone china, ceramic buffet ware, or eco areca plates</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-xs text-[#FAF8F5]">
+                      <CheckCircle2 className="w-4 h-4 text-[#F5CE68] shrink-0" />
+                      <span><strong>Hospitality Stewards:</strong> Polite uniformed table captains & post-event cleanup crew</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-xs text-[#FAF8F5]">
+                      <CheckCircle2 className="w-4 h-4 text-[#F5CE68] shrink-0" />
+                      <span><strong>All-Inclusive Packages:</strong> Basic (₹850), Premium (₹950), Deluxe (₹1050)</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-8 flex flex-col sm:flex-row gap-3">
+                  <Link
+                    to="/packages"
+                    className="flex-1 py-3.5 rounded-2xl gold-gradient-btn text-xs font-black text-[#041810] text-center shadow-lg hover:scale-[1.02] transition-transform"
+                  >
+                    View Banquet Packages
+                  </Link>
+                  <Link
+                    to="/booking?type=catering"
+                    className="flex-1 py-3.5 rounded-2xl bg-[#041810] border border-[#D4AF37]/50 text-xs font-bold text-[#F5CE68] hover:bg-emerald-950 text-center transition-colors"
+                  >
+                    Book Full Catering
+                  </Link>
+                </div>
+              </div>
+            </TiltCard>
+
+            {/* Model B: Verified Master Cook Hire */}
+            <TiltCard maxTilt={3}>
+              <div className="rounded-[36px] bg-[#06291C]/90 backdrop-blur-2xl border-2 border-[#D4AF37]/60 p-8 sm:p-10 flex flex-col justify-between h-full liquid-shine shadow-[0_24px_70px_rgba(0,0,0,0.6)] relative overflow-hidden group">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-[#D4AF37]/10 rounded-full blur-3xl pointer-events-none" />
+
+                <div className="space-y-6">
+                  <div className="flex items-center justify-between">
+                    <span className="px-3.5 py-1 rounded-full bg-emerald-950 border border-emerald-400 text-xs font-black text-emerald-300 uppercase tracking-wider">
+                      On-Site Private Cook Team
+                    </span>
+                    <span className="text-xs text-[#CBD5E1] font-semibold">10 to 2,000+ Guests</span>
+                  </div>
+
+                  <div>
+                    <h3 className="font-display text-2xl sm:text-3xl font-black text-white flex items-center gap-2.5">
+                      <ChefHat className="w-7 h-7 text-emerald-400" />
+                      <span>Professional Cook Services</span>
+                    </h3>
+                    <p className="text-xs sm:text-sm text-[#CBD5E1] mt-2 leading-relaxed font-normal">
+                      Hire veteran Odia halwais, master chefs, and specialized cook teams to prepare fresh, piping-hot dishes on-site in your home kitchen, mandap kitchen, or outdoor venue.
+                    </p>
+                  </div>
+
+                  <div className="space-y-2.5 pt-2">
+                    <div className="flex items-center gap-2 text-xs text-[#FAF8F5]">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                      <span><strong>Verified Master Chefs:</strong> 10+ years average culinary experience & police-verified</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-xs text-[#FAF8F5]">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                      <span><strong>Flexible Groceries:</strong> Supply your own groceries or have AD Catering procure fresh</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-xs text-[#FAF8F5]">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                      <span><strong>Specialized Crews:</strong> Odia Mutton Kasa masters, Satvik Brahmin cooks & sweet halwais</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-xs text-[#FAF8F5]">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                      <span><strong>Spotless Kitchen Handover:</strong> Full utensil cleaning and sanitization after cooking</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-xs text-[#FAF8F5]">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                      <span><strong>Transparent Cook Fee:</strong> Starting ₹1,499 (Home Cook) to ₹4,999 (Wedding Crew)</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-8 flex flex-col sm:flex-row gap-3">
+                  <Link
+                    to="/cook-service"
+                    className="flex-1 py-3.5 rounded-2xl gold-gradient-btn text-xs font-black text-[#041810] text-center shadow-lg hover:scale-[1.02] transition-transform"
+                  >
+                    Explore Cook Services
+                  </Link>
+                  <Link
+                    to="/booking?type=cook"
+                    className="flex-1 py-3.5 rounded-2xl bg-[#041810] border border-[#D4AF37]/50 text-xs font-bold text-[#F5CE68] hover:bg-emerald-950 text-center transition-colors"
+                  >
+                    Hire a Master Cook
+                  </Link>
+                </div>
+              </div>
+            </TiltCard>
+
           </div>
 
         </div>

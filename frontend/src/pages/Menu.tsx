@@ -9,7 +9,6 @@ import {
   Search,
   Check,
   Plus,
-  ShoppingBag,
   Sparkles,
   Filter,
   Trash2,
@@ -1525,19 +1524,22 @@ export const Menu: React.FC = () => {
       </div>
 
       {/* ====================================================
-          9. FLOATING MENU SELECTION CART DOCK
+          9. FLOATING EVENT FEAST MENU TRAY DOCK
           ==================================================== */}
       {selectedDishes.length > 0 && (
         <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 w-[92%] max-w-2xl p-4 rounded-3xl bg-[#041810]/95 border border-[#D4AF37] shadow-[0_25px_80px_rgba(0,0,0,0.85)] flex items-center justify-between gap-4 backdrop-blur-3xl animate-in slide-in-from-bottom-5 text-[#FAF8F5]">
           <div className="flex items-center gap-3 min-w-0">
             <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-[#D4AF37] to-[#F5CE68] text-[#041810] flex items-center justify-center font-bold shrink-0 shadow">
-              <ShoppingBag className="w-5 h-5" />
+              <UtensilsCrossed className="w-5 h-5 text-[#041810]" />
             </div>
             <div className="min-w-0">
-              <p className="text-xs font-bold text-white truncate">
-                {selectedDishes.length} Custom {selectedDishes.length === 1 ? 'Dish' : 'Dishes'} Selected
+              <p className="text-xs font-bold text-white truncate flex items-center gap-1.5">
+                <span className="text-[#F5CE68] font-black uppercase text-[10px] tracking-wider bg-emerald-950/80 px-2 py-0.5 rounded-md border border-[#D4AF37]/40">
+                  Feast Menu Tray
+                </span>
+                <span>{selectedDishes.length} Custom {selectedDishes.length === 1 ? 'Dish' : 'Dishes'} Selected</span>
               </p>
-              <p className="text-[11px] text-[#CBD5E1] truncate max-w-md">
+              <p className="text-[11px] text-[#CBD5E1] truncate max-w-md mt-0.5">
                 {selectedDishes.map((d) => d.name).join(', ')}
               </p>
             </div>
@@ -1547,7 +1549,7 @@ export const Menu: React.FC = () => {
             <button
               onClick={clearSelection}
               className="p-2 rounded-xl text-slate-400 hover:text-rose-400 transition-colors"
-              title="Clear dish selection"
+              title="Clear menu selection"
             >
               <Trash2 className="w-4 h-4" />
             </button>
@@ -1555,7 +1557,7 @@ export const Menu: React.FC = () => {
               to="/booking"
               className="px-5 py-2.5 rounded-xl gold-gradient-btn text-xs font-black text-[#041810] shadow-md flex items-center gap-1.5 whitespace-nowrap hover:scale-105 transition-transform"
             >
-              <span>Continue to Booking</span>
+              <span>Add to Event Booking</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
