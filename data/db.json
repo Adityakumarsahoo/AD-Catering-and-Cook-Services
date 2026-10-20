@@ -2543,24 +2543,109 @@
       "id": "pkg_3",
       "name": "PREMIUM PACKAGE",
       "pricePerPerson": 950,
-      "description": "Luxurious culinary spread crafted for grand wedding receptions, engagement galas, and high-end celebrations.",
-      "startersCount": 4,
-      "mainCourseCount": 8,
-      "dessertCount": 3,
-      "drinksCount": 2,
+      "description": "Grand Royal Wedding Reception Feast featuring 36 authentic delicacies across 9 distinct live counters and buffet stations.",
+      "startersCount": 8,
+      "mainCourseCount": 11,
+      "dessertCount": 4,
+      "drinksCount": 5,
       "staffIncluded": true,
       "decorationOption": true,
       "features": [
-        "4 Live Counter Starters (Amritsari Fish + Kebabs)",
-        "Royal Odia Mutton Kasa or Rogan Josh",
-        "Butter Chicken / Fish Besara",
-        "Shahi Paneer + Mixed Veg Jalfrezi",
-        "Dum Biryani + Fragrant Pulao",
-        "Tandoori Roti, Naan & Kulcha",
-        "3 Desserts (Chhena Poda + Rasmalai + Kulfi)",
-        "Full Ceramic Crockery & Premium Linen"
+        "Welcome Drinks: Fire Mocktail, Smoky Mocktail, Masala Drinks",
+        "Soup Counter: Veg Manchow Soup, Chicken H/S Soup",
+        "Starter (Veg): Papudi/Aloo Tiki Chaat, Panipuri Counter, Paneer Crispy, Spring Roll, Corn Chaat",
+        "Starter (Non-Veg): Chicken (Tikka/Lolipop), Fish Finger, Scotch Egg",
+        "Plate Counter: Green Salad, Spout Salad, Rusian Salad, Papad, Dahibara, Pickles",
+        "Main Course (Veg): Rice (Veriety), Rumali Roti, Chakuli/Biri Kachudi, Dal Butter Fry, Khatta, Paneer (Masala/Hydrabadi), Mix Veg, Mushroom",
+        "Main Course (Non-Veg): Mutton Rogan Juice, Fish Masala, Chicken Hyderabadi",
+        "Sweet Desert: Chhena Payes, Hot Jalebi, Ice Cream, Gulab Jamun",
+        "Special Inclusions: Water Bottle Service & Banarasi Paan Counter"
       ],
-      "popular": true
+      "popular": true,
+      "menuItemsCount": 36,
+      "menuCategories": [
+        {
+          "category": "WELCOME DRINKS",
+          "items": [
+            "Fire Mocktail",
+            "Smoky Mocktail",
+            "Masala Drinks"
+          ]
+        },
+        {
+          "category": "SOUP COUNTER",
+          "items": [
+            "Veg Manchow Soup",
+            "Chicken H/S Soup"
+          ]
+        },
+        {
+          "category": "STARTER (VEG)",
+          "items": [
+            "Papudi Chaat / Aloo Tiki Chaat",
+            "Panipuri Counter",
+            "Paneer Crispy",
+            "Spring Roll",
+            "Corn Chaat"
+          ]
+        },
+        {
+          "category": "STARTER (NON-VEG)",
+          "items": [
+            "Chicken (Tikka / Lolipop)",
+            "Fish Finger",
+            "Scotch Egg"
+          ]
+        },
+        {
+          "category": "PLATE COUNTER",
+          "items": [
+            "Green Salad",
+            "Spout Salad",
+            "Rusian Salad",
+            "Papad",
+            "Dahibara",
+            "Pickles"
+          ]
+        },
+        {
+          "category": "MAIN COURSE (VEG)",
+          "items": [
+            "Rice (Veriety)",
+            "Rumali Roti",
+            "Chakuli / Biri Kachudi",
+            "Dal Butter Fry",
+            "Khatta",
+            "Paneer (Masala/Hydrabadi)",
+            "Mix Veg (Navaratna/Punjabi)",
+            "Mushroom (Dopiaza/Chilli)"
+          ]
+        },
+        {
+          "category": "MAIN COURSE (NON-VEG)",
+          "items": [
+            "Mutton Rogan Juice",
+            "Fish Masala",
+            "Chicken Hyderabadi"
+          ]
+        },
+        {
+          "category": "SWEET DESERT",
+          "items": [
+            "Chhena Payes",
+            "Hot Jalebi",
+            "Ice Cream",
+            "Gulab Jamun"
+          ]
+        },
+        {
+          "category": "SPECIAL COUNTERS",
+          "items": [
+            "Water Bottle",
+            "Paan Counter"
+          ]
+        }
+      ]
     },
     {
       "id": "pkg_4",

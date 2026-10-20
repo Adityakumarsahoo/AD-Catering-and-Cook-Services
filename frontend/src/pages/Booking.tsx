@@ -758,6 +758,17 @@ export const Booking: React.FC = () => {
                     <span className="text-[#CBD5E1]">Selected Package:</span>
                     <span className="font-bold text-white">{formData.selectedPackage}</span>
                   </div>
+                  {formData.selectedPackage.includes('PREMIUM') && (
+                    <div className="p-2.5 rounded-xl bg-[#06291C] border border-[#D4AF37]/40 text-[11px] text-[#FAF8F5] space-y-1">
+                      <p className="font-bold text-[#F5CE68] flex items-center gap-1">
+                        <Crown className="w-3.5 h-3.5 text-[#F5CE68]" />
+                        <span>Royal Wedding Feast (36 Items)</span>
+                      </p>
+                      <p className="text-[#CBD5E1] text-[10px] leading-relaxed">
+                        Includes Fire Mocktails, Panipuri Counter, Chicken Tikka/Lollipops, Dahibara, Mutton Rogan Josh, Dal Butter Fry, Rumali Roti, Chhena Payes, Hot Jalebi, Mineral Water & Paan Counter.
+                      </p>
+                    </div>
+                  )}
                   <div className="flex items-center justify-between pt-2">
                     <span className="text-[#CBD5E1]">Rate per Person:</span>
                     <span className="font-bold text-[#F5CE68] tabular-nums">
