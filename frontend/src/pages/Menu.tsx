@@ -54,35 +54,31 @@ export const Menu: React.FC = () => {
   const categoryScrollRef = useRef<HTMLDivElement>(null);
   const dishesGridRef = useRef<HTMLDivElement>(null);
 
-  // Official Categories List from uploaded reference menus
+  // Canonical Categories List matching the 3 official reference menu images exactly
   const categories = [
     { id: 'ALL', label: 'All Delicacies', icon: UtensilsCrossed },
-    { id: 'WELCOME DRINKS', label: 'Welcome Drinks', icon: GlassWater },
-    { id: 'SOUP', label: 'Soups & Shorbas', icon: Soup },
+    { id: 'WELCOME DRINK', label: 'Welcome Drinks', icon: GlassWater },
+    { id: 'SOUP', label: 'Soups', icon: Soup },
     { id: 'COUNTER STARTER', label: 'Counter Starters', icon: Flame },
-    { id: 'STARTER - VEG', label: 'Starters (Veg)', icon: Leaf },
-    { id: 'STARTER - NON-VEG', label: 'Starters (Non-Veg)', icon: Drumstick },
+    { id: 'STARTER (VEG)', label: 'Starters (Veg)', icon: Leaf },
+    { id: 'STARTER (NON-VEG)', label: 'Starters (Non-Veg)', icon: Drumstick },
+    { id: 'EGGS TO ORDER', label: 'Eggs to Order', icon: UtensilsCrossed },
+    { id: 'ROTI / NAN / PURI', label: 'Roti / Nan / Puri', icon: Layers },
+    { id: 'RICE / PULAO / BIRYANI', label: 'Rice / Pulao / Biryani', icon: Sparkles },
+    { id: 'DAL', label: 'Dal', icon: Soup },
+    { id: 'CHUTNEY & RAITA', label: 'Chutney & Raita', icon: UtensilsCrossed },
+    { id: 'VEGETABLE', label: 'Vegetables', icon: Leaf },
+    { id: 'MUSHROOM', label: 'Mushroom Specials', icon: Leaf },
     { id: 'PANEER', label: 'Paneer Collection', icon: Crown },
     { id: 'FISH', label: 'River & Sea Fish', icon: Fish },
     { id: 'PRAWN', label: 'Chilika Prawns', icon: Fish },
     { id: 'CHICKEN', label: 'Royal Chicken', icon: Drumstick },
-    { id: 'MUTTON', label: 'The Mutton Feast', icon: Flame },
-    { id: 'EGG', label: 'Egg Specialties', icon: UtensilsCrossed },
-    { id: 'ROTI / NAN / PURI', label: 'Roti, Naan & Puri', icon: Layers },
-    { id: 'RICE / PULAO / BIRYANI', label: 'Biryani & Pulao', icon: Sparkles },
-    { id: 'DAL', label: 'Dal & Dalma', icon: Soup },
-    { id: 'CHUTNEY & RAITA', label: 'Chutney & Raita', icon: UtensilsCrossed },
-    { id: 'VEGETABLE', label: 'Vegetable Curries', icon: Leaf },
-    { id: 'MUSHROOM', label: 'Mushroom Specials', icon: Leaf },
-    { id: 'AAMISHA / NON-VEG', label: 'Aamisha Specialties', icon: Drumstick },
-    { id: 'ODISSY SPECIAL', label: 'Odisha Heritage', icon: Crown },
-    { id: 'SADDA / VEG', label: 'Sadda & Bhaja', icon: Leaf },
+    { id: 'MUTTON', label: 'Royal Mutton', icon: Flame },
+    { id: 'AAMISHA (NON-VEG)', label: 'Aamisha (Non-Veg)', icon: Drumstick },
+    { id: 'ODISSI SPECIAL', label: 'Odissi Special', icon: Crown },
+    { id: 'SADDA (VEG)', label: 'Sadda (Veg)', icon: Leaf },
     { id: 'CONTINENTAL', label: 'Continental Corner', icon: UtensilsCrossed },
-    { id: 'SWEET DESSERT', label: 'Sweet Desserts', icon: Cake },
-    { id: 'PLATE COUNTER', label: 'Plate & Crockery', icon: Award },
-    { id: 'WATER BOTTLE', label: 'Water Station', icon: GlassWater },
-    { id: 'PAAN COUNTER', label: 'Live Paan Lounge', icon: Sparkles },
-    { id: 'FRUIT DESIGN CUTTING', label: 'Fruit Carving', icon: Heart },
+    { id: 'DESERT', label: 'Desserts & Sweets', icon: Cake },
   ];
 
   useEffect(() => {
@@ -147,19 +143,14 @@ export const Menu: React.FC = () => {
         const itemCatUpper = (item.category || '').toUpperCase();
         let matchCat = itemCatUpper === catUpper;
         if (!matchCat) {
-          if (catUpper === 'FISH' && (itemCatUpper === 'FISH' || itemCatUpper === 'RIVER & SEA FISH')) matchCat = true;
-          else if (catUpper === 'PANEER' && itemCatUpper.includes('PANEER')) matchCat = true;
-          else if (catUpper === 'CHICKEN' && itemCatUpper.includes('CHICKEN')) matchCat = true;
-          else if (catUpper === 'MUTTON' && itemCatUpper.includes('MUTTON')) matchCat = true;
-          else if (catUpper === 'PRAWN' && (itemCatUpper.includes('PRAWN') || itemCatUpper.includes('CRAB'))) matchCat = true;
-          else if (catUpper === 'STARTER - VEG' && itemCatUpper === 'STARTER - VEG') matchCat = true;
-          else if (catUpper === 'STARTER - NON-VEG' && itemCatUpper === 'STARTER - NON-VEG') matchCat = true;
-          else if (catUpper === 'SWEET DESSERT' && (itemCatUpper.includes('DESSERT') || itemCatUpper.includes('SWEET'))) matchCat = true;
-          else if (catUpper === 'WELCOME DRINKS' && (itemCatUpper.includes('DRINK') || itemCatUpper.includes('COOLER'))) matchCat = true;
-          else if (catUpper === 'ODISSY SPECIAL' && (item.isOdiaSpecialty || itemCatUpper.includes('ODIA') || itemCatUpper.includes('ODISSY'))) matchCat = true;
-          else if (catUpper === 'VEGETABLE' && (itemCatUpper.includes('VEGETABLE') || itemCatUpper === 'VEGETARIAN')) matchCat = true;
-          else if (catUpper === 'DAL' && itemCatUpper.includes('DAL')) matchCat = true;
-          else if (catUpper === 'RICE / PULAO / BIRYANI' && (itemCatUpper.includes('RICE') || itemCatUpper.includes('BIRYANI') || itemCatUpper.includes('PULAO'))) matchCat = true;
+          if (catUpper === 'WELCOME DRINK' && (itemCatUpper === 'WELCOME DRINK' || itemCatUpper === 'WELCOME DRINKS')) matchCat = true;
+          else if (catUpper === 'DESERT' && (itemCatUpper === 'DESERT' || itemCatUpper === 'DESSERT' || itemCatUpper === 'SWEET DESSERT')) matchCat = true;
+          else if (catUpper === 'ODISSI SPECIAL' && (itemCatUpper === 'ODISSI SPECIAL' || itemCatUpper === 'ODISSY SPECIAL')) matchCat = true;
+          else if (catUpper === 'STARTER (VEG)' && (itemCatUpper === 'STARTER (VEG)' || itemCatUpper === 'STARTER - VEG')) matchCat = true;
+          else if (catUpper === 'STARTER (NON-VEG)' && (itemCatUpper === 'STARTER (NON-VEG)' || itemCatUpper === 'STARTER - NON-VEG')) matchCat = true;
+          else if (catUpper === 'AAMISHA (NON-VEG)' && (itemCatUpper === 'AAMISHA (NON-VEG)' || itemCatUpper === 'AAMISHA / NON-VEG')) matchCat = true;
+          else if (catUpper === 'SADDA (VEG)' && (itemCatUpper === 'SADDA (VEG)' || itemCatUpper === 'SADDA / VEG')) matchCat = true;
+          else if (catUpper === 'EGGS TO ORDER' && (itemCatUpper === 'EGGS TO ORDER' || itemCatUpper === 'EGG')) matchCat = true;
         }
         if (!matchCat) return false;
       }
@@ -191,12 +182,12 @@ export const Menu: React.FC = () => {
 
   // Odia Specialty highlights
   const odiaSpecialDishes = useMemo(() => {
-    return menuItems.filter((item) => item.isOdiaSpecialty || item.category === 'ODISSY SPECIAL').slice(0, 6);
+    return menuItems.filter((item) => item.isOdiaSpecialty || item.category === 'ODISSI SPECIAL').slice(0, 6);
   }, [menuItems]);
 
   // Dessert highlights
   const dessertDishes = useMemo(() => {
-    return menuItems.filter((item) => item.category === 'SWEET DESSERT').slice(0, 6);
+    return menuItems.filter((item) => item.category === 'DESERT' || item.category === 'SWEET DESSERT').slice(0, 6);
   }, [menuItems]);
 
   // Non-Veg highlights
@@ -213,19 +204,14 @@ export const Menu: React.FC = () => {
       const count = menuItems.filter((item) => {
         const itemCatUpper = (item.category || '').toUpperCase();
         if (itemCatUpper === catUpper) return true;
-        if (catUpper === 'FISH' && (itemCatUpper === 'FISH' || itemCatUpper === 'RIVER & SEA FISH')) return true;
-        if (catUpper === 'PANEER' && itemCatUpper.includes('PANEER')) return true;
-        if (catUpper === 'CHICKEN' && itemCatUpper.includes('CHICKEN')) return true;
-        if (catUpper === 'MUTTON' && itemCatUpper.includes('MUTTON')) return true;
-        if (catUpper === 'PRAWN' && (itemCatUpper.includes('PRAWN') || itemCatUpper.includes('CRAB'))) return true;
-        if (catUpper === 'STARTER - VEG' && itemCatUpper === 'STARTER - VEG') return true;
-        if (catUpper === 'STARTER - NON-VEG' && itemCatUpper === 'STARTER - NON-VEG') return true;
-        if (catUpper === 'SWEET DESSERT' && (itemCatUpper.includes('DESSERT') || itemCatUpper.includes('SWEET'))) return true;
-        if (catUpper === 'WELCOME DRINKS' && (itemCatUpper.includes('DRINK') || itemCatUpper.includes('COOLER'))) return true;
-        if (catUpper === 'ODISSY SPECIAL' && (item.isOdiaSpecialty || itemCatUpper.includes('ODIA') || itemCatUpper.includes('ODISSY'))) return true;
-        if (catUpper === 'VEGETABLE' && (itemCatUpper.includes('VEGETABLE') || itemCatUpper === 'VEGETARIAN')) return true;
-        if (catUpper === 'DAL' && itemCatUpper.includes('DAL')) return true;
-        if (catUpper === 'RICE / PULAO / BIRYANI' && (itemCatUpper.includes('RICE') || itemCatUpper.includes('BIRYANI') || itemCatUpper.includes('PULAO'))) return true;
+        if (catUpper === 'WELCOME DRINK' && (itemCatUpper === 'WELCOME DRINK' || itemCatUpper === 'WELCOME DRINKS')) return true;
+        if (catUpper === 'DESERT' && (itemCatUpper === 'DESERT' || itemCatUpper === 'DESSERT' || itemCatUpper === 'SWEET DESSERT')) return true;
+        if (catUpper === 'ODISSI SPECIAL' && (itemCatUpper === 'ODISSI SPECIAL' || itemCatUpper === 'ODISSY SPECIAL')) return true;
+        if (catUpper === 'STARTER (VEG)' && (itemCatUpper === 'STARTER (VEG)' || itemCatUpper === 'STARTER - VEG')) return true;
+        if (catUpper === 'STARTER (NON-VEG)' && (itemCatUpper === 'STARTER (NON-VEG)' || itemCatUpper === 'STARTER - NON-VEG')) return true;
+        if (catUpper === 'AAMISHA (NON-VEG)' && (itemCatUpper === 'AAMISHA (NON-VEG)' || itemCatUpper === 'AAMISHA / NON-VEG')) return true;
+        if (catUpper === 'SADDA (VEG)' && (itemCatUpper === 'SADDA (VEG)' || itemCatUpper === 'SADDA / VEG')) return true;
+        if (catUpper === 'EGGS TO ORDER' && (itemCatUpper === 'EGGS TO ORDER' || itemCatUpper === 'EGG')) return true;
         return false;
       }).length;
       counts[cat.id] = count;

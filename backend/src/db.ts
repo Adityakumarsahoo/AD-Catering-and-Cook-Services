@@ -204,18 +204,11 @@ export async function initDatabase(): Promise<DatabaseSchema> {
     try {
       const raw = fs.readFileSync(DB_FILE, 'utf-8');
       dbData = JSON.parse(raw);
+      let added = false;
       if (dbData && officialMenuItems && officialMenuItems.length > 0) {
-        if (!dbData.menuItems) dbData.menuItems = [];
-        const existingNames = new Set(dbData.menuItems.map(i => i.name.toLowerCase()));
-        let added = false;
-        const allOfficialSeeds = [...(officialMenuItems || []), ...(officialVegMenuItems || [])];
-        for (const item of allOfficialSeeds) {
-          if (!existingNames.has(item.name.toLowerCase())) {
-            dbData.menuItems.push(item);
-            existingNames.add(item.name.toLowerCase());
-            added = true;
-          }
-        }
+        dbData.menuItems = officialMenuItems;
+        added = true;
+      }
         if (dbData.packages && Array.isArray(dbData.packages)) {
           const basic = dbData.packages.find(p => p.name.includes('BASIC'));
           if (basic) {
@@ -485,8 +478,7 @@ export async function initDatabase(): Promise<DatabaseSchema> {
         if (added) {
           saveDatabase();
         }
-      }
-      return dbData!;
+        return dbData!;
     } catch (e) {
       console.warn('Could not read existing db.json, generating default seeds...');
     }
