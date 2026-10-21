@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import {
   MessageCircle,
@@ -10,6 +10,8 @@ import {
   Crown,
   CheckCircle2,
   PhoneCall,
+  ChevronUp,
+  ArrowUp,
 } from 'lucide-react';
 
 export const FloatingActions: React.FC = () => {
@@ -17,6 +19,37 @@ export const FloatingActions: React.FC = () => {
   const navigate = useNavigate();
   const [waHovered, setWaHovered] = useState(false);
   const [conciergeOpen, setConciergeOpen] = useState(false);
+  const [scrollTooltip, setScrollTooltip] = useState(false);
+
+  // Scroll to Top & Live Progress tracking
+  const [showScrollTop, setShowScrollTop] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      if (scrollY > 180) {
+        setShowScrollTop(true);
+      } else {
+        setShowScrollTop(false);
+      }
+      if (height > 0) {
+        setScrollProgress(Math.min(100, Math.max(0, (scrollY / height) * 100)));
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
 
   // Estimator state
   const [selectedPkg, setSelectedPkg] = useState<'BASIC' | 'PREMIUM' | 'DELUXE'>('PREMIUM');
@@ -168,17 +201,94 @@ export const FloatingActions: React.FC = () => {
       )}
 
       {/* Floating Action Cluster (Bottom-Right on Desktop, safely above sticky bar on Mobile) */}
-      <aside aria-label="Quick contact and booking" className="fixed bottom-18 md:bottom-6 right-3 md:right-6 z-40 flex items-center gap-2">
+      <aside aria-label="Quick contact and booking" className="fixed bottom-18 md:bottom-6 right-3 md:right-6 z-40 flex items-center gap-2.5">
+        {/* Royal Circular Progress Scroll-To-Top Button */}
+        <div
+          className={`relative flex items-center justify-center transition-all duration-500 ease-out ${
+            showScrollTop
+              ? 'opacity-100 scale-100 translate-y-0 pointer-events-auto'
+              : 'opacity-0 scale-75 translate-y-6 pointer-events-none'
+          }`}
+          onMouseEnter={() => setScrollTooltip(true)}
+          onMouseLeave={() => setScrollTooltip(false)}
+        >
+          {/* Tooltip on hover */}
+          {scrollTooltip && (
+            <div className="absolute -top-11 left-1/2 -translate-x-1/2 pointer-events-none transition-all duration-300 animate-in fade-in zoom-in-95 z-50">
+              <div className="px-3 py-1 rounded-full bg-[#041810]/95 border border-[#D4AF37]/60 shadow-[0_10px_25px_rgba(0,0,0,0.85)] backdrop-blur-md flex items-center gap-1.5 whitespace-nowrap">
+                <Sparkles className="w-2.5 h-2.5 text-[#F5CE68]" />
+                <span className="text-[10px] font-black text-[#F5CE68] uppercase tracking-wider">
+                  Top • {Math.round(scrollProgress)}%
+                </span>
+              </div>
+              <div className="w-2 h-2 bg-[#041810] border-r border-b border-[#D4AF37]/60 rotate-45 mx-auto -mt-1" />
+            </div>
+          )}
+
+          <button
+            onClick={scrollToTop}
+            aria-label="Scroll to top of page"
+            className="group relative w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-[#06281C] via-[#041D13] to-[#020F09] border border-[#D4AF37]/60 shadow-[0_12px_35px_rgba(0,0,0,0.7),0_0_15px_rgba(212,175,55,0.3)] hover:border-[#F5CE68] hover:shadow-[0_16px_45px_rgba(0,0,0,0.85),0_0_25px_rgba(245,206,104,0.65)] hover:scale-110 active:scale-95 transition-all duration-300"
+          >
+            {/* Circular Progress SVG Gauge */}
+            <svg
+              className="absolute inset-0 w-full h-full -rotate-90 pointer-events-none"
+              viewBox="0 0 48 48"
+            >
+              <defs>
+                <linearGradient id="royalScrollGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#FFF2B2" />
+                  <stop offset="40%" stopColor="#F5CE68" />
+                  <stop offset="100%" stopColor="#D4AF37" />
+                </linearGradient>
+              </defs>
+              {/* Background Track */}
+              <circle
+                cx="24"
+                cy="24"
+                r="20"
+                stroke="rgba(212, 175, 55, 0.2)"
+                strokeWidth="2.5"
+                fill="none"
+              />
+              {/* Dynamic Gold Progress Fill */}
+              <circle
+                cx="24"
+                cy="24"
+                r="20"
+                stroke="url(#royalScrollGold)"
+                strokeWidth="2.8"
+                strokeDasharray="125.66"
+                strokeDashoffset={125.66 - (125.66 * scrollProgress) / 100}
+                strokeLinecap="round"
+                fill="none"
+                className="transition-all duration-150 ease-out"
+              />
+            </svg>
+
+            {/* Specular Inner Rim */}
+            <div className="absolute inset-[3px] rounded-full border border-[#D4AF37]/25 pointer-events-none" />
+
+            {/* Center Animated Chevron / Arrow with percentage */}
+            <div className="relative flex flex-col items-center justify-center text-[#F5CE68] group-hover:text-white transition-colors">
+              <ChevronUp className="w-5 h-5 -mb-0.5 stroke-[2.5] group-hover:-translate-y-1 transition-transform duration-300 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" />
+              <span className="text-[8px] font-black tracking-tight text-[#F5CE68] font-mono leading-none">
+                {Math.round(scrollProgress)}%
+              </span>
+            </div>
+          </button>
+        </div>
+
         {/* Quick Quote Trigger Pill */}
         {!isBookingPage && !isAdminPage && (
           <button
             onClick={() => setConciergeOpen(true)}
-            className="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#041810]/90 border border-[#D4AF37]/50 text-[#F5CE68] text-xs font-bold shadow-[0_16px_45px_rgba(0,0,0,0.6)] hover:scale-105 active:scale-95 transition-all duration-300 group liquid-shine"
+            className="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-gradient-to-r from-[#06281C]/95 via-[#041810]/95 to-[#020F09]/95 border border-[#D4AF37]/60 text-[#F5CE68] text-xs font-bold shadow-[0_16px_45px_rgba(0,0,0,0.6),0_0_15px_rgba(212,175,55,0.2)] hover:border-[#F5CE68] hover:shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_20px_rgba(245,206,104,0.4)] hover:scale-105 active:scale-95 transition-all duration-300 group liquid-shine backdrop-blur-xl"
           >
-            <div className="w-6 h-6 rounded-full bg-gradient-to-tr from-[#D4AF37] to-[#F5CE68] flex items-center justify-center text-[#041810] shadow-sm">
+            <div className="w-6 h-6 rounded-full bg-gradient-to-tr from-[#D4AF37] to-[#F5CE68] flex items-center justify-center text-[#041810] shadow-[0_2px_8px_rgba(212,175,55,0.4)]">
               <Calculator className="w-3.5 h-3.5" />
             </div>
-            <span className="font-bold text-[11px] text-[#F5CE68]">
+            <span className="font-extrabold text-[11px] tracking-wide text-[#F5CE68]">
               Quick Quote
             </span>
           </button>
@@ -188,15 +298,15 @@ export const FloatingActions: React.FC = () => {
         {!isBookingPage && !isAdminPage && (
           <Link
             to="/booking"
-            className="hidden md:inline-flex items-center gap-2.5 px-5 py-3 rounded-full bg-[#041810]/90 border border-[#D4AF37]/60 text-white text-xs font-bold shadow-[0_16px_45px_rgba(0,0,0,0.6)] hover:scale-105 active:scale-95 transition-all duration-300 group liquid-shine"
+            className="hidden md:inline-flex items-center gap-2.5 px-5 py-3 rounded-full bg-gradient-to-r from-[#06281C]/95 via-[#041810]/95 to-[#020F09]/95 border-2 border-[#D4AF37]/70 text-white text-xs font-bold shadow-[0_16px_45px_rgba(0,0,0,0.7),0_0_20px_rgba(212,175,55,0.25)] hover:border-[#F5CE68] hover:shadow-[0_20px_50px_rgba(0,0,0,0.85),0_0_25px_rgba(245,206,104,0.5)] hover:scale-105 active:scale-95 transition-all duration-300 group liquid-shine backdrop-blur-xl"
           >
-            <div className="w-6 h-6 rounded-full bg-gradient-to-tr from-[#D4AF37] to-[#F5CE68] flex items-center justify-center text-[#041810] shadow-sm">
+            <div className="w-6 h-6 rounded-full bg-gradient-to-tr from-[#D4AF37] to-[#F5CE68] flex items-center justify-center text-[#041810] shadow-[0_2px_8px_rgba(212,175,55,0.4)]">
               <CalendarPlus className="w-3.5 h-3.5" />
             </div>
-            <span className="gold-gradient-text tracking-wide uppercase font-extrabold text-[11px]">
+            <span className="gold-gradient-text tracking-wider uppercase font-black text-[11px]">
               Book Your Event
             </span>
-            <ArrowRight className="w-3.5 h-3.5 text-[#F5CE68] group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-3.5 h-3.5 text-[#F5CE68] group-hover:translate-x-1.5 transition-transform duration-300" />
           </Link>
         )}
 
@@ -207,14 +317,14 @@ export const FloatingActions: React.FC = () => {
           rel="noreferrer"
           onMouseEnter={() => setWaHovered(true)}
           onMouseLeave={() => setWaHovered(false)}
-          className={`flex items-center justify-center rounded-full bg-gradient-to-tr from-[#1E7E34] to-[#25D366] text-white shadow-[0_12px_35px_rgba(37,211,102,0.35)] hover:shadow-[0_16px_45px_rgba(37,211,102,0.5)] transition-all duration-300 border-2 border-[#D4AF37] h-13 ${
+          className={`flex items-center justify-center rounded-full bg-gradient-to-tr from-[#1E7E34] to-[#25D366] text-white shadow-[0_12px_35px_rgba(37,211,102,0.4),0_0_15px_rgba(37,211,102,0.25)] hover:shadow-[0_16px_45px_rgba(37,211,102,0.6),0_0_25px_rgba(37,211,102,0.4)] transition-all duration-300 border-2 border-[#D4AF37] h-13 ${
             waHovered ? 'px-5 gap-2' : 'w-13'
           }`}
           aria-label="Chat on WhatsApp"
         >
           <MessageCircle className="w-5 h-5 shrink-0" />
           {waHovered && (
-            <span className="text-xs font-extrabold whitespace-nowrap animate-in fade-in slide-in-from-left-2 duration-200">
+            <span className="text-xs font-black whitespace-nowrap animate-in fade-in slide-in-from-left-2 duration-200 tracking-wide">
               Chat With Us
             </span>
           )}

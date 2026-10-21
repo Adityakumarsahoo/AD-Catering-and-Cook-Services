@@ -31,13 +31,17 @@ import {
   HeartHandshake,
   Eye,
   Heart,
+  Briefcase,
+  Cake,
+  Leaf,
 } from 'lucide-react';
 
 export const Home: React.FC = () => {
   const { toggleDish, isDishSelected } = useMenuCart();
-  const defaultCateringList = defaultServices.filter((s) => s.category === 'catering').slice(0, 4);
+  const defaultCateringList = defaultServices.filter((s) => s.category === 'catering');
   const [featuredMenu, setFeaturedMenu] = useState<any[]>(defaultMenuItems.slice(0, 6));
   const [featuredServices, setFeaturedServices] = useState<any[]>(defaultCateringList);
+  const [serviceFilter, setServiceFilter] = useState<string>('ALL');
   const [packages, setPackages] = useState<any[]>(defaultPackages);
   const [reviews, setReviews] = useState<any[]>([]);
   const [activeModalItem, setActiveModalItem] = useState<any | null>(null);
@@ -57,7 +61,7 @@ export const Home: React.FC = () => {
         }
         if (srvRes?.services && srvRes.services.length > 0) {
           const catOnly = srvRes.services.filter((s: any) => s.category === 'catering');
-          setFeaturedServices(catOnly.length > 0 ? catOnly.slice(0, 4) : srvRes.services.slice(0, 4));
+          setFeaturedServices(catOnly.length > 0 ? catOnly : srvRes.services);
         }
         if (pkgRes?.packages && pkgRes.packages.length > 0) {
           setPackages(pkgRes.packages);
@@ -266,76 +270,218 @@ export const Home: React.FC = () => {
       <section className="py-24 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-14">
-            <div className="space-y-2">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#041810]/80 border border-[#D4AF37]/50 text-xs font-bold text-[#F5CE68] uppercase tracking-wider">
-                <Sparkles className="w-3.5 h-3.5 text-[#F5CE68]" />
-                <span>Exquisite Culinary Solutions</span>
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+            <div className="space-y-3">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-emerald-950/90 via-[#062417] to-emerald-950/90 border border-[#D4AF37]/60 text-xs font-black tracking-widest text-[#F5CE68] uppercase shadow-[0_4px_20px_rgba(212,175,55,0.25)]">
+                <Crown className="w-3.5 h-3.5 text-[#FFDF73] animate-pulse" />
+                <span>EXQUISITE BANQUET & LIVE COUNTER SOLUTIONS</span>
               </div>
               <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
-                Our Premier Catering Services
+                Our Premier <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF1B8] via-[#FFDF73] to-[#D4AF37]">Catering Services</span>
               </h2>
+              <p className="text-sm text-[#CBD5E1] max-w-2xl leading-relaxed">
+                From grand multi-day royal wedding banquets and authentic Odia banana leaf feasts to live LED light tables and executive corporate galas — freshly prepared and graciously served.
+              </p>
             </div>
+
             <Link
               to="/services"
-              className="mt-4 md:mt-0 text-sm font-bold text-[#F5CE68] hover:text-white inline-flex items-center gap-2 group transition-colors"
+              className="px-5 py-3 rounded-2xl bg-[#041810]/90 border border-[#D4AF37]/60 text-xs font-black text-[#F5CE68] hover:text-white hover:bg-emerald-950 inline-flex items-center gap-2.5 group transition-all shadow-[0_6px_20px_rgba(0,0,0,0.5)] shrink-0 self-start md:self-end"
             >
-              <span>View All 12 Offerings</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
+              <span>Explore All 12 Offerings</span>
+              <ArrowRight className="w-4 h-4 text-[#F5CE68] group-hover:translate-x-1.5 transition-transform" />
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {(featuredServices && featuredServices.length > 0 ? featuredServices : defaultCateringList).map((srv) => (
-              <TiltCard key={srv.id} maxTilt={4}>
-                <div className="group rounded-[32px] glass-card border border-[#D4AF37]/40 overflow-hidden flex flex-col justify-between h-full liquid-shine">
-                  <div>
-                    <div className="relative h-56 overflow-hidden">
-                      <img
-                        src={srv.image}
-                        alt={srv.title}
-                        onError={(e) => {
-                          e.currentTarget.onerror = null;
-                          e.currentTarget.src = 'https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=800&q=80';
-                        }}
-                        className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#020D08]/80 via-transparent to-transparent" />
-                      
-                      <span className="absolute top-3 right-3 text-xs font-bold px-3 py-1 rounded-full bg-[#041810]/90 border border-[#D4AF37]/60 text-[#F5CE68] shadow-sm">
-                        Starting ₹{srv.startingPrice}
-                      </span>
-                    </div>
-
-                    <div className="p-6">
-                      <h3 className="font-display font-bold text-lg text-white group-hover:text-[#F5CE68] transition-colors mb-2">
-                        {srv.title}
-                      </h3>
-                      <p className="text-xs text-[#94A3B8] line-clamp-3 leading-relaxed mb-4">
-                        {srv.description}
-                      </p>
-                      <ul className="space-y-2 mb-2">
-                        {srv.features?.slice(0, 2).map((feat: string, idx: number) => (
-                          <li key={idx} className="flex items-center gap-2 text-xs text-[#CBD5E1]">
-                            <CheckCircle2 className="w-3.5 h-3.5 text-[#F5CE68] shrink-0" />
-                            <span>{feat}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div className="p-6 pt-0">
-                    <Link
-                      to={`/booking?service=${encodeURIComponent(srv.title)}`}
-                      className="w-full py-3 rounded-xl gold-gradient-btn text-xs font-black text-[#041810] text-center block transition-all shadow-md active:scale-95"
-                    >
-                      Book This Service
-                    </Link>
-                  </div>
-                </div>
-              </TiltCard>
+          {/* Interactive Category Filter Pills */}
+          <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-8 no-scrollbar">
+            {[
+              { id: 'ALL', label: 'All Offerings', icon: <Sparkles className="w-3.5 h-3.5" /> },
+              { id: 'WEDDING', label: 'Royal Weddings', icon: <Crown className="w-3.5 h-3.5" /> },
+              { id: 'ODIA', label: 'Odia Banana Leaf', icon: <Leaf className="w-3.5 h-3.5" /> },
+              { id: 'LIGHT_TABLE', label: 'Live Light Tables', icon: <Sparkles className="w-3.5 h-3.5" /> },
+              { id: 'PARTIES', label: 'Parties & Corporate', icon: <Briefcase className="w-3.5 h-3.5" /> },
+            ].map((tab) => (
+              <button
+                key={tab.id}
+                type="button"
+                onClick={() => setServiceFilter(tab.id)}
+                className={`px-4 py-2 rounded-full text-xs font-black tracking-wider uppercase flex items-center gap-2 whitespace-nowrap transition-all ${
+                  serviceFilter === tab.id
+                    ? 'gold-gradient-btn text-[#041810] shadow-[0_4px_15px_rgba(212,175,55,0.4)] scale-105'
+                    : 'bg-[#041810]/80 border border-[#D4AF37]/40 text-[#CBD5E1] hover:text-[#F5CE68] hover:border-[#D4AF37]'
+                }`}
+              >
+                {tab.icon}
+                <span>{tab.label}</span>
+              </button>
             ))}
+          </div>
+
+          {/* Dynamic Services Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {(featuredServices && featuredServices.length > 0 ? featuredServices : defaultCateringList)
+              .filter((srv) => {
+                if (serviceFilter === 'ALL') return true;
+                const t = srv.title.toLowerCase();
+                if (serviceFilter === 'WEDDING') return t.includes('wedding');
+                if (serviceFilter === 'ODIA') return t.includes('odia') || t.includes('feast');
+                if (serviceFilter === 'LIGHT_TABLE') return t.includes('light') || t.includes('led');
+                if (serviceFilter === 'PARTIES') return t.includes('birth') || t.includes('anniversary') || t.includes('corp');
+                return true;
+              })
+              .slice(0, 4)
+              .map((srv) => {
+                const titleLower = srv.title.toLowerCase();
+                const isWedding = titleLower.includes('wedding');
+                const isOdia = titleLower.includes('odia') || titleLower.includes('feast');
+                const isLightTable = titleLower.includes('light') || titleLower.includes('led');
+                const isParty = titleLower.includes('birth') || titleLower.includes('anniversary');
+                const isCorporate = titleLower.includes('corp');
+
+                const categoryLabel = isWedding
+                  ? 'Royal Wedding'
+                  : isOdia
+                  ? 'Heritage Feast'
+                  : isLightTable
+                  ? 'Live Light Table'
+                  : isParty
+                  ? 'Social & Birthday'
+                  : isCorporate
+                  ? 'Executive Gala'
+                  : 'Premier Banquet';
+
+                const liveIndicator = isLightTable
+                  ? 'Live Neon Light Counter'
+                  : isOdia
+                  ? 'Authentic Banana Leaf'
+                  : isWedding
+                  ? 'Live Steam Warmers & Stewards'
+                  : 'Full Turnkey Live Setup';
+
+                const categoryIcon = isWedding ? (
+                  <Crown className="w-3.5 h-3.5 text-[#FFDF73]" />
+                ) : isOdia ? (
+                  <Leaf className="w-3.5 h-3.5 text-[#4ADE80]" />
+                ) : isLightTable ? (
+                  <Sparkles className="w-3.5 h-3.5 text-[#FFDF73] animate-pulse" />
+                ) : isParty ? (
+                  <Cake className="w-3.5 h-3.5 text-[#F472B6]" />
+                ) : isCorporate ? (
+                  <Briefcase className="w-3.5 h-3.5 text-[#60A5FA]" />
+                ) : (
+                  <UtensilsCrossed className="w-3.5 h-3.5 text-[#FFDF73]" />
+                );
+
+                return (
+                  <TiltCard key={srv.id} maxTilt={4}>
+                    <div className="group relative rounded-[34px] p-[1.5px] bg-gradient-to-b from-[#D4AF37]/35 via-emerald-800/20 to-[#D4AF37]/45 hover:from-[#F5CE68] hover:via-[#D4AF37] hover:to-[#10B981] transition-all duration-500 hover:-translate-y-2.5 h-full flex flex-col justify-between shadow-[0_20px_50px_rgba(0,0,0,0.7)] hover:shadow-[0_25px_65px_rgba(0,0,0,0.85),0_0_35px_rgba(212,175,55,0.25)] overflow-hidden">
+                      
+                      {/* Ambient Halo Glow on Hover */}
+                      <div className="absolute -inset-1 rounded-[36px] bg-gradient-to-tr from-[#D4AF37]/0 via-[#D4AF37]/15 to-emerald-500/10 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-700 pointer-events-none" />
+
+                      {/* Inner Dark Emerald Glass Container */}
+                      <div className="relative rounded-[32.5px] bg-gradient-to-b from-[#062417]/95 via-[#03150E]/98 to-[#020A06] backdrop-blur-2xl flex flex-col justify-between h-full overflow-hidden z-10">
+                        
+                        <div>
+                          {/* Image Box with Shimmer Sweep */}
+                          <div className="relative h-60 overflow-hidden shimmer-sweep">
+                            <img
+                              src={srv.image}
+                              alt={srv.title}
+                              onError={(e) => {
+                                e.currentTarget.onerror = null;
+                                e.currentTarget.src = '/images/royal-light-table.jpg';
+                              }}
+                              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#020A06] via-[#041810]/35 to-transparent" />
+
+                            {/* Category Badge (Top Left) */}
+                            <div className="absolute top-3 left-3 px-3.5 py-1 rounded-full bg-[#041810]/90 backdrop-blur-md border border-[#D4AF37]/60 shadow-md flex items-center gap-1.5">
+                              {categoryIcon}
+                              <span className="text-[10px] font-black uppercase tracking-wider text-[#F5CE68]">
+                                {categoryLabel}
+                              </span>
+                            </div>
+
+                            {/* 3D Gold Price Tag (Top Right) */}
+                            <div className="absolute top-3 right-3 badge-gold-3d px-3.5 py-1 rounded-full text-xs font-black shadow-lg flex items-center gap-1">
+                              <span>Starting ₹{srv.startingPrice}</span>
+                              <span className="text-[9px] font-bold text-[#041810]/80 uppercase tracking-tight">/ Guest</span>
+                            </div>
+
+                            {/* Live Status Pill (Bottom Left) */}
+                            <div className="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-[#041810]/85 backdrop-blur-md border border-[#D4AF37]/40 text-[10px] font-bold text-[#CBD5E1] flex items-center gap-1.5 shadow-md">
+                              <span className="relative flex h-2 w-2">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                              </span>
+                              <span className="text-[#A7F3D0]">{liveIndicator}</span>
+                            </div>
+                          </div>
+
+                          {/* Card Content Body */}
+                          <div className="p-6">
+                            <h3 className="font-display font-black text-xl text-white group-hover:text-[#F5CE68] transition-colors leading-snug line-clamp-1 mb-2">
+                              {srv.title}
+                            </h3>
+
+                            <p className="text-xs text-[#94A3B8] line-clamp-2 leading-relaxed mb-4">
+                              {srv.description}
+                            </p>
+
+                            {/* 2x2 Feature Chips */}
+                            <div className="grid grid-cols-2 gap-2 mb-4">
+                              {(srv.features || []).slice(0, 4).map((feat: string, idx: number) => (
+                                <div
+                                  key={idx}
+                                  className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-emerald-950/45 border border-[#D4AF37]/25 text-[11px] text-[#E2E8F0] font-medium group-hover:border-[#D4AF37]/50 transition-colors shadow-sm"
+                                >
+                                  <CheckCircle2 className="w-3.5 h-3.5 text-[#F5CE68] shrink-0" />
+                                  <span className="truncate">{feat}</span>
+                                </div>
+                              ))}
+                            </div>
+
+                            {/* Meta Specs Bar */}
+                            <div className="flex items-center justify-between border-t border-[#D4AF37]/20 pt-3 text-[11px] text-[#94A3B8]">
+                              <span className="flex items-center gap-1">
+                                <Users className="w-3.5 h-3.5 text-[#F5CE68]" />
+                                <span>25 to 5,000+ Guests</span>
+                              </span>
+                              <span className="flex items-center gap-1 text-emerald-400 font-semibold">
+                                <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+                                <span>100% Purity & Hygiene</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Card Action Footer */}
+                        <div className="p-6 pt-0 flex items-center gap-2">
+                          <Link
+                            to={`/booking?service=${encodeURIComponent(srv.title)}`}
+                            className="flex-1 py-3.5 px-4 rounded-xl gold-gradient-btn text-xs font-black text-[#041810] flex items-center justify-center gap-2 shadow-[0_6px_20px_rgba(212,175,55,0.35)] hover:shadow-[0_10px_30px_rgba(212,175,55,0.55)] active:scale-95 transition-all group/btn text-center"
+                          >
+                            <span>Book This Service</span>
+                            <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1.5 transition-transform shrink-0" />
+                          </Link>
+
+                          <Link
+                            to="/menu"
+                            className="px-3.5 py-3.5 rounded-xl bg-[#041810] border border-[#D4AF37]/50 text-[#F5CE68] hover:text-white hover:bg-emerald-950 transition-all shadow-md flex items-center justify-center group/menu shrink-0"
+                            title="Explore Menu Items"
+                          >
+                            <UtensilsCrossed className="w-4 h-4 group-hover/menu:scale-110 transition-transform" />
+                          </Link>
+                        </div>
+
+                      </div>
+                    </div>
+                  </TiltCard>
+                );
+              })}
           </div>
 
         </div>

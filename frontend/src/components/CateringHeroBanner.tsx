@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   UtensilsCrossed,
@@ -21,6 +21,7 @@ interface CateringHeroBannerProps {
 export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
   className = '',
 }) => {
+  const [rightCardMode, setRightCardMode] = useState<'LIGHT_TABLE' | 'FEAST'>('LIGHT_TABLE');
   return (
     <div
       className={`relative rounded-3xl sm:rounded-[44px] overflow-hidden border-2 border-[#D4AF37]/50 shadow-[0_30px_90px_rgba(0,0,0,0.7)] bg-[#041810] liquid-shine ${className}`}
@@ -199,30 +200,94 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
             </div>
           </div>
 
-          {/* RIGHT WING: Royal Banana Leaf Wedding Feast */}
+          {/* RIGHT WING: Royal Light Table / Banana Leaf Wedding Feast */}
           <div className="lg:col-span-3 order-3 flex flex-col items-center lg:items-end space-y-3">
-            <div className="relative w-full max-w-[260px] h-48 sm:h-56 rounded-3xl overflow-hidden border-2 border-[#D4AF37]/50 shadow-[0_15px_40px_rgba(0,0,0,0.6)] group">
-              <img
-                src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80"
-                alt="Traditional Indian Banana Leaf Wedding Feast"
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#041810] via-[#041810]/40 to-transparent" />
-
-              {/* Golden corner badge */}
-              <span className="absolute top-3 right-3 px-3 py-1 rounded-full bg-[#041810]/85 border border-[#D4AF37] text-[10px] font-black text-[#F5CE68] uppercase tracking-wider flex items-center gap-1 shadow">
-                <Leaf className="w-3 h-3 text-[#4ADE80]" />
-                <span>Banana Leaf Feast</span>
-              </span>
-
-              {/* Feast text */}
-              <div className="absolute bottom-3 left-3 right-3 text-right">
-                <p className="text-xs font-bold text-white drop-shadow">Royal Odia & Indian Thali</p>
-                <p className="text-[10px] text-[#F5CE68]">Dalma, Mutton Kasa, Biryani</p>
-              </div>
+            {/* Mode Switcher Pill */}
+            <div className="flex items-center gap-1 p-1 rounded-full bg-[#041810]/90 border border-[#D4AF37]/50 shadow-md">
+              <button
+                type="button"
+                onClick={() => setRightCardMode('LIGHT_TABLE')}
+                className={`px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider flex items-center gap-1 transition-all ${
+                  rightCardMode === 'LIGHT_TABLE'
+                    ? 'gold-gradient-btn text-[#041810] shadow'
+                    : 'text-[#CBD5E1] hover:text-[#F5CE68]'
+                }`}
+              >
+                <Sparkles className="w-2.5 h-2.5" />
+                <span>Light Table</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => setRightCardMode('FEAST')}
+                className={`px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider flex items-center gap-1 transition-all ${
+                  rightCardMode === 'FEAST'
+                    ? 'gold-gradient-btn text-[#041810] shadow'
+                    : 'text-[#CBD5E1] hover:text-[#F5CE68]'
+                }`}
+              >
+                <Leaf className="w-2.5 h-2.5" />
+                <span>Odia Feast</span>
+              </button>
             </div>
+
+            <div className="relative w-full max-w-[260px] h-48 sm:h-56 rounded-3xl overflow-hidden border-2 border-[#D4AF37]/60 shadow-[0_15px_40px_rgba(0,0,0,0.7),0_0_20px_rgba(212,175,55,0.25)] group">
+              {rightCardMode === 'LIGHT_TABLE' ? (
+                <>
+                  <img
+                    src="/images/royal-light-table.jpg"
+                    alt="Royal LED Light Table & Illuminated Banquet Buffet"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#041810] via-[#041810]/40 to-transparent" />
+
+                  {/* Golden corner badge */}
+                  <span className="absolute top-3 right-3 px-3 py-1 rounded-full bg-[#041810]/90 border border-[#D4AF37] text-[10px] font-black text-[#F5CE68] uppercase tracking-wider flex items-center gap-1 shadow-md">
+                    <Sparkles className="w-3 h-3 text-[#FFDF73] animate-pulse" />
+                    <span>Live Light Table</span>
+                  </span>
+
+                  {/* Light table text */}
+                  <div className="absolute bottom-3 left-3 right-3 text-right">
+                    <p className="text-xs font-bold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
+                      Royal LED Light Table
+                    </p>
+                    <p className="text-[10px] text-[#F5CE68] font-medium">
+                      Ice-Glass & Neon Ambience
+                    </p>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <img
+                    src="/images/royal-odia-feast.jpg"
+                    alt="Authentic Royal Odia Banana Leaf Wedding Feast"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#041810] via-[#041810]/40 to-transparent" />
+
+                  {/* Golden corner badge */}
+                  <span className="absolute top-3 right-3 px-3 py-1 rounded-full bg-[#041810]/90 border border-[#D4AF37] text-[10px] font-black text-[#F5CE68] uppercase tracking-wider flex items-center gap-1 shadow-md">
+                    <Leaf className="w-3 h-3 text-[#4ADE80]" />
+                    <span>Banana Leaf Feast</span>
+                  </span>
+
+                  {/* Feast text */}
+                  <div className="absolute bottom-3 left-3 right-3 text-right">
+                    <p className="text-xs font-bold text-white drop-shadow">
+                      Royal Odia & Indian Thali
+                    </p>
+                    <p className="text-[10px] text-[#F5CE68]">
+                      Dalma, Mutton Kasa, Biryani
+                    </p>
+                  </div>
+                </>
+              )}
+            </div>
+
             <p className="text-[11px] text-[#CBD5E1] text-center lg:text-right max-w-[240px]">
-              Traditional authentic feast with hot fragrant rice, Puri/Roti, Dalma, and brass bowl service.
+              {rightCardMode === 'LIGHT_TABLE'
+                ? 'Illuminated LED glass buffet tables & glowing reception counters for evening gala celebrations.'
+                : 'Traditional authentic feast with hot fragrant rice, Puri/Roti, Dalma, and brass bowl service.'}
             </p>
           </div>
 
