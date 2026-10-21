@@ -218,8 +218,49 @@ export async function initDatabase(): Promise<DatabaseSchema> {
         }
         if (dbData.packages && Array.isArray(dbData.packages)) {
           const basic = dbData.packages.find(p => p.name.includes('BASIC'));
-          if (basic && basic.pricePerPerson !== 850) {
+          if (basic) {
             basic.pricePerPerson = 850;
+            basic.description = 'Ideal for intimate family gatherings, birthday get-togethers, and budget-friendly traditional get-togethers.';
+            basic.menuItemsCount = 29;
+            basic.menuTitle = 'NORMAL MENU';
+            basic.cardBadge = '2 Starters • 4 Mains';
+            basic.image = basic.image || 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80';
+            basic.menuCategories = [
+              { category: 'WELCOME DRINKS', items: ['Dahi Chhanch / Kesar Milk'] },
+              { category: 'SOUP COUNTER', items: ['Lemon Coriender Soup', 'Chicken H/S Soup'] },
+              { category: 'STARTER (VEG)', items: ['Papudi Chaat / Aloo Tiki Chaat', 'Panipuri Counter', 'Paneer Crispy', 'Veg Cutlet', 'Corn Chaat'] },
+              { category: 'STARTER (NON-VEG)', items: ['Chicken Pakoda', 'Egg Chop'] },
+              { category: 'PLATE COUNTER', items: ['Green Salad', 'Papad', 'Dahibara', 'Pickles'] },
+              { category: 'MAIN COURSE (VEG)', items: ['Rice (Veriety)', 'Rumali Roti / Chakuli', 'Dal Fry', 'Khatta', 'Paneer (Masala/Hydrabadi)', 'Mix Veg (Navaratna/Punjabi)', 'Mushroom Besar'] },
+              { category: 'MAIN COURSE (NON-VEG)', items: ['Mutton Rogan Juice', 'Fish Fry', 'Chicken Hyderabadi'] },
+              { category: 'SWEET DESERT', items: ['Chhena Payes', 'Hot Jalebi', 'Ice Cream', 'Rasogola'] },
+              { category: 'SPECIAL COUNTERS', items: ['Water Bottle', 'Paan Counter'] }
+            ];
+            basic.packageInclusions = [
+              '2 Starters & Appetizers',
+              '4 Main Course Delicacies',
+              '1 Royal Sweets & Desserts',
+              '1 Welcome Coolers',
+              'Uniformed Service Crew Included',
+              'Commercial Warming Chafing Buffet Setup'
+            ];
+            basic.signatureHighlights = [
+              '1 Welcome Beverage (Aam Panna / Jaljeera / Dahi Chhanch)',
+              '2 Starters (Veg Crispy / Pakora / Chaat)',
+              '1 Paneer / Veg Specialty'
+            ];
+            basic.features = [
+              'Welcome Drinks: Dahi Chhanch / Kesar Milk',
+              'Soup Counter: Lemon Coriender Soup, Chicken H/S Soup',
+              'Starter (Veg): Papudi/Aloo Tiki Chaat, Panipuri Counter, Paneer Crispy, Veg Cutlet, Corn Chaat',
+              'Starter (Non-Veg): Chicken Pakoda, Egg Chop',
+              'Plate Counter: Green Salad, Papad, Dahibara, Pickles',
+              'Main Course (Veg): Rice (Veriety), Rumali Roti / Chakuli, Dal Fry, Khatta, Paneer, Mix Veg, Mushroom Besar',
+              'Main Course (Non-Veg): Mutton Rogan Juice, Fish Fry, Chicken Hyderabadi',
+              'Sweet Desert: Chhena Payes, Hot Jalebi, Ice Cream, Rasogola',
+              'Special Inclusions: Water Bottle Service & Paan Counter',
+              'Package Inclusions: 2 Starters, 4 Mains, 1 Dessert, 1 Drink, Crew & Chafing Buffet'
+            ];
             added = true;
           }
           const prem = dbData.packages.find(p => p.name.includes('PREMIUM'));
@@ -228,8 +269,100 @@ export async function initDatabase(): Promise<DatabaseSchema> {
             added = true;
           }
           let del = dbData.packages.find(p => p.name.includes('DELUXE'));
-          if (del && del.pricePerPerson !== 1050) {
+          if (del) {
             del.pricePerPerson = 1050;
+            del.description = 'The pinnacle of winter ice-glass banquet hospitality with master live counters, VIP buffet styling, and grand multi-course delicacies.';
+            del.startersCount = 6;
+            del.mainCourseCount = 12;
+            del.dessertCount = 4;
+            del.drinksCount = 3;
+            del.staffIncluded = true;
+            del.decorationOption = true;
+            del.menuItemsCount = 44;
+            del.menuTitle = 'DELUX MENU';
+            del.cardBadge = '6 Starters • 12 Mains';
+            del.image = del.image || 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80';
+            del.menuCategories = [
+              {
+                category: 'WELCOME DRINKS',
+                items: ['Fire Mocktail', 'Smoky Mocktail', 'Masala Drinks', 'Badam Kesar Milk']
+              },
+              {
+                category: 'SOUP COUNTER',
+                items: ['Veg Sweet Corn Soup', 'Chicken H/S Soup']
+              },
+              {
+                category: 'STARTER (VEG)',
+                items: [
+                  'Papudi Chaat / Aloo Tiki Chaat',
+                  'Gupchup Counter',
+                  'Harabara Kabab / Dahi Kabab',
+                  'American Corn Crispy',
+                  'Paneer Tikka',
+                  'Mushroom salt & Pepper',
+                  'Chowmein'
+                ]
+              },
+              {
+                category: 'STARTER (NON-VEG)',
+                items: ['Garlic Prawn', 'Fish Patrapoda', 'Chicken Kabab (Malai, Reshmi, Hariyali)', 'Egg Devil']
+              },
+              {
+                category: 'PLATE COUNTER',
+                items: ['Green Salad', 'Papad', 'Dahibara', 'Pickles', 'Nadia Pachedi', 'Dahi Rasgulla', 'Pasta Salad']
+              },
+              {
+                category: 'MAIN COURSE (VEG)',
+                items: [
+                  'Rice (Variety)',
+                  'Rumali Roti',
+                  'Chakuli / Butter Naan',
+                  'Dal Makhani',
+                  'Pine Apple Jelly',
+                  'Paneer Pasinda / Tikka Masala',
+                  'Kadai Mushroom',
+                  'Navaratna Kurma',
+                  'Sijnal Veg'
+                ]
+              },
+              {
+                category: 'MAIN COURSE (NON-VEG)',
+                items: ['Mutton Rogan Josh', 'Dahi Fish', 'Garlic Chicken', 'Malai Prawn']
+              },
+              {
+                category: 'SWEET DESSERT',
+                items: ['Kheer Sagar', 'Ice Cream', 'Baked Rasgula', 'Gajar Halwa']
+              },
+              {
+                category: 'SPECIAL COUNTERS',
+                items: ['Water Bottle', 'Paan Counter', 'Fruit Design Cutting']
+              }
+            ];
+            del.packageInclusions = [
+              '6 Starters & Appetizers',
+              '12 Main Course Delicacies',
+              '4 Royal Sweets & Desserts',
+              '3 Welcome Coolers',
+              'Uniformed Service Crew Included',
+              'Commercial Warming Chafing Buffet Setup'
+            ];
+            del.signatureHighlights = [
+              '6 Live Counters (Chaat, Live BBQ & Seafood)',
+              'Mutton Rogan Josh & Malai Prawn Delicacies',
+              'Artisanal Desserts & Fruit Design Cutting'
+            ];
+            del.features = [
+              'Welcome Drinks: Fire Mocktail, Smoky Mocktail, Masala Drinks, Badam Kesar Milk',
+              'Soup Counter: Veg Sweet Corn Soup, Chicken H/S Soup',
+              'Starter (Veg): Papudi/Aloo Tiki Chaat, Gupchup Counter, Harabara/Dahi Kabab, American Corn Crispy, Paneer Tikka, Mushroom salt & Pepper, Chowmein',
+              'Starter (Non-Veg): Garlic Prawn, Fish Patrapoda, Chicken Kabab (Malai/Reshmi/Hariyali), Egg Devil',
+              'Plate Counter: Green Salad, Papad, Dahibara, Pickles, Nadia Pachedi, Dahi Rasgulla, Pasta Salad',
+              'Main Course (Veg): Rice (Variety), Rumali Roti, Chakuli/Butter Naan, Dal Makhani, Pine Apple Jelly, Paneer Pasinda/Tikka Masala, Kadai Mushroom, Navaratna Kurma, Sijnal Veg',
+              'Main Course (Non-Veg): Mutton Rogan Josh, Dahi Fish, Garlic Chicken, Malai Prawn',
+              'Sweet Dessert: Kheer Sagar, Ice Cream, Baked Rasgula, Gajar Halwa',
+              'Special Inclusions: Water Bottle, Paan Counter, Fruit Design Cutting',
+              'Package Inclusions: 6 Starters, 12 Mains, 4 Desserts, 3 Drinks, Crew & Chafing Buffet'
+            ];
             added = true;
           } else if (!del) {
             dbData.packages.push({
@@ -243,15 +376,90 @@ export async function initDatabase(): Promise<DatabaseSchema> {
               drinksCount: 3,
               staffIncluded: true,
               decorationOption: true,
+              menuItemsCount: 44,
+              menuTitle: 'DELUX MENU',
+              cardBadge: '6 Starters • 12 Mains',
+              image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80',
+              menuCategories: [
+                {
+                  category: 'WELCOME DRINKS',
+                  items: ['Fire Mocktail', 'Smoky Mocktail', 'Masala Drinks', 'Badam Kesar Milk']
+                },
+                {
+                  category: 'SOUP COUNTER',
+                  items: ['Veg Sweet Corn Soup', 'Chicken H/S Soup']
+                },
+                {
+                  category: 'STARTER (VEG)',
+                  items: [
+                    'Papudi Chaat / Aloo Tiki Chaat',
+                    'Gupchup Counter',
+                    'Harabara Kabab / Dahi Kabab',
+                    'American Corn Crispy',
+                    'Paneer Tikka',
+                    'Mushroom salt & Pepper',
+                    'Chowmein'
+                  ]
+                },
+                {
+                  category: 'STARTER (NON-VEG)',
+                  items: ['Garlic Prawn', 'Fish Patrapoda', 'Chicken Kabab (Malai, Reshmi, Hariyali)', 'Egg Devil']
+                },
+                {
+                  category: 'PLATE COUNTER',
+                  items: ['Green Salad', 'Papad', 'Dahibara', 'Pickles', 'Nadia Pachedi', 'Dahi Rasgulla', 'Pasta Salad']
+                },
+                {
+                  category: 'MAIN COURSE (VEG)',
+                  items: [
+                    'Rice (Variety)',
+                    'Rumali Roti',
+                    'Chakuli / Butter Naan',
+                    'Dal Makhani',
+                    'Pine Apple Jelly',
+                    'Paneer Pasinda / Tikka Masala',
+                    'Kadai Mushroom',
+                    'Navaratna Kurma',
+                    'Sijnal Veg'
+                  ]
+                },
+                {
+                  category: 'MAIN COURSE (NON-VEG)',
+                  items: ['Mutton Rogan Josh', 'Dahi Fish', 'Garlic Chicken', 'Malai Prawn']
+                },
+                {
+                  category: 'SWEET DESSERT',
+                  items: ['Kheer Sagar', 'Ice Cream', 'Baked Rasgula', 'Gajar Halwa']
+                },
+                {
+                  category: 'SPECIAL COUNTERS',
+                  items: ['Water Bottle', 'Paan Counter', 'Fruit Design Cutting']
+                }
+              ],
+              packageInclusions: [
+                '6 Starters & Appetizers',
+                '12 Main Course Delicacies',
+                '4 Royal Sweets & Desserts',
+                '3 Welcome Coolers',
+                'Uniformed Service Crew Included',
+                'Commercial Warming Chafing Buffet Setup'
+              ],
+              signatureHighlights: [
+                '6 Live Counters (Chaat, Live BBQ & Seafood)',
+                'Mutton Rogan Josh & Malai Prawn Delicacies',
+                'Artisanal Desserts & Fruit Design Cutting'
+              ],
               features: [
-                '6 Live Master Counter Starters',
-                'VIP Odia Mutton Kasa + Prawn Malai Curry',
-                'Butter Chicken + Crab Masala / Fish Besara',
-                'Paneer Lababdar + Malai Kofta + Dal Makhani',
-                'Zafrani Dum Biryani + Dry Fruit Pulao',
-                'Live Tandoor Breads Assortment',
-                '4 Luxury Desserts (Chhena Poda, Rasmalai, Ice Cream, Hot Gulab Jamun)',
-                '5-Star Royal Ice Banquet Table Setup & Executive Service Staff',
+                'Welcome Drinks: Fire Mocktail, Smoky Mocktail, Masala Drinks, Badam Kesar Milk',
+                'Soup Counter: Veg Sweet Corn Soup, Chicken H/S Soup',
+                'Starter (Veg): Papudi/Aloo Tiki Chaat, Gupchup Counter, Harabara/Dahi Kabab, American Corn Crispy, Paneer Tikka, Mushroom salt & Pepper, Chowmein',
+                'Starter (Non-Veg): Garlic Prawn, Fish Patrapoda, Chicken Kabab (Malai/Reshmi/Hariyali), Egg Devil',
+                'Plate Counter: Green Salad, Papad, Dahibara, Pickles, Nadia Pachedi, Dahi Rasgulla, Pasta Salad',
+                'Main Course (Veg): Rice (Variety), Rumali Roti, Chakuli/Butter Naan, Dal Makhani, Pine Apple Jelly, Paneer Pasinda/Tikka Masala, Kadai Mushroom, Navaratna Kurma, Sijnal Veg',
+                'Main Course (Non-Veg): Mutton Rogan Josh, Dahi Fish, Garlic Chicken, Malai Prawn',
+                'Sweet Dessert: Kheer Sagar, Ice Cream, Baked Rasgula, Gajar Halwa',
+                'Special Inclusions: Water Bottle, Paan Counter, Fruit Design Cutting',
+                'Package Inclusions: 6 Starters, 12 Mains, 4 Desserts, 3 Drinks, Crew & Chafing Buffet'
               ],
               popular: false,
             });
@@ -633,22 +841,93 @@ export async function initDatabase(): Promise<DatabaseSchema> {
       id: 'pkg_1',
       name: 'BASIC PACKAGE',
       pricePerPerson: 850,
-      description: 'Clean, elegant frosted-glass spread ideal for intimate family gatherings, birthday get-togethers, and traditional pujas.',
+      description: 'Ideal for intimate family gatherings, birthday get-togethers, and budget-friendly traditional get-togethers.',
       startersCount: 2,
       mainCourseCount: 4,
       dessertCount: 1,
       drinksCount: 1,
       staffIncluded: true,
       decorationOption: false,
+      menuItemsCount: 29,
+      menuTitle: 'NORMAL MENU',
+      cardBadge: '2 Starters • 4 Mains',
+      image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80',
+      menuCategories: [
+        {
+          category: 'WELCOME DRINKS',
+          items: ['Dahi Chhanch / Kesar Milk'],
+        },
+        {
+          category: 'SOUP COUNTER',
+          items: ['Lemon Coriender Soup', 'Chicken H/S Soup'],
+        },
+        {
+          category: 'STARTER (VEG)',
+          items: [
+            'Papudi Chaat / Aloo Tiki Chaat',
+            'Panipuri Counter',
+            'Paneer Crispy',
+            'Veg Cutlet',
+            'Corn Chaat',
+          ],
+        },
+        {
+          category: 'STARTER (NON-VEG)',
+          items: ['Chicken Pakoda', 'Egg Chop'],
+        },
+        {
+          category: 'PLATE COUNTER',
+          items: ['Green Salad', 'Papad', 'Dahibara', 'Pickles'],
+        },
+        {
+          category: 'MAIN COURSE (VEG)',
+          items: [
+            'Rice (Veriety)',
+            'Rumali Roti / Chakuli',
+            'Dal Fry',
+            'Khatta',
+            'Paneer (Masala/Hydrabadi)',
+            'Mix Veg (Navaratna/Punjabi)',
+            'Mushroom Besar',
+          ],
+        },
+        {
+          category: 'MAIN COURSE (NON-VEG)',
+          items: ['Mutton Rogan Juice', 'Fish Fry', 'Chicken Hyderabadi'],
+        },
+        {
+          category: 'SWEET DESERT',
+          items: ['Chhena Payes', 'Hot Jalebi', 'Ice Cream', 'Rasogola'],
+        },
+        {
+          category: 'SPECIAL COUNTERS',
+          items: ['Water Bottle', 'Paan Counter'],
+        },
+      ],
+      packageInclusions: [
+        '2 Starters & Appetizers',
+        '4 Main Course Delicacies',
+        '1 Royal Sweets & Desserts',
+        '1 Welcome Coolers',
+        'Uniformed Service Crew Included',
+        'Commercial Warming Chafing Buffet Setup',
+      ],
+      signatureHighlights: [
+        '1 Welcome Beverage (Aam Panna / Jaljeera / Dahi Chhanch)',
+        '2 Starters (Veg Crispy / Pakora / Chaat)',
+        '1 Paneer / Veg Specialty',
+      ],
       features: [
-        '1 Welcome Cooler (Fresh Lime Soda / Jaljeera)',
-        '2 Starters (Veg Crispy / Corn Seekh)',
-        '1 Paneer / Seasonal Veg Specialty',
-        '1 Dal Tadka / Authentic Dalma',
-        'Steamed Basmati Rice + Phulka / Roti',
-        '1 Traditional Sweet (Gulab Jamun)',
-        'Salad, Papad & House Pickles',
-        'Uniformed Service Staff & Chafing Station',
+        'Welcome Drinks: Dahi Chhanch / Kesar Milk',
+        'Soup Counter: Lemon Coriender Soup, Chicken H/S Soup',
+        'Starter (Veg): Papudi/Aloo Tiki Chaat, Panipuri Counter, Paneer Crispy, Veg Cutlet, Corn Chaat',
+        'Starter (Non-Veg): Chicken Pakoda, Egg Chop',
+        'Plate Counter: Green Salad, Papad, Dahibara, Pickles',
+        'Main Course (Veg): Rice (Veriety), Rumali Roti / Chakuli, Dal Fry, Khatta, Paneer, Mix Veg, Mushroom Besar',
+        'Main Course (Non-Veg): Mutton Rogan Juice, Fish Fry, Chicken Hyderabadi',
+        'Sweet Desert: Chhena Payes, Hot Jalebi, Ice Cream, Rasogola',
+        'Special Inclusions: Water Bottle Service & Paan Counter',
+        'Package Inclusions: 2 Starters, 4 Mains, 1 Dessert, 1 Drink, Crew & Chafing Buffet',
       ],
       popular: false,
     },
@@ -710,15 +989,90 @@ export async function initDatabase(): Promise<DatabaseSchema> {
       drinksCount: 3,
       staffIncluded: true,
       decorationOption: true,
-      features: [
+      menuItemsCount: 44,
+      menuTitle: 'DELUX MENU',
+      cardBadge: '6 Starters • 12 Mains',
+      image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80',
+      menuCategories: [
+        {
+          category: 'WELCOME DRINKS',
+          items: ['Fire Mocktail', 'Smoky Mocktail', 'Masala Drinks', 'Badam Kesar Milk'],
+        },
+        {
+          category: 'SOUP COUNTER',
+          items: ['Veg Sweet Corn Soup', 'Chicken H/S Soup'],
+        },
+        {
+          category: 'STARTER (VEG)',
+          items: [
+            'Papudi Chaat / Aloo Tiki Chaat',
+            'Gupchup Counter',
+            'Harabara Kabab / Dahi Kabab',
+            'American Corn Crispy',
+            'Paneer Tikka',
+            'Mushroom salt & Pepper',
+            'Chowmein',
+          ],
+        },
+        {
+          category: 'STARTER (NON-VEG)',
+          items: ['Garlic Prawn', 'Fish Patrapoda', 'Chicken Kabab (Malai, Reshmi, Hariyali)', 'Egg Devil'],
+        },
+        {
+          category: 'PLATE COUNTER',
+          items: ['Green Salad', 'Papad', 'Dahibara', 'Pickles', 'Nadia Pachedi', 'Dahi Rasgulla', 'Pasta Salad'],
+        },
+        {
+          category: 'MAIN COURSE (VEG)',
+          items: [
+            'Rice (Variety)',
+            'Rumali Roti',
+            'Chakuli / Butter Naan',
+            'Dal Makhani',
+            'Pine Apple Jelly',
+            'Paneer Pasinda / Tikka Masala',
+            'Kadai Mushroom',
+            'Navaratna Kurma',
+            'Sijnal Veg',
+          ],
+        },
+        {
+          category: 'MAIN COURSE (NON-VEG)',
+          items: ['Mutton Rogan Josh', 'Dahi Fish', 'Garlic Chicken', 'Malai Prawn'],
+        },
+        {
+          category: 'SWEET DESSERT',
+          items: ['Kheer Sagar', 'Ice Cream', 'Baked Rasgula', 'Gajar Halwa'],
+        },
+        {
+          category: 'SPECIAL COUNTERS',
+          items: ['Water Bottle', 'Paan Counter', 'Fruit Design Cutting'],
+        },
+      ],
+      packageInclusions: [
+        '6 Starters & Appetizers',
+        '12 Main Course Delicacies',
+        '4 Royal Sweets & Desserts',
+        '3 Welcome Coolers',
+        'Uniformed Service Crew Included',
+        'Commercial Warming Chafing Buffet Setup',
+      ],
+      signatureHighlights: [
         '6 Live Counters (Chaat, Live BBQ & Seafood)',
-        'Royal Odia Mutton Kasa, Prawn Malai Curry, Fish Fry',
-        'Hyderabadi Dum Biryani & Fragrant Pulao',
-        'Shahi Paneer, Dal Bukhara & Special Breads',
-        'Assorted Breads from Live Tandoor',
-        '4 Grand Artisanal Sweets (Chhena Poda, Rasmalai, Malpua)',
-        'VIP Table Decor & Uniformed Executive Captains',
-        'Complimentary Welcome Ice Mocktail Bar',
+        'Mutton Rogan Josh & Malai Prawn Delicacies',
+        'Artisanal Desserts & Fruit Design Cutting',
+      ],
+      features: [
+        'Welcome Drinks: Fire Mocktail, Smoky Mocktail, Masala Drinks, Badam Kesar Milk',
+        'Soup Counter: Veg Sweet Corn Soup, Chicken H/S Soup',
+        'Starter (Veg): Papudi/Aloo Tiki Chaat, Gupchup Counter, Harabara/Dahi Kabab, American Corn Crispy, Paneer Tikka, Mushroom salt & Pepper, Chowmein',
+        'Starter (Non-Veg): Garlic Prawn, Fish Patrapoda, Chicken Kabab (Malai/Reshmi/Hariyali), Egg Devil',
+        'Plate Counter: Green Salad, Papad, Dahibara, Pickles, Nadia Pachedi, Dahi Rasgulla, Pasta Salad',
+        'Main Course (Veg): Rice (Variety), Rumali Roti, Chakuli/Butter Naan, Dal Makhani, Pine Apple Jelly, Paneer Pasinda/Tikka Masala, Kadai Mushroom, Navaratna Kurma, Sijnal Veg',
+        'Main Course (Non-Veg): Mutton Rogan Josh, Dahi Fish, Garlic Chicken, Malai Prawn',
+        'Sweet Dessert: Kheer Sagar, Ice Cream, Baked Rasgula, Gajar Halwa',
+        'Special Inclusions: Water Bottle, Paan Counter, Fruit Design Cutting',
+        'Package Inclusions: 6 Starters, 12 Mains, 4 Desserts, 3 Drinks, Crew & Chafing Buffet',
       ],
       popular: false,
     },

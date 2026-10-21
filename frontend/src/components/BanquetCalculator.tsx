@@ -21,12 +21,18 @@ export const BanquetCalculator: React.FC<BanquetCalculatorProps> = ({
       id: 'BASIC',
       name: 'BASIC',
       rate: 850,
-      badge: 'Essential Banquet',
+      badge: 'NORMAL MENU • Essential Banquet',
       starters: 2,
       mains: 4,
       desserts: 1,
       drinks: 1,
-      highlights: ['Fresh Lime Cooler', 'Dal Tadka / Dalma', 'Gulab Jamun', 'Uniformed Crew & Chafers'],
+      highlights: [
+        '29 Delicacies from Normal Menu (Image 2)',
+        'Dahi Chhanch, Lemon Coriander & Chicken Soup',
+        'Veg & Non-Veg Starters (Chaat, Panipuri, Chicken Pakoda, Egg Chop)',
+        'Mutton Rogan Juice, Fish Fry, Chicken Hyderabadi & Paneer',
+        'Chhena Payes, Hot Jalebi, Rasogola, Water & Paan Counter',
+      ],
     },
     {
       id: 'PREMIUM',
@@ -55,7 +61,13 @@ export const BanquetCalculator: React.FC<BanquetCalculatorProps> = ({
       mains: 12,
       desserts: 4,
       drinks: 3,
-      highlights: ['6 Live Food Stations', 'Chilika Prawns & Fish Fry', 'Artisanal Dessert Lounge', 'VIP Uniformed Captains'],
+      highlights: [
+        '44 Delicacies from Delux Menu (Image 2)',
+        'Fire/Smoky Mocktails & Sweet Corn Soup',
+        'Live Gupchup, Chaat, Garlic Prawn & Fish Patrapoda',
+        'Mutton Rogan Josh, Malai Prawn & Dal Makhani',
+        'Kheer Sagar, Baked Rasgulla, Fruit Design Cutting & Paan',
+      ],
     },
   ];
 

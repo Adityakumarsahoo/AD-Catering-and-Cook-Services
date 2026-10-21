@@ -1331,38 +1331,42 @@ export const Menu: React.FC = () => {
               <div className="space-y-4">
                 <div>
                   <h3 className="font-display font-black text-2xl text-white">BASIC</h3>
-                  <p className="text-xs text-[#CBD5E1] mt-1">Clean, elegant celebratory feast</p>
+                  <p className="text-xs text-[#CBD5E1] mt-1">Normal Menu • 29 Delicacies from Image 2</p>
                   <p className="font-display font-black text-2xl text-[#F5CE68] mt-2">₹850 <span className="text-xs text-[#CBD5E1] font-semibold">/ Person</span></p>
                 </div>
 
                 <div className="py-3 border-y border-[#D4AF37]/25 space-y-3 text-xs text-[#CBD5E1]">
                   <div className="flex items-center justify-between">
                     <span>Dishes Count:</span>
-                    <strong className="text-white">45+ Selections</strong>
+                    <strong className="text-white">29 Delicacies (Normal Menu)</strong>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span>Welcome Coolers:</span>
-                    <strong className="text-white">1 Choice (Lime Soda / Jaljeera)</strong>
+                    <span>Welcome Drinks:</span>
+                    <strong className="text-white">Dahi Chhanch / Kesar Milk</strong>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span>Starters:</span>
-                    <strong className="text-white">2 (Veg Crispy / Corn Seekh)</strong>
+                    <span>Soup Counter:</span>
+                    <strong className="text-white">Lemon Coriander & Chicken H/S</strong>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span>Starters (Veg/Non):</span>
+                    <strong className="text-white">Chaat, Panipuri, Chicken Pakoda, Egg Chop</strong>
                   </div>
                   <div className="flex items-center justify-between">
                     <span>Main Courses:</span>
-                    <strong className="text-white">Chicken / Paneer + Dalma</strong>
+                    <strong className="text-white">Mutton Rogan Juice, Fish Fry, Chicken, Paneer</strong>
                   </div>
                   <div className="flex items-center justify-between">
                     <span>Breads & Rice:</span>
-                    <strong className="text-white">Tandoori Roti, Phulka & Basmati</strong>
+                    <strong className="text-white">Rumali Roti / Chakuli & Rice (Variety)</strong>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span>Desserts:</span>
-                    <strong className="text-white">1 Classic (Gulab Jamun)</strong>
+                    <span>Sweet Dessert:</span>
+                    <strong className="text-white">Chhena Payes, Hot Jalebi, Rasogola</strong>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span>Staff & Warmers:</span>
-                    <strong className="text-emerald-400">Included</strong>
+                    <span>Extras & Setup:</span>
+                    <strong className="text-emerald-400">Water Bottle, Paan Counter & Crew</strong>
                   </div>
                 </div>
               </div>
@@ -1435,8 +1439,8 @@ export const Menu: React.FC = () => {
                 <div className="flex items-center justify-between">
                   <div>
                     <h3 className="font-display font-black text-2xl text-white">DELUXE</h3>
-                    <p className="text-xs text-[#CBD5E1] mt-1">The pinnacle of VIP hospitality</p>
-                    <p className="font-display font-black text-2xl text-[#F5CE68] mt-2">₹1050 <span className="text-xs text-[#CBD5E1] font-semibold">/ Person</span></p>
+                    <p className="text-xs text-[#CBD5E1] mt-1">Delux Menu • 44 Delicacies from Image 2</p>
+                    <p className="font-display font-black text-2xl text-[#F5CE68] mt-2">₹1,050 <span className="text-xs text-[#CBD5E1] font-semibold">/ Person</span></p>
                   </div>
                   <span className="px-3 py-1 rounded-full bg-[#041810] text-[#F5CE68] text-[10px] font-black uppercase shadow-sm border border-[#D4AF37]/50">
                     VIP LUXURY
@@ -1446,31 +1450,35 @@ export const Menu: React.FC = () => {
                 <div className="py-3 border-y border-[#D4AF37]/30 space-y-3 text-xs text-[#CBD5E1]">
                   <div className="flex items-center justify-between">
                     <span>Dishes Count:</span>
-                    <strong className="text-[#F5CE68]">All 108+ Delicacies</strong>
+                    <strong className="text-[#F5CE68]">44 Delicacies (Delux Menu)</strong>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span>Welcome Coolers:</span>
-                    <strong className="text-white">Full Mocktail & Ice Bar</strong>
+                    <span>Welcome Drinks:</span>
+                    <strong className="text-white">Fire/Smoky Mocktail, Badam Kesar Milk</strong>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span>Starters:</span>
-                    <strong className="text-white">6 (Live BBQ, Prawns & Kebabs)</strong>
+                    <span>Soup Counter:</span>
+                    <strong className="text-white">Veg Sweet Corn & Chicken H/S Soup</strong>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span>Starters (Veg/Non):</span>
+                    <strong className="text-white">Gupchup, Harabara, Garlic Prawn, Fish Patrapoda</strong>
                   </div>
                   <div className="flex items-center justify-between">
                     <span>Main Courses:</span>
-                    <strong className="text-white">Mutton Kasa + Prawn + Fish</strong>
+                    <strong className="text-white">Mutton Rogan Josh, Malai Prawn, Dahi Fish</strong>
                   </div>
                   <div className="flex items-center justify-between">
                     <span>Breads & Rice:</span>
-                    <strong className="text-white">Assorted Tandoor Baskets & Biryani</strong>
+                    <strong className="text-white">Rumali Roti, Butter Naan, Chakuli & Rice</strong>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span>Desserts:</span>
-                    <strong className="text-white">4 Grand Artisanal Sweets</strong>
+                    <span>Sweet Dessert:</span>
+                    <strong className="text-white">Kheer Sagar, Baked Rasgula, Gajar Halwa</strong>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span>Live Counters:</span>
-                    <strong className="text-emerald-400">Live BBQ + Paan + Fruit Lounge</strong>
+                    <span>Specials & Extras:</span>
+                    <strong className="text-emerald-400">Fruit Design Cutting, Water & Paan Counter</strong>
                   </div>
                 </div>
               </div>

@@ -81,7 +81,21 @@ export interface CateringPackage {
   isFeatured?: boolean;
   minGuests?: number;
   sortOrder?: number;
+  menuItemsCount?: number;
+  menuTitle?: string;
+  cardBadge?: string;
+  image?: string;
+  menuCategories?: Array<{
+    category: string;
+    items: string[];
+    id?: string;
+    group?: string;
+    icon?: string;
+  }>;
+  packageInclusions?: string[];
+  signatureHighlights?: string[];
 }
+
 
 export interface GalleryItem {
   id: string;
