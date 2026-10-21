@@ -7,6 +7,7 @@ import { MagneticButton } from '../components/MagneticButton.js';
 import { AnimatedCounter } from '../components/AnimatedCounter.js';
 import { FoodDetailModal } from '../components/FoodDetailModal.js';
 import { BanquetCalculator } from '../components/BanquetCalculator.js';
+import { BanquetPackagesSection } from '../components/BanquetPackagesSection.js';
 import { CateringHeroBanner } from '../components/CateringHeroBanner.js';
 import { ADBrandEmblem } from '../components/ADBrandEmblem.js';
 import { defaultServices } from '../data/defaultServices.js';
@@ -73,72 +74,7 @@ export const Home: React.FC = () => {
     loadData();
   }, []);
 
-  // Map and order the 3 core packages from single source of truth
-  const basicPkg = packages.find((p) => p.name.includes('BASIC')) || {
-    id: 'pkg_1',
-    name: 'BASIC',
-    pricePerPerson: 850,
-    description: 'Ideal for intimate family gatherings, birthday get-togethers, and budget-friendly traditional get-togethers.',
-    startersCount: 2,
-    mainCourseCount: 4,
-    dessertCount: 1,
-    drinksCount: 1,
-    image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80',
-    popular: false,
-  };
 
-  const premiumPkg = packages.find((p) => p.name.includes('PREMIUM')) || {
-    id: 'pkg_3',
-    name: 'PREMIUM',
-    pricePerPerson: 950,
-    description: 'Our most selected luxury spread with live starter counters, royal gravies, aromatic dum biryani, and artisanal desserts.',
-    startersCount: 4,
-    mainCourseCount: 8,
-    dessertCount: 3,
-    drinksCount: 2,
-    image: 'https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=800&q=80',
-    popular: true,
-  };
-
-  const deluxePkg = packages.find((p) => p.name.includes('DELUXE')) || {
-    id: 'pkg_deluxe',
-    name: 'DELUXE',
-    pricePerPerson: 1050,
-    description: 'The pinnacle of winter ice-glass banquet hospitality with master live counters, VIP buffet styling, and grand multi-course delicacies.',
-    startersCount: 6,
-    mainCourseCount: 12,
-    dessertCount: 4,
-    drinksCount: 3,
-    image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80',
-    popular: false,
-  };
-
-  const corePackages = [
-    {
-      ...basicPkg,
-      cleanName: 'BASIC',
-      badge: 'Essential Banquet',
-      cardStyle: 'glass-medium border border-[#D4AF37]/40 shadow-[0_20px_50px_rgba(0,0,0,0.4)]',
-      image: basicPkg.image || 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80',
-      btnStyle: 'gold-gradient-btn',
-    },
-    {
-      ...premiumPkg,
-      cleanName: 'PREMIUM',
-      badge: 'POPULAR',
-      cardStyle: 'glass-strong border-2 border-[#D4AF37] shadow-[0_25px_65px_rgba(0,0,0,0.6)] ring-2 ring-[#F5CE68]/40',
-      image: premiumPkg.image || 'https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=800&q=80',
-      btnStyle: 'gold-gradient-btn',
-    },
-    {
-      ...deluxePkg,
-      cleanName: 'DELUXE',
-      badge: 'VIP LUXURY',
-      cardStyle: 'glass-strong border-2 border-[#FFDF73] shadow-[0_30px_75px_rgba(0,0,0,0.7)] animate-luxury-border',
-      image: deluxePkg.image || 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80',
-      btnStyle: 'gold-gradient-btn',
-    },
-  ];
 
   return (
     <div className="relative overflow-hidden text-[#FAF8F5]">
@@ -704,97 +640,12 @@ export const Home: React.FC = () => {
             </p>
           </div>
 
-          {/* 3 Packages side-by-side on desktop */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-            {corePackages.map((pkg) => (
-              <TiltCard key={pkg.id} maxTilt={pkg.cleanName === 'PREMIUM' ? 4 : 3}>
-                <div
-                  className={`relative rounded-[36px] p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 liquid-shine h-full ${pkg.cardStyle}`}
-                >
-                  {pkg.cleanName === 'PREMIUM' ? (
-                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-[#D4AF37] to-[#F5CE68] text-[#041810] text-[10px] font-black uppercase tracking-wider shadow-md flex items-center gap-1">
-                      <Crown className="w-3 h-3" />
-                      <span>POPULAR</span>
-                    </span>
-                  ) : pkg.cleanName === 'DELUXE' ? (
-                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-emerald-950 to-[#041810] text-[#FFDF73] text-[10px] font-black uppercase tracking-wider shadow-md flex items-center gap-1 border border-[#D4AF37]">
-                      <Sparkles className="w-3 h-3 text-[#F5CE68]" />
-                      <span>VIP LUXURY</span>
-                    </span>
-                  ) : null}
-
-                  <div>
-                    {/* Food Photography Thumbnail */}
-                    <div className="relative h-44 rounded-2xl overflow-hidden mb-6 border border-[#D4AF37]/40 shadow-sm">
-                      <img
-                        src={pkg.image}
-                        alt={`${pkg.cleanName} Package Catering spread`}
-                        className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-108"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#020D08]/80 via-transparent to-transparent" />
-                      <span className="absolute bottom-3 left-3 text-xs font-bold text-[#F5CE68] px-3 py-1 rounded-full bg-[#041810]/85 backdrop-blur-md border border-[#D4AF37]/40">
-                        {pkg.startersCount} Starters • {pkg.mainCourseCount} Mains
-                      </span>
-                    </div>
-
-                    <h3 className="font-display font-black text-2xl text-white">{pkg.cleanName}</h3>
-                    <p className="text-xs text-[#CBD5E1] mt-1 min-h-[38px] leading-relaxed">
-                      {pkg.description}
-                    </p>
-                    
-                    {/* Smooth Entry Price Counter */}
-                    <div className="my-5 pb-4 border-b border-[#D4AF37]/25 flex items-baseline gap-1.5">
-                      <span className="text-3xl sm:text-4xl font-display font-black text-[#F5CE68]">
-                        <AnimatedCounter
-                          end={pkg.pricePerPerson}
-                          prefix="₹"
-                          triggerOnView={true}
-                          duration={1200}
-                          className="tabular-nums"
-                        />
-                      </span>
-                      <span className="text-xs text-[#94A3B8] font-semibold">/ Person</span>
-                    </div>
-
-                    <ul className="space-y-2.5 text-xs text-[#CBD5E1] mb-6">
-                      <li className="flex items-center gap-2">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-[#F5CE68] shrink-0" />
-                        <span>{pkg.startersCount} Starters & Appetizers</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-[#F5CE68] shrink-0" />
-                        <span>{pkg.mainCourseCount} Main Course Delicacies</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-[#F5CE68] shrink-0" />
-                        <span>{pkg.dessertCount} Royal Desserts</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-[#F5CE68] shrink-0" />
-                        <span>{pkg.drinksCount} Welcome Coolers</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-[#F5CE68] shrink-0" />
-                        <span>Staff & Chafing Warmer Setup</span>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <Link
-                    to={`/booking?package=${encodeURIComponent(pkg.name)}`}
-                    className={`w-full py-3.5 rounded-2xl text-xs font-bold text-center transition-all shadow-md active:scale-95 ${pkg.btnStyle}`}
-                  >
-                    Choose {pkg.cleanName}
-                  </Link>
-                </div>
-              </TiltCard>
-            ))}
-          </div>
-
-          {/* Interactive Live Banquet Price & Guest Calculator */}
-          <div className="mt-16">
-            <BanquetCalculator />
-          </div>
+          {/* Full Package Style Cards with Live In-Card Menus, Category Filtering & Authentic Modals */}
+          <BanquetPackagesSection
+            showHeader={false}
+            showCalculator={true}
+            showConsultationBanner={false}
+          />
 
         </div>
       </section>
