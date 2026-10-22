@@ -4,6 +4,8 @@ import { api } from '../services/api.js';
 import { TiltCard } from '../components/TiltCard.js';
 import { AnimatedCounter } from '../components/AnimatedCounter.js';
 import { BanquetCalculator } from '../components/BanquetCalculator.js';
+import { MinimumGuestsNotice } from '../components/MinimumGuestsNotice.js';
+import { BUSINESS_CONFIG } from '../config/cateringConfig.js';
 import {
   CheckCircle2,
   Sparkles,
@@ -19,6 +21,8 @@ import {
   FileText,
   Wine,
   Coffee,
+  Users,
+  PhoneCall,
 } from 'lucide-react';
 import { defaultPackages } from '../data/defaultData.js';
 
@@ -79,7 +83,7 @@ export const ROYAL_WEDDING_MENU_CATEGORIES: RoyalMenuCategory[] = [
     category: 'PLATE COUNTER',
     group: 'plate',
     icon: '🥗',
-    image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=400&q=80',
     items: ['Green Salad', 'Spout Salad', 'Rusian Salad', 'Papad', 'Dahibara', 'Pickles'],
   },
   {
@@ -173,7 +177,7 @@ export const NORMAL_MENU_CATEGORIES: RoyalMenuCategory[] = [
     category: 'PLATE COUNTER',
     group: 'plate',
     icon: '🥗',
-    image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=400&q=80',
     items: ['Green Salad', 'Papad', 'Dahibara', 'Pickles'],
   },
   {
@@ -268,7 +272,7 @@ export const DELUX_MENU_CATEGORIES: RoyalMenuCategory[] = [
     category: 'PLATE COUNTER',
     group: 'plate',
     icon: '🥗',
-    image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=400&q=80',
     items: ['Green Salad', 'Papad', 'Dahibara', 'Pickles', 'Nadia Pachedi', 'Dahi Rasgulla', 'Pasta Salad'],
   },
   {
@@ -400,7 +404,7 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
     drinksCount: 1,
     staffIncluded: true,
     decorationOption: false,
-    image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80',
+    image: '/images/luxury-buffet-setup.jpg',
     cardBadge: '2 Starters • 4 Mains',
     packageInclusions: [
       '2 Starters & Appetizers',
@@ -505,7 +509,7 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
       cleanName: 'BASIC',
       badge: 'NORMAL MENU • ₹850',
       cardStyle: 'glass-medium border border-[#D4AF37]/50 shadow-[0_20px_50px_rgba(0,0,0,0.5)] ring-1 ring-[#D4AF37]/30',
-      image: basicPkg.image || 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80',
+      image: basicPkg.image || '/images/luxury-buffet-setup.jpg',
       btnStyle: 'gold-gradient-btn',
     },
     {
@@ -547,6 +551,9 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
             </p>
           </div>
         )}
+
+        {/* Standard Catering Policy: Minimum Booking 500 Guests */}
+        <MinimumGuestsNotice variant="banner" className="mb-10" />
 
         {/* ====================================================
             RESPONSIVE 3-CARD GRID: BASIC (₹850), PREMIUM (₹950), DELUXE (₹1050)
@@ -702,7 +709,7 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
                             className="tabular-nums whitespace-nowrap"
                           />
                         </span>
-                        <span className="text-xs text-[#94A3B8] font-semibold whitespace-nowrap">/ Person</span>
+                        <span className="text-xs text-[#94A3B8] font-semibold whitespace-nowrap">/ Plate</span>
                       </div>
 
                       {isBasic && (
@@ -749,6 +756,25 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
                           <span>Delux Menu</span>
                         </button>
                       )}
+                    </div>
+
+                    {/* Serving Details & Minimum Booking Requirement */}
+                    <div className="mb-4 p-3 rounded-2xl bg-[#020F09]/90 border border-[#D4AF37]/35 space-y-1.5 text-[11px]">
+                      <div className="flex items-center justify-between text-[#F5CE68] font-bold">
+                        <span className="flex items-center gap-1.5">
+                          <Users className="w-3.5 h-3.5 text-[#F5CE68]" />
+                          <span>Minimum Booking: 500 Guests</span>
+                        </span>
+                        <span className="text-[10px] text-emerald-400 font-semibold px-2 py-0.5 rounded-full bg-emerald-950/80 border border-emerald-500/40">Standard</span>
+                      </div>
+                      <div className="flex items-center justify-between text-[#CBD5E1]">
+                        <span>Food Menu Included:</span>
+                        <strong className="text-white font-bold">{isBasic ? '29 Delicacies' : isPremium ? '36 Delicacies' : '44 Delicacies'}</strong>
+                      </div>
+                      <div className="flex items-center justify-between text-[#CBD5E1]">
+                        <span>Serving Details:</span>
+                        <span className="text-white">Buffet Handis & Uniformed Crew</span>
+                      </div>
                     </div>
 
                     {/* ====================================================
@@ -1254,12 +1280,12 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
                   {/* Primary & Secondary CTA Buttons */}
                   <div className="space-y-2 mt-auto pt-2">
                     <Link
-                      to={`/booking?package=${encodeURIComponent(pkg.name)}`}
+                      to={`/booking?package=${encodeURIComponent(pkg.name)}&guests=500`}
                       className={`w-full py-3.5 sm:py-4 rounded-2xl text-xs font-black text-center block transition-all shadow-md active:scale-95 ${pkg.btnStyle}`}
                     >
                       <span className="flex items-center justify-center gap-2">
                         <Calendar className="w-3.5 h-3.5" />
-                        <span>Choose {pkg.cleanName} (₹{pkg.pricePerPerson})</span>
+                        <span>Book {pkg.cleanName} (₹{pkg.pricePerPerson} / Plate)</span>
                         <ArrowRight className="w-3.5 h-3.5" />
                       </span>
                     </Link>
@@ -1311,6 +1337,39 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
               </TiltCard>
             );
           })}
+        </div>
+
+        {/* Informative Callout for Smaller Gatherings below 500 guests */}
+        <div className="mt-10 p-6 rounded-3xl bg-[#041810]/95 border-2 border-[#D4AF37]/50 text-center space-y-3 shadow-xl">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-950/70 border border-[#D4AF37]/50 text-xs font-bold text-[#F5CE68]">
+            <Users className="w-3.5 h-3.5 text-[#F5CE68]" />
+            <span>Special Enquiry for Smaller Gatherings</span>
+          </div>
+          <h4 className="font-display font-black text-xl text-white">
+            Looking for catering for fewer than 500 guests?
+          </h4>
+          <p className="text-xs sm:text-sm text-[#CBD5E1] max-w-2xl mx-auto leading-relaxed">
+            We also accept special enquiries for smaller gatherings of 200, 300, or other guest counts below our standard minimum. Please contact us using the phone number provided in the website footer to discuss your requirements.
+          </p>
+          <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
+            <a
+              href={`tel:${BUSINESS_CONFIG.phonePrimaryRaw}`}
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl gold-gradient-btn text-xs font-black text-[#041810] shadow-md hover:scale-105 active:scale-95 transition-all"
+            >
+              <PhoneCall className="w-3.5 h-3.5" />
+              <span>Call {BUSINESS_CONFIG.phonePrimary}</span>
+            </a>
+            <a
+              href={`https://wa.me/${BUSINESS_CONFIG.whatsappNumber}?text=${encodeURIComponent(
+                'Hello AD Catering, I would like to inquire about a custom catering booking for fewer than 500 guests (e.g. 200 or 300 guests).'
+              )}`}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-950 border border-emerald-500/50 text-xs font-bold text-emerald-300 hover:bg-emerald-900 transition-colors"
+            >
+              <span>WhatsApp Custom Quotation</span>
+            </a>
+          </div>
         </div>
 
         {/* ====================================================
@@ -1367,7 +1426,7 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
               <div className="flex items-center gap-2">
                 <Crown className="w-5 h-5 text-[#F5CE68]" />
                 <span className="font-display font-black text-sm sm:text-base text-white tracking-wide">
-                  Normal Menu • Basic Package (₹850 / Person)
+                  Normal Menu • Basic Package (₹850 / Plate)
                 </span>
               </div>
 
@@ -1434,7 +1493,7 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
                     </h2>
                   </div>
                   <p className="text-xs text-[#E2E8F0] font-normal pt-1">
-                    29 Signature Delicacies Across 9 Banquet Counters • Uniformed Crew Included • ₹850 / Person
+                    29 Signature Delicacies Across 9 Banquet Counters • Uniformed Crew Included • ₹850 / Plate
                   </p>
                 </div>
 
@@ -1812,8 +1871,7 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
                     className="max-h-[66vh] w-auto object-contain rounded-xl shadow-2xl"
                     onError={(e) => {
                       e.currentTarget.onerror = null;
-                      e.currentTarget.src =
-                        'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1200&q=80';
+                      e.currentTarget.src = '/images/luxury-buffet-setup.jpg';
                     }}
                   />
                 </div>
@@ -1864,7 +1922,7 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
               <div className="flex items-center gap-2">
                 <Crown className="w-5 h-5 text-[#F5CE68]" />
                 <span className="font-display font-black text-sm sm:text-base text-white tracking-wide">
-                  Royal Wedding Banquet Menu (₹950 / Person)
+                  Royal Wedding Banquet Menu (₹950 / Plate)
                 </span>
               </div>
 
@@ -2275,7 +2333,7 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
               <div className="flex items-center gap-2">
                 <Crown className="w-5 h-5 text-[#FFDF73]" />
                 <span className="font-display font-black text-sm sm:text-base text-white tracking-wide">
-                  Delux Menu • Deluxe Package (₹1,050 / Person)
+                  Delux Menu • Deluxe Package (₹1,050 / Plate)
                 </span>
               </div>
 
@@ -2342,7 +2400,7 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
                     </h2>
                   </div>
                   <p className="text-xs text-[#E2E8F0] font-normal pt-1">
-                    44 Signature Delicacies Across 9 Banquet Counters • VIP Live Stations & Ice-Glass Hospitality • ₹1,050 / Person
+                    44 Signature Delicacies Across 9 Banquet Counters • VIP Live Stations & Ice-Glass Hospitality • ₹1,050 / Plate
                   </p>
                 </div>
 

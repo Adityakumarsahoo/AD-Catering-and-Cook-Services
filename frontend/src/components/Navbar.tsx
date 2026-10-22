@@ -26,6 +26,7 @@ import {
 } from 'lucide-react';
 import { ADBrandEmblem } from './ADBrandEmblem.js';
 import { CategorySideDrawer } from './CategorySideDrawer.js';
+import { BUSINESS_CONFIG } from '../config/cateringConfig.js';
 
 export const Navbar: React.FC = () => {
   const { user, isAdmin, logout } = useAuth();
@@ -165,9 +166,9 @@ export const Navbar: React.FC = () => {
 
             {/* Instant Phone Hotline - Gold Circular Brooch */}
             <a
-              href="tel:+919876543210"
+              href={BUSINESS_CONFIG.phoneTel}
               className="w-7 h-7 xl:w-8 xl:h-8 rounded-full bg-gradient-to-b from-[#0B3D26] to-[#041A12] border border-[#D4AF37]/70 text-[#FFDF73] hover:border-[#FFF1B8] hover:bg-gradient-to-r hover:from-[#FFF1B8] hover:via-[#F5CE68] hover:to-[#D4AF37] hover:text-[#03150E] transition-all duration-300 shadow-[0_4px_12px_rgba(0,0,0,0.5),0_0_10px_rgba(212,175,55,0.25)] hover:shadow-[0_0_18px_rgba(212,175,55,0.6)] flex items-center justify-center shrink-0"
-              title="Call AD Catering (+91 98765 43210)"
+              title={`Call AD Catering (${BUSINESS_CONFIG.phoneFormatted})`}
               aria-label="Direct Call"
             >
               <Phone className="w-3 h-3 xl:w-3.5 xl:h-3.5" />
@@ -365,7 +366,7 @@ export const Navbar: React.FC = () => {
             {/* Quick 1-Tap Contact Buttons */}
             <div className="grid grid-cols-2 gap-2">
               <a
-                href="https://wa.me/919876543210"
+                href={BUSINESS_CONFIG.whatsappUrl}
                 target="_blank"
                 rel="noreferrer"
                 className="py-2.5 px-3 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 text-white text-xs font-black flex items-center justify-center gap-1.5 shadow-md active:scale-95 transition-transform"
@@ -375,10 +376,10 @@ export const Navbar: React.FC = () => {
               </a>
 
               <a
-                href="tel:+919876543210"
+                href={BUSINESS_CONFIG.phoneTel}
                 className="py-2.5 px-3 rounded-xl bg-gradient-to-r from-[#0B3D26] to-[#041A12] border border-[#D4AF37]/70 text-[#FFDF73] text-xs font-black flex items-center justify-center gap-1.5 shadow-md active:scale-95 transition-transform"
               >
-                <Phone className="w-3.5 h-3.5 text-[#FFDF73]" />
+                <Phone className="w-3.5 h-3.5" />
                 <span>Call Hotline</span>
               </a>
             </div>

@@ -206,7 +206,7 @@ export async function initDatabase(): Promise<DatabaseSchema> {
       dbData = JSON.parse(raw);
       let added = false;
       if (dbData && officialMenuItems && officialMenuItems.length > 0) {
-        dbData.menuItems = officialMenuItems;
+        dbData.menuItems = officialMenuItems as unknown as MenuItem[];
         added = true;
       }
         if (dbData.packages && Array.isArray(dbData.packages)) {
@@ -217,7 +217,7 @@ export async function initDatabase(): Promise<DatabaseSchema> {
             basic.menuItemsCount = 29;
             basic.menuTitle = 'NORMAL MENU';
             basic.cardBadge = '2 Starters • 4 Mains';
-            basic.image = basic.image || 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80';
+            basic.image = basic.image || '/images/luxury-buffet-setup.jpg';
             basic.menuCategories = [
               { category: 'WELCOME DRINKS', items: ['Dahi Chhanch / Kesar Milk'] },
               { category: 'SOUP COUNTER', items: ['Lemon Coriender Soup', 'Chicken H/S Soup'] },
@@ -522,7 +522,7 @@ export async function initDatabase(): Promise<DatabaseSchema> {
       isVeg: true,
       isPopular: true,
       isOdiaSpecialty: true,
-      image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80',
+      image: '/images/gourmet-ceramic-curry.jpg',
     },
     {
       id: 'menu_2',
@@ -853,7 +853,7 @@ export async function initDatabase(): Promise<DatabaseSchema> {
       menuItemsCount: 29,
       menuTitle: 'NORMAL MENU',
       cardBadge: '2 Starters • 4 Mains',
-      image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80',
+      image: '/images/luxury-buffet-setup.jpg',
       menuCategories: [
         {
           category: 'WELCOME DRINKS',
@@ -1113,10 +1113,10 @@ export async function initDatabase(): Promise<DatabaseSchema> {
     },
     {
       id: 'gal_2',
-      title: 'Heritage Odia Royal Thali',
+      title: 'Heritage Odia Royal Feast',
       category: 'Traditional Food',
-      image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1200&q=80',
-      description: 'Traditional feast featuring authentic Dalma, Machha Besara, Aloo Bhaja, and Chhena Poda.',
+      image: '/images/royal-odia-feast.jpg',
+      description: 'Traditional feast featuring authentic Dalma, Machha Besara, Aloo Bhaja, and Chhena Poda on fresh banana leaf.',
     },
     {
       id: 'gal_3',

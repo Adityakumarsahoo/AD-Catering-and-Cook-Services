@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { api } from '../services/api.js';
 import toast from 'react-hot-toast';
 import { Phone, Mail, MapPin, Clock, Send, MessageCircle, ArrowUpRight, Crown } from 'lucide-react';
+import { BUSINESS_CONFIG } from '../config/cateringConfig';
+import { MinimumGuestsNotice } from '../components/MinimumGuestsNotice';
 
 export const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -43,7 +45,7 @@ export const Contact: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-14 text-[#FAF8F5]">
+        <div className="text-center max-w-3xl mx-auto space-y-4 mb-10 text-[#FAF8F5]">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-950/80 border border-[#D4AF37]/50 text-xs font-bold text-[#F5CE68] uppercase tracking-wider shadow">
             <Crown className="w-3.5 h-3.5 text-[#F5CE68]" />
             <span>Get In Touch</span>
@@ -52,8 +54,13 @@ export const Contact: React.FC = () => {
             Contact AD Catering & Cook Services
           </h1>
           <p className="text-sm sm:text-base text-[#CBD5E1] leading-relaxed font-normal">
-            Have questions about wedding menus, cook availability, or bulk quotes? Our team is available 7 days a week.
+            Have questions about wedding menus, cook availability, or custom quotes? Our team is available 7 days a week.
           </p>
+        </div>
+
+        {/* Minimum 500 Guests & Special Small Event Notice */}
+        <div className="max-w-4xl mx-auto mb-12">
+          <MinimumGuestsNotice variant="card" />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
@@ -81,7 +88,11 @@ export const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-white text-sm">Direct Phone</h4>
-                    <p className="mt-0.5 leading-relaxed text-[#F5CE68] font-bold">+91 98765 43210 / +91 94371 23456</p>
+                    <p className="mt-0.5 leading-relaxed text-[#F5CE68] font-bold">
+                      <a href={BUSINESS_CONFIG.phoneTel} className="hover:underline">
+                        {BUSINESS_CONFIG.phoneFormatted}
+                      </a>
+                    </p>
                   </div>
                 </div>
 
@@ -91,7 +102,11 @@ export const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-white text-sm">Email Inquiries</h4>
-                    <p className="mt-0.5 leading-relaxed text-[#CBD5E1]">contact@adcatering.com</p>
+                    <p className="mt-0.5 leading-relaxed text-[#CBD5E1]">
+                      <a href={`mailto:${BUSINESS_CONFIG.email}`} className="hover:underline">
+                        {BUSINESS_CONFIG.email}
+                      </a>
+                    </p>
                   </div>
                 </div>
 
@@ -109,7 +124,7 @@ export const Contact: React.FC = () => {
               {/* Direct Buttons */}
               <div className="pt-4 border-t border-[#D4AF37]/30 flex flex-col sm:flex-row gap-3">
                 <a
-                  href="https://wa.me/919876543210"
+                  href={BUSINESS_CONFIG.whatsappUrl}
                   target="_blank"
                   rel="noreferrer"
                   className="flex-1 py-3 px-4 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold text-center flex items-center justify-center gap-1.5 transition-all shadow-md"
@@ -119,7 +134,7 @@ export const Contact: React.FC = () => {
                   <ArrowUpRight className="w-3.5 h-3.5" />
                 </a>
                 <a
-                  href="tel:+919876543210"
+                  href={BUSINESS_CONFIG.phoneTel}
                   className="flex-1 py-3 px-4 rounded-2xl bg-emerald-950/80 hover:bg-emerald-900 border border-[#D4AF37]/50 text-white text-xs font-bold text-center flex items-center justify-center gap-1.5 transition-all shadow-sm"
                 >
                   <Phone className="w-4 h-4 text-[#F5CE68]" />

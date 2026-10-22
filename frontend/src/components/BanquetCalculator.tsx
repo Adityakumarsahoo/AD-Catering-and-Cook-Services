@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Crown, Sparkles, Users, CheckCircle2, ArrowRight, Calculator, Calendar, Award } from 'lucide-react';
+import { Crown, Sparkles, Users, CheckCircle2, ArrowRight, Calculator, Calendar, Award, PhoneCall } from 'lucide-react';
+import { BUSINESS_CONFIG } from '../config/cateringConfig.js';
 
 interface BanquetCalculatorProps {
   className?: string;
@@ -11,7 +12,7 @@ interface BanquetCalculatorProps {
 export const BanquetCalculator: React.FC<BanquetCalculatorProps> = ({
   className = '',
   initialPackage = 'PREMIUM',
-  initialGuests = 200,
+  initialGuests = 500,
 }) => {
   const [selectedPackage, setSelectedPackage] = useState<string>(initialPackage);
   const [guestCount, setGuestCount] = useState<number>(initialGuests);
@@ -73,8 +74,9 @@ export const BanquetCalculator: React.FC<BanquetCalculatorProps> = ({
 
   const currentPkg = packagesInfo.find((p) => p.name === selectedPackage) || packagesInfo[1];
   const totalCost = guestCount * currentPkg.rate;
+  const isBelowMinimum = guestCount < 500;
 
-  const guestPresets = [50, 100, 200, 350, 500, 800, 1200];
+  const guestPresets = [200, 300, 500, 750, 1000, 1500, 2000];
 
   return (
     <div className={`rounded-[36px] glass-strong border border-[#D4AF37]/50 p-6 sm:p-10 shadow-[0_24px_70px_rgba(0,0,0,0.65)] relative overflow-hidden liquid-shine ${className}`}>
@@ -92,13 +94,13 @@ export const BanquetCalculator: React.FC<BanquetCalculatorProps> = ({
             Calculate Your Banquet Budget
           </h3>
           <p className="text-xs sm:text-sm text-[#CBD5E1] mt-1 font-normal">
-            Slide to adjust guest count and compare Basic (₹850), Premium (₹950), and Deluxe (₹1050) per-person packages.
+            Slide to adjust guest count and compare Basic (₹850), Premium (₹950), and Deluxe (₹1,050) per-plate packages. Minimum booking: 500 guests.
           </p>
         </div>
 
         <div className="p-3.5 rounded-2xl bg-[#041810]/80 border border-[#D4AF37]/40 text-right shrink-0">
-          <p className="text-[10px] uppercase tracking-wider font-bold text-[#F5CE68]">Transparent Catering</p>
-          <p className="text-xs font-black text-white mt-0.5">Zero Hidden Extras • Staff Included</p>
+          <p className="text-[10px] uppercase tracking-wider font-bold text-[#F5CE68]">Minimum Booking: 500 Guests</p>
+          <p className="text-xs font-black text-white mt-0.5">Per-Plate Pricing • Zero Hidden Extras</p>
         </div>
       </div>
 
@@ -146,7 +148,7 @@ export const BanquetCalculator: React.FC<BanquetCalculatorProps> = ({
 
                     <p className="text-xl font-display font-black text-[#F5CE68] mt-2 tabular-nums">
                       ₹{pkg.rate}
-                      <span className="text-[10px] text-[#94A3B8] font-normal ml-1">/ guest</span>
+                      <span className="text-[10px] text-[#94A3B8] font-normal ml-1">/ Plate</span>
                     </p>
 
                     <p className="text-[10px] text-[#CBD5E1] mt-1 font-medium">
@@ -163,22 +165,22 @@ export const BanquetCalculator: React.FC<BanquetCalculatorProps> = ({
             <div className="flex items-center justify-between">
               <label className="text-xs font-bold text-white uppercase tracking-wider flex items-center gap-1.5">
                 <Users className="w-4 h-4 text-[#F5CE68]" />
-                <span>2. Number of Guests:</span>
+                <span>2. Number of Guests / Plates:</span>
               </label>
               <div className="px-3.5 py-1 rounded-xl bg-[#041810] border border-[#D4AF37]/50 shadow-sm flex items-center gap-1">
                 <span className="font-display text-lg font-black text-[#F5CE68] tabular-nums">{guestCount}</span>
-                <span className="text-xs text-[#94A3B8] font-semibold">Honored Guests</span>
+                <span className="text-xs text-[#94A3B8] font-semibold">Guests</span>
               </div>
             </div>
 
             {/* Slider */}
             <input
               type="range"
-              min={25}
-              max={1500}
+              min={100}
+              max={2500}
               step={25}
               value={guestCount}
-              onChange={(e) => setGuestCount(parseInt(e.target.value) || 25)}
+              onChange={(e) => setGuestCount(parseInt(e.target.value) || 100)}
               className="w-full h-2.5 bg-[#020F09] rounded-lg appearance-none cursor-pointer accent-[#D4AF37]"
             />
 
@@ -196,17 +198,46 @@ export const BanquetCalculator: React.FC<BanquetCalculatorProps> = ({
                       : 'bg-[#041810]/80 hover:bg-emerald-950 text-[#CBD5E1] border border-[#D4AF37]/30'
                   }`}
                 >
-                  {count}
+                  {count} {count < 500 ? '(Special)' : ''}
                 </button>
               ))}
             </div>
           </div>
 
+          {/* Minimum 500 Guests Requirement Notice (If below 500) */}
+          {isBelowMinimum ? (
+            <div className="p-4 rounded-2xl bg-amber-950/70 border-2 border-[#D4AF37]/70 space-y-2 shadow-lg animate-in fade-in">
+              <div className="flex items-center gap-2">
+                <Crown className="w-4 h-4 text-[#F5CE68]" />
+                <h4 className="font-display font-black text-sm text-[#F5CE68]">
+                  {BUSINESS_CONFIG.minimumBookingNotice.title}
+                </h4>
+              </div>
+              <p className="text-xs text-[#CBD5E1] leading-relaxed">
+                {BUSINESS_CONFIG.minimumBookingNotice.smallerGatheringsNote}
+              </p>
+              <div className="pt-1">
+                <a
+                  href={`tel:${BUSINESS_CONFIG.phonePrimaryRaw}`}
+                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#D4AF37] hover:bg-[#F5CE68] text-[#041810] text-xs font-black transition-colors shadow-md"
+                >
+                  <PhoneCall className="w-3.5 h-3.5" />
+                  <span>Call {BUSINESS_CONFIG.phonePrimary} for Custom Quotation</span>
+                </a>
+              </div>
+            </div>
+          ) : (
+            <div className="p-3 rounded-2xl bg-emerald-950/60 border border-emerald-500/40 flex items-center gap-2 text-xs text-emerald-300">
+              <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+              <span>Standard Booking Confirmed: Meets 500+ guests banquet minimum requirement.</span>
+            </div>
+          )}
+
           {/* Highlights Checklist */}
           <div className="p-4 rounded-2xl bg-[#041810]/70 border border-[#D4AF37]/30 space-y-2">
             <p className="text-[11px] font-bold text-[#F5CE68] uppercase tracking-wider flex items-center gap-1.5">
               <Sparkles className="w-3.5 h-3.5 text-[#F5CE68]" />
-              <span>Included in {currentPkg.name} at ₹{currentPkg.rate}/person:</span>
+              <span>Included in {currentPkg.name} at ₹{currentPkg.rate} / Plate:</span>
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#CBD5E1]">
               {currentPkg.highlights.map((h, i) => (
@@ -251,12 +282,12 @@ export const BanquetCalculator: React.FC<BanquetCalculatorProps> = ({
             {/* Computation details */}
             <div className="space-y-2.5 text-xs text-[#CBD5E1]">
               <div className="flex justify-between">
-                <span>Guest Count:</span>
+                <span>Guest Count / Plates:</span>
                 <span className="font-bold text-white tabular-nums">{guestCount} Guests</span>
               </div>
               <div className="flex justify-between">
-                <span>Per Guest Rate:</span>
-                <span className="font-bold text-[#F5CE68] tabular-nums">₹{currentPkg.rate}</span>
+                <span>Per Plate Rate:</span>
+                <span className="font-bold text-[#F5CE68] tabular-nums">₹{currentPkg.rate} / Plate</span>
               </div>
               <div className="flex justify-between">
                 <span>Buffet Table & Chafing Stations:</span>
@@ -281,18 +312,30 @@ export const BanquetCalculator: React.FC<BanquetCalculatorProps> = ({
               </p>
             </div>
 
-            {/* Direct Booking CTA */}
-            <Link
-              to={`/booking?package=${encodeURIComponent(currentPkg.name + ' PACKAGE')}&guests=${guestCount}`}
-              className="w-full py-4 rounded-2xl gold-gradient-btn text-xs font-black text-center text-[#041810] shadow-xl flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-98 transition-all"
-            >
-              <Calendar className="w-4 h-4" />
-              <span>Lock This Date with {currentPkg.name}</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+            {/* CTA: If < 500 guests, route to custom quote contact; if >= 500, standard lock date */}
+            {isBelowMinimum ? (
+              <a
+                href={`tel:${BUSINESS_CONFIG.phonePrimaryRaw}`}
+                className="w-full py-4 rounded-2xl gold-gradient-btn text-xs font-black text-center text-[#041810] shadow-xl flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-98 transition-all"
+              >
+                <PhoneCall className="w-4 h-4" />
+                <span>Call {BUSINESS_CONFIG.phonePrimary} for Custom Quote</span>
+              </a>
+            ) : (
+              <Link
+                to={`/booking?package=${encodeURIComponent(currentPkg.name + ' PACKAGE')}&guests=${guestCount}`}
+                className="w-full py-4 rounded-2xl gold-gradient-btn text-xs font-black text-center text-[#041810] shadow-xl flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-98 transition-all"
+              >
+                <Calendar className="w-4 h-4" />
+                <span>Lock This Date with {currentPkg.name}</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            )}
 
             <p className="text-center text-[10px] text-[#94A3B8]">
-              No immediate card payment needed. Our director will verify your venue and date slot.
+              {isBelowMinimum
+                ? 'Standard package booking requires 500 guests. Smaller events are handled via phone quotation.'
+                : 'No immediate card payment needed. Our director will verify your venue and date slot.'}
             </p>
           </div>
         </div>

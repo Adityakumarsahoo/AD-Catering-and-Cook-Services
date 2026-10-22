@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { api } from '../services/api.js';
 import { TiltCard } from '../components/TiltCard.js';
-import { CheckCircle2, ArrowRight, X, Sparkles, ChefHat, Crown } from 'lucide-react';
+import { CheckCircle2, ArrowRight, X, Sparkles, ChefHat, Crown, Users } from 'lucide-react';
 import { defaultServices } from '../data/defaultServices.js';
+import { MinimumGuestsNotice } from '../components/MinimumGuestsNotice.js';
 
 export const Services: React.FC = () => {
   const [services, setServices] = useState<any[]>(defaultServices);
@@ -87,6 +88,9 @@ export const Services: React.FC = () => {
           </div>
         </div>
 
+        {/* 500 Guests Standard Minimum Banner */}
+        <MinimumGuestsNotice variant="banner" className="mb-12" />
+
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filtered.map((service) => (
@@ -107,8 +111,13 @@ export const Services: React.FC = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#041810]/80 via-transparent to-transparent" />
                     <div className="absolute top-4 right-4 px-3.5 py-1 rounded-full bg-emerald-950/90 border border-[#D4AF37]/50 text-xs font-bold text-[#F5CE68] shadow-lg">
-                      {service.category === 'cook' ? 'Cook Hire' : 'Per Person'} ₹{service.startingPrice}
+                      {service.category === 'cook' ? 'Custom Quote' : `₹${service.startingPrice} / Plate`}
                     </div>
+                    {service.category === 'catering' && (
+                      <div className="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-[#041810]/90 border border-[#D4AF37]/50 text-[10px] font-bold text-[#F5CE68]">
+                        Min. 500 Guests
+                      </div>
+                    )}
                   </div>
 
                   <div className="p-6 sm:p-7">
@@ -172,12 +181,21 @@ export const Services: React.FC = () => {
                   {selectedService.category === 'cook' ? 'Professional Cook Service' : 'Catering Solution'}
                 </span>
                 <h3 className="font-display font-bold text-2xl text-white">{selectedService.title}</h3>
-                <p className="text-xl font-black text-[#F5CE68] tabular-nums">
-                  Starting at ₹{selectedService.startingPrice}
-                  <span className="text-xs text-[#CBD5E1] ml-1 font-normal">
-                    {selectedService.category === 'cook' ? 'per session/event' : 'per guest'}
-                  </span>
-                </p>
+                {selectedService.category === 'cook' ? (
+                  <p className="text-xl font-black text-[#F5CE68]">
+                    Custom Personalized Quote
+                    <span className="block text-xs text-[#CBD5E1] mt-0.5 font-normal">
+                      Tailored to your menu, guest count & cooking hours
+                    </span>
+                  </p>
+                ) : (
+                  <p className="text-xl font-black text-[#F5CE68] tabular-nums">
+                    ₹{selectedService.startingPrice}
+                    <span className="text-xs text-[#CBD5E1] ml-1 font-normal">
+                      / Plate
+                    </span>
+                  </p>
+                )}
                 <p className="text-xs text-[#CBD5E1] leading-relaxed pt-1 font-normal">
                   {selectedService.description}
                 </p>
@@ -204,10 +222,10 @@ export const Services: React.FC = () => {
                 Close
               </button>
               <Link
-                to={`/booking?service=${encodeURIComponent(selectedService.title)}`}
+                to={selectedService.category === 'cook' ? `/booking?type=cook&service=${encodeURIComponent(selectedService.title)}` : `/booking?service=${encodeURIComponent(selectedService.title)}`}
                 className="px-6 py-2.5 rounded-xl gold-gradient-btn text-xs font-black shadow-md text-[#041810]"
               >
-                Proceed to Book This Service
+                {selectedService.category === 'cook' ? 'Get Custom Quote' : 'Proceed to Book This Service'}
               </Link>
             </div>
           </div>

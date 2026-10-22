@@ -131,7 +131,7 @@ router.post('/', requireAdmin, (req, res) => {
     menuType: (menuType || 'all').toLowerCase() as any,
     description: (description || '').trim(),
     price: price !== undefined && price !== '' ? Number(price) : undefined,
-    image: image || 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80',
+    image: image || '/images/gourmet-ceramic-curry.jpg',
     isVeg: Boolean(isVeg),
     isPopular: Boolean(isPopular),
     isFeatured: Boolean(isFeatured),

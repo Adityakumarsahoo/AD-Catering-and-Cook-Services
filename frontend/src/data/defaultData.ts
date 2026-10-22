@@ -13,7 +13,7 @@ export const defaultPackages: any[] = [
     "menuItemsCount": 29,
     "menuTitle": "NORMAL MENU",
     "cardBadge": "2 Starters • 4 Mains",
-    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80",
+    "image": "/images/luxury-buffet-setup.jpg",
     "menuCategories": [
       {
         "category": "WELCOME DRINKS",
@@ -312,10 +312,10 @@ export const defaultGallery: any[] = [
   },
   {
     "id": "gal_2",
-    "title": "Heritage Odia Royal Thali",
+    "title": "Heritage Odia Royal Feast",
     "category": "Traditional Food",
-    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1200&q=80",
-    "description": "Traditional feast featuring authentic Dalma, Machha Besara, Aloo Bhaja, and Chhena Poda."
+    "image": "/images/royal-odia-feast.jpg",
+    "description": "Authentic Odia feast featuring Dalma, Odia Mutton Kasa, Machha Besara, and Chhena Poda on fresh banana leaf."
   },
   {
     "id": "gal_3",

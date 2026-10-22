@@ -17,13 +17,19 @@ import {
   HelpCircle,
   ArrowRight,
   Calculator,
+  Phone,
+  PhoneCall,
+  MessageCircle,
+  FileText,
+  BadgeCheck,
 } from 'lucide-react';
+import { BUSINESS_CONFIG } from '../config/cateringConfig.js';
 
 export const CookService: React.FC = () => {
   const [cookServices, setCookServices] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
-  // Quick estimator state
+  // Quick requirement planner state (No fixed prices)
   const [selectedCookId, setSelectedCookId] = useState<string>('srv_7');
   const [estimatorGuests, setEstimatorGuests] = useState<number>(30);
   const [estimatorMeal, setEstimatorMeal] = useState<'lunch' | 'dinner' | 'full_day'>('lunch');
@@ -45,10 +51,6 @@ export const CookService: React.FC = () => {
   }, []);
 
   const activeCookService = cookServices.find((c) => c.id === selectedCookId) || cookServices[0];
-  const baseRate = activeCookService ? activeCookService.startingPrice : 1499;
-  const mealMultiplier = estimatorMeal === 'full_day' ? 1.75 : 1.0;
-  const guestAddon = Math.max(0, Math.floor((estimatorGuests - 25) / 10)) * 250;
-  const estimatedCookCost = Math.round((baseRate + guestAddon) * mealMultiplier);
 
   const workflowSteps = [
     {
@@ -79,6 +81,10 @@ export const CookService: React.FC = () => {
 
   const faqs = [
     {
+      q: 'How does cook service pricing work without fixed rates?',
+      a: 'Every event and kitchen has unique requirements. We quote customized, transparent pricing based on your chosen menu complexity, service duration, number of courses, and guest headcount so you never overpay.',
+    },
+    {
       q: 'Do your cooks bring their own utensils and equipment?',
       a: 'For home cooking (up to 40 guests), our cooks work with your kitchen utensils and gas. For wedding feasts and large gathering teams (50+ to 2,000+ guests), our battalion brings complete industrial brass handis, heavy burners, and halwai equipment.',
     },
@@ -100,26 +106,59 @@ export const CookService: React.FC = () => {
     <div className="pt-32 pb-24 relative z-10 min-h-screen text-[#FAF8F5]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Hero Header for Cook Services */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-950/80 border border-[#D4AF37]/50 text-xs font-bold text-[#F5CE68] uppercase tracking-wider shadow">
-            <ChefHat className="w-3.5 h-3.5 text-[#F5CE68]" />
-            <span>Dedicated Master Cook & Halwai Hire</span>
+        {/* ====================================================
+            1. HERO HEADER WITH 15+ YEARS EXPERIENCE
+            ==================================================== */}
+        <div className="text-center max-w-3xl mx-auto space-y-5 mb-14">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-950/90 border border-[#D4AF37]/60 text-xs font-extrabold text-[#F5CE68] uppercase tracking-wider shadow-lg">
+            <Crown className="w-3.5 h-3.5 text-[#F5CE68]" />
+            <span>AD Professional Cook & Private Chef Services</span>
           </div>
+          
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight">
             Professional Cook Services
           </h1>
-          <p className="text-sm sm:text-base text-[#CBD5E1] leading-relaxed font-normal">
-            Hire Odisha’s most experienced private chefs, wedding halwais, non-veg specialists, and home cooks. Enjoy 5-star royal banquet hygiene and authentic heritage taste prepared fresh right in your own kitchen or venue.
-          </p>
+
+          {/* 15+ Years of Master Cook Experience Showcase */}
+          <div className="p-6 sm:p-8 rounded-[32px] bg-gradient-to-br from-[#06291C]/95 via-[#041A12]/90 to-[#02100A]/95 border-2 border-[#D4AF37]/60 shadow-[0_20px_60px_rgba(0,0,0,0.7),0_0_35px_rgba(212,175,55,0.2)] text-center relative overflow-hidden liquid-shine my-6">
+            <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#FFF1B8] to-transparent" />
+            
+            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-gradient-to-r from-[#D4AF37]/20 via-[#F5CE68]/30 to-[#D4AF37]/20 border border-[#D4AF37]/70 text-[#F5CE68] text-xs font-black uppercase tracking-widest mb-3 shadow">
+              <Award className="w-4 h-4 text-[#F5CE68]" />
+              <span>Heritage Culinary Mastery</span>
+            </div>
+
+            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#FFF1B8] via-[#F5CE68] to-[#D4AF37] tracking-tight">
+              15+ Years of Master Cook Experience
+            </h2>
+
+            <p className="text-sm sm:text-base text-[#CBD5E1] leading-relaxed font-normal max-w-2xl mx-auto mt-3">
+              Experienced professional chefs bringing exceptional cooking skills, authentic flavors, and memorable dining experiences to your home and special events.
+            </p>
+
+            <div className="mt-5 flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs text-[#F5CE68] font-bold">
+              <div className="flex items-center gap-1.5">
+                <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                <span className="text-white">Police & ID Verified</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                <span className="text-white">100% On-Site Live Cooking</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                <span className="text-white">Spotless Kitchen Cleanup</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* Cook Trust Metrics in Royal Emerald Cards */}
+        {/* Cook Trust Metrics */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
           <div className="p-6 rounded-3xl bg-[#06291C]/85 backdrop-blur-xl border border-[#D4AF37]/40 text-center liquid-shine shadow-xl">
             <Clock className="w-7 h-7 text-[#F5CE68] mx-auto mb-2" />
-            <p className="font-display text-2xl font-bold text-white">10+ Years</p>
-            <p className="text-xs text-[#CBD5E1] mt-0.5 font-medium">Average Master Experience</p>
+            <p className="font-display text-2xl font-bold text-white">15+ Years</p>
+            <p className="text-xs text-[#CBD5E1] mt-0.5 font-medium">Master Culinary Experience</p>
           </div>
           <div className="p-6 rounded-3xl bg-[#06291C]/85 backdrop-blur-xl border border-[#D4AF37]/40 text-center liquid-shine shadow-xl">
             <ShieldCheck className="w-7 h-7 text-emerald-400 mx-auto mb-2" />
@@ -138,9 +177,11 @@ export const CookService: React.FC = () => {
           </div>
         </div>
 
-        {/* Cook Services Cards */}
-        <div className="mb-20">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8">
+        {/* ====================================================
+            2. CHOOSE YOUR MASTER COOK SPECIALIZATION (NO FIXED PRICES)
+            ==================================================== */}
+        <div className="mb-20" id="specializations">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
             <div>
               <span className="text-xs font-bold text-[#F5CE68] uppercase tracking-wider">
                 Specialized Culinary Crews
@@ -149,11 +190,36 @@ export const CookService: React.FC = () => {
                 Choose Your Master Cook Specialization
               </h2>
             </div>
-            <p className="text-xs text-[#CBD5E1] mt-2 md:mt-0 max-w-md">
-              From intimate family feasts to mass wedding bhojis of 2,000+ guests, our certified master cooks deliver authentic culinary craftsmanship.
+            <p className="text-xs text-[#CBD5E1] max-w-md leading-relaxed">
+              From intimate family feasts to mass wedding bhojis of 2,000+ guests, our certified master cooks deliver authentic culinary craftsmanship with personalized quotes.
             </p>
           </div>
 
+          {/* Contact-Based Pricing Informational Banner */}
+          <div className="mb-8 p-5 rounded-2xl bg-[#041810]/95 border border-[#D4AF37]/50 shadow-md flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex items-start gap-3">
+              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-[#D4AF37] to-[#F5CE68] flex items-center justify-center text-[#041810] shrink-0 mt-0.5 shadow">
+                <ChefHat className="w-4 h-4 text-[#041810]" />
+              </div>
+              <div>
+                <h4 className="text-sm font-bold text-white">
+                  Contact Us for Custom Pricing & Tailored Menus
+                </h4>
+                <p className="text-xs text-[#CBD5E1] mt-0.5 leading-relaxed">
+                  Every event and kitchen has different requirements. Contact us to discuss your preferred cuisine, service duration, guest count, and cooking needs. We’ll help you find the right cook for your requirements.
+                </p>
+              </div>
+            </div>
+            <a
+              href={BUSINESS_CONFIG.phoneTel}
+              className="px-4 py-2.5 rounded-xl bg-emerald-950/90 hover:bg-emerald-900 border border-[#D4AF37]/60 text-xs font-bold text-[#F5CE68] whitespace-nowrap flex items-center gap-1.5 shadow-sm transition-all shrink-0"
+            >
+              <PhoneCall className="w-3.5 h-3.5" />
+              <span>Talk to Our Team: {BUSINESS_CONFIG.phoneFormatted}</span>
+            </a>
+          </div>
+
+          {/* Specialization Cards (Completely Removed Prices) */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {cookServices.map((cook) => (
               <TiltCard key={cook.id} maxTilt={3}>
@@ -172,8 +238,11 @@ export const CookService: React.FC = () => {
                         className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#041810]/80 via-transparent to-transparent" />
-                      <div className="absolute top-4 right-4 px-3.5 py-1 rounded-full bg-emerald-950/90 border border-[#D4AF37]/50 text-xs font-bold text-[#F5CE68] shadow-md">
-                        Starting ₹{cook.startingPrice}
+                      
+                      {/* Contact-Based Custom Quote Pill Badge */}
+                      <div className="absolute top-4 right-4 px-3.5 py-1.5 rounded-full bg-emerald-950/95 border border-[#D4AF37]/60 text-[11px] font-black text-[#F5CE68] shadow-md flex items-center gap-1.5">
+                        <Sparkles className="w-3 h-3 text-[#F5CE68]" />
+                        <span>Custom Quote</span>
                       </div>
                     </div>
 
@@ -196,13 +265,21 @@ export const CookService: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="p-6 pt-0">
+                  {/* Dual Action: Primary "Get a Custom Quote" + Secondary "Talk to Our Team" */}
+                  <div className="p-6 pt-0 space-y-2">
                     <Link
                       to={`/booking?type=cook&service=${encodeURIComponent(cook.title)}`}
-                      className="w-full py-3.5 rounded-2xl gold-gradient-btn text-xs font-black text-center block shadow-md hover:scale-[1.02] transition-transform text-[#041810]"
+                      className="w-full py-3 rounded-2xl gold-gradient-btn text-xs font-black text-center block shadow-md hover:scale-[1.02] transition-transform text-[#041810]"
                     >
-                      Hire This Master Cook
+                      Get a Custom Quote
                     </Link>
+                    <a
+                      href={BUSINESS_CONFIG.phoneTel}
+                      className="w-full py-2.5 rounded-xl bg-emerald-950/80 hover:bg-emerald-900 border border-[#D4AF37]/40 text-xs font-bold text-center flex items-center justify-center gap-1.5 text-[#F5CE68] transition-colors"
+                    >
+                      <Phone className="w-3.5 h-3.5" />
+                      <span>Talk to Our Team</span>
+                    </a>
                   </div>
                 </div>
               </TiltCard>
@@ -211,7 +288,7 @@ export const CookService: React.FC = () => {
         </div>
 
         {/* ====================================================
-            Interactive Cook Hire Cost Estimator
+            3. INTERACTIVE COOK REQUIREMENT PLANNER (NO FIXED PRICES)
             ==================================================== */}
         <section className="mb-20 rounded-[36px] bg-[#041810]/95 border border-[#D4AF37]/50 p-6 sm:p-10 shadow-[0_24px_70px_rgba(0,0,0,0.7)] relative overflow-hidden liquid-shine">
           <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#F5CE68] to-transparent" />
@@ -219,22 +296,22 @@ export const CookService: React.FC = () => {
           <div className="flex flex-col md:flex-row md:items-center justify-between pb-6 border-b border-[#D4AF37]/25 gap-4">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/80 border border-[#D4AF37]/40 text-xs font-bold text-[#F5CE68] uppercase tracking-wider mb-2">
-                <Calculator className="w-3.5 h-3.5" />
-                <span>Instant Cook Hire Calculator</span>
+                <ChefHat className="w-3.5 h-3.5" />
+                <span>Let's Plan Your Perfect Menu</span>
               </div>
               <h2 className="font-display text-2xl sm:text-3xl font-black text-white">
-                Estimate Your Private Cook Hire Cost
+                Discover the Perfect Cook for Your Needs
               </h2>
-              <p className="text-xs sm:text-sm text-[#CBD5E1] mt-1">
-                Customize by cook specialty, guest count, and meal duration for instant transparent pricing.
+              <p className="text-xs sm:text-sm text-[#CBD5E1] mt-1 max-w-2xl">
+                Your Occasion, Your Chef, Your Experience. Customize your preferred culinary specialization, guest count, and meal schedule for a personalized quote.
               </p>
             </div>
             <div className="text-right">
-              <span className="text-[10px] text-[#94A3B8] uppercase tracking-wider">Estimated Cook Fee</span>
-              <p className="font-display text-3xl font-black text-[#F5CE68] tabular-nums">
-                ₹{estimatedCookCost.toLocaleString('en-IN')}
+              <span className="text-[10px] text-[#94A3B8] uppercase tracking-wider">Pricing Method</span>
+              <p className="font-display text-2xl font-black text-[#F5CE68]">
+                Custom Quotation
               </p>
-              <span className="text-[10px] text-emerald-400 font-medium">Includes Full Kitchen Cleanup</span>
+              <span className="text-[10px] text-emerald-400 font-medium">Transparent Itemized Proposal</span>
             </div>
           </div>
 
@@ -258,7 +335,7 @@ export const CookService: React.FC = () => {
                       }`}
                     >
                       <p className="truncate font-semibold">{c.title}</p>
-                      <p className="text-[11px] text-[#F5CE68] mt-0.5">From ₹{c.startingPrice}</p>
+                      <p className="text-[11px] text-[#F5CE68] mt-0.5">Custom Menu Plan</p>
                     </button>
                   ))}
                 </div>
@@ -289,7 +366,7 @@ export const CookService: React.FC = () => {
               {/* Meal Slot */}
               <div>
                 <label className="text-xs font-bold text-white uppercase tracking-wider block mb-2">
-                  3. Meal Slot:
+                  3. Service Duration / Meal Slot:
                 </label>
                 <div className="flex flex-wrap gap-2">
                   {(['lunch', 'dinner', 'full_day'] as const).map((m) => (
@@ -313,7 +390,7 @@ export const CookService: React.FC = () => {
             </div>
 
             <div className="lg:col-span-4 p-6 rounded-3xl bg-[#06291C]/80 border border-[#D4AF37]/40 space-y-4">
-              <h3 className="font-display font-bold text-lg text-white">Hire Summary</h3>
+              <h3 className="font-display font-bold text-lg text-white">Requirement Summary</h3>
               <div className="space-y-2 text-xs text-[#CBD5E1]">
                 <div className="flex justify-between">
                   <span>Selected Cook:</span>
@@ -328,16 +405,26 @@ export const CookService: React.FC = () => {
                   <span className="font-bold text-white uppercase">{estimatorMeal.replace('_', ' ')}</span>
                 </div>
                 <div className="flex justify-between border-t border-[#D4AF37]/25 pt-2 text-[#F5CE68] font-bold">
-                  <span>Estimated Total:</span>
-                  <span className="text-base tabular-nums">₹{estimatedCookCost.toLocaleString('en-IN')}</span>
+                  <span>Pricing Structure:</span>
+                  <span className="text-xs uppercase">Customized Quote</span>
                 </div>
               </div>
-              <Link
-                to={`/booking?type=cook&service=${encodeURIComponent(activeCookService?.title || 'Master Home Cook Service')}&guests=${estimatorGuests}`}
-                className="w-full py-3 rounded-xl gold-gradient-btn text-xs font-black text-center block text-[#041810] shadow-md hover:scale-[1.02] transition-transform"
-              >
-                Proceed to Book Cook
-              </Link>
+
+              <div className="pt-2 space-y-2">
+                <Link
+                  to={`/booking?type=cook&service=${encodeURIComponent(activeCookService?.title || 'Master Home Cook Service')}&guests=${estimatorGuests}`}
+                  className="w-full py-3.5 rounded-xl gold-gradient-btn text-xs font-black text-center block text-[#041810] shadow-md hover:scale-[1.02] transition-transform"
+                >
+                  Get Your Personalized Quote
+                </Link>
+                <a
+                  href={BUSINESS_CONFIG.phoneTel}
+                  className="w-full py-2.5 rounded-xl bg-emerald-950/80 hover:bg-emerald-900 border border-[#D4AF37]/40 text-xs font-bold text-center flex items-center justify-center gap-1.5 text-[#F5CE68] transition-colors"
+                >
+                  <Phone className="w-3.5 h-3.5" />
+                  <span>Talk to Our Team</span>
+                </a>
+              </div>
             </div>
           </div>
         </section>

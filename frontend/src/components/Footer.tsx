@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ChefHat, Phone, Mail, MapPin, Clock, ArrowUpRight, Shield, Crown, Sparkles } from 'lucide-react';
+import { ChefHat, Phone, Mail, MapPin, Clock, ArrowUpRight, Shield, Crown, Sparkles, Users } from 'lucide-react';
 import { ADBrandEmblem } from './ADBrandEmblem.js';
+import { BUSINESS_CONFIG } from '../config/cateringConfig.js';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="relative z-10 bg-[#020B07] border-t border-[#D4AF37]/35 text-[#FAF8F5]/80 pt-16 pb-12 shadow-2xl">
+    <footer id="footer-contact" className="relative z-10 bg-[#020B07] border-t border-[#D4AF37]/35 text-[#FAF8F5]/80 pt-16 pb-12 shadow-2xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-12 border-b border-[#D4AF37]/20">
           
@@ -15,10 +16,10 @@ export const Footer: React.FC = () => {
               <ADBrandEmblem size="sm" showText={false} />
               <div className="flex flex-col">
                 <span className="font-display font-black text-lg text-white group-hover:text-[#F5CE68] tracking-tight transition-colors">
-                  AD CATERING & COOK SERVICES
+                  {BUSINESS_CONFIG.name.toUpperCase()}
                 </span>
                 <span className="text-[10px] text-[#F5CE68] tracking-widest uppercase font-bold">
-                  Delicious Food for Every Special Occasion
+                  {BUSINESS_CONFIG.tagline}
                 </span>
               </div>
             </Link>
@@ -27,9 +28,10 @@ export const Footer: React.FC = () => {
               Odisha’s premier catering company specializing in grand royal weddings, corporate banquets, traditional Odia feasts, and certified home cook services.
             </p>
 
+            {/* Configurable Contact Buttons */}
             <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3">
               <a
-                href="https://wa.me/919876543210"
+                href={`https://wa.me/${BUSINESS_CONFIG.whatsappNumber}`}
                 target="_blank"
                 rel="noreferrer"
                 className="px-4 py-2 rounded-xl bg-emerald-950/70 text-emerald-300 border border-emerald-500/40 text-xs font-bold hover:bg-emerald-900/80 transition-all flex items-center justify-center gap-1.5 shadow"
@@ -38,12 +40,23 @@ export const Footer: React.FC = () => {
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </a>
               <a
-                href="tel:+919876543210"
+                href={`tel:${BUSINESS_CONFIG.phonePrimaryRaw}`}
                 className="px-4 py-2 rounded-xl glass-medium text-[#FAF8F5] border border-white/15 text-xs font-bold hover:border-[#D4AF37]/50 transition-all flex items-center justify-center gap-1.5 shadow"
               >
                 <Phone className="w-3.5 h-3.5 text-[#F5CE68]" />
-                <span>+91 98765 43210</span>
+                <span>{BUSINESS_CONFIG.phonePrimary}</span>
               </a>
+            </div>
+
+            {/* Special Enquiry for <500 Guests Callout in Footer */}
+            <div className="p-3 rounded-xl bg-[#041810] border border-[#D4AF37]/35 space-y-1 text-xs">
+              <p className="font-bold text-[#F5CE68] flex items-center gap-1.5 text-[11px]">
+                <Users className="w-3.5 h-3.5 text-[#F5CE68]" />
+                <span>Standard Minimum: 500 Guests</span>
+              </p>
+              <p className="text-[11px] text-[#CBD5E1] leading-relaxed">
+                Special enquiries accepted for smaller events (200, 300+ guests). Call <a href={`tel:${BUSINESS_CONFIG.phonePrimaryRaw}`} className="text-[#F5CE68] font-bold underline">{BUSINESS_CONFIG.phonePrimary}</a> for custom quotations.
+              </p>
             </div>
           </div>
 
@@ -133,19 +146,23 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2.5 text-xs text-[#FAF8F5]/80 font-light">
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-[#F5CE68] shrink-0 mt-0.5" />
-                <span>Plot 104, Shaheed Nagar, Bhubaneswar, Odisha 751007</span>
+                <span>{BUSINESS_CONFIG.address}</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-[#F5CE68] shrink-0" />
-                <span>+91 98765 43210 / +91 94371 23456</span>
+                <a href={`tel:${BUSINESS_CONFIG.phonePrimaryRaw}`} className="hover:text-[#F5CE68] transition-colors">
+                  {BUSINESS_CONFIG.phoneDisplay}
+                </a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-[#F5CE68] shrink-0" />
-                <span>contact@adcatering.com</span>
+                <a href={`mailto:${BUSINESS_CONFIG.email}`} className="hover:text-[#F5CE68] transition-colors">
+                  {BUSINESS_CONFIG.email}
+                </a>
               </li>
               <li className="flex items-start gap-2">
                 <Clock className="w-4 h-4 text-[#F5CE68] shrink-0 mt-0.5" />
-                <span>Open 7 Days: 8:00 AM – 11:00 PM</span>
+                <span>{BUSINESS_CONFIG.hours}</span>
               </li>
             </ul>
           </div>

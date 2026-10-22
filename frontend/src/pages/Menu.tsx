@@ -34,8 +34,11 @@ import {
   Menu as MenuIcon,
   X,
   LayoutGrid,
-  Grid2X2
+  Grid2X2,
+  Users
 } from 'lucide-react';
+import { MinimumGuestsNotice } from '../components/MinimumGuestsNotice.js';
+import { BUSINESS_CONFIG } from '../config/cateringConfig.js';
 
 export const Menu: React.FC = () => {
   const { selectedDishes, toggleDish, isDishSelected, clearSelection } = useMenuCart();
@@ -177,12 +180,20 @@ export const Menu: React.FC = () => {
 
   // Featured Chef's specials
   const chefSpecialDishes = useMemo(() => {
-    return menuItems.filter((item) => item.isFeatured || (item.isPopular && item.isOdiaSpecialty)).slice(0, 4);
+    const priorityIds = ['menu_278', 'menu_140', 'menu_300', 'menu_365'];
+    const priority = priorityIds.map(id => menuItems.find(item => item.id === id)).filter(Boolean) as any[];
+    if (priority.length === 4) return priority;
+    const rest = menuItems.filter((item) => (item.isFeatured || (item.isPopular && item.isOdiaSpecialty)) && !priorityIds.includes(item.id));
+    return [...priority, ...rest].slice(0, 4);
   }, [menuItems]);
 
   // Odia Specialty highlights
   const odiaSpecialDishes = useMemo(() => {
-    return menuItems.filter((item) => item.isOdiaSpecialty || item.category === 'ODISSI SPECIAL').slice(0, 6);
+    const priorityIds = ['menu_300', 'menu_297', 'menu_365', 'menu_246', 'menu_296', 'menu_278'];
+    const priority = priorityIds.map(id => menuItems.find(item => item.id === id)).filter(Boolean) as any[];
+    if (priority.length === 6) return priority;
+    const rest = menuItems.filter((item) => (item.isOdiaSpecialty || item.category === 'ODISSI SPECIAL') && !priorityIds.includes(item.id));
+    return [...priority, ...rest].slice(0, 6);
   }, [menuItems]);
 
   // Dessert highlights
@@ -372,7 +383,7 @@ export const Menu: React.FC = () => {
                 <div className="space-y-4">
                   <div className="relative h-44 rounded-2xl overflow-hidden border border-[#D4AF37]/30 shadow-md">
                     <img
-                      src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80"
+                      src="/images/luxury-buffet-setup.jpg"
                       alt="Normal Menu Feast"
                       className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
                     />
@@ -678,7 +689,7 @@ export const Menu: React.FC = () => {
                           onError={(e) => {
                             e.currentTarget.onerror = null;
                             e.currentTarget.src = dish.isVeg
-                              ? 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80'
+                              ? '/images/gourmet-ceramic-curry.jpg'
                               : 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80';
                           }}
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
@@ -760,7 +771,7 @@ export const Menu: React.FC = () => {
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Search 145+ dishes..."
+                  placeholder="Search 360+ dishes (Biryani, Dal, Paneer, Fish, Mutton, Sweets)..."
                   className="w-full bg-[#06291C] border border-[#D4AF37]/40 rounded-xl pl-9 pr-7 py-2 text-xs text-white placeholder-emerald-300/60 focus:outline-none focus:border-[#F5CE68]"
                 />
                 {searchQuery && (
@@ -1167,7 +1178,7 @@ export const Menu: React.FC = () => {
                                 onError={(e) => {
                                   e.currentTarget.onerror = null;
                                   e.currentTarget.src = dish.isVeg
-                                    ? 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80'
+                                    ? '/images/gourmet-ceramic-curry.jpg'
                                     : 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80';
                                 }}
                                 className="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-700 ease-out"
@@ -1241,6 +1252,19 @@ export const Menu: React.FC = () => {
                               <p className="text-[11px] text-[#CBD5E1] line-clamp-1 sm:line-clamp-2 leading-tight">
                                 {dish.description}
                               </p>
+
+                              {/* Serving Size & Pricing Badge */}
+                              <div className="flex items-center justify-between text-[10px] text-emerald-300 font-medium pt-1 gap-1">
+                                <span className="truncate flex items-center gap-1 text-[10px] text-emerald-200/90">
+                                  <UtensilsCrossed className="w-2.5 h-2.5 text-[#F5CE68] shrink-0" />
+                                  <span className="truncate">{dish.serving || '1 Banquet Portion'}</span>
+                                </span>
+                                {dish.price ? (
+                                  <span className="text-[#F5CE68] font-black shrink-0 text-[11px]">₹{dish.price}</span>
+                                ) : (
+                                  <span className="text-emerald-400 font-bold shrink-0 text-[9px] bg-emerald-950/70 px-1.5 py-0.5 rounded border border-emerald-500/30">Package</span>
+                                )}
+                              </div>
                             </div>
                           </div>
 
@@ -1306,9 +1330,12 @@ export const Menu: React.FC = () => {
               Menu Collections Comparison
             </h2>
             <p className="text-sm text-[#CBD5E1] font-normal">
-              Compare items, counters, and service inclusions across our Basic, Premium, and Deluxe banquet offerings.
+              Compare items, counters, and service inclusions across our Basic, Premium, and Deluxe banquet offerings. Standard catering packages are designed for a minimum of 500 guests.
             </p>
           </div>
+
+          {/* 500 Guests Standard Minimum Notice Banner */}
+          <MinimumGuestsNotice variant="banner" className="mb-6" />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
@@ -1316,15 +1343,24 @@ export const Menu: React.FC = () => {
             <div className="rounded-[36px] bg-[#06291C]/85 backdrop-blur-xl border border-[#D4AF37]/40 p-6 sm:p-8 space-y-6 liquid-shine flex flex-col justify-between shadow-[0_20px_50px_rgba(0,0,0,0.6)]">
               <div className="space-y-4">
                 <div>
-                  <h3 className="font-display font-black text-2xl text-white">BASIC</h3>
+                  <div className="flex items-center justify-between">
+                    <h3 className="font-display font-black text-2xl text-white">BASIC</h3>
+                    <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-[#041810] text-[#F5CE68] border border-[#D4AF37]/40">
+                      Min. 500 Guests
+                    </span>
+                  </div>
                   <p className="text-xs text-[#CBD5E1] mt-1">Normal Menu • 29 Delicacies from Image 2</p>
-                  <p className="font-display font-black text-2xl text-[#F5CE68] mt-2">₹850 <span className="text-xs text-[#CBD5E1] font-semibold">/ Person</span></p>
+                  <p className="font-display font-black text-2xl text-[#F5CE68] mt-2">₹850 <span className="text-xs text-[#CBD5E1] font-semibold">/ Plate</span></p>
                 </div>
 
                 <div className="py-3 border-y border-[#D4AF37]/25 space-y-3 text-xs text-[#CBD5E1]">
                   <div className="flex items-center justify-between">
                     <span>Dishes Count:</span>
                     <strong className="text-white">29 Delicacies (Normal Menu)</strong>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span>Serving Details:</span>
+                    <strong className="text-white">Buffet Handis & Uniformed Crew</strong>
                   </div>
                   <div className="flex items-center justify-between">
                     <span>Welcome Drinks:</span>
@@ -1358,10 +1394,10 @@ export const Menu: React.FC = () => {
               </div>
 
               <Link
-                to="/booking?package=BASIC%20PACKAGE"
+                to="/booking?package=BASIC%20PACKAGE&guests=500"
                 className="w-full py-3.5 rounded-xl bg-emerald-950/80 hover:bg-emerald-900 border border-[#D4AF37]/50 text-xs font-bold text-center block text-white shadow-sm transition-all"
               >
-                Choose Basic (₹850)
+                Book Basic (₹850 / Plate)
               </Link>
             </div>
 
@@ -1372,17 +1408,26 @@ export const Menu: React.FC = () => {
                   <div>
                     <h3 className="font-display font-black text-2xl text-white">PREMIUM</h3>
                     <p className="text-xs text-[#F5CE68] font-semibold mt-1">Most chosen wedding banquet</p>
-                    <p className="font-display font-black text-2xl text-[#F5CE68] mt-2">₹950 <span className="text-xs text-[#CBD5E1] font-semibold">/ Person</span></p>
+                    <p className="font-display font-black text-2xl text-[#F5CE68] mt-2">₹950 <span className="text-xs text-[#CBD5E1] font-semibold">/ Plate</span></p>
                   </div>
-                  <span className="px-3 py-1 rounded-full bg-gradient-to-r from-[#D4AF37] to-[#E5C04A] text-[#041810] text-[10px] font-black uppercase shadow-sm">
-                    POPULAR
-                  </span>
+                  <div className="flex flex-col items-end gap-1">
+                    <span className="px-3 py-1 rounded-full bg-gradient-to-r from-[#D4AF37] to-[#E5C04A] text-[#041810] text-[10px] font-black uppercase shadow-sm">
+                      POPULAR
+                    </span>
+                    <span className="text-[9px] font-bold px-2 py-0.5 rounded-full bg-[#041810] text-[#F5CE68] border border-[#D4AF37]/40">
+                      Min. 500 Guests
+                    </span>
+                  </div>
                 </div>
 
                 <div className="py-3 border-y border-[#D4AF37]/30 space-y-3 text-xs text-[#CBD5E1]">
                   <div className="flex items-center justify-between">
                     <span>Dishes Count:</span>
                     <strong className="text-[#F5CE68]">75+ Selections</strong>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span>Serving Details:</span>
+                    <strong className="text-white">Royal Live Counters & Silver Chafers</strong>
                   </div>
                   <div className="flex items-center justify-between">
                     <span>Welcome Coolers:</span>
@@ -1412,10 +1457,10 @@ export const Menu: React.FC = () => {
               </div>
 
               <Link
-                to="/booking?package=PREMIUM%20PACKAGE"
+                to="/booking?package=PREMIUM%20PACKAGE&guests=500"
                 className="w-full py-3.5 rounded-xl gold-gradient-btn text-[#041810] text-xs font-black text-center block shadow-md hover:scale-[1.02] transition-transform"
               >
-                Choose Premium (₹950)
+                Book Premium (₹950 / Plate)
               </Link>
             </div>
 
@@ -1426,17 +1471,26 @@ export const Menu: React.FC = () => {
                   <div>
                     <h3 className="font-display font-black text-2xl text-white">DELUXE</h3>
                     <p className="text-xs text-[#CBD5E1] mt-1">Delux Menu • 44 Delicacies from Image 2</p>
-                    <p className="font-display font-black text-2xl text-[#F5CE68] mt-2">₹1,050 <span className="text-xs text-[#CBD5E1] font-semibold">/ Person</span></p>
+                    <p className="font-display font-black text-2xl text-[#F5CE68] mt-2">₹1,050 <span className="text-xs text-[#CBD5E1] font-semibold">/ Plate</span></p>
                   </div>
-                  <span className="px-3 py-1 rounded-full bg-[#041810] text-[#F5CE68] text-[10px] font-black uppercase shadow-sm border border-[#D4AF37]/50">
-                    VIP LUXURY
-                  </span>
+                  <div className="flex flex-col items-end gap-1">
+                    <span className="px-3 py-1 rounded-full bg-[#041810] text-[#F5CE68] text-[10px] font-black uppercase shadow-sm border border-[#D4AF37]/50">
+                      VIP LUXURY
+                    </span>
+                    <span className="text-[9px] font-bold px-2 py-0.5 rounded-full bg-[#041810] text-[#FFDF73] border border-[#D4AF37]/40">
+                      Min. 500 Guests
+                    </span>
+                  </div>
                 </div>
 
                 <div className="py-3 border-y border-[#D4AF37]/30 space-y-3 text-xs text-[#CBD5E1]">
                   <div className="flex items-center justify-between">
                     <span>Dishes Count:</span>
                     <strong className="text-[#F5CE68]">44 Delicacies (Delux Menu)</strong>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span>Serving Details:</span>
+                    <strong className="text-white">VIP Live Stations & Ice-Glass Hospitality</strong>
                   </div>
                   <div className="flex items-center justify-between">
                     <span>Welcome Drinks:</span>
@@ -1470,10 +1524,10 @@ export const Menu: React.FC = () => {
               </div>
 
               <Link
-                to="/booking?package=DELUXE%20PACKAGE"
+                to="/booking?package=DELUXE%20PACKAGE&guests=500"
                 className="w-full py-3.5 rounded-xl gold-gradient-btn text-[#041810] text-xs font-black text-center block shadow-md hover:scale-[1.02] transition-transform"
               >
-                Choose Deluxe (₹1050)
+                Book Deluxe (₹1,050 / Plate)
               </Link>
             </div>
 

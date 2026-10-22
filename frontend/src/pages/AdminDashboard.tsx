@@ -877,9 +877,12 @@ export const AdminDashboard: React.FC = () => {
                           <h4 className="font-display font-bold text-base text-white">{pkg.name}</h4>
                           <p className="text-xs text-[#CBD5E1] mt-0.5">{pkg.description}</p>
                         </div>
-                        <span className="font-display text-xl font-bold text-[#F5CE68] tabular-nums">
-                          ₹{pkg.pricePerPerson}
-                        </span>
+                        <div className="text-right">
+                          <span className="font-display text-xl font-bold text-[#F5CE68] tabular-nums">
+                            ₹{pkg.pricePerPerson}
+                          </span>
+                          <p className="text-[10px] text-slate-400">/ Plate</p>
+                        </div>
                       </div>
                       <div className="text-xs text-[#CBD5E1] space-y-1 font-medium">
                         <p>• {pkg.startersCount} Starters, {pkg.mainCourseCount} Main Course</p>

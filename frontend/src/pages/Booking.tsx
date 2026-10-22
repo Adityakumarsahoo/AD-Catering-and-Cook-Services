@@ -17,11 +17,14 @@ import {
   ShieldCheck,
   UtensilsCrossed,
   Crown,
-  ChefHat,
   Flame,
   Leaf,
   Award,
+  PhoneCall,
+  Phone,
+  ChefHat,
 } from 'lucide-react';
+import { BUSINESS_CONFIG } from '../config/cateringConfig.js';
 
 export const Booking: React.FC = () => {
   const { user } = useAuth();
@@ -35,7 +38,7 @@ export const Booking: React.FC = () => {
   const initialPackage = searchParams.get('package') || 'PREMIUM PACKAGE';
   const initialService = searchParams.get('service') || '';
   const initialMenuType = searchParams.get('menuType') || '';
-  const initialGuests = parseInt(searchParams.get('guests') || '') || (initialType === 'cook' ? 30 : 150);
+  const initialGuests = parseInt(searchParams.get('guests') || '') || (initialType === 'cook' ? 30 : 500);
 
   const [bookingType, setBookingType] = useState<'catering' | 'cook'>(initialType);
   const [packages, setPackages] = useState<any[]>([]);
@@ -114,6 +117,7 @@ export const Booking: React.FC = () => {
 
   // Active Total
   const activeEstimatedTotal = bookingType === 'catering' ? estimatedCateringTotal : estimatedCookTotal;
+  const isBelowMinimum = bookingType === 'catering' && formData.guestCount < 500;
 
   const eventTypes = [
     'Wedding Reception',
@@ -145,16 +149,19 @@ export const Booking: React.FC = () => {
       return;
     }
 
-    const minGuests = bookingType === 'catering' ? 25 : 10;
+    const minGuests = bookingType === 'catering' ? 10 : 10;
     if (formData.guestCount < minGuests) {
-      toast.error(`Minimum guest count for ${bookingType === 'catering' ? 'Catering' : 'Cook Service'} is ${minGuests}.`);
+      toast.error('Please enter a valid guest count.');
       return;
     }
 
     setIsSubmitting(true);
     try {
-      // Build requirements string
       let specReq = formData.specialRequirements;
+      if (isBelowMinimum) {
+        const smallerGatheringNote = `[SPECIAL ENQUIRY: ${formData.guestCount} GUESTS - BELOW 500 STANDARD MINIMUM - REQUIRE CUSTOM QUOTATION]`;
+        specReq = specReq ? `${smallerGatheringNote}\n${specReq}` : smallerGatheringNote;
+      }
       if (bookingType === 'cook') {
         const cookNotes = `[COOK HIRE] Specialty: ${formData.cookSpecialty} | Meal: ${formData.mealSlot} | Groceries: ${formData.groceryOption} | Kitchen: ${formData.kitchenType}`;
         specReq = specReq ? `${cookNotes}\n${specReq}` : cookNotes;
@@ -456,27 +463,51 @@ export const Booking: React.FC = () => {
 
                   <div>
                     <label className="block text-xs font-bold text-[#CBD5E1] mb-1.5">
-                      {bookingType === 'catering' ? 'Estimated Guests (Min 25)' : 'Guest Scale (Min 10)'} *
+                      {bookingType === 'catering' ? 'Estimated Guests (Standard Min 500)' : 'Guest Scale (Min 10)'} *
                     </label>
                     <input
                       type="number"
-                      min={bookingType === 'catering' ? 25 : 10}
+                      min={10}
                       max={10000}
                       step={5}
                       value={formData.guestCount}
                       onChange={(e) =>
                         setFormData({
                           ...formData,
-                          guestCount: Math.max(
-                            bookingType === 'catering' ? 25 : 10,
-                            parseInt(e.target.value) || (bookingType === 'catering' ? 25 : 10)
-                          ),
+                          guestCount: Math.max(10, parseInt(e.target.value) || 10),
                         })
                       }
                       className="w-full bg-[#06291C] border border-[#D4AF37]/40 rounded-2xl px-4 py-2.5 text-xs text-white font-bold tabular-nums focus:outline-none focus:border-[#F5CE68] shadow-sm transition-all"
                     />
                   </div>
                 </div>
+
+                {/* 500 Guests Standard Minimum Notice when <500 */}
+                {isBelowMinimum && (
+                  <div className="p-4 rounded-2xl bg-amber-950/75 border-2 border-[#D4AF37]/70 space-y-2 shadow-lg animate-in fade-in">
+                    <div className="flex items-center gap-2">
+                      <Crown className="w-4 h-4 text-[#F5CE68]" />
+                      <h4 className="font-display font-black text-sm text-[#F5CE68]">
+                        {BUSINESS_CONFIG.minimumBookingNotice.title}
+                      </h4>
+                    </div>
+                    <p className="text-xs text-[#CBD5E1] leading-relaxed">
+                      {BUSINESS_CONFIG.minimumBookingNotice.smallerGatheringsNote}
+                    </p>
+                    <div className="pt-1 flex flex-wrap items-center gap-2.5">
+                      <a
+                        href={`tel:${BUSINESS_CONFIG.phonePrimaryRaw}`}
+                        className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#D4AF37] hover:bg-[#F5CE68] text-[#041810] text-xs font-black transition-colors shadow-sm"
+                      >
+                        <Phone className="w-3.5 h-3.5" />
+                        <span>Call {BUSINESS_CONFIG.phonePrimary}</span>
+                      </a>
+                      <span className="text-[11px] text-[#94A3B8]">
+                        Or submit below to request a tailored quote
+                      </span>
+                    </div>
+                  </div>
+                )}
 
                 <div>
                   <label className="block text-xs font-bold text-[#CBD5E1] mb-1.5">
@@ -539,7 +570,7 @@ export const Booking: React.FC = () => {
                       >
                         {packages.map((p) => (
                           <option key={p.id} value={p.name} className="bg-[#041810] text-white">
-                            {p.name} (₹{p.pricePerPerson}/guest)
+                            {p.name} (₹{p.pricePerPerson} / Plate)
                           </option>
                         ))}
                         <option value="Customized Menu" className="bg-[#041810] text-white">
@@ -722,14 +753,18 @@ export const Booking: React.FC = () => {
                       <Sparkles className="w-4 h-4" />
                       <span>
                         {bookingType === 'catering'
-                          ? 'Submit Catering Banquet Request'
-                          : 'Book Master Cook Service'}
+                          ? isBelowMinimum
+                            ? `Request Custom Quotation (${formData.guestCount} Guests)`
+                            : `Submit Catering Banquet Request (${formData.guestCount} Guests)`
+                          : `Request Custom Cook Quote & Availability (${formData.guestCount} Guests)`}
                       </span>
                     </>
                   )}
                 </button>
                 <p className="text-center text-[11px] text-[#94A3B8] mt-2 font-normal">
-                  No immediate online payment required. Our culinary director will call you to verify kitchen capacity and finalize your booking.
+                  {isBelowMinimum
+                    ? 'Our banquet director will contact you with a customized quotation tailored to your guest scale.'
+                    : 'No immediate online payment required. Our culinary director will call you to verify kitchen capacity and finalize your booking.'}
                 </p>
               </div>
             </form>
@@ -770,15 +805,15 @@ export const Booking: React.FC = () => {
                     </div>
                   )}
                   <div className="flex items-center justify-between pt-2">
-                    <span className="text-[#CBD5E1]">Rate per Person:</span>
+                    <span className="text-[#CBD5E1]">Rate per Plate:</span>
                     <span className="font-bold text-[#F5CE68] tabular-nums">
-                      ₹{pricePerPerson}
+                      ₹{pricePerPerson} / Plate
                     </span>
                   </div>
                   <div className="flex items-center justify-between pt-2">
-                    <span className="text-[#CBD5E1]">Honored Guests:</span>
+                    <span className="text-[#CBD5E1]">Plates / Guests:</span>
                     <span className="font-bold text-white tabular-nums">
-                      {formData.guestCount}
+                      {formData.guestCount} {isBelowMinimum ? '(Custom Quote)' : 'Guests'}
                     </span>
                   </div>
                   <div className="flex items-center justify-between pt-2">
@@ -818,17 +853,31 @@ export const Booking: React.FC = () => {
 
               {/* Dynamic Total Box */}
               <div className="p-5 rounded-2xl bg-gradient-to-br from-[#06291C] to-[#041810] text-white border border-[#D4AF37]/40 text-center shadow-md">
-                <p className="text-[10px] text-[#CBD5E1] uppercase tracking-widest font-semibold">
-                  Estimated Total Quote
-                </p>
-                <p className="font-display text-3xl sm:text-4xl font-black text-[#F5CE68] mt-1 tabular-nums">
-                  ₹{activeEstimatedTotal.toLocaleString('en-IN')}
-                </p>
-                <p className="text-[10px] text-[#94A3B8] mt-1">
-                  {bookingType === 'catering'
-                    ? `(Based on ${formData.guestCount} guests × ₹${pricePerPerson})`
-                    : `(Cook Team Fee for ${formData.guestCount} guests)`}
-                </p>
+                {bookingType === 'catering' ? (
+                  <>
+                    <p className="text-[10px] text-[#CBD5E1] uppercase tracking-widest font-semibold">
+                      Estimated Catering Total
+                    </p>
+                    <p className="font-display text-3xl sm:text-4xl font-black text-[#F5CE68] mt-1 tabular-nums">
+                      ₹{activeEstimatedTotal.toLocaleString('en-IN')}
+                    </p>
+                    <p className="text-[10px] text-[#94A3B8] mt-1">
+                      (Based on {formData.guestCount} plates × ₹{pricePerPerson} / plate)
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    <p className="text-[10px] text-[#CBD5E1] uppercase tracking-widest font-semibold">
+                      Cook Hire Pricing
+                    </p>
+                    <p className="font-display text-2xl sm:text-3xl font-black text-[#F5CE68] mt-1">
+                      Custom Personalized Quote
+                    </p>
+                    <p className="text-[10px] text-[#94A3B8] mt-1">
+                      Itemized proposal tailored to your chosen menu & {formData.guestCount} guests
+                    </p>
+                  </>
+                )}
               </div>
 
               <div className="p-4 rounded-2xl bg-[#06291C]/70 border border-[#D4AF37]/30 space-y-1.5 text-[11px] text-[#CBD5E1]">

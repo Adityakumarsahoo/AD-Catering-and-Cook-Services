@@ -39,7 +39,7 @@ export const AdminPackages: React.FC = () => {
     staffIncluded: true,
     decorationOption: true,
     popular: false,
-    minGuests: 50,
+    minGuests: 500,
     featuresText: '',
   };
 
@@ -83,7 +83,7 @@ export const AdminPackages: React.FC = () => {
       staffIncluded: Boolean(pkg.staffIncluded),
       decorationOption: Boolean(pkg.decorationOption),
       popular: Boolean(pkg.popular),
-      minGuests: pkg.minGuests || 50,
+      minGuests: pkg.minGuests || 500,
       featuresText: Array.isArray(pkg.features) ? pkg.features.join('\n') : '',
     });
     setModalOpen(true);
@@ -92,7 +92,7 @@ export const AdminPackages: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.pricePerPerson) {
-      toast.error('Package name and price per person are required.');
+      toast.error('Package name and price per plate are required.');
       return;
     }
 
@@ -193,7 +193,7 @@ export const AdminPackages: React.FC = () => {
                   <span className="text-2xl font-black font-mono text-[#AA7C11]">
                     ₹{pkg.pricePerPerson}
                   </span>
-                  <p className="text-[10px] text-slate-400 font-medium">per person</p>
+                  <p className="text-[10px] text-slate-400 font-medium">per plate</p>
                 </div>
               </div>
 
@@ -294,7 +294,7 @@ export const AdminPackages: React.FC = () => {
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-slate-700 font-bold mb-1">Price per Person (₹) *</label>
+                  <label className="block text-slate-700 font-bold mb-1">Price per Plate (₹) *</label>
                   <input
                     type="number"
                     required

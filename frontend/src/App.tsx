@@ -10,6 +10,7 @@ import { IntroSplash } from './components/IntroSplash.js';
 import { Navbar } from './components/Navbar.js';
 import { Footer } from './components/Footer.js';
 import { FloatingActions } from './components/FloatingActions.js';
+import { MobileBottomNav } from './components/MobileBottomNav.js';
 import { ProtectedRoute, AdminRoute } from './components/ProtectedRoute.js';
 import { AdminLayout } from './layouts/AdminLayout.js';
 
@@ -205,7 +206,7 @@ function AppContent() {
       <CustomCursor />
       <VideoBackground />
       <Navbar />
-      <main className="flex-1 relative z-10">
+      <main className="flex-1 relative z-10 pb-20 md:pb-0">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -235,6 +236,7 @@ function AppContent() {
       </main>
       <Footer />
       <FloatingActions />
+      <MobileBottomNav />
     </div>
   );
 }

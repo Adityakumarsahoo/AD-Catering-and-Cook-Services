@@ -246,7 +246,7 @@ export const VegMenu: React.FC = () => {
     name: 'Navaratna Kurma',
     category: 'MAIN COURSE',
     description: 'Nine culinary jewels of tender seasonal vegetables, fruits, dry nuts, and cottage cheese cooked in a royal mild cashew cream kurma.',
-    image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/e/ec/Navratan_Korma.jpg',
     isVeg: true,
     isFeatured: true,
     tags: ['Imperial Mughal', 'Mild & Royal', 'Dry Fruits & Nuts'],
@@ -267,7 +267,7 @@ export const VegMenu: React.FC = () => {
       name: 'Seasonal Veg',
       category: 'MAIN COURSE',
       description: 'Fresh farm-picked seasonal cauliflower, green peas, carrots, and beans dry-roasted with aromatic whole spices.',
-      image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80',
       isVeg: true,
       tags: ['Farm Fresh', 'Seasonal Bounty'],
     },
@@ -276,7 +276,7 @@ export const VegMenu: React.FC = () => {
       name: 'Mushroom Chilli',
       category: 'MAIN COURSE',
       description: 'Crispy button mushrooms wok-tossed with scallions, capsicum, green chillies, and savory dark soy.',
-      image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80',
       isVeg: true,
       tags: ['Indo-Chinese', 'Hot & Savory'],
     },
@@ -401,9 +401,9 @@ export const VegMenu: React.FC = () => {
         {/* Background Image: Royal Emerald Vegetarian Banquet Ambient */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1920&q=80"
+            src="/images/luxury-buffet-setup.jpg"
             alt="Pure Vegetarian Catering Feast"
-            className="w-full h-full object-cover filter brightness-[0.7] contrast-[1.1] opacity-25"
+            className="w-full h-full object-cover filter brightness-[0.7] contrast-[1.1] opacity-35"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#06291C]/90 via-[#041810]/95 to-[#020D08]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_center,rgba(16,185,129,0.2)_0%,transparent_70%)]" />

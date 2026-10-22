@@ -38,9 +38,14 @@ import {
 
 export const Home: React.FC = () => {
   const { toggleDish, isDishSelected } = useMenuCart();
-  const defaultCateringList = defaultServices.filter((s) => s.category === 'catering');
-  const [featuredMenu, setFeaturedMenu] = useState<any[]>(defaultMenuItems.slice(0, 6));
-  const [featuredServices, setFeaturedServices] = useState<any[]>(defaultCateringList);
+  const ROYAL_SIGNATURE_IDS = ['menu_278', 'menu_140', 'menu_300', 'menu_222', 'menu_365', 'menu_21'];
+  const signatureDishes = ROYAL_SIGNATURE_IDS
+    .map(id => defaultMenuItems.find(i => i.id === id))
+    .filter(Boolean);
+  const [featuredMenu, setFeaturedMenu] = useState<any[]>(
+    signatureDishes.length > 0 ? signatureDishes : defaultMenuItems.slice(0, 6)
+  );
+  const [featuredServices, setFeaturedServices] = useState<any[]>(defaultServices);
   const [serviceFilter, setServiceFilter] = useState<string>('ALL');
   const [packages, setPackages] = useState<any[]>(defaultPackages);
   const [reviews, setReviews] = useState<any[]>([]);
@@ -57,7 +62,10 @@ export const Home: React.FC = () => {
           api.getReviews().catch(() => null),
         ]);
         if (menuRes?.menuItems && menuRes.menuItems.length > 0) {
-          setFeaturedMenu(menuRes.menuItems.slice(0, 6));
+          const curated = ROYAL_SIGNATURE_IDS
+            .map(id => menuRes.menuItems.find((i: any) => i.id === id))
+            .filter(Boolean);
+          setFeaturedMenu(curated.length > 0 ? curated : menuRes.menuItems.slice(0, 6));
         }
         if (srvRes?.services && srvRes.services.length > 0) {
           const catOnly = srvRes.services.filter((s: any) => s.category === 'catering');
@@ -518,7 +526,7 @@ export const Home: React.FC = () => {
                     <span className="px-3.5 py-1 rounded-full bg-[#041810] border border-[#D4AF37] text-xs font-black text-[#F5CE68] uppercase tracking-wider">
                       Turnkey Banquet Service
                     </span>
-                    <span className="text-xs text-[#CBD5E1] font-semibold">25 to 5,000+ Guests</span>
+                    <span className="text-xs text-[#F5CE68] font-bold">Min. 500 Guests (Special Quote for 200/300)</span>
                   </div>
 
                   <div>
@@ -550,7 +558,7 @@ export const Home: React.FC = () => {
                     </div>
                     <div className="flex items-center gap-2 text-xs text-[#FAF8F5]">
                       <CheckCircle2 className="w-4 h-4 text-[#F5CE68] shrink-0" />
-                      <span><strong>All-Inclusive Packages:</strong> Basic (₹850), Premium (₹950), Deluxe (₹1050)</span>
+                      <span><strong>All-Inclusive Packages:</strong> Basic (₹850 / Plate), Premium (₹950 / Plate), Deluxe (₹1,050 / Plate) • Min. 500 Guests</span>
                     </div>
                   </div>
                 </div>
@@ -563,7 +571,7 @@ export const Home: React.FC = () => {
                     View Banquet Packages
                   </Link>
                   <Link
-                    to="/booking?type=catering"
+                    to="/booking?type=catering&guests=500"
                     className="flex-1 py-3.5 rounded-2xl bg-[#041810] border border-[#D4AF37]/50 text-xs font-bold text-[#F5CE68] hover:bg-emerald-950 text-center transition-colors"
                   >
                     Book Full Catering
@@ -595,26 +603,36 @@ export const Home: React.FC = () => {
                     </p>
                   </div>
 
-                  <div className="space-y-2.5 pt-2">
-                    <div className="flex items-center gap-2 text-xs text-[#FAF8F5]">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-                      <span><strong>Verified Master Chefs:</strong> 10+ years average culinary experience & police-verified</span>
+                  <div className="space-y-3 pt-2">
+                    <div className="flex items-start gap-2.5 text-xs text-[#FAF8F5]">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                      <span>
+                        <strong className="text-white">15+ Years of Master Cook Experience:</strong> Experienced professional chefs bringing exceptional cooking skills, authentic flavors, and memorable dining experiences to your home and special events.
+                      </span>
                     </div>
-                    <div className="flex items-center gap-2 text-xs text-[#FAF8F5]">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-                      <span><strong>Flexible Groceries:</strong> Supply your own groceries or have AD Catering procure fresh</span>
+                    <div className="flex items-start gap-2.5 text-xs text-[#FAF8F5]">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                      <span>
+                        <strong className="text-white">Flexible Groceries:</strong> Supply your own groceries with chef’s checklist, or have AD Catering procure 100% pure desi ghee & fresh items.
+                      </span>
                     </div>
-                    <div className="flex items-center gap-2 text-xs text-[#FAF8F5]">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-                      <span><strong>Specialized Crews:</strong> Odia Mutton Kasa masters, Satvik Brahmin cooks & sweet halwais</span>
+                    <div className="flex items-start gap-2.5 text-xs text-[#FAF8F5]">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                      <span>
+                        <strong className="text-white">Specialized Crews:</strong> Odia Mutton Kasa masters, Satvik Brahmin cooks & sweet halwai battalions.
+                      </span>
                     </div>
-                    <div className="flex items-center gap-2 text-xs text-[#FAF8F5]">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-                      <span><strong>Spotless Kitchen Handover:</strong> Full utensil cleaning and sanitization after cooking</span>
+                    <div className="flex items-start gap-2.5 text-xs text-[#FAF8F5]">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                      <span>
+                        <strong className="text-white">Spotless Kitchen Handover:</strong> Full utensil cleaning and sanitization after cooking.
+                      </span>
                     </div>
-                    <div className="flex items-center gap-2 text-xs text-[#FAF8F5]">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-                      <span><strong>Transparent Cook Fee:</strong> Starting ₹1,499 (Home Cook) to ₹4,999 (Wedding Crew)</span>
+                    <div className="flex items-start gap-2.5 text-xs text-[#FAF8F5]">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                      <span>
+                        <strong className="text-white">Personalized Custom Pricing:</strong> Contact-based quotation tailored to your chosen menu, guest count & hours.
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -630,7 +648,7 @@ export const Home: React.FC = () => {
                     to="/booking?type=cook"
                     className="flex-1 py-3.5 rounded-2xl bg-[#041810] border border-[#D4AF37]/50 text-xs font-bold text-[#F5CE68] hover:bg-emerald-950 text-center transition-colors"
                   >
-                    Hire a Master Cook
+                    Request a Cook Now
                   </Link>
                 </div>
               </div>
@@ -715,8 +733,9 @@ export const Home: React.FC = () => {
                     </div>
 
                     <div className="mt-4 pt-3 border-t border-[#D4AF37]/20 flex items-center justify-between">
-                      <span className="text-[11px] text-[#94A3B8] font-medium">
-                        {item.isOdiaSpecialty ? 'Heritage Odia' : 'Royal Feast'}
+                      <span className="text-[11px] text-[#A7F3D0] font-medium flex items-center gap-1 truncate max-w-[170px]">
+                        <UtensilsCrossed className="w-3 h-3 text-[#F5CE68] shrink-0" />
+                        <span className="truncate">{item.serving || (item.isOdiaSpecialty ? 'Heritage Odia' : 'Royal Banquet')}</span>
                       </span>
                       <button
                         onClick={() =>
@@ -797,42 +816,104 @@ export const Home: React.FC = () => {
       </section>
 
       {/* ====================================================
-          5. MASTER COOK SERVICES BANNER
+          5. MASTER COOK SERVICES HERO SHOWCASE (REDESIGNED & OVERFLOW FIXED)
           ==================================================== */}
-      <section className="py-20 relative z-10">
+      <section className="py-20 relative z-10" id="cook-hero">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <TiltCard maxTilt={2}>
-            <div className="rounded-[40px] glass-strong border border-[#D4AF37]/50 p-8 sm:p-12 shadow-[0_24px_70px_rgba(0,0,0,0.6)] relative overflow-hidden liquid-shine">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
-                <div className="lg:col-span-8 space-y-4">
-                  <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#041810]/80 border border-[#D4AF37]/50 text-xs font-bold text-[#F5CE68] uppercase tracking-wider">
-                    <ChefHat className="w-4 h-4 text-[#F5CE68]" />
-                    <span>Verified Master Cooks for Hire</span>
-                  </span>
-                  <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-black text-white">
-                    Need a Master Cook for Your Home or Event?
-                  </h2>
-                  <p className="text-xs sm:text-sm text-[#CBD5E1] max-w-2xl leading-relaxed">
-                    Hire our verified master cooks for private home celebrations, traditional Odia feast preparation, non-veg specialists (Mutton & Fish), or halwais for weddings. We handle the cooking while you enjoy with guests.
-                  </p>
+            <div className="rounded-[40px] glass-strong border border-[#D4AF37]/60 p-6 sm:p-10 lg:p-12 shadow-[0_24px_70px_rgba(0,0,0,0.65)] relative overflow-hidden liquid-shine">
+              
+              {/* Top ambient gold accent hairline */}
+              <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#F5CE68] to-transparent opacity-80" />
+
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center relative z-10">
+                
+                {/* Left Column: Headings, Highlights & CTAs */}
+                <div className="lg:col-span-7 flex flex-col justify-between space-y-5 min-w-0">
+                  <div className="space-y-3">
+                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#041810]/90 border border-[#D4AF37]/60 text-xs font-extrabold text-[#F5CE68] uppercase tracking-wider shadow">
+                      <Crown className="w-3.5 h-3.5 text-[#F5CE68]" />
+                      <span>15+ Years of Master Cook Experience</span>
+                    </div>
+
+                    <p className="text-xs sm:text-sm font-black uppercase tracking-widest text-[#F5CE68]">
+                      Need a Master Cook for Your Home or Event?
+                    </p>
+
+                    <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black text-white tracking-tight leading-tight break-words">
+                      Exceptional Cooking. <span className="gold-gradient-text">Right at Your Doorstep.</span>
+                    </h2>
+
+                    <p className="text-xs sm:text-sm text-[#CBD5E1] leading-relaxed max-w-xl break-words font-normal">
+                      Find the right master cook for your home, family gathering, celebration, or special event. Enjoy personalized cooking services designed around your needs with authentic Odia flavors, hygienic preparation, and complete kitchen sanitization.
+                    </p>
+                  </div>
+
+                  {/* Highlights Grid */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1 text-xs text-[#FAF8F5]">
+                    <div className="flex items-center gap-2 bg-[#041810]/70 p-2.5 rounded-2xl border border-[#D4AF37]/30">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                      <span className="font-medium">15+ Yrs Master Chefs</span>
+                    </div>
+                    <div className="flex items-center gap-2 bg-[#041810]/70 p-2.5 rounded-2xl border border-[#D4AF37]/30">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                      <span className="font-medium">Police & ID Verified</span>
+                    </div>
+                    <div className="flex items-center gap-2 bg-[#041810]/70 p-2.5 rounded-2xl border border-[#D4AF37]/30">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                      <span className="font-medium">100% On-Site Live Cooking</span>
+                    </div>
+                    <div className="flex items-center gap-2 bg-[#041810]/70 p-2.5 rounded-2xl border border-[#D4AF37]/30">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                      <span className="font-medium">Full Spotless Kitchen Handover</span>
+                    </div>
+                  </div>
+
+                  {/* Action Buttons Row (Responsive Stacking) */}
+                  <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-3">
+                    <Link
+                      to="/booking?type=cook"
+                      className="px-7 py-4 rounded-2xl gold-gradient-btn text-xs font-black text-[#041810] text-center shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2"
+                    >
+                      <ChefHat className="w-4 h-4 text-[#041810]" />
+                      <span>Request a Cook Now</span>
+                      <ArrowRight className="w-3.5 h-3.5 text-[#041810]" />
+                    </Link>
+                    <Link
+                      to="/cook-service"
+                      className="px-7 py-4 rounded-2xl bg-emerald-950/80 hover:bg-emerald-900 border border-[#D4AF37]/60 text-xs font-bold text-[#F5CE68] text-center shadow-sm transition-all flex items-center justify-center gap-2"
+                    >
+                      <span>Explore Cook Services</span>
+                    </Link>
+                  </div>
                 </div>
 
-                <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3.5 justify-end">
-                  <MagneticButton
-                    to="/cook-service"
-                    variant="gold"
-                    className="w-full py-4 rounded-2xl text-xs font-bold shadow-md text-center"
-                  >
-                    Explore Cook Services
-                  </MagneticButton>
-                  <MagneticButton
-                    to="/booking?service=Cook+Service"
-                    variant="ice"
-                    className="w-full py-4 rounded-2xl text-xs font-bold text-center shadow-sm bg-emerald-950/80 border border-[#D4AF37]/50 text-[#F5CE68] hover:bg-emerald-900"
-                  >
-                    Request a Cook Now
-                  </MagneticButton>
+                {/* Right Column: Visual Chef Presentation */}
+                <div className="lg:col-span-5 min-w-0 relative">
+                  <div className="relative rounded-[32px] overflow-hidden border border-[#D4AF37]/60 shadow-2xl h-72 sm:h-80 lg:h-96 group">
+                    <img
+                      src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1000&q=80"
+                      alt="Professional Master Chef Cooking"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#02100A]/95 via-[#02100A]/30 to-transparent" />
+                    
+                    {/* Floating Bottom Card */}
+                    <div className="absolute bottom-4 left-4 right-4 p-3.5 rounded-2xl bg-[#041810]/95 border border-[#D4AF37]/60 backdrop-blur-xl flex items-center justify-between shadow-xl">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#D4AF37] to-[#F5CE68] flex items-center justify-center text-[#041810] shrink-0 shadow">
+                          <Award className="w-5 h-5 text-[#041810]" />
+                        </div>
+                        <div>
+                          <p className="text-xs font-black text-white">15+ Years Master Experience</p>
+                          <p className="text-[10px] text-[#F5CE68] font-bold">Authentic Heritage Flavors</p>
+                        </div>
+                      </div>
+                      <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 shadow-[0_0_8px_#34D399] animate-pulse shrink-0" />
+                    </div>
+                  </div>
                 </div>
+
               </div>
             </div>
           </TiltCard>

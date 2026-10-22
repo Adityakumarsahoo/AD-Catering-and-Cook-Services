@@ -14,6 +14,8 @@ import {
   ArrowUp,
 } from 'lucide-react';
 
+import { BUSINESS_CONFIG } from '../config/cateringConfig.js';
+
 export const FloatingActions: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -51,9 +53,9 @@ export const FloatingActions: React.FC = () => {
     });
   };
 
-  // Estimator state
+  // Estimator state: Default to standard 500 guests minimum
   const [selectedPkg, setSelectedPkg] = useState<'BASIC' | 'PREMIUM' | 'DELUXE'>('PREMIUM');
-  const [guestCount, setGuestCount] = useState<number>(150);
+  const [guestCount, setGuestCount] = useState<number>(500);
 
   const packagePrices = {
     BASIC: 850,
@@ -62,6 +64,7 @@ export const FloatingActions: React.FC = () => {
   };
 
   const calculatedTotal = guestCount * packagePrices[selectedPkg];
+  const isBelowMinimum = guestCount < 500;
 
   // Hide floating CTAs on booking page or admin dashboard to prevent clutter
   const isBookingPage = location.pathname === '/booking';
@@ -126,6 +129,7 @@ export const FloatingActions: React.FC = () => {
                     </p>
                     <p className={`text-xs font-black mt-0.5 tabular-nums ${selectedPkg === pkg ? 'text-[#F5CE68]' : 'text-emerald-400'}`}>
                       ₹{packagePrices[pkg]}
+                      <span className="text-[9px] font-normal block text-[#94A3B8]">/ Plate</span>
                     </p>
                   </button>
                 ))}
@@ -135,36 +139,63 @@ export const FloatingActions: React.FC = () => {
             {/* Guests Slider */}
             <div className="space-y-2">
               <div className="flex justify-between items-center text-xs">
-                <span className="font-bold text-white">Estimated Guests:</span>
+                <span className="font-bold text-white">Number of Plates / Guests:</span>
                 <span className="font-black text-[#F5CE68] px-2.5 py-1 rounded-xl bg-[#041810] border border-[#D4AF37]/50 tabular-nums">
                   {guestCount} Guests
                 </span>
               </div>
               <input
                 type="range"
-                min={20}
-                max={1000}
-                step={10}
+                min={100}
+                max={2500}
+                step={25}
                 value={guestCount}
                 onChange={(e) => setGuestCount(Number(e.target.value))}
                 className="w-full h-2 bg-[#020F09] rounded-lg appearance-none cursor-pointer accent-[#D4AF37]"
               />
               <div className="flex justify-between text-[10px] text-[#94A3B8]">
-                <span>20 min</span>
-                <span>250 standard</span>
-                <span>1,000+ grand</span>
+                <span>100</span>
+                <span className="text-[#F5CE68] font-bold">500 (Standard Min)</span>
+                <span>2,500+</span>
               </div>
             </div>
+
+            {/* 500 Guests Requirement & Special Enquiry Notice */}
+            {isBelowMinimum ? (
+              <div className="p-3.5 rounded-2xl bg-amber-950/70 border border-[#D4AF37]/60 text-xs text-[#CBD5E1] space-y-1.5 shadow-md">
+                <p className="font-bold text-[#F5CE68] flex items-center gap-1.5 text-xs">
+                  <Crown className="w-3.5 h-3.5 text-[#F5CE68]" />
+                  <span>{BUSINESS_CONFIG.minimumBookingNotice.title}</span>
+                </p>
+                <p className="text-[11px] leading-relaxed text-[#CBD5E1]">
+                  {BUSINESS_CONFIG.minimumBookingNotice.smallerGatheringsNote}
+                </p>
+                <div className="pt-1">
+                  <a
+                    href={`tel:${BUSINESS_CONFIG.phonePrimaryRaw}`}
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#D4AF37] text-[#041810] text-[11px] font-black hover:bg-[#F5CE68] transition-colors shadow-sm"
+                  >
+                    <PhoneCall className="w-3 h-3" />
+                    <span>Call {BUSINESS_CONFIG.phonePrimary}</span>
+                  </a>
+                </div>
+              </div>
+            ) : (
+              <div className="p-2.5 rounded-xl bg-emerald-950/60 border border-emerald-500/40 text-[11px] text-emerald-300 flex items-center gap-1.5">
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                <span>Meets standard 500 guests catering minimum. Uniformed crew & setup included.</span>
+              </div>
+            )}
 
             {/* Live Calculation Display */}
             <div className="p-4 rounded-2xl bg-[#041810]/90 border border-[#D4AF37]/35 shadow-inner space-y-1.5">
               <div className="flex justify-between text-xs text-[#CBD5E1]">
-                <span>Rate per guest:</span>
-                <span className="font-bold text-white">₹{packagePrices[selectedPkg]}</span>
+                <span>Rate per Plate:</span>
+                <span className="font-bold text-[#F5CE68] tabular-nums">₹{packagePrices[selectedPkg]} / Plate</span>
               </div>
               <div className="flex justify-between text-xs text-[#CBD5E1]">
-                <span>Total guests:</span>
-                <span className="font-bold text-white">{guestCount}</span>
+                <span>Total Plates / Guests:</span>
+                <span className="font-bold text-white tabular-nums">{guestCount} Guests</span>
               </div>
               <div className="border-t border-[#D4AF37]/25 pt-2 flex justify-between items-baseline">
                 <span className="text-xs font-black text-white">Estimated Total:</span>
@@ -176,16 +207,26 @@ export const FloatingActions: React.FC = () => {
 
             {/* CTAs */}
             <div className="space-y-2.5">
-              <button
-                onClick={handleProceedBooking}
-                className="w-full py-3.5 rounded-2xl gold-gradient-btn text-xs font-black text-[#041810] shadow-md flex items-center justify-center gap-2 active:scale-98 transition-transform"
-              >
-                <CalendarPlus className="w-4 h-4" />
-                <span>Reserve This Package Now</span>
-              </button>
+              {isBelowMinimum ? (
+                <a
+                  href={`tel:${BUSINESS_CONFIG.phonePrimaryRaw}`}
+                  className="w-full py-3.5 rounded-2xl gold-gradient-btn text-xs font-black text-[#041810] shadow-md flex items-center justify-center gap-2 active:scale-98 transition-transform"
+                >
+                  <PhoneCall className="w-4 h-4" />
+                  <span>Call {BUSINESS_CONFIG.phonePrimary} for Custom Quote</span>
+                </a>
+              ) : (
+                <button
+                  onClick={handleProceedBooking}
+                  className="w-full py-3.5 rounded-2xl gold-gradient-btn text-xs font-black text-[#041810] shadow-md flex items-center justify-center gap-2 active:scale-98 transition-transform"
+                >
+                  <CalendarPlus className="w-4 h-4" />
+                  <span>Reserve This Package Now</span>
+                </button>
+              )}
 
               <a
-                href={`https://wa.me/919437123456?text=${encodeURIComponent(
+                href={`https://wa.me/${BUSINESS_CONFIG.whatsappNumber}?text=${encodeURIComponent(
                   `Hello AD Catering, I would like to inquire about the ${selectedPkg} Package for approximately ${guestCount} guests (Estimated Quote: ₹${calculatedTotal.toLocaleString('en-IN')}).`
                 )}`}
                 target="_blank"
@@ -200,8 +241,8 @@ export const FloatingActions: React.FC = () => {
         </div>
       )}
 
-      {/* Floating Action Cluster (Bottom-Right on Desktop, safely above sticky bar on Mobile) */}
-      <aside aria-label="Quick contact and booking" className="fixed bottom-18 md:bottom-6 right-3 md:right-6 z-40 flex items-center gap-2.5">
+      {/* Floating Action Cluster (Bottom-Right on Desktop, safely above mobile bottom nav on Mobile) */}
+      <aside aria-label="Quick contact and booking" className="fixed bottom-20 md:bottom-6 right-3 md:right-6 z-40 flex items-center gap-2.5">
         {/* Royal Circular Progress Scroll-To-Top Button */}
         <div
           className={`relative flex items-center justify-center transition-all duration-500 ease-out ${
@@ -312,7 +353,9 @@ export const FloatingActions: React.FC = () => {
 
         {/* Floating WhatsApp Capsule with Expand On Hover */}
         <a
-          href="https://wa.me/919437123456?text=Hello%20AD%20Catering%2C%20I%20would%20like%20to%20inquire%20about%20catering%20services."
+          href={`https://wa.me/${BUSINESS_CONFIG.whatsappNumber}?text=${encodeURIComponent(
+            'Hello AD Catering, I would like to inquire about catering services.'
+          )}`}
           target="_blank"
           rel="noreferrer"
           onMouseEnter={() => setWaHovered(true)}
@@ -330,34 +373,6 @@ export const FloatingActions: React.FC = () => {
           )}
         </a>
       </aside>
-
-      {/* Floating Mobile Sticky CTA Bar */}
-      {!isBookingPage && !isAdminPage && (
-        <aside
-          aria-label="Mobile booking action"
-          className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#041810]/95 backdrop-blur-xl border-t border-[#D4AF37]/50 p-2.5 px-4 pb-safe flex items-center justify-between gap-2 shadow-[0_-10px_35px_rgba(0,0,0,0.85)]"
-        >
-          <button
-            onClick={() => setConciergeOpen(true)}
-            className="flex flex-col text-left"
-          >
-            <span className="text-[10px] text-[#F5CE68] font-black uppercase tracking-wider flex items-center gap-1">
-              <Calculator className="w-3 h-3 text-[#F5CE68]" />
-              <span>Quick Calculator</span>
-            </span>
-            <span className="text-xs text-white font-black">
-              From ₹850 / person
-            </span>
-          </button>
-          <Link
-            to="/booking"
-            className="px-5 py-2.5 rounded-xl gold-gradient-btn text-[#041810] font-black text-xs flex items-center gap-1.5 shadow-md active:scale-95 transition-transform"
-          >
-            <CalendarPlus className="w-4 h-4" />
-            <span>Book Event</span>
-          </Link>
-        </aside>
-      )}
     </>
   );
 };

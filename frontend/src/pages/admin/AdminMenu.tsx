@@ -118,7 +118,7 @@ export const AdminMenu: React.FC = () => {
         menuType: formData.menuType,
         description: formData.description.trim(),
         price: Number(formData.price || 0),
-        image: formData.image || 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80',
+        image: formData.image || '/images/gourmet-ceramic-curry.jpg',
         isVeg: formData.isVeg,
         isPopular: formData.isPopular,
         isFeatured: formData.isFeatured,
@@ -302,7 +302,7 @@ export const AdminMenu: React.FC = () => {
                       <div className="flex items-center gap-3">
                         <div className="w-11 h-11 rounded-xl overflow-hidden bg-slate-100 shrink-0 border border-slate-200">
                           <img
-                            src={item.image || 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80'}
+                            src={item.image || '/images/gourmet-ceramic-curry.jpg'}
                             alt={item.name}
                             className="w-full h-full object-cover"
                           />

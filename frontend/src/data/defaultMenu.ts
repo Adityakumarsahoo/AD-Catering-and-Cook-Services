@@ -4,7 +4,7 @@ export const defaultMenuItems: any[] = [
     "name": "Milk Shake (Badam / Mango / Pineapple / Vanilla)",
     "category": "WELCOME DRINK",
     "menuType": "all",
-    "description": "Authentic Milk Shake (Badam / Mango / Pineapple / Vanilla) prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Rich and creamy milkshake crafted with cold dairy milk, natural fruit pulps, badam slivers, and vanilla essence served in a chilled tall glass.",
     "price": 80,
     "image": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
@@ -19,16 +19,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Tall Glass (350ml)"
   },
   {
     "id": "menu_2",
     "name": "Hot Badam Milk",
     "category": "WELCOME DRINK",
     "menuType": "all",
-    "description": "Authentic Hot Badam Milk prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Traditional slow-boiled milk infused with crushed California almonds, pure saffron strands, and fragrant green cardamom.",
     "price": 80,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Badam_Milk_Drink.jpg",
+    "image": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": true,
     "isFeatured": false,
@@ -41,16 +42,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Warm Kulhad / Glass Mug (250ml)"
   },
   {
     "id": "menu_3",
     "name": "Lassi (Sweet)",
     "category": "WELCOME DRINK",
     "menuType": "all",
-    "description": "Authentic Lassi (Sweet) prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Thick Punjabi sweet lassi churned with rich curd, rose water, and crowned with a dollop of fresh clotted malai and pistachios.",
     "price": 80,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/0/06/Lassi_%28Sweet%29.JPG",
+    "image": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": true,
     "isFeatured": false,
@@ -63,16 +65,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Earthen Kulhad (350ml)"
   },
   {
     "id": "menu_4",
     "name": "Chanch",
     "category": "WELCOME DRINK",
     "menuType": "all",
-    "description": "Authentic Chanch prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Cooling spiced chaas blended with light churned yogurt, roasted jeera, rock salt, fresh mint, and coriander in a clear glass.",
     "price": 80,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/9/90/Chaas_or_chaach_is_a_curd_based_drink%2C_popular_across_India.jpg",
+    "image": "https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -85,16 +88,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Chilled Glass (300ml)"
   },
   {
     "id": "menu_5",
     "name": "Fruit Punch",
     "category": "WELCOME DRINK",
     "menuType": "all",
-    "description": "Authentic Fruit Punch prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Festive cocktail of fresh orange, pineapple, pomegranate, and seasonal fruit juices layered with crushed ice and citrus garnish.",
     "price": 80,
-    "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -107,16 +111,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Hurricane Glass (350ml)"
   },
   {
     "id": "menu_6",
     "name": "Aam Panna",
     "category": "WELCOME DRINK",
     "menuType": "all",
-    "description": "Authentic Aam Panna prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Authentic summer cooler brewed from roasted green mangoes, black salt, toasted cumin, and fresh mint leaves.",
     "price": 80,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/8/87/Aam_Panna_%28Raw_Mango_Drink%29.jpg",
+    "image": "https://images.unsplash.com/photo-1497534446932-c925b458314e?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -129,16 +134,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Glass (250ml)"
   },
   {
     "id": "menu_7",
     "name": "Thandai",
     "category": "WELCOME DRINK",
     "menuType": "all",
-    "description": "Authentic Thandai prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Royal festive beverage infused with ground fennel, poppy seeds, crushed almonds, rose petals, and saffron milk.",
     "price": 80,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/2/23/Thandai_Drink.jpg",
+    "image": "https://images.unsplash.com/photo-1517244683847-7456b63c5969?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -151,16 +157,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Festive Goblet (250ml)"
   },
   {
     "id": "menu_8",
     "name": "Falluda",
     "category": "WELCOME DRINK",
     "menuType": "all",
-    "description": "Authentic Falluda prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Decadent dessert beverage with rose syrup, delicate vermicelli, soaked sabja basil seeds, rich milk, and kulfi scoop.",
     "price": 80,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Falooda_%28cropped%29.jpg",
+    "image": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -173,16 +180,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Tall Sundae Glass (350ml)"
   },
   {
     "id": "menu_9",
     "name": "Jaljeera",
     "category": "WELCOME DRINK",
     "menuType": "all",
-    "description": "Authentic Jaljeera prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Zesty digestive cooler infused with roasted cumin, tamarind pulp, dry ginger, fresh mint, and crisp boondi pearls.",
     "price": 80,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/2/24/Jal_Jeera_%28Spiced_cumin_water%29.jpg",
+    "image": "https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -195,14 +203,15 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Traditional Glass (250ml)"
   },
   {
     "id": "menu_10",
     "name": "Lemon Cold Drinks",
     "category": "WELCOME DRINK",
     "menuType": "all",
-    "description": "Authentic Lemon Cold Drinks prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Sparkling fizzy lemonade garnished with fresh lemon wheels, mint leaves, and ice rocks.",
     "price": 80,
     "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
@@ -217,14 +226,15 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Chilled Glass (300ml)"
   },
   {
     "id": "menu_11",
     "name": "Cold Drinks",
     "category": "WELCOME DRINK",
     "menuType": "all",
-    "description": "Authentic Cold Drinks prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Chilled selection of branded aerated beverages served frosty with fresh lime wedges.",
     "price": 80,
     "image": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
@@ -239,16 +249,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Chilled Bottle / Glass (300ml)"
   },
   {
     "id": "menu_12",
     "name": "Masala Cold Drinks",
     "category": "WELCOME DRINK",
     "menuType": "all",
-    "description": "Authentic Masala Cold Drinks prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Fizzy soda infused with chaat masala, kala namak, ginger juice, and squeezed fresh lime.",
     "price": 80,
-    "image": "https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -261,14 +272,15 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Spiced Glass (300ml)"
   },
   {
     "id": "menu_13",
     "name": "Mocktail",
     "category": "WELCOME DRINK",
     "menuType": "all",
-    "description": "Authentic Mocktail prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Artfully layered tropical banquet mocktail blending blue curacao syrup, citrus soda, and fruit purees.",
     "price": 80,
     "image": "https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
@@ -283,14 +295,15 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Stemmed Glass (250ml)"
   },
   {
     "id": "menu_14",
     "name": "Cold Coffee",
     "category": "WELCOME DRINK",
     "menuType": "all",
-    "description": "Authentic Cold Coffee prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Velvety espresso blended with chilled whole milk, chocolate syrup drizzle, and topped with chocolate curls.",
     "price": 80,
     "image": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
@@ -305,16 +318,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Frappé Glass (350ml)"
   },
   {
     "id": "menu_15",
     "name": "Tea & Coffee",
     "category": "WELCOME DRINK",
     "menuType": "all",
-    "description": "Authentic Tea & Coffee prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Steaming hot ginger-cardamom cutting chai or freshly brewed South Indian chicory filter coffee.",
     "price": 80,
-    "image": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -327,16 +341,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Porcelain Cup (180ml)"
   },
   {
     "id": "menu_16",
     "name": "Cream of Tomato Soup",
     "category": "SOUP",
     "menuType": "all",
-    "description": "Authentic Cream of Tomato Soup prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Velvety slow-simmered ripe tomato puree with fresh cream swirl, garden basil, and crunchy herb croutons.",
     "price": 110,
-    "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": true,
     "isFeatured": true,
@@ -349,14 +364,15 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Ceramic Soup Bowl (250ml)"
   },
   {
     "id": "menu_17",
     "name": "H / S Soup (Veg. & Non Veg.)",
     "category": "SOUP",
     "menuType": "all",
-    "description": "Authentic H / S Soup (Veg. & Non Veg.) prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Classic spicy and tangy broth packed with julienned vegetables, mushrooms, dark soy, and chili vinegar.",
     "price": 110,
     "image": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
@@ -371,16 +387,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Ceramic Soup Bowl (250ml)"
   },
   {
     "id": "menu_18",
     "name": "S / C Soup (Veg. & Non Veg.)",
     "category": "SOUP",
     "menuType": "all",
-    "description": "Authentic S / C Soup (Veg. & Non Veg.) prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Mild and comforting sweet corn broth with tender kernels, finely diced vegetables, and fragrant white pepper.",
     "price": 110,
-    "image": "https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": true,
     "isFeatured": false,
@@ -393,16 +410,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Ceramic Soup Bowl (250ml)"
   },
   {
     "id": "menu_19",
     "name": "L / C Soup (Veg. & Non Veg.)",
     "category": "SOUP",
     "menuType": "all",
-    "description": "Authentic L / C Soup (Veg. & Non Veg.) prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Clear vegetable broth infused with freshly squeezed lemon juice, vibrant cilantro stems, and minced ginger.",
     "price": 110,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/4/47/Lemon_coriander_soup.jpg",
+    "image": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -415,16 +433,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Ceramic Soup Bowl (250ml)"
   },
   {
     "id": "menu_20",
     "name": "Noodle Soup (Veg. & Non Veg.)",
     "category": "SOUP",
     "menuType": "all",
-    "description": "Authentic Noodle Soup (Veg. & Non Veg.) prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Fragrant Asian noodle soup loaded with silken noodles, fresh garden greens, spring onions, and oriental spices.",
     "price": 110,
-    "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -437,16 +456,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Asian Ceramic Bowl (300ml)"
   },
   {
     "id": "menu_21",
     "name": "PaniPuri",
     "category": "COUNTER STARTER",
     "menuType": "all",
-    "description": "Authentic PaniPuri prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Hollow crisp puris filled with spiced potato-chickpea mash, served with tangy mint water and sweet tamarind water in earthen vessels.",
     "price": 120,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Panipuri_food.jpg",
+    "image": "/images/dishes/live-panipuri.jpg",
     "isVeg": true,
     "isPopular": true,
     "isFeatured": true,
@@ -459,16 +479,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "6 Crispy Puris • Live Counter"
   },
   {
     "id": "menu_22",
     "name": "Papdi Chaat",
     "category": "COUNTER STARTER",
     "menuType": "all",
-    "description": "Authentic Papdi Chaat prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Crisp flour wafers layered with boiled potatoes, chickpeas, sweet beaten curd, date chutney, and golden sev.",
     "price": 120,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Dahi_Papdi_Chaat.jpg",
+    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": true,
     "isFeatured": false,
@@ -481,16 +502,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Ceramic Platter (220g)"
   },
   {
     "id": "menu_23",
     "name": "Mix Chaat",
     "category": "COUNTER STARTER",
     "menuType": "all",
-    "description": "Authentic Mix Chaat prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Assorted street chaat melange featuring papdi, bhalla, spiced potatoes, roasted cumin, and sweet-tangy relishes.",
     "price": 120,
-    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": true,
     "isFeatured": false,
@@ -503,16 +525,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Ceramic Bowl (220g)"
   },
   {
     "id": "menu_24",
     "name": "Dhokla Chaat",
     "category": "COUNTER STARTER",
     "menuType": "all",
-    "description": "Authentic Dhokla Chaat prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Steamed savory gram flour cakes tempered with mustard seeds and curry leaves, dressed with tangy chutneys and grated coconut.",
     "price": 120,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/8/87/Khaman_Dhokla.jpg",
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -525,16 +548,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Spongy Squares (180g)"
   },
   {
     "id": "menu_25",
     "name": "Samosa Chaat",
     "category": "COUNTER STARTER",
     "menuType": "all",
-    "description": "Authentic Samosa Chaat prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Golden crushed samosas smothered with spiced chickpea curry, sweetened yogurt, tamarind sauce, and fresh coriander.",
     "price": 120,
-    "image": "https://images.unsplash.com/photo-1732519970445-8f2d6998961f?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -547,16 +571,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "2 Crushed Samosas with Gravy"
   },
   {
     "id": "menu_26",
     "name": "Aloo Chaat",
     "category": "COUNTER STARTER",
     "menuType": "all",
-    "description": "Authentic Aloo Chaat prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Crispy pan-tossed potato cubes seasoned with black salt, roasted cumin, lime juice, and piquant green mint chutney.",
     "price": 120,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Aloo_Chaat_-_New_Delhi.jpg",
+    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -569,16 +594,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Ceramic Bowl (200g)"
   },
   {
     "id": "menu_27",
     "name": "Dahi Papdi",
     "category": "COUNTER STARTER",
     "menuType": "all",
-    "description": "Authentic Dahi Papdi prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Delicate papdis topped with spiced potato bits, creamy chilled curd, pomegranate arils, and crispy nylon sev.",
     "price": 120,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Dahi_Papdi_Chaat_with_sev.jpg",
+    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -591,16 +617,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 White Porcelain Plate (200g)"
   },
   {
     "id": "menu_28",
     "name": "Dahiwada Aloudum",
     "category": "COUNTER STARTER",
     "menuType": "all",
-    "description": "Authentic Dahiwada Aloudum prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Famous Cuttack street delicacy of urad dal vadas soaked in tempered light curd, paired with spicy Odia aloodum and yellow pea ghuguni.",
     "price": 120,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Dahibara_Aludam.jpg",
+    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -613,16 +640,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "3 Vadas + Aloodum & Ghuguni"
   },
   {
     "id": "menu_29",
     "name": "Raj Kachodi",
     "category": "COUNTER STARTER",
     "menuType": "all",
-    "description": "Authentic Raj Kachodi prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Crisp large kachori shell stuffed with sprouted beans, potatoes, boondi, sweetened yogurt, and drizzled with multi-colored chutneys.",
     "price": 120,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/8/89/Raj_Kachori_-_Connaught_Place_-_New_Delhi.jpg",
+    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -635,16 +663,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Jumbo Stuffed Royal Kachori"
   },
   {
     "id": "menu_30",
     "name": "Gujia Vada",
     "category": "COUNTER STARTER",
     "menuType": "all",
-    "description": "Authentic Gujia Vada prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Traditional sweet-curd soaked lentil dumplings with sweet date-tamarind chutney and roasted cumin powder on a ceramic saucer.",
     "price": 120,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Dahi_vada_in_sweet_curd.jpg",
+    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -657,16 +686,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "2 Stuffed Vadas (180g)"
   },
   {
     "id": "menu_31",
     "name": "Mona (Veg. & Non Veg.)",
     "category": "COUNTER STARTER",
     "menuType": "all",
-    "description": "Authentic Mona (Veg. & Non Veg.) prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Crispy golden appetiser rolls stuffed with savory seasoned filling and served with sweet chili sauce on ceramic tableware.",
     "price": 120,
-    "image": "https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -679,16 +709,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Cocktail Bites"
   },
   {
     "id": "menu_32",
     "name": "Mini Pizza",
     "category": "COUNTER STARTER",
     "menuType": "all",
-    "description": "Authentic Mini Pizza prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Bite-sized artisanal crusts baked with rich herb tomato concasse, mozzarella cheese, bell peppers, and oregano.",
     "price": 120,
-    "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -701,16 +732,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Mini Pizzas"
   },
   {
     "id": "menu_33",
     "name": "Pao Bhaji",
     "category": "COUNTER STARTER",
     "menuType": "all",
-    "description": "Authentic Pao Bhaji prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Mashed spiced vegetable curry simmered with ample pure butter on a live griddle, served with toasted pavs and onion-lemon salad on ceramic plate.",
     "price": 120,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Pav_bhaji_%212.jpg",
+    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -723,16 +755,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "2 Buttered Pavs + Bhaji Bowl"
   },
   {
     "id": "menu_34",
     "name": "Masala Mudi",
     "category": "COUNTER STARTER",
     "menuType": "all",
-    "description": "Authentic Masala Mudi prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Crispy puffed rice tossed with mustard oil, roasted peanuts, diced coconut, boiled chickpeas, and tangy green chilies.",
     "price": 120,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Jhal_Muri_-_Barasat_2013-05-18_7185.JPG",
+    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -745,16 +778,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Earthen Bowl (150g)"
   },
   {
     "id": "menu_35",
     "name": "Crispy Corn",
     "category": "STARTER (VEG)",
     "menuType": "all",
-    "description": "Authentic Crispy Corn prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Crisp American sweet corn kernels tossed with cracked pepper, spring onions, green chilies, and peri-peri seasoning.",
     "price": 150,
-    "image": "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": true,
     "isFeatured": true,
@@ -767,16 +801,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Platter (220g)"
   },
   {
     "id": "menu_36",
     "name": "Boiled Corn Chaat",
     "category": "STARTER (VEG)",
     "menuType": "all",
-    "description": "Authentic Boiled Corn Chaat prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Steamed tender sweet corn kernels tossed with butter, chaat masala, lemon zest, and garden herbs.",
     "price": 150,
-    "image": "https://images.unsplash.com/photo-1551782450-17144efb9c50?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": true,
     "isFeatured": false,
@@ -789,16 +824,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Ceramic Bowl (200g)"
   },
   {
     "id": "menu_37",
     "name": "Crispy Babycorn",
     "category": "STARTER (VEG)",
     "menuType": "all",
-    "description": "Authentic Crispy Babycorn prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Golden battered baby corn spears wok-tossed with scallions, capsicum, and aromatic garlic-chili glaze on white porcelain.",
     "price": 150,
-    "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": true,
     "isFeatured": false,
@@ -811,16 +847,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Platter (220g)"
   },
   {
     "id": "menu_38",
     "name": "Dry Chana Roast",
     "category": "STARTER (VEG)",
     "menuType": "all",
-    "description": "Authentic Dry Chana Roast prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Dry roasted kabuli chana spiced with crushed coriander seeds, anardana, green chilies, and tangy chaat seasoning.",
     "price": 150,
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -833,16 +870,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Bowl (200g)"
   },
   {
     "id": "menu_39",
     "name": "Soya Lollypop",
     "category": "STARTER (VEG)",
     "menuType": "all",
-    "description": "Authentic Soya Lollypop prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "High-protein soya chunks marinated in tandoori yogurt spice and roasted over charcoal skewers served on ceramic platter.",
     "price": 150,
-    "image": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -855,16 +893,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Skewered Lollipops"
   },
   {
     "id": "menu_40",
     "name": "Bread's Nest",
     "category": "STARTER (VEG)",
     "menuType": "all",
-    "description": "Authentic Bread's Nest prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Crisp toasted bread nests filled with seasoned paneer, corn, and herb cheese filling with sweet chili dip.",
     "price": 150,
-    "image": "https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -877,16 +916,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Nest Baskets"
   },
   {
     "id": "menu_41",
     "name": "Cheesy Potato Rice Ball",
     "category": "STARTER (VEG)",
     "menuType": "all",
-    "description": "Authentic Cheesy Potato Rice Ball prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Golden breadcrumb-crusted cheesy potato and rice croquettes with molten mozzarella center on white ceramic plate.",
     "price": 150,
-    "image": "https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -899,16 +939,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "5 Golden Arancini Balls"
   },
   {
     "id": "menu_42",
     "name": "Veg Lollypop",
     "category": "STARTER (VEG)",
     "menuType": "all",
-    "description": "Authentic Veg Lollypop prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Spiced vegetable and potato croquettes mounted on skewers and crisped to golden perfection.",
     "price": 150,
-    "image": "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -921,16 +962,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Veg Lollipops"
   },
   {
     "id": "menu_43",
     "name": "HaraBhara Kabab",
     "category": "STARTER (VEG)",
     "menuType": "all",
-    "description": "Authentic HaraBhara Kabab prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Pan-seared spinach, green peas, and cottage cheese patties flavored with royal garam masala on a ceramic dish.",
     "price": 150,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Hara_bhara_kebab.jpg",
+    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -943,16 +985,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Pan-Grilled Kebabs"
   },
   {
     "id": "menu_44",
     "name": "Halakda (Veg. / Gobi/Mirchi/Paneer)",
     "category": "STARTER (VEG)",
     "menuType": "all",
-    "description": "Authentic Halakda (Veg. / Gobi/Mirchi/Paneer) prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Crispy chickpea-battered cauliflower florets, paneer bites, and sweet peppers served with green chutney.",
     "price": 150,
-    "image": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -965,16 +1008,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Assorted Platter (250g)"
   },
   {
     "id": "menu_45",
     "name": "Finger Chips",
     "category": "STARTER (VEG)",
     "menuType": "all",
-    "description": "Authentic Finger Chips prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Golden French fries seasoned with sea salt and peri-peri herbs in a porcelain bowl with dipping sauces.",
     "price": 150,
-    "image": "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -987,16 +1031,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Basket (200g)"
   },
   {
     "id": "menu_46",
     "name": "Veg Cutlet",
     "category": "STARTER (VEG)",
     "menuType": "all",
-    "description": "Authentic Veg Cutlet prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Crumbed and crisp-fried beetroot, carrot, potato, and peanut cutlets served with kasundi and tomato relish.",
     "price": 150,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/52/Vegetable_Cutlet.jpg",
+    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -1009,16 +1054,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "2 Hearty Cutlets"
   },
   {
     "id": "menu_47",
     "name": "Bread Chop",
     "category": "STARTER (VEG)",
     "menuType": "all",
-    "description": "Authentic Bread Chop prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Golden batter-fried bread triangles filled with spiced potato and paneer stuffing.",
     "price": 150,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Bread_Pakora.JPG",
+    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -1031,16 +1077,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "2 Stuffed Triangles"
   },
   {
     "id": "menu_48",
     "name": "Paneer Stick Tikka",
     "category": "STARTER (VEG)",
     "menuType": "all",
-    "description": "Authentic Paneer Stick Tikka prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Fresh cottage cheese cubes threaded onto skewers with capsicum, onion, and roasted in tandoor embers on white plate.",
     "price": 150,
-    "image": "https://images.unsplash.com/photo-1788843304145-bec146aa83c5?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -1053,16 +1100,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Skewered Tikka Pieces"
   },
   {
     "id": "menu_49",
     "name": "Paneer Kofta",
     "category": "STARTER (VEG)",
     "menuType": "all",
-    "description": "Authentic Paneer Kofta prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Melt-in-mouth cottage cheese and khoya dumplings stuffed with raisins and cashews in delicate saffron cream.",
     "price": 150,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Malai_Kofta_in_cashew_gravy.jpg",
+    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -1075,16 +1123,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "3 Velvet Koftas"
   },
   {
     "id": "menu_50",
     "name": "Crispy Paneer",
     "category": "STARTER (VEG)",
     "menuType": "all",
-    "description": "Authentic Crispy Paneer prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Batter-crusted fresh paneer fingers flash-fried until crackling crisp outside and pillowy soft inside.",
     "price": 150,
-    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -1097,14 +1146,15 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Platter (220g)"
   },
   {
     "id": "menu_51",
     "name": "Paneer Finger",
     "category": "STARTER (VEG)",
     "menuType": "all",
-    "description": "Authentic Paneer Finger prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Herb-crusted cottage cheese fingers served with spiced mint-yogurt dip on an elegant white ceramic plate.",
     "price": 150,
     "image": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
@@ -1119,16 +1169,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "6 Paneer Fingers"
   },
   {
     "id": "menu_52",
     "name": "Paneer Popcorn",
     "category": "STARTER (VEG)",
     "menuType": "all",
-    "description": "Authentic Paneer Popcorn prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Bite-sized crunchy paneer nuggets seasoned with paprika, garlic powder, and oregano.",
     "price": 150,
-    "image": "https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -1141,16 +1192,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Bowl (200g)"
   },
   {
     "id": "menu_53",
     "name": "Paneer Chatpata",
     "category": "STARTER (VEG)",
     "menuType": "all",
-    "description": "Authentic Paneer Chatpata prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Tangy and spicy pan-sautéed paneer bites tossed with crushed pepper, lime, and curry leaves.",
     "price": 150,
-    "image": "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -1163,16 +1215,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Platter (220g)"
   },
   {
     "id": "menu_54",
     "name": "Paneer Tikka",
     "category": "STARTER (VEG)",
     "menuType": "all",
-    "description": "Authentic Paneer Tikka prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Charcoal-grilled malai paneer tikka marinated in thick hang curd, cream, and green cardamom.",
     "price": 150,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Malai_Paneer_Tikka%2C_PK_007.jpg",
+    "image": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -1185,16 +1238,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Royal Tandoori Chunks"
   },
   {
     "id": "menu_55",
     "name": "Dragon (Paneer)",
     "category": "STARTER (VEG)",
     "menuType": "all",
-    "description": "Authentic Dragon (Paneer) prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Indo-Chinese paneer strips tossed with cashew nuts, dried red chilies, and fiery sweet dragon sauce.",
     "price": 150,
-    "image": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -1207,16 +1261,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Platter (220g)"
   },
   {
     "id": "menu_56",
     "name": "Manchurian (Paneer/Mushroom/Babycorn/Gobi)",
     "category": "STARTER (VEG)",
     "menuType": "all",
-    "description": "Authentic Manchurian (Paneer/Mushroom/Babycorn/Gobi) prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Crispy vegetable balls glazed in rich ginger-garlic dark soy sauce with spring onions on porcelain dish.",
     "price": 150,
-    "image": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -1229,16 +1284,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Platter (250g)"
   },
   {
     "id": "menu_57",
     "name": "Chilly (Paneer/Mushroom/Gobi/Babycorn)",
     "category": "STARTER (VEG)",
     "menuType": "all",
-    "description": "Authentic Chilly (Paneer/Mushroom/Gobi/Babycorn) prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Wok-seared paneer cubes and crunchy bell peppers tossed in spicy chili-garlic soy reduction.",
     "price": 150,
-    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -1251,16 +1307,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Platter (250g)"
   },
   {
     "id": "menu_58",
     "name": "65 (Paneer/Mushroom/Babycorn/Gobi)",
     "category": "STARTER (VEG)",
     "menuType": "all",
-    "description": "Authentic 65 (Paneer/Mushroom/Babycorn/Gobi) prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "South Indian style spicy fried paneer cubes tempered with curry leaves, crushed mustard, and dry red chilies.",
     "price": 150,
-    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -1273,16 +1330,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Platter (220g)"
   },
   {
     "id": "menu_59",
     "name": "Hot Garlic (Paneer/Mushroom/Babycorn/Gobi)",
     "category": "STARTER (VEG)",
     "menuType": "all",
-    "description": "Authentic Hot Garlic (Paneer/Mushroom/Babycorn/Gobi) prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Stir-fried button mushrooms and baby corn drenched in pungent roasted garlic and chili glaze.",
     "price": 150,
-    "image": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -1295,16 +1353,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Platter (220g)"
   },
   {
     "id": "menu_60",
     "name": "Ginger (Paneer/Mushroom/Babycorn/Gobi)",
     "category": "STARTER (VEG)",
     "menuType": "all",
-    "description": "Authentic Ginger (Paneer/Mushroom/Babycorn/Gobi) prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Crisp cauliflower and paneer bites tossed in an aromatic fresh ginger, soy, and green scallion sauce.",
     "price": 150,
-    "image": "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -1317,16 +1376,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Platter (220g)"
   },
   {
     "id": "menu_61",
     "name": "Schezwan (Paneer/Mushroom/Babycorn/Gobi)",
     "category": "STARTER (VEG)",
     "menuType": "all",
-    "description": "Authentic Schezwan (Paneer/Mushroom/Babycorn/Gobi) prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Spicy Schezwan pepper-infused stir fry with baby corn, mushrooms, and cottage cheese.",
     "price": 150,
-    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -1339,16 +1399,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Platter (220g)"
   },
   {
     "id": "menu_62",
     "name": "Veg. Chilli",
     "category": "STARTER (VEG)",
     "menuType": "all",
-    "description": "Authentic Veg. Chilli prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Crispy fried assorted vegetables tossed with green chilies, onions, and dark savory glaze.",
     "price": 150,
-    "image": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -1361,16 +1422,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Platter (220g)"
   },
   {
     "id": "menu_63",
     "name": "Veg. Chiliese Choppsy",
     "category": "STARTER (VEG)",
     "menuType": "all",
-    "description": "Authentic Veg. Chiliese Choppsy prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Crispy fried noodles smothered in sweet and tangy Cantonese vegetable sauce with a sunny garnish.",
     "price": 150,
-    "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -1383,16 +1445,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Platter (250g)"
   },
   {
     "id": "menu_64",
     "name": "Veg. Spring Roll",
     "category": "STARTER (VEG)",
     "menuType": "all",
-    "description": "Authentic Veg. Spring Roll prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Golden translucent pastry sheets filled with shredded cabbage, carrots, and glass noodles, fried crisp.",
     "price": 150,
-    "image": "https://images.unsplash.com/photo-1786174045051-673a64444d72?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -1405,16 +1468,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Spring Rolls (Halved)"
   },
   {
     "id": "menu_65",
     "name": "Veg China Town",
     "category": "STARTER (VEG)",
     "menuType": "all",
-    "description": "Authentic Veg China Town prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "House signature stir fry combining crispy vegetables, water chestnuts, and savory soy-sesame dressing.",
     "price": 150,
-    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -1427,7 +1491,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Platter (220g)"
   },
   {
     "id": "menu_66",
@@ -1436,7 +1501,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Fish Finger (Bone Less) prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 240,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/7/77/Fish_fingers.jpg",
+    "image": "https://images.unsplash.com/photo-1552901695-cfa7432e6bbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": true,
     "isFeatured": true,
@@ -1449,7 +1514,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Crispy Pieces / Platter"
   },
   {
     "id": "menu_67",
@@ -1458,7 +1524,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Fish Amritsari (Bone Less) prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 240,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Amritsari_Fish_Fry.jpg",
+    "image": "https://images.unsplash.com/photo-1552901695-cfa7432e6bbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": true,
     "isFeatured": false,
@@ -1471,7 +1537,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Crispy Pieces / Platter"
   },
   {
     "id": "menu_68",
@@ -1480,7 +1547,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Fish Chop (Bone Less) prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 240,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/52/Vegetable_Cutlet.jpg",
+    "image": "https://images.unsplash.com/photo-1552901695-cfa7432e6bbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": true,
     "isFeatured": false,
@@ -1493,7 +1560,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Crispy Pieces / Platter"
   },
   {
     "id": "menu_69",
@@ -1515,7 +1583,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Crispy Pieces / Platter"
   },
   {
     "id": "menu_70",
@@ -1524,7 +1593,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Tandoori Pomfret prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 240,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Tandoori_pomfret.jpg",
+    "image": "https://images.unsplash.com/photo-1552901695-cfa7432e6bbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -1537,7 +1606,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Crispy Pieces / Platter"
   },
   {
     "id": "menu_71",
@@ -1546,7 +1616,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Fried Pomfret prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 240,
-    "image": "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1552901695-cfa7432e6bbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -1559,7 +1629,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Crispy Pieces / Platter"
   },
   {
     "id": "menu_72",
@@ -1568,7 +1639,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Fish Honey Balls prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 240,
-    "image": "https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1552901695-cfa7432e6bbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -1581,7 +1652,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Crispy Pieces / Platter"
   },
   {
     "id": "menu_73",
@@ -1590,7 +1662,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Prawn Pokoda prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 240,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Prawn_pakora.jpg",
+    "image": "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -1603,7 +1675,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Crispy Pieces / Platter"
   },
   {
     "id": "menu_74",
@@ -1612,7 +1685,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Fried Prawn prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 240,
-    "image": "https://images.unsplash.com/photo-1559742811-822873691df8?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -1625,7 +1698,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Crispy Pieces / Platter"
   },
   {
     "id": "menu_75",
@@ -1634,7 +1708,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Crispy Prawn prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 240,
-    "image": "https://plus.unsplash.com/premium_photo-1667115593089-17f5b6116217?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -1647,7 +1721,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Crispy Pieces / Platter"
   },
   {
     "id": "menu_76",
@@ -1669,7 +1744,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Crispy Pieces / Platter"
   },
   {
     "id": "menu_77",
@@ -1678,7 +1754,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Tandoori Prawn prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 240,
-    "image": "https://images.unsplash.com/photo-1559742811-822873691df8?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -1691,7 +1767,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Crispy Pieces / Platter"
   },
   {
     "id": "menu_78",
@@ -1713,7 +1790,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Crispy Pieces / Platter"
   },
   {
     "id": "menu_79",
@@ -1722,7 +1800,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Hot Garlic Prawn prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 240,
-    "image": "https://plus.unsplash.com/premium_photo-1700752342459-c276465c177e?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -1735,7 +1813,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Crispy Pieces / Platter"
   },
   {
     "id": "menu_80",
@@ -1744,7 +1823,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Ginger Prawn prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 240,
-    "image": "https://images.unsplash.com/photo-1559742811-822873691df8?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -1757,7 +1836,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Crispy Pieces / Platter"
   },
   {
     "id": "menu_81",
@@ -1779,7 +1859,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Crispy Pieces / Platter"
   },
   {
     "id": "menu_82",
@@ -1801,7 +1882,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Crispy Pieces / Platter"
   },
   {
     "id": "menu_83",
@@ -1810,7 +1892,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Chicken Pokoda prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 240,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Chicken_Pakora.jpg",
+    "image": "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -1823,7 +1905,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Crispy Pieces / Platter"
   },
   {
     "id": "menu_84",
@@ -1845,7 +1928,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Crispy Pieces / Platter"
   },
   {
     "id": "menu_85",
@@ -1854,7 +1938,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Chicken Ghee Fry prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 240,
-    "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -1867,7 +1951,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Crispy Pieces / Platter"
   },
   {
     "id": "menu_86",
@@ -1876,7 +1961,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Honey Chicken prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 240,
-    "image": "https://images.unsplash.com/photo-1527477244186-e414c1ebc8eb?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -1889,7 +1974,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Crispy Pieces / Platter"
   },
   {
     "id": "menu_87",
@@ -1898,7 +1984,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Chicken (Manchurian/Dragon/Schezwan/Chilly/Lollypop) prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 240,
-    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -1911,7 +1997,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Crispy Pieces / Platter"
   },
   {
     "id": "menu_88",
@@ -1920,7 +2007,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Tandoori Chicken prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 240,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/0/08/20251121_133209_Tandoori_chicken.jpg",
+    "image": "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -1933,7 +2020,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Crispy Pieces / Platter"
   },
   {
     "id": "menu_89",
@@ -1955,7 +2043,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Crispy Pieces / Platter"
   },
   {
     "id": "menu_90",
@@ -1964,7 +2053,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Chicken Malai Tikka prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 240,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/a/af/Murgh_Malai_Kebab.jpg",
+    "image": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -1977,7 +2066,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Crispy Pieces / Platter"
   },
   {
     "id": "menu_91",
@@ -1986,7 +2076,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Assorted Kebab (Tikka/Hariyali/Malai) prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 240,
-    "image": "https://images.unsplash.com/photo-1781332143834-19a40f746cd9?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -1999,7 +2089,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Crispy Pieces / Platter"
   },
   {
     "id": "menu_92",
@@ -2021,7 +2112,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Crispy Pieces / Platter"
   },
   {
     "id": "menu_93",
@@ -2030,7 +2122,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Chicken Leg Kebab prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 240,
-    "image": "https://images.unsplash.com/photo-1527477244186-e414c1ebc8eb?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -2043,7 +2135,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Crispy Pieces / Platter"
   },
   {
     "id": "menu_94",
@@ -2052,7 +2145,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Garlic Chicken prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 240,
-    "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -2065,7 +2158,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Crispy Pieces / Platter"
   },
   {
     "id": "menu_95",
@@ -2074,7 +2168,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Ginger Chicken prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 240,
-    "image": "https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -2087,7 +2181,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "4 Crispy Pieces / Platter"
   },
   {
     "id": "menu_96",
@@ -2109,7 +2204,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_97",
@@ -2131,7 +2227,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_98",
@@ -2153,7 +2250,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_99",
@@ -2162,7 +2260,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Egg Scotch prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 90,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/0/07/Scotch_egg.jpg",
+    "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -2175,7 +2273,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_100",
@@ -2184,7 +2283,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Egg Chop prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 90,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Dimer_Devil.jpg",
+    "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -2197,7 +2296,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_101",
@@ -2206,7 +2306,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Egg Pakoda prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 90,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Egg_Bonda.jpg",
+    "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -2219,7 +2319,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_102",
@@ -2241,7 +2342,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "2 Fresh Pieces"
   },
   {
     "id": "menu_103",
@@ -2263,7 +2365,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "2 Fresh Pieces"
   },
   {
     "id": "menu_104",
@@ -2272,7 +2375,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Tandoori Roti prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 45,
-    "image": "https://images.unsplash.com/photo-1626074353765-517a681e40be?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1586444248902-2f64eddc13df?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": true,
     "isFeatured": false,
@@ -2285,7 +2388,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "2 Fresh Pieces"
   },
   {
     "id": "menu_105",
@@ -2294,7 +2398,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Phulka prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 45,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/9/91/Phulka_Roti.jpg",
+    "image": "https://images.unsplash.com/photo-1586444248902-2f64eddc13df?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -2307,7 +2411,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "2 Fresh Pieces"
   },
   {
     "id": "menu_106",
@@ -2316,7 +2421,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Rumali Roti prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 45,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/1/15/Rumali_roti.jpg",
+    "image": "https://images.unsplash.com/photo-1586444248902-2f64eddc13df?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -2329,7 +2434,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "2 Fresh Pieces"
   },
   {
     "id": "menu_107",
@@ -2338,7 +2444,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Missi Roti prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 45,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/52/Missi_Roti.jpg",
+    "image": "https://images.unsplash.com/photo-1586444248902-2f64eddc13df?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -2351,7 +2457,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "2 Fresh Pieces"
   },
   {
     "id": "menu_108",
@@ -2373,7 +2480,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "2 Fresh Pieces"
   },
   {
     "id": "menu_109",
@@ -2382,7 +2490,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Chakuli prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 45,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Chakuli_Pitha.jpg",
+    "image": "https://images.unsplash.com/photo-1586444248902-2f64eddc13df?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -2395,7 +2503,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "2 Fresh Pieces"
   },
   {
     "id": "menu_110",
@@ -2404,7 +2513,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Moong Chilla prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 45,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/3/30/Moong_dal_chila.jpg",
+    "image": "https://images.unsplash.com/photo-1586444248902-2f64eddc13df?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -2417,7 +2526,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "2 Fresh Pieces"
   },
   {
     "id": "menu_111",
@@ -2426,7 +2536,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Masala Puri prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 45,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/6/63/Poori_and_aloo_masala.jpg",
+    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -2439,7 +2549,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "2 Fresh Pieces"
   },
   {
     "id": "menu_112",
@@ -2448,7 +2559,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Plane Puri prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 45,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/6/63/Poori_and_aloo_masala.jpg",
+    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -2461,7 +2572,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "2 Fresh Pieces"
   },
   {
     "id": "menu_113",
@@ -2483,7 +2595,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "2 Fresh Pieces"
   },
   {
     "id": "menu_114",
@@ -2492,7 +2605,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Milky Puri prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 45,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/6/63/Poori_and_aloo_masala.jpg",
+    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -2505,7 +2618,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "2 Fresh Pieces"
   },
   {
     "id": "menu_115",
@@ -2514,7 +2628,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Palak Puri prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 45,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Palak_Puri.jpg",
+    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -2527,7 +2641,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "2 Fresh Pieces"
   },
   {
     "id": "menu_116",
@@ -2536,7 +2651,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Beetu Puri prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 45,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/6/63/Poori_and_aloo_masala.jpg",
+    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -2549,7 +2664,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "2 Fresh Pieces"
   },
   {
     "id": "menu_117",
@@ -2558,7 +2674,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Biri Kachodi prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 45,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Khasta_Kachori.jpg",
+    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -2571,7 +2687,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "2 Fresh Pieces"
   },
   {
     "id": "menu_118",
@@ -2580,7 +2697,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Plane Paratha prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 45,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/2/23/Plain_paratha.jpg",
+    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -2593,7 +2710,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "2 Fresh Pieces"
   },
   {
     "id": "menu_119",
@@ -2602,7 +2720,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Lachha Paratha prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 45,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Lachha_Paratha.jpg",
+    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -2615,7 +2733,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "2 Fresh Pieces"
   },
   {
     "id": "menu_120",
@@ -2624,7 +2743,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Paneer Paratha prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 45,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/56/Paneer_paratha.jpg",
+    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -2637,7 +2756,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "2 Fresh Pieces"
   },
   {
     "id": "menu_121",
@@ -2646,7 +2766,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Aloo Paratha prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 45,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/54/Aloo_Paratha_also_known_as_Batata_Paratha.jpg",
+    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -2659,7 +2779,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "2 Fresh Pieces"
   },
   {
     "id": "menu_122",
@@ -2668,7 +2789,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Vegetable Paratha prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 45,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/54/Aloo_Paratha_also_known_as_Batata_Paratha.jpg",
+    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -2681,7 +2802,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "2 Fresh Pieces"
   },
   {
     "id": "menu_123",
@@ -2690,7 +2812,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Battura prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 45,
-    "image": "https://images.unsplash.com/photo-1788602564560-9bcbf0f9acb6?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1586444248902-2f64eddc13df?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -2703,7 +2825,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "2 Fresh Pieces"
   },
   {
     "id": "menu_124",
@@ -2712,7 +2835,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Baby Kulcha prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 45,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Amritsari_Kulcha.jpg",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -2725,14 +2848,15 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "2 Fresh Pieces"
   },
   {
     "id": "menu_125",
     "name": "Plane Rice",
     "category": "RICE / PULAO / BIRYANI",
     "menuType": "all",
-    "description": "Authentic Plane Rice prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Fluffy, long-grain aged Basmati rice gently steamed to tender perfection, served piping hot in a white ceramic bowl.",
     "price": 180,
     "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
@@ -2747,16 +2871,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Ceramic Bowl (350g)"
   },
   {
     "id": "menu_126",
     "name": "Jeera Rice",
     "category": "RICE / PULAO / BIRYANI",
     "menuType": "all",
-    "description": "Authentic Jeera Rice prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Fragrant Basmati rice tempered with pure cow desi ghee, whole cumin seeds, and fresh garden coriander.",
     "price": 180,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Jeera_Rice.jpg",
+    "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": true,
     "isFeatured": false,
@@ -2769,16 +2894,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.044Z",
-    "updatedAt": "2026-10-21T17:48:18.044Z"
+    "updatedAt": "2026-10-21T17:48:18.044Z",
+    "serving": "1 Ceramic Bowl (350g)"
   },
   {
     "id": "menu_127",
     "name": "Green Pease Rice",
     "category": "RICE / PULAO / BIRYANI",
     "menuType": "all",
-    "description": "Authentic Green Pease Rice prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Tender sweet green peas cooked with aromatic whole spices and long-grain basmati in a porcelain serving dish.",
     "price": 180,
-    "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": true,
     "isFeatured": false,
@@ -2791,16 +2917,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Ceramic Bowl (350g)"
   },
   {
     "id": "menu_128",
     "name": "Lemon Rice",
     "category": "RICE / PULAO / BIRYANI",
     "menuType": "all",
-    "description": "Authentic Lemon Rice prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Zesty turmeric-golden rice tempered with roasted peanuts, split chickpeas, curry leaves, and fresh lime juice.",
     "price": 180,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Lemon_Rice.jpg",
+    "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -2813,16 +2940,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Ceramic Dish (350g)"
   },
   {
     "id": "menu_129",
     "name": "Coconut Rice",
     "category": "RICE / PULAO / BIRYANI",
     "menuType": "all",
-    "description": "Authentic Coconut Rice prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Aromatic rice simmered with freshly grated coastal coconut, cashews, mustard seeds, and ginger.",
     "price": 180,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Coconut_Rice.jpg",
+    "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -2835,16 +2963,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Ceramic Bowl (350g)"
   },
   {
     "id": "menu_130",
     "name": "Tomato Rice",
     "category": "RICE / PULAO / BIRYANI",
     "menuType": "all",
-    "description": "Authentic Tomato Rice prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Spicy tomato-infused basmati rice seasoned with cinnamon, cloves, and caramelized shallots.",
     "price": 180,
-    "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -2857,16 +2986,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Ceramic Bowl (350g)"
   },
   {
     "id": "menu_131",
     "name": "Curd Rice",
     "category": "RICE / PULAO / BIRYANI",
     "menuType": "all",
-    "description": "Authentic Curd Rice prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Soothing South Indian curd rice tempered with mustard seeds, curry leaves, ginger, and ruby pomegranate arils.",
     "price": 180,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Curd_Rice.jpg",
+    "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -2879,16 +3009,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Earthen Bowl (350g)"
   },
   {
     "id": "menu_132",
     "name": "Veg Pulao",
     "category": "RICE / PULAO / BIRYANI",
     "menuType": "all",
-    "description": "Authentic Veg Pulao prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Royal vegetable pulao cooked with carrots, french beans, peas, cashews, and whole garam masala.",
     "price": 180,
-    "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -2901,16 +3032,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Ceramic Platter (400g)"
   },
   {
     "id": "menu_133",
     "name": "Kashmiri Pulao",
     "category": "RICE / PULAO / BIRYANI",
     "menuType": "all",
-    "description": "Authentic Kashmiri Pulao prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Exquisite saffron-scented pulao garnished with sliced almonds, walnuts, fried cashews, raisins, and fresh pomegranate.",
     "price": 180,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Kashmiri_Pulao.jpg",
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -2923,16 +3055,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Royal Platter (400g)"
   },
   {
     "id": "menu_134",
     "name": "Navaratan Pulao",
     "category": "RICE / PULAO / BIRYANI",
     "menuType": "all",
-    "description": "Authentic Navaratan Pulao prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Nine-gem celebratory pulao featuring seasonal vegetables, paneer cubes, dried fruits, and golden saffron strands.",
     "price": 180,
-    "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -2945,16 +3078,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Ceramic Bowl (400g)"
   },
   {
     "id": "menu_135",
     "name": "Kaju Pulao",
     "category": "RICE / PULAO / BIRYANI",
     "menuType": "all",
-    "description": "Authentic Kaju Pulao prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Fragrant ghee-cooked basmati rice loaded with roasted whole cashews and delicate aromatic spices.",
     "price": 180,
-    "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -2967,16 +3101,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Porcelain Dish (380g)"
   },
   {
     "id": "menu_136",
     "name": "Plane Pulao",
     "category": "RICE / PULAO / BIRYANI",
     "menuType": "all",
-    "description": "Authentic Plane Pulao prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Subtle spiced basmati pulao cooked in pure ghee broth with bay leaf and whole cardamom.",
     "price": 180,
-    "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -2989,16 +3124,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Ceramic Bowl (350g)"
   },
   {
     "id": "menu_137",
     "name": "Moti Pulao",
     "category": "RICE / PULAO / BIRYANI",
     "menuType": "all",
-    "description": "Authentic Moti Pulao prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Festive Awadhi rice specialty crowned with golden fried lentil and paneer pearls.",
     "price": 180,
-    "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -3011,16 +3147,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Ceramic Bowl (380g)"
   },
   {
     "id": "menu_138",
     "name": "Plane Dum Biryani",
     "category": "RICE / PULAO / BIRYANI",
     "menuType": "all",
-    "description": "Authentic Plane Dum Biryani prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Slow-cooked sealed dum biryani rice infused with saffron milk, kewra water, and fried onions.",
     "price": 180,
-    "image": "https://images.unsplash.com/photo-1691171047312-d809eccef46d?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -3033,14 +3170,15 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Handi (450g)"
   },
   {
     "id": "menu_139",
     "name": "Veg Biryani",
     "category": "RICE / PULAO / BIRYANI",
     "menuType": "all",
-    "description": "Authentic Veg Biryani prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Layered aromatic Hyderabadi vegetable dum biryani cooked with marinated vegetables and fragrant basmati.",
     "price": 180,
     "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
@@ -3055,16 +3193,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Ceramic Handi (450g)"
   },
   {
     "id": "menu_140",
     "name": "Chicken Biryani",
     "category": "RICE / PULAO / BIRYANI",
     "menuType": "all",
-    "description": "Authentic Chicken Biryani prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Grand chicken dum biryani prepared with succulent chicken pieces, saffron rice, boiled egg, and roasted spices on porcelain.",
     "price": 180,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/0/05/100%25_Homemade_Biryani.jpg",
+    "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -3077,16 +3216,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Royal Platter (550g • 2 Chicken Pieces)"
   },
   {
     "id": "menu_141",
     "name": "Mutton Biryani",
     "category": "RICE / PULAO / BIRYANI",
     "menuType": "all",
-    "description": "Authentic Mutton Biryani prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Authentic Hyderabadi mutton dum biryani slow-cooked on charcoal with tender goat meat, browned onions, and mint.",
     "price": 180,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5a/%22Hyderabadi_Dum_Biryani%22.jpg",
+    "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -3099,16 +3239,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Royal Platter (550g • 2 Tender Mutton Cuts)"
   },
   {
     "id": "menu_142",
     "name": "Kheema Rice (Non Veg)",
     "category": "RICE / PULAO / BIRYANI",
     "menuType": "all",
-    "description": "Authentic Kheema Rice (Non Veg) prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Aromatic spiced rice tossed with minced mutton kheema, green peas, and whole spices.",
     "price": 180,
-    "image": "https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -3121,14 +3262,15 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Ceramic Bowl (400g)"
   },
   {
     "id": "menu_143",
     "name": "Veg Fried Rice (Chinese)",
     "category": "RICE / PULAO / BIRYANI",
     "menuType": "all",
-    "description": "Authentic Veg Fried Rice (Chinese) prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Wok-tossed long grain rice with finely diced carrots, bell peppers, spring onions, and toasted sesame oil.",
     "price": 180,
     "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
@@ -3143,16 +3285,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Asian Bowl (380g)"
   },
   {
     "id": "menu_144",
     "name": "Schezwan Rice (Chinese)",
     "category": "RICE / PULAO / BIRYANI",
     "menuType": "all",
-    "description": "Authentic Schezwan Rice (Chinese) prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Fiery wok fried rice tossed with house-made Schezwan chili paste, garlic, and fresh vegetables.",
     "price": 180,
-    "image": "https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -3165,16 +3308,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Asian Bowl (380g)"
   },
   {
     "id": "menu_145",
     "name": "Chicken Fried Rice (Chinese)",
     "category": "RICE / PULAO / BIRYANI",
     "menuType": "all",
-    "description": "Authentic Chicken Fried Rice (Chinese) prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Golden wok-tossed fried rice with tender diced chicken, scrambled eggs, and scallions.",
     "price": 180,
-    "image": "https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -3187,16 +3331,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Ceramic Platter (420g)"
   },
   {
     "id": "menu_146",
     "name": "Mix Fried Rice (Chinese)",
     "category": "RICE / PULAO / BIRYANI",
     "menuType": "all",
-    "description": "Authentic Mix Fried Rice (Chinese) prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Hearty mixed fried rice featuring tender chicken, fresh prawns, scrambled egg, and garden vegetables.",
     "price": 180,
-    "image": "https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -3209,16 +3354,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Ceramic Platter (450g)"
   },
   {
     "id": "menu_147",
     "name": "Plane Dal",
     "category": "DAL",
     "menuType": "all",
-    "description": "Authentic Plane Dal prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Comforting yellow arhar dal slow-cooked with turmeric, rock salt, and topped with a spoonful of pure cow ghee.",
     "price": 130,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/52/Dal_Fry.jpg",
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": true,
     "isFeatured": true,
@@ -3231,16 +3377,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Ceramic Bowl (300ml)"
   },
   {
     "id": "menu_148",
     "name": "Dal Fry",
     "category": "DAL",
     "menuType": "all",
-    "description": "Authentic Dal Fry prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Creamy yellow lentils tempered with browned garlic slivers, cumin seeds, tomatoes, and chopped fresh cilantro.",
     "price": 130,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/52/Dal_Fry.jpg",
+    "image": "/images/gourmet-ceramic-curry.jpg",
     "isVeg": true,
     "isPopular": true,
     "isFeatured": false,
@@ -3253,16 +3400,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Ceramic Bowl (300ml)"
   },
   {
     "id": "menu_149",
     "name": "Dal Butter Fry",
     "category": "DAL",
     "menuType": "all",
-    "description": "Authentic Dal Butter Fry prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Rich yellow dal enriched with a generous slab of melted butter, smoky hing, and whole dry red chilies.",
     "price": 130,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/52/Dal_Fry.jpg",
+    "image": "/images/gourmet-ceramic-curry.jpg",
     "isVeg": true,
     "isPopular": true,
     "isFeatured": false,
@@ -3275,16 +3423,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Porcelain Bowl (300ml)"
   },
   {
     "id": "menu_150",
     "name": "Dal Makhani",
     "category": "DAL",
     "menuType": "all",
-    "description": "Authentic Dal Makhani prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Slow-simmered black urad lentils and kidney beans cooked overnight with butter, fresh cream, and ripe tomatoes.",
     "price": 130,
-    "image": "https://plus.unsplash.com/premium_photo-1700752343809-6dc1517295df?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -3297,16 +3446,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Ceramic Handi (350ml)"
   },
   {
     "id": "menu_151",
     "name": "Dal Tadka",
     "category": "DAL",
     "menuType": "all",
-    "description": "Authentic Dal Tadka prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Dhaba style toor dal finished with a double tadka of ghee, cumin, dry red chilies, and smoked paprika.",
     "price": 130,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/52/Dal_Fry.jpg",
+    "image": "/images/gourmet-ceramic-curry.jpg",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -3319,16 +3469,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Ceramic Bowl (300ml)"
   },
   {
     "id": "menu_152",
     "name": "Dal Panchmela",
     "category": "DAL",
     "menuType": "all",
-    "description": "Authentic Dal Panchmela prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Traditional blend of five nutritious lentils simmered with ginger, cloves, and roasted spices in a ceramic bowl.",
     "price": 130,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/52/Dal_Fry.jpg",
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -3341,16 +3492,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Ceramic Bowl (300ml)"
   },
   {
     "id": "menu_153",
     "name": "Dal Bukhara",
     "category": "DAL",
     "menuType": "all",
-    "description": "Authentic Dal Bukhara prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Velvety slow-cooked black lentils prepared in the iconic Bukhara clay-oven style with tomatoes and churned butter.",
     "price": 130,
-    "image": "https://plus.unsplash.com/premium_photo-1700752343809-6dc1517295df?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -3363,16 +3515,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Ceramic Handi (350ml)"
   },
   {
     "id": "menu_154",
     "name": "Dal Maharani",
     "category": "DAL",
     "menuType": "all",
-    "description": "Authentic Dal Maharani prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Imperial creamy dal cooked with whole spices, almond paste, and garnished with fresh cream swirls.",
     "price": 130,
-    "image": "https://plus.unsplash.com/premium_photo-1700752343809-6dc1517295df?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -3385,16 +3538,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Ceramic Handi (350ml)"
   },
   {
     "id": "menu_155",
     "name": "Coconut Dal",
     "category": "DAL",
     "menuType": "all",
-    "description": "Authentic Coconut Dal prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Coastal yellow dal tempered with freshly grated coconut, curry leaves, and fragrant mustard seeds.",
     "price": 130,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/52/Dal_Fry.jpg",
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -3407,16 +3561,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Ceramic Bowl (300ml)"
   },
   {
     "id": "menu_156",
     "name": "Khati Mithi Dal",
     "category": "DAL",
     "menuType": "all",
-    "description": "Authentic Khati Mithi Dal prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Gujarati sweet and sour yellow dal balanced with jaggery, kokum, peanuts, and aromatic cinnamon.",
     "price": 130,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/52/Dal_Fry.jpg",
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -3429,16 +3584,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Ceramic Bowl (300ml)"
   },
   {
     "id": "menu_157",
     "name": "Lemon Dal",
     "category": "DAL",
     "menuType": "all",
-    "description": "Authentic Lemon Dal prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Tangy and refreshing toor dal brightened with squeezed lemon juice, green chilies, and ginger.",
     "price": 130,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/52/Dal_Fry.jpg",
+    "image": "https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -3451,16 +3607,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Ceramic Bowl (300ml)"
   },
   {
     "id": "menu_158",
     "name": "Masala Dal",
     "category": "DAL",
     "menuType": "all",
-    "description": "Authentic Masala Dal prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Robust spicy dal tempered with onion, tomato, garam masala, and cracked coriander seeds.",
     "price": 130,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/52/Dal_Fry.jpg",
+    "image": "/images/gourmet-ceramic-curry.jpg",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -3473,16 +3630,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Ceramic Bowl (300ml)"
   },
   {
     "id": "menu_159",
     "name": "Vegetable Dal",
     "category": "DAL",
     "menuType": "all",
-    "description": "Authentic Vegetable Dal prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Nutritious traditional dal cooked with fresh pumpkin, raw banana, eggplant, tomatoes, and crushed coconut.",
     "price": 130,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/55/Pumpin_dalma.jpg",
+    "image": "/images/dishes/odia-dalma.jpg",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -3495,16 +3653,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Terracotta Handi (350ml)"
   },
   {
     "id": "menu_160",
     "name": "Dal Mughlai (Non Veg)",
     "category": "DAL",
     "menuType": "all",
-    "description": "Authentic Dal Mughlai (Non Veg) prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Rich Mughlai dal simmered with fragrant whole spices, cream, and tender meat broth.",
     "price": 130,
-    "image": "https://plus.unsplash.com/premium_photo-1700752343809-6dc1517295df?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -3517,7 +3676,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Ceramic Bowl (350ml)"
   },
   {
     "id": "menu_161",
@@ -3526,7 +3686,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Chatni (Mango/Tomato/Fruits/Khajur/P.A/Ambula) prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 70,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/3/30/Mango_chutney.jpg",
+    "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": true,
     "isFeatured": true,
@@ -3539,7 +3699,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_162",
@@ -3548,7 +3709,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Dry Fruits Chutney prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 70,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/3/30/Mango_chutney.jpg",
+    "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": true,
     "isFeatured": false,
@@ -3561,7 +3722,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_163",
@@ -3570,7 +3732,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Pumpkin Chutney prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 70,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/3/30/Mango_chutney.jpg",
+    "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": true,
     "isFeatured": false,
@@ -3583,7 +3745,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_164",
@@ -3592,7 +3755,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Kashmir Chutney prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 70,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/3/30/Mango_chutney.jpg",
+    "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -3605,7 +3768,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_165",
@@ -3614,7 +3778,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Plastic Chutney prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 70,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/3/30/Mango_chutney.jpg",
+    "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -3627,7 +3791,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_166",
@@ -3636,7 +3801,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Jelly (Mango/Papaya P.A/Apple) prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 70,
-    "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -3649,7 +3814,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_167",
@@ -3658,7 +3824,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Baingan Aachari prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 70,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/54/Baingan_bharta.jpg",
+    "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -3671,7 +3837,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_168",
@@ -3680,7 +3847,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Dahi Baingan/Bhindi prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 70,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Dahi_Baigana.jpg",
+    "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -3693,7 +3860,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_169",
@@ -3702,7 +3870,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Nadia Pachedi prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 70,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Dahi_Baigana.jpg",
+    "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -3715,7 +3883,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_170",
@@ -3724,7 +3893,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Raita (Ambula/Bundi/Mix Aloo/P.A/Fruits) prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 70,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/d/df/Boondi_Raita.jpg",
+    "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -3737,7 +3906,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_171",
@@ -3746,7 +3916,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Dahi Bara prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 70,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Dahibara_Aludam.jpg",
+    "image": "/images/dishes/dahi-pakhala.jpg",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -3759,7 +3929,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_172",
@@ -3768,7 +3939,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Dahi Pakodi prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 70,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Dahi_vada_in_sweet_curd.jpg",
+    "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -3781,7 +3952,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_173",
@@ -3790,7 +3962,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Dahi Kadhi prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 70,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/0/07/Kadhi_pakora.jpg",
+    "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -3803,7 +3975,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_174",
@@ -3825,7 +3998,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_175",
@@ -3834,7 +4008,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Pampad prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 70,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/9/90/Papad.jpg",
+    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -3847,7 +4021,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_176",
@@ -3869,7 +4044,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_177",
@@ -3891,16 +4067,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_178",
     "name": "Veg Kadhai",
     "category": "VEGETABLE",
     "menuType": "all",
-    "description": "Authentic Veg Kadhai prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Vibrant bell peppers, baby corn, and fresh garden vegetables wok-tossed in a freshly ground coriander-kadai spice gravy.",
     "price": 160,
-    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": true,
     "isFeatured": false,
@@ -3913,7 +4090,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Ceramic Bowl (350g)"
   },
   {
     "id": "menu_179",
@@ -3935,16 +4113,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_180",
     "name": "Veg Jhalfry",
     "category": "VEGETABLE",
     "menuType": "all",
-    "description": "Authentic Veg Jhalfry prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Colorful batons of carrot, beans, paneer, and peppers stir-fried in a tangy sweet-sour tomato chili reduction.",
     "price": 160,
-    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -3957,16 +4136,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Ceramic Dish (350g)"
   },
   {
     "id": "menu_181",
     "name": "Veg Butter Masala",
     "category": "VEGETABLE",
     "menuType": "all",
-    "description": "Authentic Veg Butter Masala prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Exquisite garden vegetables and paneer simmered in a silky tomato makhani gravy enriched with churned butter and cream.",
     "price": 160,
-    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -3979,7 +4159,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 White Ceramic Bowl (350g)"
   },
   {
     "id": "menu_182",
@@ -3988,7 +4169,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Navratan Korma prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 160,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Navratan_Korma.jpg",
+    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -4001,7 +4182,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_183",
@@ -4023,7 +4205,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_184",
@@ -4045,16 +4228,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_185",
     "name": "Veg Bemishal",
     "category": "VEGETABLE",
     "menuType": "all",
-    "description": "Authentic Veg Bemishal prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Incomparable royal vegetable medley simmered in a rich brown onion-cashew gravy with hint of saffron.",
     "price": 160,
-    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -4067,7 +4251,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Ceramic Handi (350g)"
   },
   {
     "id": "menu_186",
@@ -4089,7 +4274,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_187",
@@ -4098,7 +4284,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Veg Kofta prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 160,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Malai_Kofta_in_cashew_gravy.jpg",
+    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -4111,7 +4297,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_188",
@@ -4120,7 +4307,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Stuffed (Capsicum, Tomato, Potato, Parwal) prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 160,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Bharwan_shimla_mirch.jpg",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -4133,7 +4320,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_189",
@@ -4155,7 +4343,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_190",
@@ -4164,7 +4353,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Veg Hariyali prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 160,
-    "image": "https://images.unsplash.com/photo-1589647363585-f4a7d3877b10?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -4177,16 +4366,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_191",
     "name": "Veg Nawabi",
     "category": "VEGETABLE",
     "menuType": "all",
-    "description": "Authentic Veg Nawabi prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Nawabi cashew cream curry with koftas and seasonal vegetables, delicately spiced with green cardamom.",
     "price": 160,
-    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -4199,7 +4389,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Porcelain Dish (350g)"
   },
   {
     "id": "menu_192",
@@ -4221,7 +4412,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_193",
@@ -4230,7 +4422,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Gobi Aloo Masala prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 160,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/1/14/Aloo_Gobi.jpg",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -4243,7 +4435,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_194",
@@ -4252,7 +4445,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Aloo Gobi Dry prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 160,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/1/14/Aloo_Gobi.jpg",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -4265,7 +4458,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_195",
@@ -4274,7 +4468,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Gobi Mughlai prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 160,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/1/14/Aloo_Gobi.jpg",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -4287,7 +4481,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_196",
@@ -4296,7 +4491,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Aloo Dum prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 160,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/8/87/Dum_Aloo.jpg",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -4309,7 +4504,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_197",
@@ -4318,7 +4514,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Aloo Dum Kashmiri prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 160,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/8/87/Dum_Aloo.jpg",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -4331,7 +4527,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_198",
@@ -4340,7 +4537,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Aloo Mughlai prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 160,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/8/87/Dum_Aloo.jpg",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -4353,7 +4550,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_199",
@@ -4362,7 +4560,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Aloo Stuff Masala prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 160,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/8/87/Dum_Aloo.jpg",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -4375,7 +4573,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_200",
@@ -4384,7 +4583,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Aloo Kurkure Bhujia prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 160,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Aloo_Chaat_-_New_Delhi.jpg",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -4397,7 +4596,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_201",
@@ -4406,7 +4606,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Parwal Aloo Masala prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 160,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/8/86/Aloo_potol_dalna.jpg",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -4419,7 +4619,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_202",
@@ -4428,7 +4629,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Parwal Korma prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 160,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/8/86/Aloo_potol_dalna.jpg",
+    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -4441,7 +4642,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_203",
@@ -4450,7 +4652,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Parwal Dahi Masala prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 160,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/8/86/Aloo_potol_dalna.jpg",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -4463,7 +4665,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_204",
@@ -4472,7 +4675,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Parwal Methi Malai prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 160,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/8/86/Aloo_potol_dalna.jpg",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -4485,7 +4688,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_205",
@@ -4494,7 +4698,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Parwal Jhal prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 160,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/8/86/Aloo_potol_dalna.jpg",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -4507,7 +4711,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_206",
@@ -4516,7 +4721,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Dahi Bhindi prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 160,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Dahi_Bhindi.jpg",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -4529,7 +4734,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_207",
@@ -4538,7 +4744,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Vindi Masala prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 160,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Bhindi_Masala.jpg",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -4551,7 +4757,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_208",
@@ -4560,7 +4767,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Vindi Kurkure prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 160,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Kurkuri_Bhindi.jpg",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -4573,16 +4780,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_209",
     "name": "Tawa Bhaji",
     "category": "VEGETABLE",
     "menuType": "all",
-    "description": "Authentic Tawa Bhaji prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Assorted fresh seasonal vegetables dry-roasted on a cast-iron tawa with crushed whole spices and lemon.",
     "price": 160,
-    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -4595,7 +4803,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Ceramic Platter (300g)"
   },
   {
     "id": "menu_210",
@@ -4617,7 +4826,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_211",
@@ -4639,7 +4849,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_212",
@@ -4648,7 +4859,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Chana Masala prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 160,
-    "image": "https://images.unsplash.com/photo-1788602564560-9bcbf0f9acb6?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -4661,7 +4872,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_213",
@@ -4683,7 +4895,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_214",
@@ -4705,7 +4918,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_215",
@@ -4727,16 +4941,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_216",
     "name": "Mushroom Butter Masala",
     "category": "MUSHROOM",
     "menuType": "all",
-    "description": "Authentic Mushroom Butter Masala prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Fresh button mushrooms simmered in a velvety buttery tomato-cashew makhani gravy.",
     "price": 210,
-    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -4749,7 +4964,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Ceramic Handi (350g)"
   },
   {
     "id": "menu_217",
@@ -4758,7 +4974,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Mushroom Besar prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 210,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/55/Pumpin_dalma.jpg",
+    "image": "/images/dishes/macha-besara.jpg",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -4771,7 +4987,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_218",
@@ -4793,7 +5010,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_219",
@@ -4815,7 +5033,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_220",
@@ -4837,7 +5056,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_221",
@@ -4846,7 +5066,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Muttor Paneer prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 220,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Matar_paneer.jpg",
+    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": true,
     "isFeatured": true,
@@ -4859,7 +5079,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_222",
@@ -4868,7 +5089,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Paneer Butter Masala prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 220,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Paneer_Butter_Masala.JPG",
+    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": true,
     "isFeatured": false,
@@ -4881,7 +5102,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_223",
@@ -4890,7 +5112,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Paneer Kadhai prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 220,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/52/Kadai_paneer.jpg",
+    "image": "/images/gourmet-ceramic-curry.jpg",
     "isVeg": true,
     "isPopular": true,
     "isFeatured": false,
@@ -4903,7 +5125,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_224",
@@ -4925,7 +5148,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_225",
@@ -4934,7 +5158,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Paneer Kofta prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 220,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Malai_Kofta_in_cashew_gravy.jpg",
+    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -4947,7 +5171,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_226",
@@ -4969,7 +5194,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_227",
@@ -4991,7 +5217,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_228",
@@ -5000,7 +5227,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Paneer Makhani prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 220,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Paneer_Butter_Masala.JPG",
+    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -5013,7 +5240,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_229",
@@ -5035,7 +5263,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_230",
@@ -5044,7 +5273,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Paneer Bhurji prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 220,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Paneer_Bhurji.jpg",
+    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -5057,7 +5286,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_231",
@@ -5066,7 +5296,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Palak Paneer prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 220,
-    "image": "https://images.unsplash.com/photo-1589647363585-f4a7d3877b10?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -5079,7 +5309,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_232",
@@ -5101,7 +5332,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_233",
@@ -5123,7 +5355,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_234",
@@ -5132,7 +5365,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Paneer Chilly prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 220,
-    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -5145,7 +5378,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_235",
@@ -5167,7 +5401,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_236",
@@ -5189,7 +5424,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_237",
@@ -5198,7 +5434,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Paneer Tikka Btr. Masala prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 220,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Paneer_Butter_Masala.JPG",
+    "image": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -5211,7 +5447,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_238",
@@ -5233,7 +5470,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_239",
@@ -5242,7 +5480,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Tiranga Paneer prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 220,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Malai_Paneer_Tikka%2C_PK_007.jpg",
+    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -5255,7 +5493,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_240",
@@ -5264,7 +5503,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Fish Masala prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 260,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Fish_curry.jpg",
+    "image": "https://images.unsplash.com/photo-1559742811-822873691df8?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": true,
     "isFeatured": true,
@@ -5277,7 +5516,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_241",
@@ -5299,7 +5539,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_242",
@@ -5308,7 +5549,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Steam Fish prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 260,
-    "image": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1559742811-822873691df8?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": true,
     "isFeatured": false,
@@ -5321,7 +5562,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_243",
@@ -5330,7 +5572,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Fish Kalia prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 260,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Machher_Kalia.jpg",
+    "image": "/images/dishes/macha-besara.jpg",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -5343,7 +5585,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_244",
@@ -5352,7 +5595,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Bengali Fish Masala prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 260,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Machher_Kalia.jpg",
+    "image": "/images/dishes/macha-besara.jpg",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -5365,7 +5608,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_245",
@@ -5374,7 +5618,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Fish Dahiwala prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 260,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Fish_curry.jpg",
+    "image": "https://images.unsplash.com/photo-1559742811-822873691df8?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -5387,7 +5631,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_246",
@@ -5396,7 +5641,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Mustard Fish prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 260,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/0/07/Shorshe_Ilish.jpg",
+    "image": "/images/dishes/macha-besara.jpg",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -5409,7 +5654,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_247",
@@ -5431,7 +5677,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_248",
@@ -5440,7 +5687,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Pomfret Masala prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 260,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Tandoori_pomfret.jpg",
+    "image": "https://images.unsplash.com/photo-1552901695-cfa7432e6bbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -5453,7 +5700,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_249",
@@ -5462,7 +5710,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Tawa Pomfret prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 260,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Tandoori_pomfret.jpg",
+    "image": "https://images.unsplash.com/photo-1552901695-cfa7432e6bbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -5475,7 +5723,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_250",
@@ -5484,7 +5733,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Crab Masala prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 260,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Crab_curry.jpg",
+    "image": "https://images.unsplash.com/photo-1559742811-822873691df8?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -5497,7 +5746,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_251",
@@ -5506,7 +5756,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Prawn Chilly prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 290,
-    "image": "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1559742811-822873691df8?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": true,
     "isFeatured": true,
@@ -5519,7 +5769,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_252",
@@ -5541,7 +5792,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_253",
@@ -5550,7 +5802,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Prawn Dopyaza prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 290,
-    "image": "https://plus.unsplash.com/premium_photo-1700752342459-c276465c177e?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1559742811-822873691df8?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": true,
     "isFeatured": false,
@@ -5563,7 +5815,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_254",
@@ -5572,7 +5825,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Prawn Malai Curry prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 290,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Chingri_malai_curry.jpg",
+    "image": "https://images.unsplash.com/photo-1559742811-822873691df8?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -5585,7 +5838,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_255",
@@ -5594,7 +5848,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Prawn Masala prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 290,
-    "image": "https://plus.unsplash.com/premium_photo-1700752342459-c276465c177e?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1559742811-822873691df8?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -5607,7 +5861,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_256",
@@ -5616,7 +5871,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Prawn Makhani prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 290,
-    "image": "https://plus.unsplash.com/premium_photo-1700752342459-c276465c177e?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1559742811-822873691df8?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -5629,7 +5884,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_257",
@@ -5638,7 +5894,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Mustard Prawn prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 290,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Chingri_malai_curry.jpg",
+    "image": "https://images.unsplash.com/photo-1559742811-822873691df8?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -5651,7 +5907,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_258",
@@ -5660,7 +5917,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Chicken Curry prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 240,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Chicken_curry.jpg",
+    "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": true,
     "isFeatured": true,
@@ -5673,7 +5930,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_259",
@@ -5682,7 +5940,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Chicken Masala prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 240,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Chicken_curry.jpg",
+    "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": true,
     "isFeatured": false,
@@ -5695,7 +5953,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_260",
@@ -5717,7 +5976,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_261",
@@ -5739,7 +5999,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_262",
@@ -5748,7 +6009,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Chicken Butter Masala prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 240,
-    "image": "https://images.unsplash.com/photo-1705174427925-744646e72117?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -5761,7 +6022,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_263",
@@ -5770,7 +6032,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Chicken Tikka Butter Masala prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 240,
-    "image": "https://images.unsplash.com/photo-1705174427925-744646e72117?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -5783,7 +6045,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_264",
@@ -5792,7 +6055,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Chicken Roast Masala prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 240,
-    "image": "https://images.unsplash.com/photo-1527477244186-e414c1ebc8eb?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -5805,7 +6068,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_265",
@@ -5827,7 +6091,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_266",
@@ -5849,7 +6114,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_267",
@@ -5858,7 +6124,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Murgh Mussalam prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 240,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/0/08/Murgh_Mussallam.jpg",
+    "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -5871,7 +6137,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_268",
@@ -5880,7 +6147,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Chicken Hariyali prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 240,
-    "image": "https://images.unsplash.com/photo-1589647363585-f4a7d3877b10?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -5893,7 +6160,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_269",
@@ -5902,7 +6170,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Palak Chicken (Seasonal) prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 240,
-    "image": "https://images.unsplash.com/photo-1589647363585-f4a7d3877b10?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -5915,7 +6183,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_270",
@@ -5937,7 +6206,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_271",
@@ -5959,7 +6229,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_272",
@@ -5968,7 +6239,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Chicken Leg Masala prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 240,
-    "image": "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -5981,7 +6252,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_273",
@@ -6003,7 +6275,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_274",
@@ -6012,7 +6285,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Chicken Bharta prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 240,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/9/90/Chicken_Bharta.jpg",
+    "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -6025,7 +6298,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_275",
@@ -6047,7 +6321,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_276",
@@ -6069,7 +6344,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_277",
@@ -6078,7 +6354,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Katki Spl. Chicken prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 240,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Chicken_curry.jpg",
+    "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -6091,7 +6367,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_278",
@@ -6100,7 +6377,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Mutton Curry prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 380,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/9/95/Mutton_curry.jpg",
+    "image": "/images/dishes/odia-mutton-kasa.jpg",
     "isVeg": false,
     "isPopular": true,
     "isFeatured": true,
@@ -6113,7 +6390,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_279",
@@ -6122,7 +6400,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Mutton Masala prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 380,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/9/95/Mutton_curry.jpg",
+    "image": "/images/dishes/odia-mutton-kasa.jpg",
     "isVeg": false,
     "isPopular": true,
     "isFeatured": false,
@@ -6135,7 +6413,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_280",
@@ -6144,7 +6423,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Mutton Rogan Josh prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 380,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Rogan_Josh%2C_Newent_-_geograph.org.uk_-_4777714.jpg",
+    "image": "/images/dishes/odia-mutton-kasa.jpg",
     "isVeg": false,
     "isPopular": true,
     "isFeatured": false,
@@ -6157,7 +6436,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_281",
@@ -6166,7 +6446,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Mutton Butter Masala prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 380,
-    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/dishes/odia-mutton-kasa.jpg",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -6179,7 +6459,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_282",
@@ -6188,7 +6469,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Mutton Bhuna Roast prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 380,
-    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/dishes/odia-mutton-kasa.jpg",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -6201,7 +6482,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_283",
@@ -6210,7 +6492,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Mutton Hydrabadi prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 380,
-    "image": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/dishes/odia-mutton-kasa.jpg",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -6223,7 +6505,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_284",
@@ -6232,7 +6515,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Mutton Badsaha prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 380,
-    "image": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/dishes/odia-mutton-kasa.jpg",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -6245,7 +6528,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_285",
@@ -6254,7 +6538,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Mutton Ghee Roast M/S prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 380,
-    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/dishes/odia-mutton-kasa.jpg",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -6267,7 +6551,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_286",
@@ -6276,7 +6561,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Kheema Mutton prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 380,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/a/af/Keema_matar.jpg",
+    "image": "/images/dishes/odia-mutton-kasa.jpg",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -6289,7 +6574,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_287",
@@ -6298,7 +6584,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Chuna Macha Bhaja / Besar prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 280,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/0/07/Shorshe_Ilish.jpg",
+    "image": "/images/dishes/macha-besara.jpg",
     "isVeg": false,
     "isPopular": true,
     "isFeatured": true,
@@ -6311,7 +6597,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_288",
@@ -6320,7 +6607,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Macha Munda Ghanta prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 280,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Machher_Kalia.jpg",
+    "image": "/images/dishes/macha-besara.jpg",
     "isVeg": false,
     "isPopular": true,
     "isFeatured": false,
@@ -6333,7 +6620,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_289",
@@ -6342,7 +6630,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Mudhi Ghanta prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 280,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Machher_Kalia.jpg",
+    "image": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": true,
     "isFeatured": false,
@@ -6355,7 +6643,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_290",
@@ -6364,7 +6653,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Poi Chingudi Ghanta prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 280,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Chingri_malai_curry.jpg",
+    "image": "https://images.unsplash.com/photo-1559742811-822873691df8?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -6377,7 +6666,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_291",
@@ -6386,7 +6676,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Macha Aambila prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 280,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Fish_curry.jpg",
+    "image": "/images/dishes/macha-besara.jpg",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -6399,7 +6689,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_292",
@@ -6408,7 +6699,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Chingudi Dalema prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 280,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Chingri_malai_curry.jpg",
+    "image": "/images/dishes/odia-dalma.jpg",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -6421,7 +6712,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_293",
@@ -6430,7 +6722,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Chingudi Checha prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 280,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Prawn_pakora.jpg",
+    "image": "https://images.unsplash.com/photo-1559742811-822873691df8?auto=format&fit=crop&w=600&q=80",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -6443,7 +6735,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_294",
@@ -6452,7 +6745,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Macha Checha prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 280,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Fish_curry.jpg",
+    "image": "/images/dishes/macha-besara.jpg",
     "isVeg": false,
     "isPopular": false,
     "isFeatured": false,
@@ -6465,7 +6758,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_295",
@@ -6474,7 +6768,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Ghee Arna prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 150,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/8/8b/PAKHALA_KANSA_%28ODIA%29.jpg",
+    "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": true,
     "isFeatured": true,
@@ -6487,7 +6781,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_296",
@@ -6496,7 +6791,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Kanika (Sweet) prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 150,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Kashmiri_Pulao.jpg",
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": true,
     "isFeatured": false,
@@ -6509,7 +6804,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_297",
@@ -6518,7 +6814,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Dahi Pakhala prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 150,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/8/8b/PAKHALA_KANSA_%28ODIA%29.jpg",
+    "image": "/images/dishes/dahi-pakhala.jpg",
     "isVeg": true,
     "isPopular": true,
     "isFeatured": false,
@@ -6531,7 +6827,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_298",
@@ -6553,7 +6850,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_299",
@@ -6562,7 +6860,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Sweet Dal prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 150,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/52/Dal_Fry.jpg",
+    "image": "/images/dishes/odia-dalma.jpg",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -6575,7 +6873,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_300",
@@ -6584,7 +6883,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Dalema prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 150,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/55/Pumpin_dalma.jpg",
+    "image": "/images/dishes/odia-dalma.jpg",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -6597,7 +6896,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_301",
@@ -6606,7 +6906,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Tomato Khajur Khatta prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 150,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/3/30/Mango_chutney.jpg",
+    "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -6619,7 +6919,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_302",
@@ -6628,7 +6929,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Ambula Khatta prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 150,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/3/30/Mango_chutney.jpg",
+    "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -6641,7 +6942,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_303",
@@ -6650,7 +6952,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Amba Khatta prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 150,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/3/30/Mango_chutney.jpg",
+    "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -6663,7 +6965,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_304",
@@ -6672,7 +6975,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Awu Khatta prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 150,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/3/30/Mango_chutney.jpg",
+    "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -6685,7 +6988,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_305",
@@ -6694,7 +6998,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Kandamula Khatta prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 150,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/3/30/Mango_chutney.jpg",
+    "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -6707,7 +7011,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_306",
@@ -6716,7 +7021,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Dahi Ambula prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 150,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Dahi_Baigana.jpg",
+    "image": "/images/dishes/odia-dalma.jpg",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -6729,7 +7034,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_307",
@@ -6738,7 +7044,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Nadia Pachedi prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 150,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Dahi_Baigana.jpg",
+    "image": "/images/dishes/odia-dalma.jpg",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -6751,7 +7057,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_308",
@@ -6760,7 +7067,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Dahi Baigan prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 150,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Dahi_Baigana.jpg",
+    "image": "/images/dishes/odia-dalma.jpg",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -6773,7 +7080,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_309",
@@ -6782,7 +7090,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Kakharu Khatta prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 150,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/3/30/Mango_chutney.jpg",
+    "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -6795,7 +7103,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_310",
@@ -6804,7 +7113,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Sadda Besar prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 140,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/55/Pumpin_dalma.jpg",
+    "image": "/images/dishes/macha-besara.jpg",
     "isVeg": true,
     "isPopular": true,
     "isFeatured": true,
@@ -6817,7 +7126,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_311",
@@ -6826,7 +7136,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Sadda Mahura prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 140,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/55/Pumpin_dalma.jpg",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": true,
     "isFeatured": false,
@@ -6839,7 +7149,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_312",
@@ -6848,7 +7159,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Sadda Chihankaa (Mixture) prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 140,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/55/Pumpin_dalma.jpg",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": true,
     "isFeatured": false,
@@ -6861,7 +7172,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_313",
@@ -6870,7 +7182,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Chhuin Badi Aloo Besar prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 140,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/55/Pumpin_dalma.jpg",
+    "image": "/images/dishes/macha-besara.jpg",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -6883,7 +7195,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_314",
@@ -6892,7 +7205,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Santula prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 140,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Santula.jpg",
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -6905,7 +7218,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_315",
@@ -6914,7 +7228,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Lau Badi Nadia Besar prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 140,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/55/Pumpin_dalma.jpg",
+    "image": "/images/dishes/macha-besara.jpg",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -6927,7 +7241,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_316",
@@ -6936,7 +7251,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Badi Besar prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 140,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/55/Pumpin_dalma.jpg",
+    "image": "/images/dishes/macha-besara.jpg",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -6949,7 +7264,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_317",
@@ -6958,7 +7274,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Badi Chura prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 140,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/55/Pumpin_dalma.jpg",
+    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -6971,7 +7287,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_318",
@@ -6980,7 +7297,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Saga Muga prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 140,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Saag.jpg",
+    "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -6993,7 +7310,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_319",
@@ -7002,7 +7320,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Aloo Posto prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 140,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/6/69/Aloo_posto.jpg",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -7015,7 +7333,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_320",
@@ -7024,7 +7343,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Janhi Posto prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 140,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/6/69/Aloo_posto.jpg",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -7037,7 +7356,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_321",
@@ -7046,7 +7366,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Potal Aloo Rasa prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 140,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/8/86/Aloo_potol_dalna.jpg",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -7059,7 +7379,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_322",
@@ -7068,7 +7389,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Saga Besar prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 140,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Saag.jpg",
+    "image": "/images/dishes/macha-besara.jpg",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -7081,7 +7402,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_323",
@@ -7090,7 +7412,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Saga Bhaja prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 140,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Saag.jpg",
+    "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -7103,7 +7425,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_324",
@@ -7112,7 +7435,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Chhena Badi Aloo M/S prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 140,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/55/Pumpin_dalma.jpg",
+    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -7125,7 +7448,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_325",
@@ -7134,7 +7458,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Chuin Aloo Bhaja prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 140,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/1/14/Aloo_Gobi.jpg",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -7147,7 +7471,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_326",
@@ -7156,7 +7481,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Baigan Bharta prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 140,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/54/Baingan_bharta.jpg",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -7169,7 +7494,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_327",
@@ -7178,7 +7504,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Aloo Bhrta prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 140,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Aloo_Chaat_-_New_Delhi.jpg",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -7191,7 +7517,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_328",
@@ -7200,7 +7527,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Tomato Poda prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 140,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/3/30/Mango_chutney.jpg",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -7213,7 +7540,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_329",
@@ -7222,7 +7550,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Baigan Bhaja prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 140,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/54/Baingan_bharta.jpg",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -7235,7 +7563,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_330",
@@ -7244,7 +7573,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Kadali Bhaja prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 140,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/1/14/Aloo_Gobi.jpg",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -7257,7 +7586,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_331",
@@ -7266,7 +7596,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Chatu Besar prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 140,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/55/Pumpin_dalma.jpg",
+    "image": "/images/dishes/macha-besara.jpg",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -7279,7 +7609,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_332",
@@ -7301,7 +7632,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_333",
@@ -7323,7 +7655,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_334",
@@ -7345,7 +7678,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_335",
@@ -7367,7 +7701,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_336",
@@ -7389,7 +7724,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_337",
@@ -7411,7 +7747,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_338",
@@ -7433,7 +7770,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_339",
@@ -7455,7 +7793,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_340",
@@ -7477,16 +7816,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "Serves 1-2 (350g Handi)"
   },
   {
     "id": "menu_341",
     "name": "Rice Kheer",
     "category": "DESERT",
     "menuType": "all",
-    "description": "Authentic Rice Kheer prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Slow-reduced full cream milk and fragrant Gobindobhog rice kheer scented with green cardamom and saffron.",
     "price": 120,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Badham_kheer.jpg",
+    "image": "https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": true,
     "isFeatured": true,
@@ -7499,16 +7839,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Ceramic Dessert Bowl (200g)"
   },
   {
     "id": "menu_342",
     "name": "Chhene Payas",
     "category": "DESERT",
     "menuType": "all",
-    "description": "Authentic Chhene Payas prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Traditional Odia Chhena Payas made from fresh chenna cottage cheese granules simmered in thickened sweetened milk.",
     "price": 120,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Rasmalai_%2843245%29.jpg",
+    "image": "https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": true,
     "isFeatured": false,
@@ -7521,7 +7862,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Ceramic Dessert Bowl (200g)"
   },
   {
     "id": "menu_343",
@@ -7530,7 +7872,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Jhili Payas prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 120,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Badham_kheer.jpg",
+    "image": "https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": true,
     "isFeatured": false,
@@ -7543,7 +7885,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Dessert Portion (180g)"
   },
   {
     "id": "menu_344",
@@ -7552,7 +7895,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Sitavog Payas prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 120,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Badham_kheer.jpg",
+    "image": "https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -7565,7 +7908,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Dessert Portion (180g)"
   },
   {
     "id": "menu_345",
@@ -7574,7 +7918,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Makhna Payas prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 120,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Badham_kheer.jpg",
+    "image": "https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -7587,7 +7931,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Dessert Portion (180g)"
   },
   {
     "id": "menu_346",
@@ -7596,7 +7941,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Semiya Payas prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 120,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Badham_kheer.jpg",
+    "image": "https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -7609,16 +7954,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Dessert Portion (180g)"
   },
   {
     "id": "menu_347",
     "name": "Gajar Payas",
     "category": "DESERT",
     "menuType": "all",
-    "description": "Authentic Gajar Payas prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Winter red carrots slow-cooked with pure cow ghee, whole khoya, and loaded with roasted cashews and almonds.",
     "price": 120,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/7/73/Gajar_ka_halwa.jpg",
+    "image": "https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -7631,7 +7977,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Ceramic Bowl (180g)"
   },
   {
     "id": "menu_348",
@@ -7640,7 +7987,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Kheer Sagar prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 120,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Rasmalai_%2843245%29.jpg",
+    "image": "https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -7653,7 +8000,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Dessert Portion (180g)"
   },
   {
     "id": "menu_349",
@@ -7662,7 +8010,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Halwa (Suji, Gajar, Moong) prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 120,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/7/73/Gajar_ka_halwa.jpg",
+    "image": "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -7675,7 +8023,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Dessert Portion (180g)"
   },
   {
     "id": "menu_350",
@@ -7684,7 +8033,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Imarti prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 120,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Imarti.jpg",
+    "image": "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -7697,7 +8046,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Dessert Portion (180g)"
   },
   {
     "id": "menu_351",
@@ -7706,7 +8056,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Sahitukuda prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 120,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Shahi_tukra.jpg",
+    "image": "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -7719,7 +8069,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Dessert Portion (180g)"
   },
   {
     "id": "menu_352",
@@ -7741,16 +8092,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Dessert Portion (180g)"
   },
   {
     "id": "menu_353",
     "name": "Hot Jalebi",
     "category": "DESERT",
     "menuType": "all",
-    "description": "Authentic Hot Jalebi prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Crisp golden jalebis freshly fried in desi ghee and steeped in saffron sugar syrup on a white porcelain dessert plate.",
     "price": 120,
-    "image": "https://images.unsplash.com/photo-1760263216784-a4ca9a841ff5?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -7763,16 +8115,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "4 Hot Spiral Jalebis (180g)"
   },
   {
     "id": "menu_354",
     "name": "Rasogulla",
     "category": "DESERT",
     "menuType": "all",
-    "description": "Authentic Rasogulla prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Authentic Odisha Pahala-style melt-in-mouth spongy cottage cheese spheres soaked in warm light cardamom syrup.",
     "price": 120,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/3/39/Rasgulla.jpg",
+    "image": "https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -7785,16 +8138,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "2 Spongy Rasgullas"
   },
   {
     "id": "menu_355",
     "name": "Baked Rasogulla",
     "category": "DESERT",
     "menuType": "all",
-    "description": "Authentic Baked Rasogulla prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Juicy rasgullas baked under rich rabdi until a caramelized golden crust forms on top.",
     "price": 120,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Rasgulla_With_Rabdi.jpg",
+    "image": "https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -7807,7 +8161,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "2 Baked Rasgullas in Terracotta Pot"
   },
   {
     "id": "menu_356",
@@ -7816,7 +8171,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Baked Boondi prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 120,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Shahi_tukra.jpg",
+    "image": "https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -7829,14 +8184,15 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Dessert Portion (180g)"
   },
   {
     "id": "menu_357",
     "name": "Gulab Jamun",
     "category": "DESERT",
     "menuType": "all",
-    "description": "Authentic Gulab Jamun prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Deep golden khoya spheres fried in pure ghee and immersed in rose and cardamom scented warm sugar syrup.",
     "price": 120,
     "image": "https://images.unsplash.com/photo-1666190092159-3171cf0fbb12?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
@@ -7851,7 +8207,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "2 Hot Gulab Jamuns"
   },
   {
     "id": "menu_358",
@@ -7860,7 +8217,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Fruit Custard prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 120,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/2/29/Fruit_custard.jpg",
+    "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -7873,16 +8230,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Dessert Portion (180g)"
   },
   {
     "id": "menu_359",
     "name": "Malpua",
     "category": "DESERT",
     "menuType": "all",
-    "description": "Authentic Malpua prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Crispy-edged syrupy pancakes dipped in saffron sugar syrup and topped with chilled creamy rabri.",
     "price": 120,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Malpua.jpg",
+    "image": "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -7895,16 +8253,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "2 Saffron Malpuas with Rabdi"
   },
   {
     "id": "menu_360",
     "name": "Rabdi",
     "category": "DESERT",
     "menuType": "all",
-    "description": "Authentic Rabdi prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Thick layered malai rabdi slow-reduced in an open kadhai and flavored with crushed green cardamom.",
     "price": 120,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Rasgulla_With_Rabdi.jpg",
+    "image": "https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -7917,16 +8276,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Earthen Bowl (180g)"
   },
   {
     "id": "menu_361",
     "name": "Rasmalai",
     "category": "DESERT",
     "menuType": "all",
-    "description": "Authentic Rasmalai prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Velvety chenna discs steeped in thickened saffron-infused milk and sprinkled with chopped pistachios.",
     "price": 120,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Rasmalai_%2843245%29.jpg",
+    "image": "https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -7939,7 +8299,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "2 Soft Rasmalai Patties"
   },
   {
     "id": "menu_362",
@@ -7948,7 +8309,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Rasavali prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 120,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Rasmalai_%2843245%29.jpg",
+    "image": "https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -7961,7 +8322,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Dessert Portion (180g)"
   },
   {
     "id": "menu_363",
@@ -7970,7 +8332,7 @@ export const defaultMenuItems: any[] = [
     "menuType": "all",
     "description": "Authentic Rajbhog prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
     "price": 120,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/3/39/Rasgulla.jpg",
+    "image": "https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -7983,16 +8345,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Dessert Portion (180g)"
   },
   {
     "id": "menu_364",
     "name": "Chhena Jhilli",
     "category": "DESERT",
     "menuType": "all",
-    "description": "Authentic Chhena Jhilli prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Famous Nimapada sweet made of fried cottage cheese rings soaked in fragrant sugar syrup.",
     "price": 120,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Chhena_Poda-Puri-Odisha-IMG_1323.jpg",
+    "image": "/images/dishes/chhena-poda.jpg",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -8005,16 +8368,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "2 Nimapada Jhilli Pieces"
   },
   {
     "id": "menu_365",
     "name": "Chenna Podo",
     "category": "DESERT",
     "menuType": "all",
-    "description": "Authentic Chenna Podo prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Iconic Odisha baked cheese cake crafted from fresh chenna, sugar, and cardamom, slow-baked until caramelized and smoky.",
     "price": 120,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Chhena_Poda-Puri-Odisha-IMG_1323.jpg",
+    "image": "/images/dishes/chhena-poda.jpg",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -8027,14 +8391,15 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": true,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Generous Slice (150g)"
   },
   {
     "id": "menu_366",
     "name": "Ice Cream",
     "category": "DESERT",
     "menuType": "all",
-    "description": "Authentic Ice Cream prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Rich artisanal ice cream served in a crystal dessert cup with choice of Vanilla, Pista, or Royal Kesar Mango.",
     "price": 120,
     "image": "https://images.unsplash.com/photo-1501443762994-82bd5dace89a?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
@@ -8049,16 +8414,17 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "2 Gourmet Scoops in Glass Cup"
   },
   {
     "id": "menu_367",
     "name": "Kulfi",
     "category": "DESERT",
     "menuType": "all",
-    "description": "Authentic Kulfi prepared fresh with traditional spices and premium ingredients by AD Catering master chefs.",
+    "description": "Slow-churned dense Indian ice cream infused with saffron, pistachio, and almond slivers in a clay pot.",
     "price": 120,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Kulfi.jpg",
+    "image": "https://images.unsplash.com/photo-1501443762994-82bd5dace89a?auto=format&fit=crop&w=600&q=80",
     "isVeg": true,
     "isPopular": false,
     "isFeatured": false,
@@ -8071,7 +8437,8 @@ export const defaultMenuItems: any[] = [
     ],
     "isOdiaSpecialty": false,
     "createdAt": "2026-10-21T17:48:18.045Z",
-    "updatedAt": "2026-10-21T17:48:18.045Z"
+    "updatedAt": "2026-10-21T17:48:18.045Z",
+    "serving": "1 Traditional Matka Kulfi"
   }
 ];
 

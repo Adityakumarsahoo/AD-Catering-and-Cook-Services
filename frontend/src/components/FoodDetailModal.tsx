@@ -45,7 +45,7 @@ export const FoodDetailModal: React.FC<FoodDetailModalProps> = ({ item, onClose 
               onError={(e) => {
                 e.currentTarget.onerror = null;
                 e.currentTarget.src = item.isVeg
-                  ? 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80'
+                  ? '/images/gourmet-ceramic-curry.jpg'
                   : 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80';
               }}
               className="w-full h-full object-cover transition-transform duration-700 hover:scale-108"
@@ -92,9 +92,18 @@ export const FoodDetailModal: React.FC<FoodDetailModalProps> = ({ item, onClose 
               {item.name}
             </h3>
 
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-950/70 border border-[#D4AF37]/40 text-[#F5CE68]">
-              <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
-              <span className="text-xs font-bold tracking-wide">Catering Banquet Selection • Included in Event Package</span>
+            <div className="flex flex-wrap items-center gap-2">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-950/70 border border-[#D4AF37]/40 text-[#F5CE68]">
+                <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
+                <span className="text-xs font-bold tracking-wide">Catering Banquet Selection • Included in Event Package</span>
+              </div>
+
+              {item.serving && (
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#041810] border border-emerald-400/50 text-emerald-200 text-xs font-bold shadow-sm">
+                  <UtensilsCrossed className="w-3 h-3 text-[#F5CE68]" />
+                  <span>Serving: {item.serving}</span>
+                </div>
+              )}
             </div>
 
             <p className="text-xs sm:text-sm text-[#CBD5E1] leading-relaxed font-normal">

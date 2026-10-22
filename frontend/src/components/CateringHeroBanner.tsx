@@ -274,10 +274,10 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
                   {/* Feast text */}
                   <div className="absolute bottom-3 left-3 right-3 text-right">
                     <p className="text-xs font-bold text-white drop-shadow">
-                      Royal Odia & Indian Thali
+                      Royal Odia Banquet Feast
                     </p>
                     <p className="text-[10px] text-[#F5CE68]">
-                      Dalma, Mutton Kasa, Biryani
+                      Dalma, Mutton Kasa, Ghee Anna
                     </p>
                   </div>
                 </>
@@ -287,7 +287,7 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
             <p className="text-[11px] text-[#CBD5E1] text-center lg:text-right max-w-[240px]">
               {rightCardMode === 'LIGHT_TABLE'
                 ? 'Illuminated LED glass buffet tables & glowing reception counters for evening gala celebrations.'
-                : 'Traditional authentic feast with hot fragrant rice, Puri/Roti, Dalma, and brass bowl service.'}
+                : 'Traditional authentic feast with hot fragrant ghee anna, Dalma, and earthenware handi service.'}
             </p>
           </div>
 
