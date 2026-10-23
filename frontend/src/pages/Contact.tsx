@@ -77,7 +77,7 @@ export const Contact: React.FC = () => {
                   <div>
                     <h4 className="font-bold text-white text-sm">Headquarters Address</h4>
                     <p className="mt-0.5 leading-relaxed text-[#CBD5E1]">
-                      Plot 104, Shaheed Nagar, Bhubaneswar, Odisha 751007, India
+                      {BUSINESS_CONFIG.address}
                     </p>
                   </div>
                 </div>
@@ -90,7 +90,7 @@ export const Contact: React.FC = () => {
                     <h4 className="font-bold text-white text-sm">Direct Phone</h4>
                     <p className="mt-0.5 leading-relaxed text-[#F5CE68] font-bold">
                       <a href={BUSINESS_CONFIG.phoneTel} className="hover:underline">
-                        {BUSINESS_CONFIG.phoneFormatted}
+                        {BUSINESS_CONFIG.phoneDisplay}
                       </a>
                     </p>
                   </div>
@@ -147,7 +147,7 @@ export const Contact: React.FC = () => {
             <div className="rounded-[32px] overflow-hidden bg-[#06291C]/85 border border-[#D4AF37]/40 h-56 shadow-sm p-1">
               <iframe
                 title="AD Catering Location"
-                src="https://maps.google.com/maps?q=Shaheed%20Nagar%20Bhubaneswar&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                src="https://maps.google.com/maps?q=Badambadi%20Cuttack%20753012&t=&z=14&ie=UTF8&iwloc=&output=embed"
                 className="w-full h-full rounded-[28px] border-0 filter contrast-[1.05]"
                 loading="lazy"
               />
@@ -185,7 +185,7 @@ export const Contact: React.FC = () => {
                     required
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    placeholder="+91 98765 43210"
+                    placeholder="+91 99377 82778"
                     className="w-full bg-[#041810] border border-[#D4AF37]/40 rounded-2xl px-4 py-2.5 text-xs text-white placeholder-emerald-300/50 focus:outline-none focus:border-[#F5CE68] focus:ring-1 focus:ring-[#D4AF37]/50 shadow-inner transition-all"
                   />
                 </div>

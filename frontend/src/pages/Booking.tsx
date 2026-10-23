@@ -402,7 +402,7 @@ export const Booking: React.FC = () => {
                       onChange={(e) =>
                         setFormData({ ...formData, phone: e.target.value })
                       }
-                      placeholder="+91 98765 43210"
+                      placeholder="+91 99377 82778"
                       className="w-full bg-[#06291C] border border-[#D4AF37]/40 rounded-2xl px-4 py-2.5 text-xs text-white placeholder-emerald-300/40 focus:outline-none focus:border-[#F5CE68] shadow-sm transition-all"
                     />
                   </div>

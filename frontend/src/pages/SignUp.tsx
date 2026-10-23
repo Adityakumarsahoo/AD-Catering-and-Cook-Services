@@ -117,7 +117,7 @@ export const SignUp: React.FC = () => {
                 required
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                placeholder="+91 98765 43210"
+                placeholder="+91 99377 82778"
                 className="w-full bg-emerald-950/80 border border-[#D4AF37]/40 rounded-2xl pl-10 pr-4 py-2.5 text-xs text-white placeholder-[#94A3B8] focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] shadow-sm transition-all"
               />
             </div>

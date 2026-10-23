@@ -23,6 +23,7 @@ import {
   RefreshCw,
 } from 'lucide-react';
 import { ADBrandEmblem } from '../../components/ADBrandEmblem.js';
+import { BUSINESS_CONFIG } from '../../config/cateringConfig.js';
 
 export const AdminDashboardOverview: React.FC = () => {
   const [data, setData] = useState<any | null>(null);
@@ -420,7 +421,7 @@ export const AdminDashboardOverview: React.FC = () => {
               </div>
               <div className="flex items-center justify-between py-1">
                 <span className="text-slate-500">Customer Hotline</span>
-                <span className="font-mono font-bold text-slate-800">+91 98765 43210</span>
+                <span className="font-mono font-bold text-slate-800">{BUSINESS_CONFIG.phonePrimary}</span>
               </div>
             </div>
           </div>

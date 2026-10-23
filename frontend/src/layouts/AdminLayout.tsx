@@ -166,8 +166,8 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
             className={`flex items-center gap-3 overflow-hidden ${collapsed ? 'justify-center w-full' : ''}`}
             title="AD Catering Admin Control Room"
           >
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#0B3D26] to-[#041A12] border border-[#D4AF37]/70 flex items-center justify-center shrink-0 shadow-md">
-              <Crown className="w-5 h-5 text-[#F5CE68]" />
+            <div className="shrink-0">
+              <ADBrandEmblem size="sm" showText={false} />
             </div>
             {!collapsed && (
               <div className="flex flex-col truncate">

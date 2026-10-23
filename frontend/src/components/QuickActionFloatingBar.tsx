@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useMenuCart } from '../context/MenuCartContext.js';
 import { Phone, MessageCircle, Calendar, UtensilsCrossed, X, Sparkles, ChevronUp, ChevronDown } from 'lucide-react';
+import { BUSINESS_CONFIG } from '../config/cateringConfig.js';
 
 export const QuickActionFloatingBar: React.FC = () => {
   const { selectedDishes } = useMenuCart();
@@ -42,11 +43,11 @@ export const QuickActionFloatingBar: React.FC = () => {
 
           {/* Instant WhatsApp */}
           <a
-            href="https://wa.me/919876543210"
+            href={BUSINESS_CONFIG.whatsappUrl}
             target="_blank"
             rel="noreferrer"
             className="p-2.5 rounded-2xl bg-emerald-500 hover:bg-emerald-600 text-[#041810] font-bold shadow-md hover:scale-105 active:scale-95 transition-all flex items-center justify-center"
-            title="Chat instantly on WhatsApp"
+            title={`Chat instantly on WhatsApp (${BUSINESS_CONFIG.whatsappNumberFormatted})`}
             aria-label="WhatsApp Concierge"
           >
             <MessageCircle className="w-4 h-4 text-[#041810]" />
@@ -54,9 +55,9 @@ export const QuickActionFloatingBar: React.FC = () => {
 
           {/* Quick Phone Call */}
           <a
-            href="tel:+919876543210"
+            href={BUSINESS_CONFIG.phoneTel}
             className="p-2.5 rounded-2xl bg-[#06291C] border border-[#D4AF37]/40 text-[#F5CE68] shadow-sm hover:scale-105 active:scale-95 transition-all flex items-center justify-center hover:border-[#D4AF37]"
-            title="Call Catering Manager (+91 98765 43210)"
+            title={`Call Catering Manager (${BUSINESS_CONFIG.phonePrimary})`}
             aria-label="Call Catering Manager"
           >
             <Phone className="w-4 h-4 text-[#F5CE68]" />
