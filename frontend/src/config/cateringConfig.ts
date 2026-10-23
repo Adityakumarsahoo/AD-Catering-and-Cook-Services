@@ -21,12 +21,12 @@ export const BUSINESS_CONFIG = {
   whatsappNumberFormatted: '+91 7684842778',
   whatsappUrl: 'https://wa.me/917684842778',
   email: 'contact@adcatering.com',
-  address: 'At-biswanath bhawan, lalbahadur lane near swadhin boys hostel, Po- AD market, PS- badambadi, pin- 753012, CUTTACK',
-  streetAddress: 'At-biswanath bhawan, lalbahadur lane near swadhin boys hostel, Po- AD market, PS- badambadi',
+  address: 'AT-BISWANATH BHAWAN, LALBAHADUR LANE NEAR SWADHIN BOYS HOSTEL, PO- AD MARKET, PS- BADAMBADI, PIN- 753012, CUTTACK',
+  streetAddress: 'AT-BISWANATH BHAWAN, LALBAHADUR LANE NEAR SWADHIN BOYS HOSTEL, PO- AD MARKET, PS- BADAMBADI',
   city: 'CUTTACK',
   postalCode: '753012',
-  state: 'Odisha',
-  country: 'India',
+  state: 'ODISHA',
+  country: 'INDIA',
   hours: 'Open 7 Days: 8:00 AM – 11:00 PM',
 
   // Catering Rules & Minimum Booking

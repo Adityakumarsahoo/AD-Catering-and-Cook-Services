@@ -76,7 +76,7 @@ export const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-white text-sm">Headquarters Address</h4>
-                    <p className="mt-0.5 leading-relaxed text-[#CBD5E1]">
+                    <p className="mt-0.5 leading-relaxed text-[#CBD5E1] uppercase tracking-wide">
                       {BUSINESS_CONFIG.address}
                     </p>
                   </div>

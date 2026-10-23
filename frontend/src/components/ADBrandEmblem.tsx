@@ -28,12 +28,12 @@ export const ADBrandEmblem: React.FC<ADBrandEmblemProps> = ({
     <div className={`inline-flex flex-col items-center select-none ${className}`}>
       {/* Exact 3D Circular Gold & Black Emblem matching the official brand picture */}
       <div
-        className={`relative ${current.box} rounded-full overflow-hidden flex items-center justify-center transition-all duration-300 group-hover:scale-105 shadow-[0_10px_35px_rgba(212,175,55,0.45),0_0_15px_rgba(212,175,55,0.25)] ring-1 ring-[#D4AF37]/70 bg-[#020B07] shrink-0`}
+        className={`relative ${current.box} rounded-full overflow-hidden flex items-center justify-center transition-all duration-300 group-hover:scale-105 shrink-0`}
       >
         <img
           src="/images/logo-badge.png"
           alt="AD Catering and Cook Services"
-          className={`w-full h-full object-contain filter drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)] select-none pointer-events-none ${imgClassName}`}
+          className={`w-full h-full object-cover rounded-full filter drop-shadow-[0_4px_16px_rgba(212,175,55,0.4)] select-none pointer-events-none ${imgClassName}`}
           loading="eager"
           decoding="async"
           onError={(e) => {

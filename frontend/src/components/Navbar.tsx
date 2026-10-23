@@ -92,9 +92,9 @@ export const Navbar: React.FC = () => {
             to="/"
             className="flex items-center gap-2 sm:gap-2.5 group shrink-0 py-0.5 px-1.5 -ml-1 rounded-2xl hover:bg-emerald-950/50 transition-all duration-300"
           >
-            <div className="relative shrink-0 p-0.5 rounded-full bg-gradient-to-br from-[#0B3D26] via-[#041A12] to-[#02100A] border border-[#D4AF37]/60 shadow-[0_0_12px_rgba(212,175,55,0.25)] group-hover:border-[#FFDF73] transition-colors">
+            <div className="relative shrink-0 flex items-center justify-center">
               <ADBrandEmblem size="sm" showText={false} />
-              <span className="absolute -bottom-0.5 -right-0.5 w-2 h-2 sm:w-2.5 sm:h-2.5 bg-emerald-400 border-2 border-[#02110A] rounded-full shadow-[0_0_6px_#10B981] animate-pulse" />
+              <span className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 bg-emerald-400 border-2 border-[#02110A] rounded-full shadow-[0_0_6px_#10B981] animate-pulse" />
             </div>
 
             <div className="flex flex-col">

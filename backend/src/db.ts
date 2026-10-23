@@ -185,7 +185,7 @@ export const initialSettings: WebsiteSettings = {
   phoneHotline: '+91 99377 82778',
   whatsappNumber: '+91 7684842778',
   supportEmail: 'contact@adcatering.com',
-  headquartersAddress: 'At-biswanath bhawan, lalbahadur lane near swadhin boys hostel, Po- AD market, PS- badambadi, pin- 753012, CUTTACK',
+  headquartersAddress: 'AT-BISWANATH BHAWAN, LALBAHADUR LANE NEAR SWADHIN BOYS HOSTEL, PO- AD MARKET, PS- BADAMBADI, PIN- 753012, CUTTACK',
   operatingHours: 'Monday - Sunday: 7:00 AM - 11:30 PM (IST)',
   logoUrl: '/logo.png',
   socialInstagram: 'https://instagram.com/adcatering_official',
