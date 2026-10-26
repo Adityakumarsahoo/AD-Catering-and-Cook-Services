@@ -45,7 +45,7 @@ export const ROYAL_WEDDING_MENU_CATEGORIES: RoyalMenuCategory[] = [
     category: 'WELCOME DRINKS',
     group: 'drinks',
     icon: '🍸',
-    image: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80',
     items: ['Fire Mocktail', 'Smoky Mocktail', 'Masala Drinks'],
   },
   {
@@ -53,7 +53,7 @@ export const ROYAL_WEDDING_MENU_CATEGORIES: RoyalMenuCategory[] = [
     category: 'SOUP COUNTER',
     group: 'drinks',
     icon: '🍲',
-    image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1616501268209-edffe01a2386?auto=format&fit=crop&w=600&q=80',
     items: ['Veg Manchow Soup', 'Chicken H/S Soup'],
   },
   {
@@ -61,7 +61,7 @@ export const ROYAL_WEDDING_MENU_CATEGORIES: RoyalMenuCategory[] = [
     category: 'STARTER (VEG)',
     group: 'starters',
     icon: '🍢',
-    image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=400&q=80',
+    image: '/images/dishes/live-panipuri.jpg',
     items: [
       'Papudi Chaat / Aloo Tiki Chaat',
       'Panipuri Counter',
@@ -75,7 +75,7 @@ export const ROYAL_WEDDING_MENU_CATEGORIES: RoyalMenuCategory[] = [
     category: 'STARTER (NON-VEG)',
     group: 'starters',
     icon: '🍗',
-    image: 'https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=600&q=80',
     items: ['Chicken (Tikka / Lolipop)', 'Fish Finger', 'Scotch Egg'],
   },
   {
@@ -83,7 +83,7 @@ export const ROYAL_WEDDING_MENU_CATEGORIES: RoyalMenuCategory[] = [
     category: 'PLATE COUNTER',
     group: 'plate',
     icon: '🥗',
-    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80',
     items: ['Green Salad', 'Spout Salad', 'Rusian Salad', 'Papad', 'Dahibara', 'Pickles'],
   },
   {
@@ -91,7 +91,7 @@ export const ROYAL_WEDDING_MENU_CATEGORIES: RoyalMenuCategory[] = [
     category: 'MAIN COURSE (VEG)',
     group: 'mains',
     icon: '🍛',
-    image: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=400&q=80',
+    image: '/images/gourmet-ceramic-curry.jpg',
     items: [
       'Rice (Veriety)',
       'Rumali Roti',
@@ -108,7 +108,7 @@ export const ROYAL_WEDDING_MENU_CATEGORIES: RoyalMenuCategory[] = [
     category: 'MAIN COURSE (NON-VEG)',
     group: 'mains',
     icon: '🍖',
-    image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=400&q=80',
+    image: '/images/dishes/odia-mutton-kasa.jpg',
     items: ['Mutton Rogan Juice', 'Fish Masala', 'Chicken Hyderabadi'],
   },
   {
@@ -116,7 +116,7 @@ export const ROYAL_WEDDING_MENU_CATEGORIES: RoyalMenuCategory[] = [
     category: 'SWEET DESERT',
     group: 'sweets',
     icon: '🍨',
-    image: 'https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=400&q=80',
+    image: '/images/dishes/chhena-poda.jpg',
     items: ['Chhena Payes', 'Hot Jalebi', 'Ice Cream', 'Gulab Jamun'],
   },
   {
@@ -124,7 +124,7 @@ export const ROYAL_WEDDING_MENU_CATEGORIES: RoyalMenuCategory[] = [
     category: 'SPECIAL INCLUSIONS',
     group: 'sweets',
     icon: '🍃',
-    image: 'https://images.unsplash.com/photo-1509358271058-acd22cc93898?auto=format&fit=crop&w=400&q=80',
+    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Meetha_Paan.jpg/960px-Meetha_Paan.jpg',
     items: ['Water Bottle (Packaged Mineral Water)', 'Paan Counter (Banarasi Meetha Paan)'],
   },
 ];
@@ -139,7 +139,7 @@ export const NORMAL_MENU_CATEGORIES: RoyalMenuCategory[] = [
     category: 'WELCOME DRINKS',
     group: 'drinks',
     icon: '🥛',
-    image: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=400&q=80',
+    image: '/images/dishes/Badam_Milk_Drink.jpg',
     items: ['Dahi Chhanch / Kesar Milk'],
   },
   {
@@ -147,7 +147,7 @@ export const NORMAL_MENU_CATEGORIES: RoyalMenuCategory[] = [
     category: 'SOUP COUNTER',
     group: 'drinks',
     icon: '🍲',
-    image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=600&q=80',
     items: ['Lemon Coriender Soup', 'Chicken H/S Soup'],
   },
   {
@@ -155,7 +155,7 @@ export const NORMAL_MENU_CATEGORIES: RoyalMenuCategory[] = [
     category: 'STARTER (VEG)',
     group: 'starters',
     icon: '🍢',
-    image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=400&q=80',
+    image: '/images/dishes/Malai_Paneer_Tikka__PK_007.jpg',
     items: [
       'Papudi Chaat / Aloo Tiki Chaat',
       'Panipuri Counter',
@@ -169,7 +169,7 @@ export const NORMAL_MENU_CATEGORIES: RoyalMenuCategory[] = [
     category: 'STARTER (NON-VEG)',
     group: 'starters',
     icon: '🍗',
-    image: 'https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=600&q=80',
     items: ['Chicken Pakoda', 'Egg Chop'],
   },
   {
@@ -177,7 +177,7 @@ export const NORMAL_MENU_CATEGORIES: RoyalMenuCategory[] = [
     category: 'PLATE COUNTER',
     group: 'plate',
     icon: '🥗',
-    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=400&q=80',
+    image: '/images/dishes/Dahibara_Aludam.jpg',
     items: ['Green Salad', 'Papad', 'Dahibara', 'Pickles'],
   },
   {
@@ -185,7 +185,7 @@ export const NORMAL_MENU_CATEGORIES: RoyalMenuCategory[] = [
     category: 'MAIN COURSE (VEG)',
     group: 'mains',
     icon: '🍛',
-    image: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=400&q=80',
+    image: '/images/dishes/odia-dalma.jpg',
     items: [
       'Rice (Veriety)',
       'Rumali Roti / Chakuli',
@@ -201,7 +201,7 @@ export const NORMAL_MENU_CATEGORIES: RoyalMenuCategory[] = [
     category: 'MAIN COURSE (NON-VEG)',
     group: 'mains',
     icon: '🍖',
-    image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=400&q=80',
+    image: '/images/dishes/macha-besara.jpg',
     items: ['Mutton Rogan Juice', 'Fish Fry', 'Chicken Hyderabadi'],
   },
   {
@@ -209,7 +209,7 @@ export const NORMAL_MENU_CATEGORIES: RoyalMenuCategory[] = [
     category: 'SWEET DESERT',
     group: 'sweets',
     icon: '🍨',
-    image: 'https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80',
     items: ['Chhena Payes', 'Hot Jalebi', 'Ice Cream', 'Rasogola'],
   },
   {
@@ -217,7 +217,7 @@ export const NORMAL_MENU_CATEGORIES: RoyalMenuCategory[] = [
     category: 'SPECIAL INCLUSIONS',
     group: 'sweets',
     icon: '🍃',
-    image: 'https://images.unsplash.com/photo-1509358271058-acd22cc93898?auto=format&fit=crop&w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=600&q=80',
     items: ['Water Bottle (Packaged Mineral Water)', 'Paan Counter (Banarasi Meetha Paan)'],
   },
 ];
@@ -232,7 +232,7 @@ export const DELUX_MENU_CATEGORIES: RoyalMenuCategory[] = [
     category: 'WELCOME DRINKS',
     group: 'drinks',
     icon: '🍸',
-    image: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80',
     items: ['Fire Mocktail', 'Smoky Mocktail', 'Masala Drinks', 'Badam Kesar Milk'],
   },
   {
@@ -240,7 +240,7 @@ export const DELUX_MENU_CATEGORIES: RoyalMenuCategory[] = [
     category: 'SOUP COUNTER',
     group: 'drinks',
     icon: '🍲',
-    image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?auto=format&fit=crop&w=600&q=80',
     items: ['Veg Sweet Corn Soup', 'Chicken H/S Soup'],
   },
   {
@@ -248,7 +248,7 @@ export const DELUX_MENU_CATEGORIES: RoyalMenuCategory[] = [
     category: 'STARTER (VEG)',
     group: 'starters',
     icon: '🍢',
-    image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=400&q=80',
+    image: '/images/dishes/Pav_bhaji__2.jpg',
     items: [
       'Papudi Chaat / Aloo Tiki Chaat',
       'Gupchup Counter',
@@ -264,7 +264,7 @@ export const DELUX_MENU_CATEGORIES: RoyalMenuCategory[] = [
     category: 'STARTER (NON-VEG)',
     group: 'starters',
     icon: '🍗',
-    image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80',
     items: ['Garlic Prawn', 'Fish Patrapoda', 'Chicken Kabab (Malai, Reshmi, Hariyali)', 'Egg Devil'],
   },
   {
@@ -272,7 +272,7 @@ export const DELUX_MENU_CATEGORIES: RoyalMenuCategory[] = [
     category: 'PLATE COUNTER',
     group: 'plate',
     icon: '🥗',
-    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=600&q=80',
     items: ['Green Salad', 'Papad', 'Dahibara', 'Pickles', 'Nadia Pachedi', 'Dahi Rasgulla', 'Pasta Salad'],
   },
   {
@@ -280,7 +280,7 @@ export const DELUX_MENU_CATEGORIES: RoyalMenuCategory[] = [
     category: 'MAIN COURSE (VEG)',
     group: 'mains',
     icon: '🍛',
-    image: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80',
     items: [
       'Rice (Variety)',
       'Rumali Roti',
@@ -298,7 +298,7 @@ export const DELUX_MENU_CATEGORIES: RoyalMenuCategory[] = [
     category: 'MAIN COURSE (NON-VEG)',
     group: 'mains',
     icon: '🍖',
-    image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1598103442097-8b74394b95c6?auto=format&fit=crop&w=600&q=80',
     items: ['Mutton Rogan Josh', 'Dahi Fish', 'Garlic Chicken', 'Malai Prawn'],
   },
   {
@@ -306,7 +306,7 @@ export const DELUX_MENU_CATEGORIES: RoyalMenuCategory[] = [
     category: 'SWEET DESSERT',
     group: 'sweets',
     icon: '🍨',
-    image: 'https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=600&q=80',
     items: ['Kheer Sagar', 'Ice Cream', 'Baked Rasgula', 'Gajar Halwa'],
   },
   {
@@ -314,7 +314,7 @@ export const DELUX_MENU_CATEGORIES: RoyalMenuCategory[] = [
     category: 'SPECIAL COUNTERS',
     group: 'sweets',
     icon: '🍃',
-    image: 'https://images.unsplash.com/photo-1509358271058-acd22cc93898?auto=format&fit=crop&w=400&q=80',
+    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Meetha_Paan.jpg/960px-Meetha_Paan.jpg',
     items: ['Water Bottle', 'Paan Counter', 'Fruit Design Cutting'],
   },
 ];

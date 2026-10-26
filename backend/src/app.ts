@@ -1,5 +1,7 @@
 import express, { Express } from 'express';
 import cors from 'cors';
+import path from 'path';
+import fs from 'fs';
 import { config } from './config/env.js';
 import { notFoundHandler, globalErrorHandler } from './middleware/errorHandler.js';
 
@@ -41,6 +43,19 @@ export function createApp(): Express {
   // Body Parsing Middleware
   app.use(express.json({ limit: '10mb' }));
   app.use(express.urlencoded({ extended: true, limit: '10mb' }));
+
+  // Static assets serving (uploaded and local dish photography)
+  const candidateImageDirs = [
+    path.resolve(process.cwd(), '../frontend/public/images'),
+    path.resolve(process.cwd(), 'frontend/public/images'),
+    path.resolve(process.cwd(), 'public/images'),
+  ];
+  for (const dir of candidateImageDirs) {
+    if (fs.existsSync(dir)) {
+      app.use('/images', express.static(dir));
+      break;
+    }
+  }
 
   // REST API Routes
   app.use('/api/auth', authRoutes);

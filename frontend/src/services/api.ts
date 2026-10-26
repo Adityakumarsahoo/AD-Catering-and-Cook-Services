@@ -71,6 +71,7 @@ export const api = {
     const query = params ? '?' + new URLSearchParams(params).toString() : '';
     return apiRequest(`/menu${query}`);
   },
+  getVegMenu: () => apiRequest('/menu/veg-menu'),
   getMenuSummary: () => apiRequest('/menu/summary'),
   createMenuItem: (payload: any) => apiRequest('/menu', { method: 'POST', body: JSON.stringify(payload) }),
   updateMenuItem: (id: string, payload: any) => apiRequest(`/menu/${id}`, { method: 'PUT', body: JSON.stringify(payload) }),

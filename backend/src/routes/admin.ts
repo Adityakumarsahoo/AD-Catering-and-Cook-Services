@@ -1,4 +1,6 @@
 import { Router } from 'express';
+import fs from 'fs';
+import path from 'path';
 import { getDb, saveDatabase } from '../db.js';
 import { requireAdmin, AuthenticatedRequest } from '../middleware/auth.js';
 import { uploadToCloudinary } from '../utils/cloudinary.js';
@@ -319,10 +321,41 @@ router.post('/upload', async (req, res) => {
     // Upload to Cloudinary CDN
     const uploadResult = await uploadToCloudinary(dataUrl, folder || 'ad_catering');
 
+    let finalUrl = uploadResult.url;
+    // If Cloudinary is unconfigured and returned a base64 data URI, persist to disk in public/images/uploads
+    if (finalUrl && finalUrl.startsWith('data:image/')) {
+      try {
+        const matches = finalUrl.match(/^data:image\/([a-zA-Z0-9+]+);base64,(.+)$/);
+        if (matches) {
+          const ext = matches[1] === 'jpeg' ? 'jpg' : matches[1];
+          const base64Data = matches[2];
+          const safeName = (filename || 'dish').replace(/[^a-zA-Z0-9_-]/g, '_');
+          const fileName = `${Date.now()}-${safeName}.${ext}`;
+          
+          const uploadDirs = [
+            path.resolve(process.cwd(), '../frontend/public/images/uploads'),
+            path.resolve(process.cwd(), 'frontend/public/images/uploads'),
+            path.resolve(process.cwd(), 'public/images/uploads')
+          ];
+          for (const d of uploadDirs) {
+            if (!fs.existsSync(d)) {
+              try { fs.mkdirSync(d, { recursive: true }); } catch (_) {}
+            }
+            if (fs.existsSync(d)) {
+              fs.writeFileSync(path.join(d, fileName), Buffer.from(base64Data, 'base64'));
+            }
+          }
+          finalUrl = `/images/uploads/${fileName}`;
+        }
+      } catch (saveErr) {
+        console.error('Failed to save local image fallback:', saveErr);
+      }
+    }
+
     res.json({
-      url: uploadResult.url,
+      url: finalUrl,
       publicId: uploadResult.publicId,
-      message: 'Image uploaded successfully to Cloudinary',
+      message: 'Image processed successfully',
     });
   } catch (error: any) {
     console.error('Error in /admin/upload:', error);

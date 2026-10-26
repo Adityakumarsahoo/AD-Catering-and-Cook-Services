@@ -53,6 +53,51 @@ export const AdminMenu: React.FC = () => {
   };
 
   const [formData, setFormData] = useState(initialForm);
+  const [uploadingImage, setUploadingImage] = useState(false);
+
+  const handleImageFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    if (!file.type.startsWith('image/')) {
+      toast.error('Please select an image file (JPG, PNG, WebP).');
+      return;
+    }
+
+    if (file.size > 10 * 1024 * 1024) {
+      toast.error('Image size must be under 10MB.');
+      return;
+    }
+
+    try {
+      setUploadingImage(true);
+      const reader = new FileReader();
+      reader.onload = async () => {
+        try {
+          const dataUrl = reader.result as string;
+          const res = await api.uploadAdminImage({ dataUrl, filename: file.name });
+          if (res?.url) {
+            setFormData((prev) => ({ ...prev, image: res.url }));
+            toast.success('Food image uploaded successfully!');
+          } else {
+            toast.error('Image upload failed.');
+          }
+        } catch (uploadErr: any) {
+          toast.error(uploadErr.message || 'Image upload failed');
+        } finally {
+          setUploadingImage(false);
+        }
+      };
+      reader.onerror = () => {
+        toast.error('Could not read image file.');
+        setUploadingImage(false);
+      };
+      reader.readAsDataURL(file);
+    } catch (err: any) {
+      toast.error(err.message || 'Image upload error');
+      setUploadingImage(false);
+    }
+  };
 
   const loadMenu = async () => {
     try {
@@ -461,17 +506,55 @@ export const AdminMenu: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-slate-700 font-bold mb-1">Photo Image URL</label>
+                <div className="flex items-center justify-between mb-1">
+                  <label className="block text-slate-700 font-bold">Dish Image</label>
+                  <label className="inline-flex items-center gap-1.5 text-xs text-[#D4AF37] hover:text-[#b5952f] cursor-pointer font-semibold">
+                    <Upload className="w-3.5 h-3.5" />
+                    <span>{uploadingImage ? 'Uploading...' : 'Upload Image File'}</span>
+                    <input
+                      type="file"
+                      accept="image/*"
+                      disabled={uploadingImage}
+                      onChange={handleImageFileUpload}
+                      className="hidden"
+                    />
+                  </label>
+                </div>
                 <input
-                  type="url"
+                  type="text"
                   value={formData.image}
                   onChange={(e) => setFormData({ ...formData, image: e.target.value })}
-                  placeholder="https://images.unsplash.com/photo-..."
+                  placeholder="Relative path (e.g. /images/dishes/...) or HTTPS URL"
                   className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:border-[#D4AF37]"
                 />
                 {formData.image && (
-                  <div className="mt-2 h-24 rounded-xl overflow-hidden border border-slate-200">
-                    <img src={formData.image} alt="Preview" className="w-full h-full object-cover" />
+                  <div className="mt-2.5 relative group rounded-xl overflow-hidden border border-slate-200 bg-slate-100 flex items-center justify-between p-2">
+                    <div className="flex items-center gap-3">
+                      <img
+                        src={formData.image}
+                        alt="Preview"
+                        className="w-16 h-14 rounded-lg object-cover border border-slate-200 shadow-sm"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).src = '/images/royal-odia-feast.jpg';
+                        }}
+                      />
+                      <div className="text-left">
+                        <p className="font-semibold text-slate-800 text-xs truncate max-w-[220px]">
+                          {formData.image.startsWith('/') ? 'Local Asset' : 'Web Hosted Image'}
+                        </p>
+                        <p className="text-[11px] text-slate-500 truncate max-w-[220px]">
+                          {formData.image}
+                        </p>
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => setFormData({ ...formData, image: '' })}
+                      className="p-1.5 rounded-lg bg-rose-50 text-rose-600 hover:bg-rose-100 transition-colors"
+                      title="Remove image"
+                    >
+                      <Trash2 className="w-4 h-4" />
+                    </button>
                   </div>
                 )}
               </div>

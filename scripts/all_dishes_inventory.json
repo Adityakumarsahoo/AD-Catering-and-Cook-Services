@@ -1,0 +1,1881 @@
+{
+  "WELCOME DRINK": [
+    {
+      "id": "menu_1",
+      "name": "Milk Shake (Badam / Mango / Pineapple / Vanilla)",
+      "isVeg": true
+    },
+    {
+      "id": "menu_2",
+      "name": "Hot Badam Milk",
+      "isVeg": true
+    },
+    {
+      "id": "menu_3",
+      "name": "Lassi (Sweet)",
+      "isVeg": true
+    },
+    {
+      "id": "menu_4",
+      "name": "Chanch",
+      "isVeg": true
+    },
+    {
+      "id": "menu_5",
+      "name": "Fruit Punch",
+      "isVeg": true
+    },
+    {
+      "id": "menu_6",
+      "name": "Aam Panna",
+      "isVeg": true
+    },
+    {
+      "id": "menu_7",
+      "name": "Thandai",
+      "isVeg": true
+    },
+    {
+      "id": "menu_8",
+      "name": "Falluda",
+      "isVeg": true
+    },
+    {
+      "id": "menu_9",
+      "name": "Jaljeera",
+      "isVeg": true
+    },
+    {
+      "id": "menu_10",
+      "name": "Lemon Cold Drinks",
+      "isVeg": true
+    },
+    {
+      "id": "menu_11",
+      "name": "Cold Drinks",
+      "isVeg": true
+    },
+    {
+      "id": "menu_12",
+      "name": "Masala Cold Drinks",
+      "isVeg": true
+    },
+    {
+      "id": "menu_13",
+      "name": "Mocktail",
+      "isVeg": true
+    },
+    {
+      "id": "menu_14",
+      "name": "Cold Coffee",
+      "isVeg": true
+    },
+    {
+      "id": "menu_15",
+      "name": "Tea & Coffee",
+      "isVeg": true
+    }
+  ],
+  "SOUP": [
+    {
+      "id": "menu_16",
+      "name": "Cream of Tomato Soup",
+      "isVeg": true
+    },
+    {
+      "id": "menu_17",
+      "name": "H / S Soup (Veg. & Non Veg.)",
+      "isVeg": true
+    },
+    {
+      "id": "menu_18",
+      "name": "S / C Soup (Veg. & Non Veg.)",
+      "isVeg": true
+    },
+    {
+      "id": "menu_19",
+      "name": "L / C Soup (Veg. & Non Veg.)",
+      "isVeg": true
+    },
+    {
+      "id": "menu_20",
+      "name": "Noodle Soup (Veg. & Non Veg.)",
+      "isVeg": true
+    }
+  ],
+  "COUNTER STARTER": [
+    {
+      "id": "menu_21",
+      "name": "PaniPuri",
+      "isVeg": true
+    },
+    {
+      "id": "menu_22",
+      "name": "Papdi Chaat",
+      "isVeg": true
+    },
+    {
+      "id": "menu_23",
+      "name": "Mix Chaat",
+      "isVeg": true
+    },
+    {
+      "id": "menu_24",
+      "name": "Dhokla Chaat",
+      "isVeg": true
+    },
+    {
+      "id": "menu_25",
+      "name": "Samosa Chaat",
+      "isVeg": true
+    },
+    {
+      "id": "menu_26",
+      "name": "Aloo Chaat",
+      "isVeg": true
+    },
+    {
+      "id": "menu_27",
+      "name": "Dahi Papdi",
+      "isVeg": true
+    },
+    {
+      "id": "menu_28",
+      "name": "Dahiwada Aloudum",
+      "isVeg": true
+    },
+    {
+      "id": "menu_29",
+      "name": "Raj Kachodi",
+      "isVeg": true
+    },
+    {
+      "id": "menu_30",
+      "name": "Gujia Vada",
+      "isVeg": true
+    },
+    {
+      "id": "menu_31",
+      "name": "Mona (Veg. & Non Veg.)",
+      "isVeg": true
+    },
+    {
+      "id": "menu_32",
+      "name": "Mini Pizza",
+      "isVeg": true
+    },
+    {
+      "id": "menu_33",
+      "name": "Pao Bhaji",
+      "isVeg": true
+    },
+    {
+      "id": "menu_34",
+      "name": "Masala Mudi",
+      "isVeg": true
+    }
+  ],
+  "STARTER (VEG)": [
+    {
+      "id": "menu_35",
+      "name": "Crispy Corn",
+      "isVeg": true
+    },
+    {
+      "id": "menu_36",
+      "name": "Boiled Corn Chaat",
+      "isVeg": true
+    },
+    {
+      "id": "menu_37",
+      "name": "Crispy Babycorn",
+      "isVeg": true
+    },
+    {
+      "id": "menu_38",
+      "name": "Dry Chana Roast",
+      "isVeg": true
+    },
+    {
+      "id": "menu_39",
+      "name": "Soya Lollypop",
+      "isVeg": true
+    },
+    {
+      "id": "menu_40",
+      "name": "Bread's Nest",
+      "isVeg": true
+    },
+    {
+      "id": "menu_41",
+      "name": "Cheesy Potato Rice Ball",
+      "isVeg": true
+    },
+    {
+      "id": "menu_42",
+      "name": "Veg Lollypop",
+      "isVeg": true
+    },
+    {
+      "id": "menu_43",
+      "name": "HaraBhara Kabab",
+      "isVeg": true
+    },
+    {
+      "id": "menu_44",
+      "name": "Halakda (Veg. / Gobi/Mirchi/Paneer)",
+      "isVeg": true
+    },
+    {
+      "id": "menu_45",
+      "name": "Finger Chips",
+      "isVeg": true
+    },
+    {
+      "id": "menu_46",
+      "name": "Veg Cutlet",
+      "isVeg": true
+    },
+    {
+      "id": "menu_47",
+      "name": "Bread Chop",
+      "isVeg": true
+    },
+    {
+      "id": "menu_48",
+      "name": "Paneer Stick Tikka",
+      "isVeg": true
+    },
+    {
+      "id": "menu_49",
+      "name": "Paneer Kofta",
+      "isVeg": true
+    },
+    {
+      "id": "menu_50",
+      "name": "Crispy Paneer",
+      "isVeg": true
+    },
+    {
+      "id": "menu_51",
+      "name": "Paneer Finger",
+      "isVeg": true
+    },
+    {
+      "id": "menu_52",
+      "name": "Paneer Popcorn",
+      "isVeg": true
+    },
+    {
+      "id": "menu_53",
+      "name": "Paneer Chatpata",
+      "isVeg": true
+    },
+    {
+      "id": "menu_54",
+      "name": "Paneer Tikka",
+      "isVeg": true
+    },
+    {
+      "id": "menu_55",
+      "name": "Dragon (Paneer)",
+      "isVeg": true
+    },
+    {
+      "id": "menu_56",
+      "name": "Manchurian (Paneer/Mushroom/Babycorn/Gobi)",
+      "isVeg": true
+    },
+    {
+      "id": "menu_57",
+      "name": "Chilly (Paneer/Mushroom/Gobi/Babycorn)",
+      "isVeg": true
+    },
+    {
+      "id": "menu_58",
+      "name": "65 (Paneer/Mushroom/Babycorn/Gobi)",
+      "isVeg": true
+    },
+    {
+      "id": "menu_59",
+      "name": "Hot Garlic (Paneer/Mushroom/Babycorn/Gobi)",
+      "isVeg": true
+    },
+    {
+      "id": "menu_60",
+      "name": "Ginger (Paneer/Mushroom/Babycorn/Gobi)",
+      "isVeg": true
+    },
+    {
+      "id": "menu_61",
+      "name": "Schezwan (Paneer/Mushroom/Babycorn/Gobi)",
+      "isVeg": true
+    },
+    {
+      "id": "menu_62",
+      "name": "Veg. Chilli",
+      "isVeg": true
+    },
+    {
+      "id": "menu_63",
+      "name": "Veg. Chiliese Choppsy",
+      "isVeg": true
+    },
+    {
+      "id": "menu_64",
+      "name": "Veg. Spring Roll",
+      "isVeg": true
+    },
+    {
+      "id": "menu_65",
+      "name": "Veg China Town",
+      "isVeg": true
+    }
+  ],
+  "STARTER (NON-VEG)": [
+    {
+      "id": "menu_66",
+      "name": "Fish Finger (Bone Less)",
+      "isVeg": false
+    },
+    {
+      "id": "menu_67",
+      "name": "Fish Amritsari (Bone Less)",
+      "isVeg": false
+    },
+    {
+      "id": "menu_68",
+      "name": "Fish Chop (Bone Less)",
+      "isVeg": false
+    },
+    {
+      "id": "menu_69",
+      "name": "Fish Fry",
+      "isVeg": false
+    },
+    {
+      "id": "menu_70",
+      "name": "Tandoori Pomfret",
+      "isVeg": false
+    },
+    {
+      "id": "menu_71",
+      "name": "Fried Pomfret",
+      "isVeg": false
+    },
+    {
+      "id": "menu_72",
+      "name": "Fish Honey Balls",
+      "isVeg": false
+    },
+    {
+      "id": "menu_73",
+      "name": "Prawn Pokoda",
+      "isVeg": false
+    },
+    {
+      "id": "menu_74",
+      "name": "Fried Prawn",
+      "isVeg": false
+    },
+    {
+      "id": "menu_75",
+      "name": "Crispy Prawn",
+      "isVeg": false
+    },
+    {
+      "id": "menu_76",
+      "name": "Barley Prawn",
+      "isVeg": false
+    },
+    {
+      "id": "menu_77",
+      "name": "Tandoori Prawn",
+      "isVeg": false
+    },
+    {
+      "id": "menu_78",
+      "name": "Prawn salt & Pepper",
+      "isVeg": false
+    },
+    {
+      "id": "menu_79",
+      "name": "Hot Garlic Prawn",
+      "isVeg": false
+    },
+    {
+      "id": "menu_80",
+      "name": "Ginger Prawn",
+      "isVeg": false
+    },
+    {
+      "id": "menu_81",
+      "name": "Prawn 65",
+      "isVeg": false
+    },
+    {
+      "id": "menu_82",
+      "name": "Crunchi Chicken",
+      "isVeg": false
+    },
+    {
+      "id": "menu_83",
+      "name": "Chicken Pokoda",
+      "isVeg": false
+    },
+    {
+      "id": "menu_84",
+      "name": "Chicken Popcorn",
+      "isVeg": false
+    },
+    {
+      "id": "menu_85",
+      "name": "Chicken Ghee Fry",
+      "isVeg": false
+    },
+    {
+      "id": "menu_86",
+      "name": "Honey Chicken",
+      "isVeg": false
+    },
+    {
+      "id": "menu_87",
+      "name": "Chicken (Manchurian/Dragon/Schezwan/Chilly/Lollypop)",
+      "isVeg": false
+    },
+    {
+      "id": "menu_88",
+      "name": "Tandoori Chicken",
+      "isVeg": false
+    },
+    {
+      "id": "menu_89",
+      "name": "Chicken Tikka",
+      "isVeg": false
+    },
+    {
+      "id": "menu_90",
+      "name": "Chicken Malai Tikka",
+      "isVeg": false
+    },
+    {
+      "id": "menu_91",
+      "name": "Assorted Kebab (Tikka/Hariyali/Malai)",
+      "isVeg": false
+    },
+    {
+      "id": "menu_92",
+      "name": "Tangdi Kebab",
+      "isVeg": false
+    },
+    {
+      "id": "menu_93",
+      "name": "Chicken Leg Kebab",
+      "isVeg": false
+    },
+    {
+      "id": "menu_94",
+      "name": "Garlic Chicken",
+      "isVeg": false
+    },
+    {
+      "id": "menu_95",
+      "name": "Ginger Chicken",
+      "isVeg": false
+    }
+  ],
+  "EGGS TO ORDER": [
+    {
+      "id": "menu_96",
+      "name": "Boiled Egg",
+      "isVeg": false
+    },
+    {
+      "id": "menu_97",
+      "name": "Egg Poach",
+      "isVeg": false
+    },
+    {
+      "id": "menu_98",
+      "name": "Egg Omlet",
+      "isVeg": false
+    },
+    {
+      "id": "menu_99",
+      "name": "Egg Scotch",
+      "isVeg": false
+    },
+    {
+      "id": "menu_100",
+      "name": "Egg Chop",
+      "isVeg": false
+    },
+    {
+      "id": "menu_101",
+      "name": "Egg Pakoda",
+      "isVeg": false
+    }
+  ],
+  "ROTI / NAN / PURI": [
+    {
+      "id": "menu_102",
+      "name": "Naan (Plain/Butter)",
+      "isVeg": true
+    },
+    {
+      "id": "menu_103",
+      "name": "Garlic Naan",
+      "isVeg": true
+    },
+    {
+      "id": "menu_104",
+      "name": "Tandoori Roti",
+      "isVeg": true
+    },
+    {
+      "id": "menu_105",
+      "name": "Phulka",
+      "isVeg": true
+    },
+    {
+      "id": "menu_106",
+      "name": "Rumali Roti",
+      "isVeg": true
+    },
+    {
+      "id": "menu_107",
+      "name": "Missi Roti",
+      "isVeg": true
+    },
+    {
+      "id": "menu_108",
+      "name": "Thunka Puri",
+      "isVeg": true
+    },
+    {
+      "id": "menu_109",
+      "name": "Chakuli",
+      "isVeg": true
+    },
+    {
+      "id": "menu_110",
+      "name": "Moong Chilla",
+      "isVeg": true
+    },
+    {
+      "id": "menu_111",
+      "name": "Masala Puri",
+      "isVeg": true
+    },
+    {
+      "id": "menu_112",
+      "name": "Plane Puri",
+      "isVeg": true
+    },
+    {
+      "id": "menu_113",
+      "name": "Pan Puri",
+      "isVeg": true
+    },
+    {
+      "id": "menu_114",
+      "name": "Milky Puri",
+      "isVeg": true
+    },
+    {
+      "id": "menu_115",
+      "name": "Palak Puri",
+      "isVeg": true
+    },
+    {
+      "id": "menu_116",
+      "name": "Beetu Puri",
+      "isVeg": true
+    },
+    {
+      "id": "menu_117",
+      "name": "Biri Kachodi",
+      "isVeg": true
+    },
+    {
+      "id": "menu_118",
+      "name": "Plane Paratha",
+      "isVeg": true
+    },
+    {
+      "id": "menu_119",
+      "name": "Lachha Paratha",
+      "isVeg": true
+    },
+    {
+      "id": "menu_120",
+      "name": "Paneer Paratha",
+      "isVeg": true
+    },
+    {
+      "id": "menu_121",
+      "name": "Aloo Paratha",
+      "isVeg": true
+    },
+    {
+      "id": "menu_122",
+      "name": "Vegetable Paratha",
+      "isVeg": true
+    },
+    {
+      "id": "menu_123",
+      "name": "Battura",
+      "isVeg": true
+    },
+    {
+      "id": "menu_124",
+      "name": "Baby Kulcha",
+      "isVeg": true
+    }
+  ],
+  "RICE / PULAO / BIRYANI": [
+    {
+      "id": "menu_125",
+      "name": "Plane Rice",
+      "isVeg": true
+    },
+    {
+      "id": "menu_126",
+      "name": "Jeera Rice",
+      "isVeg": true
+    },
+    {
+      "id": "menu_127",
+      "name": "Green Pease Rice",
+      "isVeg": true
+    },
+    {
+      "id": "menu_128",
+      "name": "Lemon Rice",
+      "isVeg": true
+    },
+    {
+      "id": "menu_129",
+      "name": "Coconut Rice",
+      "isVeg": true
+    },
+    {
+      "id": "menu_130",
+      "name": "Tomato Rice",
+      "isVeg": true
+    },
+    {
+      "id": "menu_131",
+      "name": "Curd Rice",
+      "isVeg": true
+    },
+    {
+      "id": "menu_132",
+      "name": "Veg Pulao",
+      "isVeg": true
+    },
+    {
+      "id": "menu_133",
+      "name": "Kashmiri Pulao",
+      "isVeg": true
+    },
+    {
+      "id": "menu_134",
+      "name": "Navaratan Pulao",
+      "isVeg": true
+    },
+    {
+      "id": "menu_135",
+      "name": "Kaju Pulao",
+      "isVeg": true
+    },
+    {
+      "id": "menu_136",
+      "name": "Plane Pulao",
+      "isVeg": true
+    },
+    {
+      "id": "menu_137",
+      "name": "Moti Pulao",
+      "isVeg": true
+    },
+    {
+      "id": "menu_138",
+      "name": "Plane Dum Biryani",
+      "isVeg": true
+    },
+    {
+      "id": "menu_139",
+      "name": "Veg Biryani",
+      "isVeg": true
+    },
+    {
+      "id": "menu_140",
+      "name": "Chicken Biryani",
+      "isVeg": false
+    },
+    {
+      "id": "menu_141",
+      "name": "Mutton Biryani",
+      "isVeg": false
+    },
+    {
+      "id": "menu_142",
+      "name": "Kheema Rice (Non Veg)",
+      "isVeg": false
+    },
+    {
+      "id": "menu_143",
+      "name": "Veg Fried Rice (Chinese)",
+      "isVeg": true
+    },
+    {
+      "id": "menu_144",
+      "name": "Schezwan Rice (Chinese)",
+      "isVeg": true
+    },
+    {
+      "id": "menu_145",
+      "name": "Chicken Fried Rice (Chinese)",
+      "isVeg": false
+    },
+    {
+      "id": "menu_146",
+      "name": "Mix Fried Rice (Chinese)",
+      "isVeg": true
+    }
+  ],
+  "DAL": [
+    {
+      "id": "menu_147",
+      "name": "Plane Dal",
+      "isVeg": true
+    },
+    {
+      "id": "menu_148",
+      "name": "Dal Fry",
+      "isVeg": true
+    },
+    {
+      "id": "menu_149",
+      "name": "Dal Butter Fry",
+      "isVeg": true
+    },
+    {
+      "id": "menu_150",
+      "name": "Dal Makhani",
+      "isVeg": true
+    },
+    {
+      "id": "menu_151",
+      "name": "Dal Tadka",
+      "isVeg": true
+    },
+    {
+      "id": "menu_152",
+      "name": "Dal Panchmela",
+      "isVeg": true
+    },
+    {
+      "id": "menu_153",
+      "name": "Dal Bukhara",
+      "isVeg": true
+    },
+    {
+      "id": "menu_154",
+      "name": "Dal Maharani",
+      "isVeg": true
+    },
+    {
+      "id": "menu_155",
+      "name": "Coconut Dal",
+      "isVeg": true
+    },
+    {
+      "id": "menu_156",
+      "name": "Khati Mithi Dal",
+      "isVeg": true
+    },
+    {
+      "id": "menu_157",
+      "name": "Lemon Dal",
+      "isVeg": true
+    },
+    {
+      "id": "menu_158",
+      "name": "Masala Dal",
+      "isVeg": true
+    },
+    {
+      "id": "menu_159",
+      "name": "Vegetable Dal",
+      "isVeg": true
+    },
+    {
+      "id": "menu_160",
+      "name": "Dal Mughlai (Non Veg)",
+      "isVeg": true
+    }
+  ],
+  "CHUTNEY & RAITA": [
+    {
+      "id": "menu_161",
+      "name": "Chatni (Mango/Tomato/Fruits/Khajur/P.A/Ambula)",
+      "isVeg": true
+    },
+    {
+      "id": "menu_162",
+      "name": "Dry Fruits Chutney",
+      "isVeg": true
+    },
+    {
+      "id": "menu_163",
+      "name": "Pumpkin Chutney",
+      "isVeg": true
+    },
+    {
+      "id": "menu_164",
+      "name": "Kashmir Chutney",
+      "isVeg": true
+    },
+    {
+      "id": "menu_165",
+      "name": "Plastic Chutney",
+      "isVeg": true
+    },
+    {
+      "id": "menu_166",
+      "name": "Jelly (Mango/Papaya P.A/Apple)",
+      "isVeg": true
+    },
+    {
+      "id": "menu_167",
+      "name": "Baingan Aachari",
+      "isVeg": true
+    },
+    {
+      "id": "menu_168",
+      "name": "Dahi Baingan/Bhindi",
+      "isVeg": true
+    },
+    {
+      "id": "menu_169",
+      "name": "Nadia Pachedi",
+      "isVeg": true
+    },
+    {
+      "id": "menu_170",
+      "name": "Raita (Ambula/Bundi/Mix Aloo/P.A/Fruits)",
+      "isVeg": true
+    },
+    {
+      "id": "menu_171",
+      "name": "Dahi Bara",
+      "isVeg": true
+    },
+    {
+      "id": "menu_172",
+      "name": "Dahi Pakodi",
+      "isVeg": true
+    },
+    {
+      "id": "menu_173",
+      "name": "Dahi Kadhi",
+      "isVeg": true
+    },
+    {
+      "id": "menu_174",
+      "name": "Green Salad",
+      "isVeg": true
+    },
+    {
+      "id": "menu_175",
+      "name": "Pampad",
+      "isVeg": true
+    }
+  ],
+  "VEGETABLE": [
+    {
+      "id": "menu_176",
+      "name": "Mix Vegetable",
+      "isVeg": true
+    },
+    {
+      "id": "menu_177",
+      "name": "Veg Dopyaza",
+      "isVeg": true
+    },
+    {
+      "id": "menu_178",
+      "name": "Veg Kadhai",
+      "isVeg": true
+    },
+    {
+      "id": "menu_179",
+      "name": "Veg Jaipuri",
+      "isVeg": true
+    },
+    {
+      "id": "menu_180",
+      "name": "Veg Jhalfry",
+      "isVeg": true
+    },
+    {
+      "id": "menu_181",
+      "name": "Veg Butter Masala",
+      "isVeg": true
+    },
+    {
+      "id": "menu_182",
+      "name": "Navratan Korma",
+      "isVeg": true
+    },
+    {
+      "id": "menu_183",
+      "name": "Veg Kundan Masala",
+      "isVeg": true
+    },
+    {
+      "id": "menu_184",
+      "name": "Veg Panjabi",
+      "isVeg": true
+    },
+    {
+      "id": "menu_185",
+      "name": "Veg Bemishal",
+      "isVeg": true
+    },
+    {
+      "id": "menu_186",
+      "name": "Veg Kadambari",
+      "isVeg": true
+    },
+    {
+      "id": "menu_187",
+      "name": "Veg Kofta",
+      "isVeg": true
+    },
+    {
+      "id": "menu_188",
+      "name": "Stuffed (Capsicum, Tomato, Potato, Parwal)",
+      "isVeg": true
+    },
+    {
+      "id": "menu_189",
+      "name": "Veg Jai Kheema",
+      "isVeg": false
+    },
+    {
+      "id": "menu_190",
+      "name": "Veg Hariyali",
+      "isVeg": true
+    },
+    {
+      "id": "menu_191",
+      "name": "Veg Nawabi",
+      "isVeg": true
+    },
+    {
+      "id": "menu_192",
+      "name": "Veg Hydrabadi",
+      "isVeg": true
+    },
+    {
+      "id": "menu_193",
+      "name": "Gobi Aloo Masala",
+      "isVeg": true
+    },
+    {
+      "id": "menu_194",
+      "name": "Aloo Gobi Dry",
+      "isVeg": true
+    },
+    {
+      "id": "menu_195",
+      "name": "Gobi Mughlai",
+      "isVeg": true
+    },
+    {
+      "id": "menu_196",
+      "name": "Aloo Dum",
+      "isVeg": true
+    },
+    {
+      "id": "menu_197",
+      "name": "Aloo Dum Kashmiri",
+      "isVeg": true
+    },
+    {
+      "id": "menu_198",
+      "name": "Aloo Mughlai",
+      "isVeg": true
+    },
+    {
+      "id": "menu_199",
+      "name": "Aloo Stuff Masala",
+      "isVeg": true
+    },
+    {
+      "id": "menu_200",
+      "name": "Aloo Kurkure Bhujia",
+      "isVeg": true
+    },
+    {
+      "id": "menu_201",
+      "name": "Parwal Aloo Masala",
+      "isVeg": true
+    },
+    {
+      "id": "menu_202",
+      "name": "Parwal Korma",
+      "isVeg": true
+    },
+    {
+      "id": "menu_203",
+      "name": "Parwal Dahi Masala",
+      "isVeg": true
+    },
+    {
+      "id": "menu_204",
+      "name": "Parwal Methi Malai",
+      "isVeg": true
+    },
+    {
+      "id": "menu_205",
+      "name": "Parwal Jhal",
+      "isVeg": true
+    },
+    {
+      "id": "menu_206",
+      "name": "Dahi Bhindi",
+      "isVeg": true
+    },
+    {
+      "id": "menu_207",
+      "name": "Vindi Masala",
+      "isVeg": true
+    },
+    {
+      "id": "menu_208",
+      "name": "Vindi Kurkure",
+      "isVeg": true
+    },
+    {
+      "id": "menu_209",
+      "name": "Tawa Bhaji",
+      "isVeg": true
+    },
+    {
+      "id": "menu_210",
+      "name": "Tawa Chamcha",
+      "isVeg": true
+    },
+    {
+      "id": "menu_211",
+      "name": "Besan Aloo Masala",
+      "isVeg": true
+    },
+    {
+      "id": "menu_212",
+      "name": "Chana Masala",
+      "isVeg": true
+    }
+  ],
+  "MUSHROOM": [
+    {
+      "id": "menu_213",
+      "name": "Mushroom Masala",
+      "isVeg": true
+    },
+    {
+      "id": "menu_214",
+      "name": "Mushroom Dopyaza",
+      "isVeg": true
+    },
+    {
+      "id": "menu_215",
+      "name": "Mushroom Kadhai",
+      "isVeg": true
+    },
+    {
+      "id": "menu_216",
+      "name": "Mushroom Butter Masala",
+      "isVeg": true
+    },
+    {
+      "id": "menu_217",
+      "name": "Mushroom Besar",
+      "isVeg": true
+    },
+    {
+      "id": "menu_218",
+      "name": "Mushroom Hydrabadi",
+      "isVeg": true
+    },
+    {
+      "id": "menu_219",
+      "name": "Mushroom Chilly",
+      "isVeg": true
+    },
+    {
+      "id": "menu_220",
+      "name": "Mushroom Takatak",
+      "isVeg": true
+    }
+  ],
+  "PANEER": [
+    {
+      "id": "menu_221",
+      "name": "Muttor Paneer",
+      "isVeg": true
+    },
+    {
+      "id": "menu_222",
+      "name": "Paneer Butter Masala",
+      "isVeg": true
+    },
+    {
+      "id": "menu_223",
+      "name": "Paneer Kadhai",
+      "isVeg": true
+    },
+    {
+      "id": "menu_224",
+      "name": "Paneer Korma",
+      "isVeg": true
+    },
+    {
+      "id": "menu_225",
+      "name": "Paneer Kofta",
+      "isVeg": true
+    },
+    {
+      "id": "menu_226",
+      "name": "Paneer Hydrabadi",
+      "isVeg": true
+    },
+    {
+      "id": "menu_227",
+      "name": "Paneer Panjabi",
+      "isVeg": true
+    },
+    {
+      "id": "menu_228",
+      "name": "Paneer Makhani",
+      "isVeg": true
+    },
+    {
+      "id": "menu_229",
+      "name": "Paneer Kheema",
+      "isVeg": false
+    },
+    {
+      "id": "menu_230",
+      "name": "Paneer Bhurji",
+      "isVeg": true
+    },
+    {
+      "id": "menu_231",
+      "name": "Palak Paneer",
+      "isVeg": true
+    },
+    {
+      "id": "menu_232",
+      "name": "Paneer Corn Masala",
+      "isVeg": true
+    },
+    {
+      "id": "menu_233",
+      "name": "Paneer Methi Malai",
+      "isVeg": true
+    },
+    {
+      "id": "menu_234",
+      "name": "Paneer Chilly",
+      "isVeg": true
+    },
+    {
+      "id": "menu_235",
+      "name": "Paneer Finger Masala",
+      "isVeg": true
+    },
+    {
+      "id": "menu_236",
+      "name": "Paneer Pasinda",
+      "isVeg": true
+    },
+    {
+      "id": "menu_237",
+      "name": "Paneer Tikka Btr. Masala",
+      "isVeg": true
+    },
+    {
+      "id": "menu_238",
+      "name": "Paneer Takatak",
+      "isVeg": true
+    },
+    {
+      "id": "menu_239",
+      "name": "Tiranga Paneer",
+      "isVeg": true
+    }
+  ],
+  "FISH": [
+    {
+      "id": "menu_240",
+      "name": "Fish Masala",
+      "isVeg": false
+    },
+    {
+      "id": "menu_241",
+      "name": "Fish Fry",
+      "isVeg": false
+    },
+    {
+      "id": "menu_242",
+      "name": "Steam Fish",
+      "isVeg": false
+    },
+    {
+      "id": "menu_243",
+      "name": "Fish Kalia",
+      "isVeg": false
+    },
+    {
+      "id": "menu_244",
+      "name": "Bengali Fish Masala",
+      "isVeg": false
+    },
+    {
+      "id": "menu_245",
+      "name": "Fish Dahiwala",
+      "isVeg": false
+    },
+    {
+      "id": "menu_246",
+      "name": "Mustard Fish",
+      "isVeg": false
+    },
+    {
+      "id": "menu_247",
+      "name": "Tawa Fish",
+      "isVeg": false
+    },
+    {
+      "id": "menu_248",
+      "name": "Pomfret Masala",
+      "isVeg": false
+    },
+    {
+      "id": "menu_249",
+      "name": "Tawa Pomfret",
+      "isVeg": false
+    },
+    {
+      "id": "menu_250",
+      "name": "Crab Masala",
+      "isVeg": false
+    }
+  ],
+  "PRAWN": [
+    {
+      "id": "menu_251",
+      "name": "Prawn Chilly",
+      "isVeg": false
+    },
+    {
+      "id": "menu_252",
+      "name": "Prawn Chatpati",
+      "isVeg": false
+    },
+    {
+      "id": "menu_253",
+      "name": "Prawn Dopyaza",
+      "isVeg": false
+    },
+    {
+      "id": "menu_254",
+      "name": "Prawn Malai Curry",
+      "isVeg": false
+    },
+    {
+      "id": "menu_255",
+      "name": "Prawn Masala",
+      "isVeg": false
+    },
+    {
+      "id": "menu_256",
+      "name": "Prawn Makhani",
+      "isVeg": false
+    },
+    {
+      "id": "menu_257",
+      "name": "Mustard Prawn",
+      "isVeg": false
+    }
+  ],
+  "CHICKEN": [
+    {
+      "id": "menu_258",
+      "name": "Chicken Curry",
+      "isVeg": false
+    },
+    {
+      "id": "menu_259",
+      "name": "Chicken Masala",
+      "isVeg": false
+    },
+    {
+      "id": "menu_260",
+      "name": "Chicken Dopyaza",
+      "isVeg": false
+    },
+    {
+      "id": "menu_261",
+      "name": "Chicken Hydrabadi",
+      "isVeg": false
+    },
+    {
+      "id": "menu_262",
+      "name": "Chicken Butter Masala",
+      "isVeg": false
+    },
+    {
+      "id": "menu_263",
+      "name": "Chicken Tikka Butter Masala",
+      "isVeg": false
+    },
+    {
+      "id": "menu_264",
+      "name": "Chicken Roast Masala",
+      "isVeg": false
+    },
+    {
+      "id": "menu_265",
+      "name": "Chicken Maharaja",
+      "isVeg": false
+    },
+    {
+      "id": "menu_266",
+      "name": "Mughlai Chicken",
+      "isVeg": false
+    },
+    {
+      "id": "menu_267",
+      "name": "Murgh Mussalam",
+      "isVeg": false
+    },
+    {
+      "id": "menu_268",
+      "name": "Chicken Hariyali",
+      "isVeg": false
+    },
+    {
+      "id": "menu_269",
+      "name": "Palak Chicken (Seasonal)",
+      "isVeg": false
+    },
+    {
+      "id": "menu_270",
+      "name": "Dum Chicken",
+      "isVeg": false
+    },
+    {
+      "id": "menu_271",
+      "name": "Lachha Chicken",
+      "isVeg": false
+    },
+    {
+      "id": "menu_272",
+      "name": "Chicken Leg Masala",
+      "isVeg": false
+    },
+    {
+      "id": "menu_273",
+      "name": "Chicken Tangdi Masala",
+      "isVeg": false
+    },
+    {
+      "id": "menu_274",
+      "name": "Chicken Bharta",
+      "isVeg": false
+    },
+    {
+      "id": "menu_275",
+      "name": "Chicken Lotpot",
+      "isVeg": false
+    },
+    {
+      "id": "menu_276",
+      "name": "Chicken Champ",
+      "isVeg": false
+    },
+    {
+      "id": "menu_277",
+      "name": "Katki Spl. Chicken",
+      "isVeg": false
+    }
+  ],
+  "MUTTON": [
+    {
+      "id": "menu_278",
+      "name": "Mutton Curry",
+      "isVeg": false
+    },
+    {
+      "id": "menu_279",
+      "name": "Mutton Masala",
+      "isVeg": false
+    },
+    {
+      "id": "menu_280",
+      "name": "Mutton Rogan Josh",
+      "isVeg": false
+    },
+    {
+      "id": "menu_281",
+      "name": "Mutton Butter Masala",
+      "isVeg": false
+    },
+    {
+      "id": "menu_282",
+      "name": "Mutton Bhuna Roast",
+      "isVeg": false
+    },
+    {
+      "id": "menu_283",
+      "name": "Mutton Hydrabadi",
+      "isVeg": false
+    },
+    {
+      "id": "menu_284",
+      "name": "Mutton Badsaha",
+      "isVeg": false
+    },
+    {
+      "id": "menu_285",
+      "name": "Mutton Ghee Roast M/S",
+      "isVeg": false
+    },
+    {
+      "id": "menu_286",
+      "name": "Kheema Mutton",
+      "isVeg": false
+    }
+  ],
+  "AAMISHA (NON-VEG)": [
+    {
+      "id": "menu_287",
+      "name": "Chuna Macha Bhaja / Besar",
+      "isVeg": false
+    },
+    {
+      "id": "menu_288",
+      "name": "Macha Munda Ghanta",
+      "isVeg": false
+    },
+    {
+      "id": "menu_289",
+      "name": "Mudhi Ghanta",
+      "isVeg": false
+    },
+    {
+      "id": "menu_290",
+      "name": "Poi Chingudi Ghanta",
+      "isVeg": false
+    },
+    {
+      "id": "menu_291",
+      "name": "Macha Aambila",
+      "isVeg": false
+    },
+    {
+      "id": "menu_292",
+      "name": "Chingudi Dalema",
+      "isVeg": false
+    },
+    {
+      "id": "menu_293",
+      "name": "Chingudi Checha",
+      "isVeg": false
+    },
+    {
+      "id": "menu_294",
+      "name": "Macha Checha",
+      "isVeg": false
+    }
+  ],
+  "ODISSI SPECIAL": [
+    {
+      "id": "menu_295",
+      "name": "Ghee Arna",
+      "isVeg": true
+    },
+    {
+      "id": "menu_296",
+      "name": "Kanika (Sweet)",
+      "isVeg": true
+    },
+    {
+      "id": "menu_297",
+      "name": "Dahi Pakhala",
+      "isVeg": true
+    },
+    {
+      "id": "menu_298",
+      "name": "Boiled Rice",
+      "isVeg": true
+    },
+    {
+      "id": "menu_299",
+      "name": "Sweet Dal",
+      "isVeg": true
+    },
+    {
+      "id": "menu_300",
+      "name": "Dalema",
+      "isVeg": true
+    },
+    {
+      "id": "menu_301",
+      "name": "Tomato Khajur Khatta",
+      "isVeg": true
+    },
+    {
+      "id": "menu_302",
+      "name": "Ambula Khatta",
+      "isVeg": true
+    },
+    {
+      "id": "menu_303",
+      "name": "Amba Khatta",
+      "isVeg": true
+    },
+    {
+      "id": "menu_304",
+      "name": "Awu Khatta",
+      "isVeg": true
+    },
+    {
+      "id": "menu_305",
+      "name": "Kandamula Khatta",
+      "isVeg": true
+    },
+    {
+      "id": "menu_306",
+      "name": "Dahi Ambula",
+      "isVeg": true
+    },
+    {
+      "id": "menu_307",
+      "name": "Nadia Pachedi",
+      "isVeg": true
+    },
+    {
+      "id": "menu_308",
+      "name": "Dahi Baigan",
+      "isVeg": true
+    },
+    {
+      "id": "menu_309",
+      "name": "Kakharu Khatta",
+      "isVeg": true
+    }
+  ],
+  "SADDA (VEG)": [
+    {
+      "id": "menu_310",
+      "name": "Sadda Besar",
+      "isVeg": true
+    },
+    {
+      "id": "menu_311",
+      "name": "Sadda Mahura",
+      "isVeg": true
+    },
+    {
+      "id": "menu_312",
+      "name": "Sadda Chihankaa (Mixture)",
+      "isVeg": true
+    },
+    {
+      "id": "menu_313",
+      "name": "Chhuin Badi Aloo Besar",
+      "isVeg": true
+    },
+    {
+      "id": "menu_314",
+      "name": "Santula",
+      "isVeg": true
+    },
+    {
+      "id": "menu_315",
+      "name": "Lau Badi Nadia Besar",
+      "isVeg": true
+    },
+    {
+      "id": "menu_316",
+      "name": "Badi Besar",
+      "isVeg": true
+    },
+    {
+      "id": "menu_317",
+      "name": "Badi Chura",
+      "isVeg": true
+    },
+    {
+      "id": "menu_318",
+      "name": "Saga Muga",
+      "isVeg": true
+    },
+    {
+      "id": "menu_319",
+      "name": "Aloo Posto",
+      "isVeg": true
+    },
+    {
+      "id": "menu_320",
+      "name": "Janhi Posto",
+      "isVeg": true
+    },
+    {
+      "id": "menu_321",
+      "name": "Potal Aloo Rasa",
+      "isVeg": true
+    },
+    {
+      "id": "menu_322",
+      "name": "Saga Besar",
+      "isVeg": true
+    },
+    {
+      "id": "menu_323",
+      "name": "Saga Bhaja",
+      "isVeg": true
+    },
+    {
+      "id": "menu_324",
+      "name": "Chhena Badi Aloo M/S",
+      "isVeg": true
+    },
+    {
+      "id": "menu_325",
+      "name": "Chuin Aloo Bhaja",
+      "isVeg": true
+    },
+    {
+      "id": "menu_326",
+      "name": "Baigan Bharta",
+      "isVeg": true
+    },
+    {
+      "id": "menu_327",
+      "name": "Aloo Bhrta",
+      "isVeg": true
+    },
+    {
+      "id": "menu_328",
+      "name": "Tomato Poda",
+      "isVeg": true
+    },
+    {
+      "id": "menu_329",
+      "name": "Baigan Bhaja",
+      "isVeg": true
+    },
+    {
+      "id": "menu_330",
+      "name": "Kadali Bhaja",
+      "isVeg": true
+    },
+    {
+      "id": "menu_331",
+      "name": "Chatu Besar",
+      "isVeg": true
+    }
+  ],
+  "CONTINENTAL": [
+    {
+      "id": "menu_332",
+      "name": "Russian Salad",
+      "isVeg": true
+    },
+    {
+      "id": "menu_333",
+      "name": "Street Corn Pasta",
+      "isVeg": true
+    },
+    {
+      "id": "menu_334",
+      "name": "Choice Of Pasta",
+      "isVeg": true
+    },
+    {
+      "id": "menu_335",
+      "name": "Cheese Ball",
+      "isVeg": true
+    },
+    {
+      "id": "menu_336",
+      "name": "Cheese Cheery P/A",
+      "isVeg": true
+    },
+    {
+      "id": "menu_337",
+      "name": "Saut'e Veg",
+      "isVeg": true
+    },
+    {
+      "id": "menu_338",
+      "name": "Continental Chicken Roast",
+      "isVeg": false
+    },
+    {
+      "id": "menu_339",
+      "name": "Stew (Veg/Chicken)",
+      "isVeg": false
+    },
+    {
+      "id": "menu_340",
+      "name": "Augratin (Veg/Chicken)",
+      "isVeg": false
+    }
+  ],
+  "DESERT": [
+    {
+      "id": "menu_341",
+      "name": "Rice Kheer",
+      "isVeg": true
+    },
+    {
+      "id": "menu_342",
+      "name": "Chhene Payas",
+      "isVeg": true
+    },
+    {
+      "id": "menu_343",
+      "name": "Jhili Payas",
+      "isVeg": true
+    },
+    {
+      "id": "menu_344",
+      "name": "Sitavog Payas",
+      "isVeg": true
+    },
+    {
+      "id": "menu_345",
+      "name": "Makhna Payas",
+      "isVeg": true
+    },
+    {
+      "id": "menu_346",
+      "name": "Semiya Payas",
+      "isVeg": true
+    },
+    {
+      "id": "menu_347",
+      "name": "Gajar Payas",
+      "isVeg": true
+    },
+    {
+      "id": "menu_348",
+      "name": "Kheer Sagar",
+      "isVeg": true
+    },
+    {
+      "id": "menu_349",
+      "name": "Halwa (Suji, Gajar, Moong)",
+      "isVeg": true
+    },
+    {
+      "id": "menu_350",
+      "name": "Imarti",
+      "isVeg": true
+    },
+    {
+      "id": "menu_351",
+      "name": "Sahitukuda",
+      "isVeg": true
+    },
+    {
+      "id": "menu_352",
+      "name": "Creamy Fruits",
+      "isVeg": true
+    },
+    {
+      "id": "menu_353",
+      "name": "Hot Jalebi",
+      "isVeg": true
+    },
+    {
+      "id": "menu_354",
+      "name": "Rasogulla",
+      "isVeg": true
+    },
+    {
+      "id": "menu_355",
+      "name": "Baked Rasogulla",
+      "isVeg": true
+    },
+    {
+      "id": "menu_356",
+      "name": "Baked Boondi",
+      "isVeg": true
+    },
+    {
+      "id": "menu_357",
+      "name": "Gulab Jamun",
+      "isVeg": true
+    },
+    {
+      "id": "menu_358",
+      "name": "Fruit Custard",
+      "isVeg": true
+    },
+    {
+      "id": "menu_359",
+      "name": "Malpua",
+      "isVeg": true
+    },
+    {
+      "id": "menu_360",
+      "name": "Rabdi",
+      "isVeg": true
+    },
+    {
+      "id": "menu_361",
+      "name": "Rasmalai",
+      "isVeg": true
+    },
+    {
+      "id": "menu_362",
+      "name": "Rasavali",
+      "isVeg": true
+    },
+    {
+      "id": "menu_363",
+      "name": "Rajbhog",
+      "isVeg": true
+    },
+    {
+      "id": "menu_364",
+      "name": "Chhena Jhilli",
+      "isVeg": true
+    },
+    {
+      "id": "menu_365",
+      "name": "Chenna Podo",
+      "isVeg": true
+    },
+    {
+      "id": "menu_366",
+      "name": "Ice Cream",
+      "isVeg": true
+    },
+    {
+      "id": "menu_367",
+      "name": "Kulfi",
+      "isVeg": true
+    }
+  ]
+}

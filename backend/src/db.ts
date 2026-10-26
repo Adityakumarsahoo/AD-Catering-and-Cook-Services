@@ -60,6 +60,7 @@ interface DatabaseSchema {
   about: AboutContent;
   navigation: NavigationItem[];
   settings: WebsiteSettings;
+  officialVegMenu?: any[];
 }
 
 let dbData: DatabaseSchema | null = null;
@@ -205,7 +206,7 @@ export async function initDatabase(): Promise<DatabaseSchema> {
       const raw = fs.readFileSync(DB_FILE, 'utf-8');
       dbData = JSON.parse(raw);
       let added = false;
-      if (dbData && officialMenuItems && officialMenuItems.length > 0) {
+      if (dbData && (!dbData.menuItems || dbData.menuItems.length === 0) && officialMenuItems && officialMenuItems.length > 0) {
         dbData.menuItems = officialMenuItems as unknown as MenuItem[];
         added = true;
       }

@@ -2,8 +2,22 @@ import { Router } from 'express';
 import { getDb, saveDatabase } from '../db.js';
 import { requireAdmin } from '../middleware/auth.js';
 import { MenuItem } from '../types.js';
+import { officialVegMenu } from '../data/officialVegMenu.js';
 
 const router = Router();
+
+// GET official 41-item Veg Menu (supports database persistence & fallback)
+router.get('/veg-menu', (req, res) => {
+  const db = getDb();
+  const items = (db.officialVegMenu && db.officialVegMenu.length === 41)
+    ? db.officialVegMenu
+    : officialVegMenu;
+  res.json({
+    totalCount: items.length,
+    categoriesCount: 7,
+    items: items
+  });
+});
 
 // GET menu summary statistics
 router.get('/summary', (req, res) => {

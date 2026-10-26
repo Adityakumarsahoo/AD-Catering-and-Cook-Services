@@ -13,7 +13,7 @@ export const defaultPackages: any[] = [
     "menuItemsCount": 29,
     "menuTitle": "NORMAL MENU",
     "cardBadge": "2 Starters • 4 Mains",
-    "image": "/images/luxury-buffet-setup.jpg",
+    "image": "/images/basic-package-card.png",
     "menuCategories": [
       {
         "category": "WELCOME DRINKS",
@@ -104,6 +104,7 @@ export const defaultPackages: any[] = [
     "drinksCount": 2,
     "staffIncluded": true,
     "decorationOption": true,
+    "image": "/images/normal-menu-card.png",
     "features": [
       "2 Welcome Coolers (Virgin Mojito + Mango)",
       "3 Starters (Chicken Tikka + Veg Kebabs)",
@@ -128,6 +129,7 @@ export const defaultPackages: any[] = [
     "staffIncluded": true,
     "decorationOption": true,
     "menuItemsCount": 36,
+    "image": "/images/delux-menu-card.png",
     "menuCategories": [
       {
         "category": "WELCOME DRINKS",
@@ -190,6 +192,7 @@ export const defaultPackages: any[] = [
     "drinksCount": 3,
     "staffIncluded": true,
     "decorationOption": true,
+    "image": "/images/royal-wedding-menu-card.jpg",
     "features": [
       "6 Live Counters (Chaat, Pasta, Live BBQ & Seafood)",
       "Odia Mutton Kasa, Prawn Malai Curry, Fish Fry",
@@ -216,7 +219,7 @@ export const defaultPackages: any[] = [
     "menuItemsCount": 44,
     "menuTitle": "DELUX MENU",
     "cardBadge": "6 Starters • 12 Mains",
-    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80",
+    "image": "/images/deluxe-package-card.png",
     "menuCategories": [
       {
         "category": "WELCOME DRINKS",

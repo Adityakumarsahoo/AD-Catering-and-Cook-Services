@@ -48,6 +48,7 @@ export interface MenuItem {
   sortOrder?: number;
   tags?: string[];
   isOdiaSpecialty?: boolean;
+  serving?: string;
   createdAt?: string;
   updatedAt?: string;
 }
