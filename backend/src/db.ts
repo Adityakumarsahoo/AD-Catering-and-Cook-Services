@@ -854,7 +854,7 @@ export async function initDatabase(): Promise<DatabaseSchema> {
       menuItemsCount: 29,
       menuTitle: 'NORMAL MENU',
       cardBadge: '2 Starters • 4 Mains',
-      image: '/images/luxury-buffet-setup.jpg',
+      image: '/images/packages/basic-package.jpg',
       menuCategories: [
         {
           category: 'WELCOME DRINKS',
@@ -966,6 +966,7 @@ export async function initDatabase(): Promise<DatabaseSchema> {
       mainCourseCount: 11,
       dessertCount: 4,
       drinksCount: 5,
+      image: '/images/packages/premium-package.jpg',
       staffIncluded: true,
       decorationOption: true,
       features: [
@@ -995,7 +996,7 @@ export async function initDatabase(): Promise<DatabaseSchema> {
       menuItemsCount: 44,
       menuTitle: 'DELUX MENU',
       cardBadge: '6 Starters • 12 Mains',
-      image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80',
+      image: '/images/packages/deluxe-package.jpg',
       menuCategories: [
         {
           category: 'WELCOME DRINKS',

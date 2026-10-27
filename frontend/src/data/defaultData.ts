@@ -13,7 +13,7 @@ export const defaultPackages: any[] = [
     "menuItemsCount": 29,
     "menuTitle": "NORMAL MENU",
     "cardBadge": "2 Starters • 4 Mains",
-    "image": "/images/basic-package-card.png",
+    "image": "/images/packages/basic-package.jpg",
     "menuCategories": [
       {
         "category": "WELCOME DRINKS",
@@ -129,7 +129,7 @@ export const defaultPackages: any[] = [
     "staffIncluded": true,
     "decorationOption": true,
     "menuItemsCount": 36,
-    "image": "/images/delux-menu-card.png",
+    "image": "/images/packages/premium-package.jpg",
     "menuCategories": [
       {
         "category": "WELCOME DRINKS",
@@ -219,7 +219,7 @@ export const defaultPackages: any[] = [
     "menuItemsCount": 44,
     "menuTitle": "DELUX MENU",
     "cardBadge": "6 Starters • 12 Mains",
-    "image": "/images/deluxe-package-card.png",
+    "image": "/images/packages/deluxe-package.jpg",
     "menuCategories": [
       {
         "category": "WELCOME DRINKS",

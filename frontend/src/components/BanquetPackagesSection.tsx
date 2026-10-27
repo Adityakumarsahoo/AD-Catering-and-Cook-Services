@@ -339,9 +339,9 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
   const [packages, setPackages] = useState<any[]>(defaultPackages);
   const [, setLoading] = useState(false);
 
-  // Modal states: 'normal' for Basic (Image 2), 'royal' for Premium (Image 2), 'deluxe' for Deluxe (Image 2)
+  // Modal states: 'normal' for Basic (Image 1), 'royal' for Premium (Image 2), 'deluxe' for Deluxe (Image 3)
   const [activeMenuModal, setActiveMenuModal] = useState<'normal' | 'royal' | 'deluxe' | null>(null);
-  const [activeModalTab, setActiveModalTab] = useState<'card' | 'poster' | 'basic_card' | 'deluxe_card'>('card');
+  const [activeModalTab, setActiveModalTab] = useState<'card' | 'poster' | 'basic_card' | 'deluxe_card'>('poster');
   
   // Basic Package (Normal Menu) in-card view states
   const [basicCategoryFilter, setBasicCategoryFilter] = useState<'all' | 'drinks' | 'starters' | 'plate' | 'mains' | 'sweets'>('all');
@@ -404,7 +404,7 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
     drinksCount: 1,
     staffIncluded: true,
     decorationOption: false,
-    image: '/images/luxury-buffet-setup.jpg',
+    image: '/images/packages/basic-package.jpg',
     cardBadge: '2 Starters • 4 Mains',
     packageInclusions: [
       '2 Starters & Appetizers',
@@ -445,7 +445,7 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
     drinksCount: 5,
     staffIncluded: true,
     decorationOption: true,
-    image: 'https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=800&q=80',
+    image: '/images/packages/premium-package.jpg',
     features: [
       'Welcome Drinks: Fire Mocktail, Smoky Mocktail, Masala Drinks',
       'Soup Counter: Veg Manchow Soup, Chicken H/S Soup',
@@ -474,7 +474,7 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
     menuItemsCount: 44,
     menuTitle: 'DELUX MENU',
     cardBadge: '6 Starters • 12 Mains',
-    image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80',
+    image: '/images/packages/deluxe-package.jpg',
     packageInclusions: [
       '6 Starters & Appetizers',
       '12 Main Course Delicacies',
@@ -509,7 +509,7 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
       cleanName: 'BASIC',
       badge: 'NORMAL MENU • ₹850',
       cardStyle: 'glass-medium border border-[#D4AF37]/50 shadow-[0_20px_50px_rgba(0,0,0,0.5)] ring-1 ring-[#D4AF37]/30',
-      image: basicPkg.image || '/images/luxury-buffet-setup.jpg',
+      image: '/images/packages/basic-package.jpg',
       btnStyle: 'gold-gradient-btn',
     },
     {
@@ -518,7 +518,7 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
       badge: 'MOST POPULAR',
       subBadge: 'ROYAL WEDDING FEAST',
       cardStyle: 'glass-strong border-2 border-[#D4AF37] shadow-[0_25px_65px_rgba(0,0,0,0.6)] ring-2 ring-[#F5CE68]/40',
-      image: 'https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=800&q=80',
+      image: '/images/packages/premium-package.jpg',
       btnStyle: 'gold-gradient-btn',
     },
     {
@@ -527,7 +527,7 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
       badge: 'VIP LUXURY',
       subBadge: 'DELUX MENU • 44 DELICACIES',
       cardStyle: 'glass-strong border-2 border-[#FFDF73] shadow-[0_30px_75px_rgba(0,0,0,0.7)] animate-luxury-border',
-      image: deluxePkg.image || 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80',
+      image: '/images/packages/deluxe-package.jpg',
       btnStyle: 'gold-gradient-btn',
     },
   ];
@@ -589,50 +589,70 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
                   ) : null}
 
                   <div>
-                    {/* Warm Appetizing Food Photography Header */}
-                    <div className="relative h-44 rounded-2xl overflow-hidden mb-5 border border-[#D4AF37]/40 shadow-sm group">
+                    {/* Warm Appetizing Food Photography Header with click to view poster */}
+                    <div
+                      onClick={() => {
+                        if (isBasic) {
+                          setActiveMenuModal('normal');
+                          setActiveModalTab('poster');
+                        } else if (isPremium) {
+                          setActiveMenuModal('royal');
+                          setActiveModalTab('poster');
+                        } else if (isDeluxe) {
+                          setActiveMenuModal('deluxe');
+                          setActiveModalTab('poster');
+                        }
+                      }}
+                      className="relative h-48 rounded-2xl overflow-hidden mb-5 border border-[#D4AF37]/40 shadow-sm group cursor-pointer"
+                      title="Click to view full package poster"
+                    >
                       <img
                         src={pkg.image}
-                        alt={`${pkg.cleanName} Package Catering spread`}
+                        alt={`${pkg.cleanName} Package Catering poster`}
                         onError={(e) => {
                           e.currentTarget.onerror = null;
-                          e.currentTarget.src =
-                            'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80';
+                          e.currentTarget.src = isBasic
+                            ? '/images/packages/basic-package.jpg'
+                            : isPremium
+                            ? '/images/packages/premium-package.jpg'
+                            : '/images/packages/deluxe-package.jpg';
                         }}
-                        className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108"
+                        className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#020D08]/85 via-transparent to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#020D08]/90 via-black/20 to-transparent" />
                       
                       {/* Floating Counter Badge on the Image */}
                       {isBasic ? (
                         <div className="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-between text-xs font-bold text-[#F5CE68] px-3 py-1 rounded-full bg-[#041810]/90 backdrop-blur-md border border-[#D4AF37]/50 shadow-md">
                           <span className="flex items-center gap-1.5 text-[11px]">
                             <span className="w-2 h-2 rounded-full bg-amber-400" />
-                            <span>2 Starters • 4 Mains</span>
+                            <span>16 Delicacies • Normal Menu</span>
                           </span>
                           <button
                             type="button"
                             onClick={(e) => {
                               e.preventDefault();
+                              e.stopPropagation();
                               setActiveMenuModal('normal');
-                              setActiveModalTab('card');
+                              setActiveModalTab('poster');
                             }}
                             className="text-[10px] uppercase font-black tracking-wider text-white hover:text-[#F5CE68] underline underline-offset-2 flex items-center gap-1"
                           >
                             <Eye className="w-3 h-3" />
-                            <span>Normal Menu</span>
+                            <span>Poster View</span>
                           </button>
                         </div>
                       ) : isPremium ? (
                         <div className="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-between text-xs font-bold text-[#F5CE68] px-3 py-1 rounded-full bg-[#041810]/90 backdrop-blur-md border border-[#D4AF37]/50 shadow-md">
                           <span className="flex items-center gap-1.5 text-[11px]">
                             <Flame className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-                            <span>36 Delicacies • 9 Full Counters</span>
+                            <span>Royal Feast • 36 Delicacies</span>
                           </span>
                           <button
                             type="button"
                             onClick={(e) => {
                               e.preventDefault();
+                              e.stopPropagation();
                               setActiveMenuModal('royal');
                               setActiveModalTab('poster');
                             }}
@@ -646,19 +666,20 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
                         <div className="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-between text-xs font-bold text-[#FFDF73] px-3 py-1 rounded-full bg-[#041810]/90 backdrop-blur-md border border-[#D4AF37]/50 shadow-md">
                           <span className="flex items-center gap-1.5 text-[11px]">
                             <span className="w-2 h-2 rounded-full bg-amber-400" />
-                            <span>6 Starters • 12 Mains</span>
+                            <span>Taste & Tradition • 44 Delicacies</span>
                           </span>
                           <button
                             type="button"
                             onClick={(e) => {
                               e.preventDefault();
+                              e.stopPropagation();
                               setActiveMenuModal('deluxe');
-                              setActiveModalTab('card');
+                              setActiveModalTab('poster');
                             }}
                             className="text-[10px] uppercase font-black tracking-wider text-white hover:text-[#FFDF73] underline underline-offset-2 flex items-center gap-1"
                           >
                             <Eye className="w-3 h-3" />
-                            <span>Delux Menu</span>
+                            <span>Poster View</span>
                           </button>
                         </div>
                       ) : (
@@ -717,13 +738,13 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
                           type="button"
                           onClick={() => {
                             setActiveMenuModal('normal');
-                            setActiveModalTab('card');
+                            setActiveModalTab('poster');
                           }}
                           className="px-3 py-1 rounded-xl bg-[#041810]/90 hover:bg-[#06291C] border border-[#D4AF37]/60 text-[#F5CE68] text-[11px] font-bold flex items-center gap-1 shadow transition-all active:scale-95"
-                          title="Open Normal Menu Card (Image 2)"
+                          title="Open Basic Package Poster (Image 1)"
                         >
                           <FileText className="w-3.5 h-3.5" />
-                          <span>Normal Menu</span>
+                          <span>Basic Poster</span>
                         </button>
                       )}
 
@@ -732,13 +753,13 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
                           type="button"
                           onClick={() => {
                             setActiveMenuModal('royal');
-                            setActiveModalTab('card');
+                            setActiveModalTab('poster');
                           }}
                           className="px-3 py-1 rounded-xl bg-amber-950/80 hover:bg-amber-900 border border-[#D4AF37]/60 text-[#F5CE68] text-[11px] font-bold flex items-center gap-1 shadow transition-all active:scale-95"
-                          title="Open Royal Banquet Menu Card"
+                          title="Open Premium Package Poster (Image 2)"
                         >
                           <FileText className="w-3.5 h-3.5" />
-                          <span>Menu Card</span>
+                          <span>Premium Poster</span>
                         </button>
                       )}
 
@@ -747,13 +768,13 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
                           type="button"
                           onClick={() => {
                             setActiveMenuModal('deluxe');
-                            setActiveModalTab('card');
+                            setActiveModalTab('poster');
                           }}
-                          className="px-3 py-1 rounded-xl bg-[#041810]/90 hover:bg-[#06291C] border border-[#D4AF37]/60 text-[#FFDF73] text-[11px] font-bold flex items-center gap-1 shadow transition-all active:scale-95"
-                          title="Open Delux Menu Card (Image 2)"
+                          className="px-3 py-1 rounded-xl bg-[#041810]/90 hover:bg-[#06291C] border border-[#FFDF73]/60 text-[#FFDF73] text-[11px] font-bold flex items-center gap-1 shadow transition-all active:scale-95"
+                          title="Open Deluxe Package Poster (Image 3)"
                         >
                           <FileText className="w-3.5 h-3.5" />
-                          <span>Delux Menu</span>
+                          <span>Deluxe Poster</span>
                         </button>
                       )}
                     </div>
@@ -1295,12 +1316,12 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
                         type="button"
                         onClick={() => {
                           setActiveMenuModal('normal');
-                          setActiveModalTab('card');
+                          setActiveModalTab('poster');
                         }}
                         className="w-full py-2.5 rounded-xl bg-[#041810]/80 hover:bg-[#06291C] border border-[#D4AF37]/45 text-[11px] font-bold text-[#F5CE68] flex items-center justify-center gap-1.5 transition-colors shadow-sm"
                       >
                         <FileText className="w-3.5 h-3.5 text-[#F5CE68]" />
-                        <span>View Normal Menu Card (Image 2)</span>
+                        <span>View Basic Package Poster & Menu</span>
                       </button>
                     )}
 
@@ -1309,12 +1330,12 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
                         type="button"
                         onClick={() => {
                           setActiveMenuModal('royal');
-                          setActiveModalTab('card');
+                          setActiveModalTab('poster');
                         }}
                         className="w-full py-2.5 rounded-xl bg-[#041810]/80 hover:bg-[#06291C] border border-[#D4AF37]/45 text-[11px] font-bold text-[#F5CE68] flex items-center justify-center gap-1.5 transition-colors shadow-sm"
                       >
                         <FileText className="w-3.5 h-3.5 text-[#F5CE68]" />
-                        <span>View Royal Wedding Menu Card</span>
+                        <span>View Premium Package Poster & Menu</span>
                       </button>
                     )}
 
@@ -1323,12 +1344,12 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
                         type="button"
                         onClick={() => {
                           setActiveMenuModal('deluxe');
-                          setActiveModalTab('card');
+                          setActiveModalTab('poster');
                         }}
                         className="w-full py-2.5 rounded-xl bg-[#041810]/80 hover:bg-[#06291C] border border-[#D4AF37]/45 text-[11px] font-bold text-[#FFDF73] flex items-center justify-center gap-1.5 transition-colors shadow-sm"
                       >
                         <FileText className="w-3.5 h-3.5 text-[#FFDF73]" />
-                        <span>View Delux Menu Card (Image 2)</span>
+                        <span>View Deluxe Package Poster & Menu</span>
                       </button>
                     )}
                   </div>
@@ -1434,17 +1455,6 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
                 <div className="inline-flex rounded-xl p-1 bg-[#041810] border border-[#D4AF37]/50 text-xs">
                   <button
                     type="button"
-                    onClick={() => setActiveModalTab('card')}
-                    className={`px-3 py-1 rounded-lg font-bold transition-all ${
-                      activeModalTab === 'card'
-                        ? 'bg-gradient-to-r from-[#D4AF37] to-[#F5CE68] text-[#041810]'
-                        : 'text-[#CBD5E1] hover:text-white'
-                    }`}
-                  >
-                    Normal Ornate Card
-                  </button>
-                  <button
-                    type="button"
                     onClick={() => setActiveModalTab('poster')}
                     className={`px-3 py-1 rounded-lg font-bold transition-all ${
                       activeModalTab === 'poster'
@@ -1452,7 +1462,18 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
                         : 'text-[#CBD5E1] hover:text-white'
                     }`}
                   >
-                    Original Menu Card (Image 2)
+                    Package Poster
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setActiveModalTab('card')}
+                    className={`px-3 py-1 rounded-lg font-bold transition-all ${
+                      activeModalTab === 'card'
+                        ? 'bg-gradient-to-r from-[#D4AF37] to-[#F5CE68] text-[#041810]'
+                        : 'text-[#CBD5E1] hover:text-white'
+                    }`}
+                  >
+                    Menu Breakdown
                   </button>
                   <button
                     type="button"
@@ -1463,7 +1484,7 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
                         : 'text-[#CBD5E1] hover:text-white'
                     }`}
                   >
-                    Basic Card (Image 1)
+                    Scanned Menu Sheet
                   </button>
                 </div>
 
@@ -1822,34 +1843,33 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
 
               </div>
             ) : activeModalTab === 'poster' ? (
-              /* TAB 2: ORIGINAL NORMAL MENU CARD POSTER (IMAGE 2 FILE) */
+              /* TAB 2: FIRST IMAGE: OFFICIAL BASIC PACKAGE POSTER */
               <div className="space-y-4 text-center">
-                <div className="relative rounded-2xl overflow-hidden border-2 border-[#D4AF37] max-h-[70vh] flex items-center justify-center bg-black/60 p-2">
+                <div className="relative rounded-2xl overflow-hidden border-2 border-[#D4AF37] max-h-[72vh] flex items-center justify-center bg-black/60 p-2">
                   <img
-                    src="/images/normal-menu-card.png"
-                    alt="Normal Menu Original Banquet Sheet (Image 2)"
-                    className="max-h-[66vh] w-auto object-contain rounded-xl shadow-2xl"
+                    src="/images/packages/basic-package.jpg"
+                    alt="Basic Package Official Banquet Poster (Image 1)"
+                    className="max-h-[68vh] w-auto object-contain rounded-xl shadow-2xl"
                     onError={(e) => {
                       e.currentTarget.onerror = null;
-                      e.currentTarget.src =
-                        'https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=1200&q=80';
+                      e.currentTarget.src = '/images/basic-package-poster.jpg';
                     }}
                   />
                 </div>
 
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2">
                   <p className="text-xs text-[#CBD5E1]">
-                    Authentic Normal Menu Banquet Sheet (Image 2) • High-Resolution Poster
+                    Official Basic Package Banquet Poster • 16 Delicacies Grid • ₹850 / Plate
                   </p>
                   <div className="flex items-center gap-3">
                     <a
-                      href="/images/normal-menu-card.png"
-                      download="Normal-Menu-Banquet-Card.png"
+                      href="/images/packages/basic-package.jpg"
+                      download="Basic-Package-Poster.jpg"
                       target="_blank"
                       rel="noreferrer"
                       className="px-4 py-2 rounded-xl bg-[#041810] hover:bg-black text-white text-xs font-bold border border-[#D4AF37]/50"
                     >
-                      Download Image
+                      Download Poster
                     </a>
                     <Link
                       to={`/booking?package=${encodeURIComponent('BASIC PACKAGE')}`}
@@ -1862,33 +1882,33 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
                 </div>
               </div>
             ) : (
-              /* TAB 3: ORIGINAL BASIC CARD POSTER (IMAGE 1 FILE) */
+              /* TAB 3: ORIGINAL SCANNED NORMAL MENU CARD */
               <div className="space-y-4 text-center">
-                <div className="relative rounded-2xl overflow-hidden border-2 border-[#D4AF37] max-h-[70vh] flex items-center justify-center bg-black/60 p-2">
+                <div className="relative rounded-2xl overflow-hidden border-2 border-[#D4AF37] max-h-[72vh] flex items-center justify-center bg-black/60 p-2">
                   <img
-                    src="/images/basic-package-card.png"
-                    alt="Basic Package Original Card (Image 1)"
-                    className="max-h-[66vh] w-auto object-contain rounded-xl shadow-2xl"
+                    src="/images/normal-menu-card.png"
+                    alt="Normal Menu Original Banquet Sheet"
+                    className="max-h-[68vh] w-auto object-contain rounded-xl shadow-2xl"
                     onError={(e) => {
                       e.currentTarget.onerror = null;
-                      e.currentTarget.src = '/images/luxury-buffet-setup.jpg';
+                      e.currentTarget.src = '/images/packages/basic-package.jpg';
                     }}
                   />
                 </div>
 
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2">
                   <p className="text-xs text-[#CBD5E1]">
-                    Authentic Basic Package Card with Inclusions & Highlights (Image 1)
+                    Authentic Normal Menu Scanned Banquet Card • High-Resolution Poster
                   </p>
                   <div className="flex items-center gap-3">
                     <a
-                      href="/images/basic-package-card.png"
-                      download="Basic-Package-Card.png"
+                      href="/images/normal-menu-card.png"
+                      download="Normal-Menu-Banquet-Card.png"
                       target="_blank"
                       rel="noreferrer"
                       className="px-4 py-2 rounded-xl bg-[#041810] hover:bg-black text-white text-xs font-bold border border-[#D4AF37]/50"
                     >
-                      Download Image
+                      Download Scan
                     </a>
                     <Link
                       to={`/booking?package=${encodeURIComponent('BASIC PACKAGE')}`}
@@ -1930,17 +1950,6 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
                 <div className="inline-flex rounded-xl p-1 bg-[#041810] border border-[#D4AF37]/50 text-xs">
                   <button
                     type="button"
-                    onClick={() => setActiveModalTab('card')}
-                    className={`px-3 py-1 rounded-lg font-bold transition-all ${
-                      activeModalTab === 'card'
-                        ? 'bg-gradient-to-r from-[#D4AF37] to-[#F5CE68] text-[#041810]'
-                        : 'text-[#CBD5E1] hover:text-white'
-                    }`}
-                  >
-                    Royal Ornate Card
-                  </button>
-                  <button
-                    type="button"
                     onClick={() => setActiveModalTab('poster')}
                     className={`px-3 py-1 rounded-lg font-bold transition-all ${
                       activeModalTab === 'poster'
@@ -1948,7 +1957,18 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
                         : 'text-[#CBD5E1] hover:text-white'
                     }`}
                   >
-                    Original Card Image
+                    Package Poster
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setActiveModalTab('card')}
+                    className={`px-3 py-1 rounded-lg font-bold transition-all ${
+                      activeModalTab === 'card'
+                        ? 'bg-gradient-to-r from-[#D4AF37] to-[#F5CE68] text-[#041810]'
+                        : 'text-[#CBD5E1] hover:text-white'
+                    }`}
+                  >
+                    Menu Breakdown
                   </button>
                 </div>
 
@@ -2271,34 +2291,33 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
 
               </div>
             ) : (
-              /* TAB 2: ORIGINAL CARD POSTER VIEW (IMAGE 2 FILE) */
+              /* TAB 2: SECOND IMAGE: OFFICIAL PREMIUM PACKAGE POSTER */
               <div className="space-y-4 text-center">
-                <div className="relative rounded-2xl overflow-hidden border-2 border-[#D4AF37] max-h-[70vh] flex items-center justify-center bg-black/60 p-2">
+                <div className="relative rounded-2xl overflow-hidden border-2 border-[#D4AF37] max-h-[72vh] flex items-center justify-center bg-black/60 p-2">
                   <img
-                    src="/images/royal-wedding-menu-card.jpg"
-                    alt="Royal Wedding Feast Original Menu Card"
-                    className="max-h-[66vh] w-auto object-contain rounded-xl shadow-2xl"
+                    src="/images/packages/premium-package.jpg"
+                    alt="Premium Package - A Royal Feast For Your Special Occasion (Image 2)"
+                    className="max-h-[68vh] w-auto object-contain rounded-xl shadow-2xl"
                     onError={(e) => {
                       e.currentTarget.onerror = null;
-                      e.currentTarget.src =
-                        'https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=1200&q=80';
+                      e.currentTarget.src = '/images/premium-package-poster.jpg';
                     }}
                   />
                 </div>
 
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2">
                   <p className="text-xs text-[#CBD5E1]">
-                    Authentic Royal Wedding Banquet Menu Sheet • High-Resolution Poster
+                    Official Premium Package Royal Feast Poster • Complete Multi-Course Spread • ₹950 / Plate
                   </p>
                   <div className="flex items-center gap-3">
                     <a
-                      href="/images/royal-wedding-menu-card.jpg"
-                      download="Royal-Wedding-Banquet-Menu.jpg"
+                      href="/images/packages/premium-package.jpg"
+                      download="Premium-Package-Royal-Feast.jpg"
                       target="_blank"
                       rel="noreferrer"
                       className="px-4 py-2 rounded-xl bg-[#041810] hover:bg-black text-white text-xs font-bold border border-[#D4AF37]/50"
                     >
-                      Download Image
+                      Download Poster
                     </a>
                     <Link
                       to={`/booking?package=${encodeURIComponent('PREMIUM PACKAGE')}`}
@@ -2341,17 +2360,6 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
                 <div className="inline-flex rounded-xl p-1 bg-[#041810] border border-[#D4AF37]/50 text-xs">
                   <button
                     type="button"
-                    onClick={() => setActiveModalTab('card')}
-                    className={`px-3 py-1 rounded-lg font-bold transition-all ${
-                      activeModalTab === 'card'
-                        ? 'bg-gradient-to-r from-[#D4AF37] to-[#F5CE68] text-[#041810]'
-                        : 'text-[#CBD5E1] hover:text-white'
-                    }`}
-                  >
-                    Delux Ornate Card
-                  </button>
-                  <button
-                    type="button"
                     onClick={() => setActiveModalTab('poster')}
                     className={`px-3 py-1 rounded-lg font-bold transition-all ${
                       activeModalTab === 'poster'
@@ -2359,7 +2367,18 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
                         : 'text-[#CBD5E1] hover:text-white'
                     }`}
                   >
-                    Original Menu Card (Image 2)
+                    Package Poster
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setActiveModalTab('card')}
+                    className={`px-3 py-1 rounded-lg font-bold transition-all ${
+                      activeModalTab === 'card'
+                        ? 'bg-gradient-to-r from-[#D4AF37] to-[#F5CE68] text-[#041810]'
+                        : 'text-[#CBD5E1] hover:text-white'
+                    }`}
+                  >
+                    Menu Breakdown
                   </button>
                   <button
                     type="button"
@@ -2370,7 +2389,7 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
                         : 'text-[#CBD5E1] hover:text-white'
                     }`}
                   >
-                    Deluxe Card (Image 1)
+                    Scanned Menu Sheet
                   </button>
                 </div>
 
@@ -2805,34 +2824,33 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
 
               </div>
             ) : activeModalTab === 'poster' ? (
-              /* TAB 2: ORIGINAL DELUX MENU CARD POSTER (IMAGE 2 FILE) */
+              /* TAB 2: THIRD IMAGE: OFFICIAL DELUXE PACKAGE POSTER */
               <div className="space-y-4 text-center">
-                <div className="relative rounded-2xl overflow-hidden border-2 border-[#D4AF37] max-h-[70vh] flex items-center justify-center bg-black/60 p-2">
+                <div className="relative rounded-2xl overflow-hidden border-2 border-[#D4AF37] max-h-[72vh] flex items-center justify-center bg-black/60 p-2">
                   <img
-                    src="/images/delux-menu-card.png"
-                    alt="Delux Menu Original Banquet Sheet (Image 2)"
-                    className="max-h-[66vh] w-auto object-contain rounded-xl shadow-2xl"
+                    src="/images/packages/deluxe-package.jpg"
+                    alt="Deluxe Package - A Perfect Blend of Taste & Tradition (Image 3)"
+                    className="max-h-[68vh] w-auto object-contain rounded-xl shadow-2xl"
                     onError={(e) => {
                       e.currentTarget.onerror = null;
-                      e.currentTarget.src =
-                        'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80';
+                      e.currentTarget.src = '/images/deluxe-package-poster.jpg';
                     }}
                   />
                 </div>
 
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2">
                   <p className="text-xs text-[#CBD5E1]">
-                    Authentic Delux Menu Banquet Sheet (Image 2) • High-Resolution Poster
+                    Official Deluxe Package Poster • A Perfect Blend of Taste & Tradition • 44 Delicacies • ₹1,050 / Plate
                   </p>
                   <div className="flex items-center gap-3">
                     <a
-                      href="/images/delux-menu-card.png"
-                      download="Delux-Menu-Banquet-Card.png"
+                      href="/images/packages/deluxe-package.jpg"
+                      download="Deluxe-Package-Poster.jpg"
                       target="_blank"
                       rel="noreferrer"
                       className="px-4 py-2 rounded-xl bg-[#041810] hover:bg-black text-white text-xs font-bold border border-[#D4AF37]/50"
                     >
-                      Download Image
+                      Download Poster
                     </a>
                     <Link
                       to={`/booking?package=${encodeURIComponent('DELUXE PACKAGE')}`}
@@ -2845,34 +2863,33 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
                 </div>
               </div>
             ) : (
-              /* TAB 3: ORIGINAL DELUXE CARD POSTER (IMAGE 1 FILE) */
+              /* TAB 3: ORIGINAL SCANNED DELUX MENU CARD */
               <div className="space-y-4 text-center">
-                <div className="relative rounded-2xl overflow-hidden border-2 border-[#D4AF37] max-h-[70vh] flex items-center justify-center bg-black/60 p-2">
+                <div className="relative rounded-2xl overflow-hidden border-2 border-[#D4AF37] max-h-[72vh] flex items-center justify-center bg-black/60 p-2">
                   <img
-                    src="/images/deluxe-package-card.png"
-                    alt="Deluxe Package Original Card (Image 1)"
-                    className="max-h-[66vh] w-auto object-contain rounded-xl shadow-2xl"
+                    src="/images/delux-menu-card.png"
+                    alt="Delux Menu Original Banquet Sheet"
+                    className="max-h-[68vh] w-auto object-contain rounded-xl shadow-2xl"
                     onError={(e) => {
                       e.currentTarget.onerror = null;
-                      e.currentTarget.src =
-                        'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80';
+                      e.currentTarget.src = '/images/packages/deluxe-package.jpg';
                     }}
                   />
                 </div>
 
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2">
                   <p className="text-xs text-[#CBD5E1]">
-                    Authentic Deluxe Package Card with Inclusions & Highlights (Image 1)
+                    Authentic Delux Menu Scanned Banquet Card • High-Resolution Poster
                   </p>
                   <div className="flex items-center gap-3">
                     <a
-                      href="/images/deluxe-package-card.png"
-                      download="Deluxe-Package-Card.png"
+                      href="/images/delux-menu-card.png"
+                      download="Delux-Menu-Banquet-Card.png"
                       target="_blank"
                       rel="noreferrer"
                       className="px-4 py-2 rounded-xl bg-[#041810] hover:bg-black text-white text-xs font-bold border border-[#D4AF37]/50"
                     >
-                      Download Image
+                      Download Scan
                     </a>
                     <Link
                       to={`/booking?package=${encodeURIComponent('DELUXE PACKAGE')}`}

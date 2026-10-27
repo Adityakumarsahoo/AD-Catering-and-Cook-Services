@@ -1,11 +1,19 @@
 // frontend/src/data/officialVegMenu.ts
-// SINGLE SOURCE OF TRUTH: EXACT 41-ENTRY OFFICIAL VEG MENU FOR AD CATERING AND COOK SERVICES
+// OFFICIAL VEG MENU PACKAGE DATA FOR AD CATERING AND COOK SERVICES
+// Strictly contains the exact items specified for the Pure Veg Menu Package
 
 export interface VegMenuItem {
   id: string;
-  orderNumber: number; // 1 to 41 strictly for audit verification
+  orderNumber: number; // 1 to 27
   name: string;
-  category: 'Welcome Drinks' | 'Soup' | 'Starter' | 'Plate Counter' | 'Main Course' | 'Sweet Dessert' | 'Additional Items';
+  category:
+    | 'Welcome Drinks'
+    | 'Soup'
+    | 'Starter'
+    | 'Plate Counter'
+    | 'Main Course'
+    | 'Sweet Dessert'
+    | 'Special Inclusions';
   categoryNumber: number; // 1 to 7
   categoryHeading: string;
   description: string;
@@ -17,766 +25,493 @@ export interface VegMenuItem {
   isFeatured?: boolean;
 }
 
-export const officialVegMenu: VegMenuItem[] = [
-  {
-    "id": "veg_1",
-    "orderNumber": 1,
-    "name": "Milk Shake (Badam / Mango / Pineapple / Vanilla)",
-    "category": "Welcome Drinks",
-    "categoryNumber": 1,
-    "categoryHeading": "1. Welcome Drinks",
-    "description": "Rich and velvety chilled gourmet milkshake blended with premium dairy cream and authentic Badam, Mango, Pineapple, or Madagascar Vanilla, served in a tall glass with crushed nuts.",
-    "image": "https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?auto=format&fit=crop&w=800&q=80",
-    "isVeg": true,
-    "serving": "1 Tall Glass (300ml)",
-    "tags": [
-      "Velvety Milkshake",
-      "Almonds & Fruit",
-      "Kids & Family Favorite"
-    ],
-    "isPopular": true,
-    "isFeatured": true
-  },
-  {
-    "id": "veg_2",
-    "orderNumber": 2,
-    "name": "Hot Badam Milk",
-    "category": "Welcome Drinks",
-    "categoryNumber": 1,
-    "categoryHeading": "1. Welcome Drinks",
-    "description": "Traditional comforting hot milk slow-simmered with crushed California almonds, aromatic Kashmiri saffron strands, green cardamom, and pure honey, served piping warm in gold-rimmed glassware.",
-    "image": "/images/dishes/Badam_Milk_Drink.jpg",
-    "isVeg": true,
-    "serving": "1 Warm Glass (250ml)",
-    "tags": [
-      "Kashmiri Saffron",
-      "Warm & Restorative",
-      "Royal Indian Comfort"
-    ],
-    "isFeatured": true
-  },
-  {
-    "id": "veg_3",
-    "orderNumber": 3,
-    "name": "Lassi (Sweet)",
-    "category": "Welcome Drinks",
-    "categoryNumber": 1,
-    "categoryHeading": "1. Welcome Drinks",
-    "description": "Thick, creamy, slow-churned Punjabi sweet curd lassi served in an authentic earthen terracotta kulhad, crowned with a rich layer of fresh malai clotted cream, slivered pistachios, and saffron.",
-    "image": "/images/dishes/sweet-lassi.jpg",
-    "isVeg": true,
-    "serving": "1 Terracotta Kulhad (350ml)",
-    "tags": [
-      "Thick Malai Clotted Cream",
-      "Hand-Churned Curd",
-      "Traditional Kulhad"
-    ],
-    "isPopular": true,
-    "isFeatured": true
-  },
-  {
-    "id": "veg_4",
-    "orderNumber": 4,
-    "name": "Chanch",
-    "category": "Welcome Drinks",
-    "categoryNumber": 1,
-    "categoryHeading": "1. Welcome Drinks",
-    "description": "Refreshing traditional Indian spiced chaas (buttermilk) slow-churned with roasted cumin powder (bhuna jeera), pink rock salt, fresh mint leaves, green chilies, and fragrant coriander garnish.",
-    "image": "/images/dishes/chanch-buttermilk.jpg",
-    "isVeg": true,
-    "serving": "1 Clay Glass (300ml)",
-    "tags": [
-      "Bhuna Jeera Tadka",
-      "Digestive Cooler",
-      "Traditional Buttermilk"
-    ]
-  },
-  {
-    "id": "veg_5",
-    "orderNumber": 5,
-    "name": "Fruit Punch",
-    "category": "Welcome Drinks",
-    "categoryNumber": 1,
-    "categoryHeading": "1. Welcome Drinks",
-    "description": "Vibrant, celebratory blend of freshly pressed mango, sweet pineapple, orange, and pomegranate juices layered over crushed mountain ice with fresh citrus wheels and garden mint.",
-    "image": "https://images.unsplash.com/photo-1546173159-315724a31696?auto=format&fit=crop&w=800&q=80",
-    "isVeg": true,
-    "serving": "1 Chilled Highball Glass (300ml)",
-    "tags": [
-      "Tropical Blend",
-      "Real Fruit Nectar",
-      "Celebration Punch"
-    ],
-    "isPopular": true
-  },
-  {
-    "id": "veg_6",
-    "orderNumber": 6,
-    "name": "Aam Panna",
-    "category": "Welcome Drinks",
-    "categoryNumber": 1,
-    "categoryHeading": "1. Welcome Drinks",
-    "description": "Authentic royal summer cooler crafted from fire-roasted raw green mangoes, organic jaggery, black salt, and freshly roasted cumin, served ice-cold with fresh mint sprigs.",
-    "image": "/images/dishes/aam-panna.jpg",
-    "isVeg": true,
-    "serving": "1 Chilled Tumbler (300ml)",
-    "tags": [
-      "Raw Green Mango",
-      "Tangy & Refreshing",
-      "Summer Heritage Special"
-    ],
-    "isFeatured": true
-  },
-  {
-    "id": "veg_7",
-    "orderNumber": 7,
-    "name": "Thandai",
-    "category": "Welcome Drinks",
-    "categoryNumber": 1,
-    "categoryHeading": "1. Welcome Drinks",
-    "description": "Opulent festive royal thandai cold milk drink infused with ground almonds, cashews, fennel seeds, melon seeds, green cardamom, and steeped saffron, adorned with fragrant dried rose petals.",
-    "image": "/images/dishes/kesar-thandai.jpg",
-    "isVeg": true,
-    "serving": "1 Crystal Glass (300ml)",
-    "tags": [
-      "Royal Saffron Thandai",
-      "Nut & Seed Infusion",
-      "Festive Delicacy"
-    ],
-    "isFeatured": true
-  },
-  {
-    "id": "veg_8",
-    "orderNumber": 8,
-    "name": "Falluda",
-    "category": "Welcome Drinks",
-    "categoryNumber": 1,
-    "categoryHeading": "1. Welcome Drinks",
-    "description": "Decadent multi-layered royal Indian dessert beverage featuring aromatic Damask rose syrup, soaked cooling sabja (basil) seeds, delicate falooda sev noodles, chilled milk, and a scoop of rich kulfi ice cream.",
-    "image": "/images/dishes/royal-falooda.jpg",
-    "isVeg": true,
-    "serving": "1 Sundae Parfait Glass (350ml)",
-    "tags": [
-      "Royal Rose Syrup",
-      "Falooda Sev & Sabja",
-      "Kulfi Ice Cream Crown"
-    ],
-    "isPopular": true,
-    "isFeatured": true
-  },
-  {
-    "id": "veg_9",
-    "orderNumber": 9,
-    "name": "Jaljeera",
-    "category": "Welcome Drinks",
-    "categoryNumber": 1,
-    "categoryHeading": "1. Welcome Drinks",
-    "description": "Crisp, invigorating northern Indian cooler made with freshly muddled mint, coriander, roasted cumin seeds, black pepper, dry mango powder, and crispy golden boondi droplets floating on top.",
-    "image": "/images/dishes/spiced-jaljeera.jpg",
-    "isVeg": true,
-    "serving": "1 Frosted Glass (300ml)",
-    "tags": [
-      "Crispy Boondi Garnish",
-      "Zesty Mint & Cumin",
-      "Digestive Appetizer"
-    ]
-  },
-  {
-    "id": "veg_10",
-    "orderNumber": 10,
-    "name": "Lemon Cold Drinks",
-    "category": "Welcome Drinks",
-    "categoryNumber": 1,
-    "categoryHeading": "1. Welcome Drinks",
-    "description": "Chilled sparkling fresh lemon soda prepared with freshly squeezed farm lemons, rock salt, crushed ice, and effervescent bubbles, garnished with fresh mint and citrus wheels.",
-    "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=80",
-    "isVeg": true,
-    "serving": "1 Tall Sparkler Glass (300ml)",
-    "tags": [
-      "Fresh Farm Lemon",
-      "Sparkling Fizz",
-      "Zesty & Crisp"
-    ]
-  },
-  {
-    "id": "veg_11",
-    "orderNumber": 11,
-    "name": "Cold Drinks",
-    "category": "Welcome Drinks",
-    "categoryNumber": 1,
-    "categoryHeading": "1. Welcome Drinks",
-    "description": "Chilled premium carbonated soft drinks and sparkling colas served ice-cold in crystal glassware with clear ice cubes, condensation, and lime wedge.",
-    "image": "/images/dishes/cold-drinks-soda.jpg",
-    "isVeg": true,
-    "serving": "1 Chilled Glass (300ml)",
-    "tags": [
-      "Ice-Cold Fizz",
-      "Banquet Standard",
-      "Refreshing Bubbles"
-    ]
-  },
-  {
-    "id": "veg_12",
-    "orderNumber": 12,
-    "name": "Masala Cold Drinks",
-    "category": "Welcome Drinks",
-    "categoryNumber": 1,
-    "categoryHeading": "1. Welcome Drinks",
-    "description": "Spiced Indian banquet street-style cold soda with carbonated cola spiced with black salt, chaat masala, roasted cumin, and fresh lemon juice with a spice-dusted rim.",
-    "image": "/images/dishes/masala-cold-drinks.jpg",
-    "isVeg": true,
-    "serving": "1 Spice-Rimmed Highball (300ml)",
-    "tags": [
-      "Desi Masala Fizz",
-      "Chaat Spiced Rim",
-      "Tangy & Effervescent"
-    ]
-  },
-  {
-    "id": "veg_13",
-    "orderNumber": 13,
-    "name": "Mocktail",
-    "category": "Welcome Drinks",
-    "categoryNumber": 1,
-    "categoryHeading": "1. Welcome Drinks",
-    "description": "Exotic handcrafted non-alcoholic signature mocktail crafted with tropical fruit nectars, blue curaçao / grenadine layers, citrus zest, and botanical garnishes.",
-    "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80",
-    "isVeg": true,
-    "serving": "1 Signature Cocktail Glass (300ml)",
-    "tags": [
-      "Signature Mocktail",
-      "Handcrafted Layers",
-      "Zero Alcohol"
-    ],
-    "isPopular": true,
-    "isFeatured": true
-  },
-  {
-    "id": "veg_14",
-    "orderNumber": 14,
-    "name": "Cold Coffee",
-    "category": "Welcome Drinks",
-    "categoryNumber": 1,
-    "categoryHeading": "1. Welcome Drinks",
-    "description": "Creamy, frothy iced coffee blended with freshly brewed dark roasted espresso beans, chilled full-cream milk, and sugar, served with a silky coffee crema swirl in a frosted glass.",
-    "image": "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=800&q=80",
-    "isVeg": true,
-    "serving": "1 Tall Frosted Glass (300ml)",
-    "tags": [
-      "Dark Roast Espresso",
-      "Creamy Coffee Froth",
-      "Chilled Pick-Me-Up"
-    ],
-    "isPopular": true
-  },
-  {
-    "id": "veg_15",
-    "orderNumber": 15,
-    "name": "Tea & Coffee",
-    "category": "Welcome Drinks",
-    "categoryNumber": 1,
-    "categoryHeading": "1. Welcome Drinks",
-    "description": "Live continuous hot beverage station serving authentic ginger-cardamom Indian masala chai alongside aromatic freshly brewed South Indian filter coffee in warm porcelain mugs.",
-    "image": "https://images.unsplash.com/photo-1561336313-0bd5e0b27ec8?auto=format&fit=crop&w=800&q=80",
-    "isVeg": true,
-    "serving": "Continuous Hot Beverage Counter",
-    "tags": [
-      "Live Chai Station",
-      "Filter Coffee & Masala Chai",
-      "Piping Hot Service"
-    ]
-  },
-  {
-    "id": "veg_16",
-    "orderNumber": 16,
-    "name": "Veg Sweet Corn/Manchow Soup",
-    "category": "Soup",
-    "categoryNumber": 2,
-    "categoryHeading": "2. Soup",
-    "description": "Comforting, velvety Indo-Chinese vegetable soup loaded with golden sweet corn kernels, finely minced garden vegetables, and aromatic white pepper garnished with crispy noodles.",
-    "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&q=80",
-    "isVeg": true,
-    "serving": "1 Steaming Ceramic Bowl (250ml)",
-    "tags": [
-      "Comfort Classic",
-      "Velvety Broth",
-      "Crispy Noodles"
-    ],
-    "isPopular": true,
-    "isFeatured": true
-  },
-  {
-    "id": "veg_17",
-    "orderNumber": 17,
-    "name": "American Corn Fry",
-    "category": "Starter",
-    "categoryNumber": 3,
-    "categoryHeading": "3. Starter",
-    "description": "Golden crispy fried American sweet corn tossed in fragrant chaat spices, fresh green chilies, coriander, and freshly squeezed lime juice.",
-    "image": "https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=800&q=80",
-    "isVeg": true,
-    "serving": "1 Appetizer Platter (200g)",
-    "tags": [
-      "Golden Crunch",
-      "Sweet & Spicy",
-      "Kids & Adults Favorite"
-    ],
-    "isPopular": true
-  },
-  {
-    "id": "veg_18",
-    "orderNumber": 18,
-    "name": "Hara Bhara Kabab",
-    "category": "Starter",
-    "categoryNumber": 3,
-    "categoryHeading": "3. Starter",
-    "description": "Pan-seared spinach, green pea, and cottage cheese patties infused with roasted cumin, ginger, and garam masala, garnished with whole cashew nuts.",
-    "image": "https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=80",
-    "isVeg": true,
-    "serving": "4 Succulent Kababs",
-    "tags": [
-      "Iron-Rich Spinach",
-      "Cashew Crown",
-      "Mint Chutney Dip"
-    ],
-    "isFeatured": true
-  },
-  {
-    "id": "veg_19",
-    "orderNumber": 19,
-    "name": "Mushroom Cheese Ball",
-    "category": "Starter",
-    "categoryNumber": 3,
-    "categoryHeading": "3. Starter",
-    "description": "Crispy panko-breaded golden croquettes stuffed with finely minced button mushrooms, gooey mozzarella, and processed cheese with herbs.",
-    "image": "https://images.unsplash.com/photo-1541529086526-db283c563270?auto=format&fit=crop&w=800&q=80",
-    "isVeg": true,
-    "serving": "4 Golden Melt-in-Mouth Balls",
-    "tags": [
-      "Gooey Melted Cheese",
-      "Crisp Panko Crust",
-      "Cocktail Star"
-    ],
-    "isPopular": true
-  },
-  {
-    "id": "veg_20",
-    "orderNumber": 20,
-    "name": "Paneer Shashlik",
-    "category": "Starter",
-    "categoryNumber": 3,
-    "categoryHeading": "3. Starter",
-    "description": "Succulent malai paneer cubes, crunchy tricolor bell peppers, and sweet onions skewered and grilled in a clay tandoor with aromatic yellow mustard and curd marinade.",
-    "image": "/images/dishes/Malai_Paneer_Tikka__PK_007.jpg",
-    "isVeg": true,
-    "serving": "2 Grilled Skewers (4 Skewered Cubes)",
-    "tags": [
-      "Tandoori Char",
-      "Malai Cottage Cheese",
-      "Smoky Aromas"
-    ],
-    "isPopular": true,
-    "isFeatured": true
-  },
-  {
-    "id": "veg_21",
-    "orderNumber": 21,
-    "name": "Dahi Papdi Chaat",
-    "category": "Starter",
-    "categoryNumber": 3,
-    "categoryHeading": "3. Starter",
-    "description": "Crispy fried wheat flour papdis crowned with spiced boiled potatoes, soft chickpeas, whipped sweetened curd, tangy tamarind chutney, and spicy mint-coriander salsa with nylon sev.",
-    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80",
-    "isVeg": true,
-    "serving": "1 Chaat Platter (6 Crisp Papdis)",
-    "tags": [
-      "Sweet & Tangy",
-      "Whipped Yogurt",
-      "Nylon Sev Crunch"
-    ],
-    "isPopular": true
-  },
-  {
-    "id": "veg_22",
-    "orderNumber": 22,
-    "name": "Gupchup",
-    "category": "Starter",
-    "categoryNumber": 3,
-    "categoryHeading": "3. Starter",
-    "description": "Live interactive panipuri counter with paper-thin crisp semolina puris filled with warm spiced potato-black chickpea masala, dipped in ice-chilled spicy mint-coriander and sweet tamarind waters.",
-    "image": "/images/dishes/live-panipuri.jpg",
-    "isVeg": true,
-    "serving": "Live Counter Service (6 Puris Per Serving)",
-    "tags": [
-      "Live Counter Star",
-      "Icy Spicy Mint Water",
-      "Crisp Semolina Puris"
-    ],
-    "isPopular": true,
-    "isFeatured": true
-  },
-  {
-    "id": "veg_23",
-    "orderNumber": 23,
-    "name": "Papad",
-    "category": "Plate Counter",
-    "categoryNumber": 4,
-    "categoryHeading": "4. Plate Counter",
-    "description": "Assortment of roasted and golden-fried Indian spiced urad dal papads, rice papadums, and sabudana crisps served with mint chutney and mixed pickles.",
-    "image": "/images/dishes/crispy-papad.jpg",
-    "isVeg": true,
-    "serving": "1 Basket (Mixed Roasted & Fried)",
-    "tags": [
-      "Crunchy Accompaniment",
-      "Urad Dal Spiced",
-      "Banquet Staple"
-    ]
-  },
-  {
-    "id": "veg_24",
-    "orderNumber": 24,
-    "name": "Salad",
-    "category": "Plate Counter",
-    "categoryNumber": 4,
-    "categoryHeading": "4. Plate Counter",
-    "description": "Garden-fresh crunchy salad platter of chilled English cucumbers, vine-ripened tomatoes, sweet carrots, red onions, beetroot curls, and lemon wedges.",
-    "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80",
-    "isVeg": true,
-    "serving": "1 Plate (150g)",
-    "tags": [
-      "Farm Fresh Greens",
-      "Hydrating & Crisp",
-      "Lemon-Pepper Dressing"
-    ]
-  },
-  {
-    "id": "veg_25",
-    "orderNumber": 25,
-    "name": "Pasta",
-    "category": "Plate Counter",
-    "categoryNumber": 4,
-    "categoryHeading": "4. Plate Counter",
-    "description": "Al dente Italian penne pasta tossed in a velvety herb tomato-cream sauce with crunchy bell peppers, sweet corn, black olives, and Italian parmesan cheese.",
-    "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=80",
-    "isVeg": true,
-    "serving": "1 Pasta Bowl (200g)",
-    "tags": [
-      "Italian Fusion",
-      "Al Dente Penne",
-      "Creamy Tomato Herbs"
-    ]
-  },
-  {
-    "id": "veg_26",
-    "orderNumber": 26,
-    "name": "Dahi Rashola",
-    "category": "Plate Counter",
-    "categoryNumber": 4,
-    "categoryHeading": "4. Plate Counter",
-    "description": "Tender cottage cheese rasgulla dumplings bathed in smooth, seasoned curd tempered with mustard seeds, curry leaves, roasted cumin, and black rock salt.",
-    "image": "/images/dishes/dahi-rashola.jpg",
-    "isVeg": true,
-    "serving": "2 Soft Dumplings in Seasoned Curd",
-    "tags": [
-      "Regional Heritage",
-      "Sweet & Savory Curd",
-      "Tempered Mustard"
-    ]
-  },
-  {
-    "id": "veg_27",
-    "orderNumber": 27,
-    "name": "Dahi Bara",
-    "category": "Plate Counter",
-    "categoryNumber": 4,
-    "categoryHeading": "4. Plate Counter",
-    "description": "Traditional Odisha-style golden fried urad dal vadas soaked in spiced light curd, served with spicy aloo dum gravy, ghugni peas, and sev garnish.",
-    "image": "/images/dishes/Dahibara_Aludam.jpg",
-    "isVeg": true,
-    "serving": "2 Soft Vadas with Aloo Dum & Ghugni",
-    "tags": [
-      "Odisha Pride",
-      "Soaked Urad Bara",
-      "Spicy Aloo Dum Pairing"
-    ],
-    "isPopular": true,
-    "isFeatured": true
-  },
-  {
-    "id": "veg_28",
-    "orderNumber": 28,
-    "name": "Green Peas Rice",
-    "category": "Main Course",
-    "categoryNumber": 5,
-    "categoryHeading": "5. Main Course",
-    "description": "Fragrant long-grain aged Basmati rice delicately steamed with sweet tender green peas, whole cloves, star anise, cinnamon quills, and desi cow ghee.",
-    "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&q=80",
-    "isVeg": true,
-    "serving": "1 Handi Portion (250g)",
-    "tags": [
-      "Aged Basmati Rice",
-      "Desi Ghee Aroma",
-      "Whole Spices"
-    ]
-  },
-  {
-    "id": "veg_29",
-    "orderNumber": 29,
-    "name": "Rumali Roti",
-    "category": "Main Course",
-    "categoryNumber": 5,
-    "categoryHeading": "5. Main Course",
-    "description": "Handkerchief-thin, ultra-soft wheat flatbread expertly tossed and cooked on an inverted hot iron tawa, served warm and folded.",
-    "image": "https://images.unsplash.com/photo-1626074353765-517a681e40be?auto=format&fit=crop&w=800&q=80",
-    "isVeg": true,
-    "serving": "2 Soft Folded Rotis",
-    "tags": [
-      "Paper Thin",
-      "Piped Hot",
-      "Melt in Mouth"
-    ]
-  },
-  {
-    "id": "veg_30",
-    "orderNumber": 30,
-    "name": "Yellow Dal Fry",
-    "category": "Main Course",
-    "categoryNumber": 5,
-    "categoryHeading": "5. Main Course",
-    "description": "Slow-simmered yellow toor and moong lentils tempered with pure cow ghee, whole cumin seeds, garlic slivers, green chilies, and fresh coriander.",
-    "image": "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&q=80",
-    "isVeg": true,
-    "serving": "1 Handi Bowl (300ml)",
-    "tags": [
-      "Desi Ghee Tadka",
-      "Comfort Classic",
-      "Protein Rich"
-    ]
-  },
-  {
-    "id": "veg_31",
-    "orderNumber": 31,
-    "name": "Fruits Jelly",
-    "category": "Main Course",
-    "categoryNumber": 5,
-    "categoryHeading": "5. Main Course",
-    "description": "Glistening chilled fruit jelly layered with colorful real fruit pieces, offering a light, refreshing sweet palate-cleanser.",
-    "image": "https://images.unsplash.com/photo-1528975604071-b4dc52a2d18c?auto=format&fit=crop&w=800&q=80",
-    "isVeg": true,
-    "serving": "1 Dessert Cup (150g)",
-    "tags": [
-      "Chilled Sweet",
-      "Real Fruit",
-      "Palate Cleanser"
-    ]
-  },
-  {
-    "id": "veg_32",
-    "orderNumber": 32,
-    "name": "Paneer Punjabi/Hyderabadi",
-    "category": "Main Course",
-    "categoryNumber": 5,
-    "categoryHeading": "5. Main Course",
-    "description": "Velvety malai cottage cheese cubes simmered in a royal, rich tomato-cashew makhani gravy enriched with butter, roasted spices, and kasuri methi.",
-    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&q=80",
-    "isVeg": true,
-    "serving": "1 Ceramic Handi (350g)",
-    "tags": [
-      "Royal Makhani",
-      "Rich Cashew Cream",
-      "Banquet Star"
-    ],
-    "isPopular": true,
-    "isFeatured": true
-  },
-  {
-    "id": "veg_33",
-    "orderNumber": 33,
-    "name": "Navaratna Kurma",
-    "category": "Main Course",
-    "categoryNumber": 5,
-    "categoryHeading": "5. Main Course",
-    "description": "Nine culinary jewels of tender seasonal vegetables, fruits, dry nuts, and cottage cheese simmered in a royal mild aromatic cashew cream kurma.",
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80",
-    "isVeg": true,
-    "serving": "1 Royal Handi (350g)",
-    "tags": [
-      "Nine Jewels",
-      "Mughal Luxury",
-      "Dry Fruits & Nuts"
-    ],
-    "isFeatured": true
-  },
-  {
-    "id": "veg_34",
-    "orderNumber": 34,
-    "name": "Seasonal Veg",
-    "category": "Main Course",
-    "categoryNumber": 5,
-    "categoryHeading": "5. Main Course",
-    "description": "Farm-fresh seasonal cauliflower florets, green peas, carrots, and french beans dry-roasted with aromatic whole cumin, ginger, and turmeric.",
-    "image": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=800&q=80",
-    "isVeg": true,
-    "serving": "1 Handi Bowl (300g)",
-    "tags": [
-      "Farm Fresh",
-      "Seasonal Bounty",
-      "Mild Spices"
-    ]
-  },
-  {
-    "id": "veg_35",
-    "orderNumber": 35,
-    "name": "Mushroom Chilli",
-    "category": "Main Course",
-    "categoryNumber": 5,
-    "categoryHeading": "5. Main Course",
-    "description": "Crispy button mushrooms wok-tossed with crunchy tricolor bell peppers, onions, green chilies, and savory dark soy glaze.",
-    "image": "/images/dishes/chilli-mushroom.jpg",
-    "isVeg": true,
-    "serving": "1 Sizzling Wok Plate (250g)",
-    "tags": [
-      "Indo-Chinese",
-      "Hot & Savory",
-      "Wok Tossed"
-    ],
-    "isPopular": true
-  },
-  {
-    "id": "veg_36",
-    "orderNumber": 36,
-    "name": "Finger Chips",
-    "category": "Main Course",
-    "categoryNumber": 5,
-    "categoryHeading": "5. Main Course",
-    "description": "Crispy golden potato fingers fried to perfection, lightly tossed in pink Himalayan rock salt and fine herbs.",
-    "image": "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=800&q=80",
-    "isVeg": true,
-    "serving": "1 Golden Basket (200g)",
-    "tags": [
-      "Crispy Golden",
-      "Kids Favorite",
-      "Hot & Fresh"
-    ]
-  },
-  {
-    "id": "veg_37",
-    "orderNumber": 37,
-    "name": "Khir Sagar",
-    "category": "Sweet Dessert",
-    "categoryNumber": 6,
-    "categoryHeading": "6. Sweet Dessert",
-    "description": "Renowned Odisha sweet specialty of miniature soft cottage cheese dumplings poached in rich, cardamom-infused thickened saffron rabdi milk with pistachios.",
-    "image": "/images/dishes/khir-sagar.jpg",
-    "isVeg": true,
-    "serving": "2 Soft Dumplings in Saffron Rabdi",
-    "tags": [
-      "Royal Odia Sweet",
-      "Saffron Rabdi",
-      "Pistachio Garnish"
-    ],
-    "isFeatured": true
-  },
-  {
-    "id": "veg_38",
-    "orderNumber": 38,
-    "name": "Hot Jalebi/Gulab Jamun",
-    "category": "Sweet Dessert",
-    "categoryNumber": 6,
-    "categoryHeading": "6. Sweet Dessert",
-    "description": "Decadent hot Indian banquet dessert featuring crisp golden saffron jalebis fried live in pure desi ghee alongside warm melt-in-mouth khoya gulab jamuns.",
-    "image": "https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=800&q=80",
-    "isVeg": true,
-    "serving": "Warm Dessert Platter",
-    "tags": [
-      "Live Jalebi Counter",
-      "Pure Desi Ghee",
-      "Warm & Syrupy"
-    ],
-    "isPopular": true,
-    "isFeatured": true
-  },
-  {
-    "id": "veg_39",
-    "orderNumber": 39,
-    "name": "Ice Cream",
-    "category": "Sweet Dessert",
-    "categoryNumber": 6,
-    "categoryHeading": "6. Sweet Dessert",
-    "description": "Silky, rich artisanal ice cream scoops in premium vanilla and strawberry flavors, served in crystal dessert bowls with roasted almond flakes.",
-    "image": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=80",
-    "isVeg": true,
-    "serving": "2 Gourmet Scoops",
-    "tags": [
-      "Chilled Cream",
-      "Banquet Classic",
-      "Almond Topping"
-    ]
-  },
-  {
-    "id": "veg_40",
-    "orderNumber": 40,
-    "name": "Water Bottle",
-    "category": "Additional Items",
-    "categoryNumber": 7,
-    "categoryHeading": "7. Additional Items",
-    "description": "Hygienically packaged and sealed, crystal-clear purified natural drinking mineral water bottles supplied for every banquet table.",
-    "image": "https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=800&q=80",
-    "isVeg": true,
-    "serving": "Continuous Banquet Service",
-    "tags": [
-      "Purified & Sealed",
-      "Continuous Service",
-      "Hygienic"
-    ]
-  },
-  {
-    "id": "veg_41",
-    "orderNumber": 41,
-    "name": "Paan Counter",
-    "category": "Additional Items",
-    "categoryNumber": 7,
-    "categoryHeading": "7. Additional Items",
-    "description": "Luxury royal meetha paan counter stall with fresh Magahi betel leaves, gulkand rose jam, silver vark foil, sweet saunf fennel, and digestive spices.",
-    "image": "/images/dishes/royal-paan-counter.jpg",
-    "isVeg": true,
-    "serving": "Live Royal Paan Lounge",
-    "tags": [
-      "Live Paan Lounge",
-      "Digestive Heritage",
-      "Silver Vark"
-    ],
-    "isFeatured": true
-  }
-];
-
-export interface VegCategoryInfo {
-  categoryNumber: number;
+export interface VegCategoryMeta {
+  number: number;
+  slug: string;
   title: string;
   shortTitle: string;
-  itemCount: number;
-  subtitle: string;
+  hindiOdiaHint: string;
+  count: number;
+  description: string;
+  iconName: string;
 }
 
-export const officialVegCategories: VegCategoryInfo[] = [
-  { categoryNumber: 1, title: '1. Welcome Drinks', shortTitle: 'Welcome Drinks', itemCount: 15, subtitle: 'Refreshing Chilled & Warm Welcome Beverages' },
-  { categoryNumber: 2, title: '2. Soup', shortTitle: 'Soup', itemCount: 1, subtitle: 'Warm, Velvety & Aromatic Broth' },
-  { categoryNumber: 3, title: '3. Starter', shortTitle: 'Starter', itemCount: 6, subtitle: 'Crispy, Crunchy & Tandoori Appetizers' },
-  { categoryNumber: 4, title: '4. Plate Counter', shortTitle: 'Plate Counter', itemCount: 5, subtitle: 'Accompaniments, Chaat & Regional Classics' },
-  { categoryNumber: 5, title: '5. Main Course', shortTitle: 'Main Course', itemCount: 9, subtitle: 'Royal Curries, Dal, Breads & Pulao' },
-  { categoryNumber: 6, title: '6. Sweet Dessert', shortTitle: 'Sweet Dessert', itemCount: 3, subtitle: 'Decadent Traditional Odia & Indian Sweets' },
-  { categoryNumber: 7, title: '7. Additional Items', shortTitle: 'Additional Items', itemCount: 2, subtitle: 'Purified Water & Royal Paan Lounge' },
+export const officialVegCategories: VegCategoryMeta[] = [
+  {
+    number: 1,
+    slug: 'welcome-drinks',
+    title: '1. Welcome Drinks',
+    shortTitle: 'Welcome Drinks',
+    hindiOdiaHint: 'ସ୍ୱାଗତ ପାନୀୟ (Swagata Paniya)',
+    count: 1,
+    description: 'Refreshing celebratory mocktail blended with natural fruit juices and sparkling citrus garnish.',
+    iconName: 'GlassWater',
+  },
+  {
+    number: 2,
+    slug: 'soup',
+    title: '2. Soup Counter',
+    shortTitle: 'Soup Counter',
+    hindiOdiaHint: 'ଗରମ ସୁପ୍ (Garam Soup)',
+    count: 1,
+    description: 'Piping hot Indo-Chinese broth choice — Sweet Corn with crisp kernels or spicy Manchow with fried noodles.',
+    iconName: 'Soup',
+  },
+  {
+    number: 3,
+    slug: 'starter',
+    title: '3. Starters & Live Stalls',
+    shortTitle: 'Starters',
+    hindiOdiaHint: 'ଶାକାହାରୀ ଷ୍ଟାର୍ଟର୍ (Veg Starters)',
+    count: 6,
+    description: 'Crispy fried appetizers, charcoal tandoori paneer shashlik, and sizzling live chaat & gupchup counters.',
+    iconName: 'Flame',
+  },
+  {
+    number: 4,
+    slug: 'plate-counter',
+    title: '4. Plate Counter & Relishes',
+    shortTitle: 'Plate Counter',
+    hindiOdiaHint: 'ପ୍ଲେଟ୍ କାଉଣ୍ଟର (Plate Counter)',
+    count: 5,
+    description: 'Live plate accompaniment station with authentic Cuttacki Dahibara, Dahi Rashola, Italian pasta, fresh salad, and roasted papad.',
+    iconName: 'UtensilsCrossed',
+  },
+  {
+    number: 5,
+    slug: 'main-course',
+    title: '5. Royal Main Course',
+    shortTitle: 'Main Course',
+    hindiOdiaHint: 'ମୁଖ୍ୟ ଭୋଜନ (Royal Main Course)',
+    count: 9,
+    description: 'Dehradun Basmati Green Peas Rice, Rumali Roti, rich Dal Fry, Shahi Paneer, Navratan Korma, Mushroom Chilli, and seasonal curries.',
+    iconName: 'Layers',
+  },
+  {
+    number: 6,
+    slug: 'sweet-dessert',
+    title: '6. Sweet Desserts',
+    shortTitle: 'Desserts',
+    hindiOdiaHint: 'ରାଜକୀୟ ମିଠା (Royal Desserts)',
+    count: 3,
+    description: 'Signature Odia Kheer Sagar, piping hot desi ghee Jalebi / Gulab Jamun, and artisanal rich ice cream.',
+    iconName: 'Cake',
+  },
+  {
+    number: 7,
+    slug: 'special-inclusions',
+    title: '7. Hospitality & Counters',
+    shortTitle: 'Inclusions',
+    hindiOdiaHint: 'ପାନ ଓ ଜଳ ସେବା (Water & Paan)',
+    count: 2,
+    description: 'Hygienic sealed mineral water bottles and royal Banarasi sweet meetha paan counter for all banquet guests.',
+    iconName: 'Sparkles',
+  },
 ];
 
-export const officialVegSummary = {
-  totalItems: 41,
-  categoriesCount: 7,
-  welcomeDrinksCount: 15,
-  soupCount: 1,
-  starterCount: 6,
-  plateCounterCount: 5,
-  mainCourseCount: 9,
-  sweetDessertCount: 3,
-  additionalItemsCount: 2,
-  pureVegAssurance: '100% Pure Vegetarian Certified Kitchen',
-};
+export const officialVegMenu: VegMenuItem[] = [
+  // -------------------------------------------------------------
+  // 1. WELCOME DRINKS (1 item)
+  // -------------------------------------------------------------
+  {
+    id: 'veg_pkg_1',
+    orderNumber: 1,
+    name: 'Mocktail',
+    category: 'Welcome Drinks',
+    categoryNumber: 1,
+    categoryHeading: '1. Welcome Drinks',
+    description: 'Vibrant celebratory mocktails layered with fresh tropical fruit nectar, crushed mint, citrus fizz, and ice, served in tall crystal glassware.',
+    image: '/images/dishes/cold-drinks-soda.jpg',
+    isVeg: true,
+    serving: '1 Tall Crystal Glass (300ml)',
+    tags: ['Tropical Mocktail', 'Welcome Drink', 'Refreshing Fizz'],
+    isPopular: true,
+    isFeatured: true,
+  },
+
+  // -------------------------------------------------------------
+  // 2. SOUP (1 item)
+  // -------------------------------------------------------------
+  {
+    id: 'veg_pkg_2',
+    orderNumber: 2,
+    name: 'Veg sweet corn / manchow soup',
+    category: 'Soup',
+    categoryNumber: 2,
+    categoryHeading: '2. Soup Counter',
+    description: 'Steaming gourmet soup duo — rich buttery American sweet corn broth or zesty garlic Manchow soup served with crispy fried noodles.',
+    image: '/images/dishes/spiced-jaljeera.jpg',
+    isVeg: true,
+    serving: '1 Warm Ceramic Bowl (220ml)',
+    tags: ['Sweet Corn', 'Manchow Soup', 'Hot Broth', 'Crispy Noodles'],
+    isFeatured: true,
+  },
+
+  // -------------------------------------------------------------
+  // 3. STARTERS (6 items)
+  // -------------------------------------------------------------
+  {
+    id: 'veg_pkg_3',
+    orderNumber: 3,
+    name: 'American corn fry',
+    category: 'Starter',
+    categoryNumber: 3,
+    categoryHeading: '3. Starters & Live Stalls',
+    description: 'Golden sweet American corn kernels battered with oriental herbs and spices, wok-tossed with diced capsicum, spring onions, and cracked pepper.',
+    image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80',
+    isVeg: true,
+    serving: '1 Portion (150g Platter)',
+    tags: ['Crispy Corn', 'American Corn', 'Appetizer Favorite'],
+    isPopular: true,
+  },
+  {
+    id: 'veg_pkg_4',
+    orderNumber: 4,
+    name: 'Hara bhara kabab',
+    category: 'Starter',
+    categoryNumber: 3,
+    categoryHeading: '3. Starters & Live Stalls',
+    description: 'Nutritious pan-seared patties crafted from pureed tender spinach, green peas, mashed potatoes, aromatic garam masala, and crowned with half cashew nut.',
+    image: '/images/dishes/Malai_Paneer_Tikka__PK_007.jpg',
+    isVeg: true,
+    serving: '3 Pieces / Portion',
+    tags: ['Spinach & Peas', 'Shallow Fried', 'Desi Ghee', 'Cashew Crown'],
+    isPopular: true,
+  },
+  {
+    id: 'veg_pkg_5',
+    orderNumber: 5,
+    name: 'Mushroom cheese ball',
+    category: 'Starter',
+    categoryNumber: 3,
+    categoryHeading: '3. Starters & Live Stalls',
+    description: 'Crispy panko-crusted croquettes stuffed with finely minced button mushrooms, gooey melted mozzarella cheese, and Italian herbs.',
+    image: '/images/dishes/chilli-mushroom.jpg',
+    isVeg: true,
+    serving: '3 Crisp Balls / Serving',
+    tags: ['Melted Mozzarella', 'Farm Mushroom', 'Crisp Croquette'],
+    isFeatured: true,
+  },
+  {
+    id: 'veg_pkg_6',
+    orderNumber: 6,
+    name: 'Paneer shashlik',
+    category: 'Starter',
+    categoryNumber: 3,
+    categoryHeading: '3. Starters & Live Stalls',
+    description: 'Skewered thick cubes of fresh Malai Paneer, bell peppers, tomatoes, and red onions marinated in hung curd and tandoori spices, charcoal-grilled to perfection.',
+    image: '/images/dishes/Malai_Paneer_Tikka__PK_007.jpg',
+    isVeg: true,
+    serving: '1 Charcoal Skewer (4 Chunks)',
+    tags: ['Malai Paneer', 'Charcoal Tandoor', 'Smoky Bell Peppers'],
+    isPopular: true,
+    isFeatured: true,
+  },
+  {
+    id: 'veg_pkg_7',
+    orderNumber: 7,
+    name: 'Dahi papdi chaat',
+    category: 'Starter',
+    categoryNumber: 3,
+    categoryHeading: '3. Starters & Live Stalls',
+    description: 'Crisp handmade flour papdis loaded with spiced boiled potatoes, chickpeas, chilled sweet yogurt, saunth tamarind chutney, mint chutney, and nylon sev.',
+    image: '/images/dishes/live-panipuri.jpg',
+    isVeg: true,
+    serving: '1 Chaat Plate (5 Crisp Papdis)',
+    tags: ['Live Chaat Counter', 'Sweet Yogurt', 'Tamarind Saunth', 'Nylon Sev'],
+    isPopular: true,
+  },
+  {
+    id: 'veg_pkg_8',
+    orderNumber: 8,
+    name: 'Gupchup',
+    category: 'Starter',
+    categoryNumber: 3,
+    categoryHeading: '3. Starters & Live Stalls',
+    description: 'Iconic live Gupchup (Pani Puri) stall with crispy hollow puris stuffed with warm spiced yellow pea-potato mash, served with tangy mint and sweet tamarind waters.',
+    image: '/images/dishes/live-panipuri.jpg',
+    isVeg: true,
+    serving: '6 Puris / Live Serving Counter',
+    tags: ['Live Gupchup', 'Pani Puri', 'Spiced Mint Water', 'All-Time Favorite'],
+    isPopular: true,
+    isFeatured: true,
+  },
+
+  // -------------------------------------------------------------
+  // 4. PLATE COUNTER (5 items)
+  // -------------------------------------------------------------
+  {
+    id: 'veg_pkg_9',
+    orderNumber: 9,
+    name: 'Papad',
+    category: 'Plate Counter',
+    categoryNumber: 4,
+    categoryHeading: '4. Plate Counter & Relishes',
+    description: 'Crispy fire-roasted and golden fried Lijjat papads served as a crunchy accompaniment on every banquet dinner plate.',
+    image: '/images/dishes/crispy-papad.jpg',
+    isVeg: true,
+    serving: '1 Whole Crisp Papad',
+    tags: ['Crunchy Papad', 'Bikaneri Spice', 'Dinner Plate Classic'],
+  },
+  {
+    id: 'veg_pkg_10',
+    orderNumber: 10,
+    name: 'Salad',
+    category: 'Plate Counter',
+    categoryNumber: 4,
+    categoryHeading: '4. Plate Counter & Relishes',
+    description: 'Garden fresh banquet salad composed of thinly sliced English cucumbers, farm tomatoes, carrots, radish, green chilies, and lemon wedges with rock salt.',
+    image: '/images/royal-light-table.jpg',
+    isVeg: true,
+    serving: '1 Fresh Salad Bowl (100g)',
+    tags: ['Garden Fresh', 'Crisp Cucumbers', 'Hydrating Greens'],
+  },
+  {
+    id: 'veg_pkg_11',
+    orderNumber: 11,
+    name: 'Pasta',
+    category: 'Plate Counter',
+    categoryNumber: 4,
+    categoryHeading: '4. Plate Counter & Relishes',
+    description: 'Italian penne pasta tossed in a velvety cream sauce with sweet corn, capsicum, oregano, and grated parmesan cheese.',
+    image: '/images/royal-light-table.jpg',
+    isVeg: true,
+    serving: '1 Plate Counter Portion (120g)',
+    tags: ['Italian Penne', 'Cheesy Cream Sauce', 'Sweet Corn'],
+  },
+  {
+    id: 'veg_pkg_12',
+    orderNumber: 12,
+    name: 'Dahi rashola',
+    category: 'Plate Counter',
+    categoryNumber: 4,
+    categoryHeading: '4. Plate Counter & Relishes',
+    description: 'Unique Odia delicacy of soft chhena rasgulla soaked in tempered spiced yogurt with roasted cumin and curry leaves, delivering sweet-savory harmony.',
+    image: '/images/dishes/dahi-rashola.jpg',
+    isVeg: true,
+    serving: '1 Sweet-Savory Serving (1 Piece)',
+    tags: ['Odia Dahi Rashola', 'Chhena Sweet & Curd', 'Heritage Delicacy'],
+    isPopular: true,
+  },
+  {
+    id: 'veg_pkg_13',
+    orderNumber: 13,
+    name: 'Dahi bara',
+    category: 'Plate Counter',
+    categoryNumber: 4,
+    categoryHeading: '4. Plate Counter & Relishes',
+    description: 'World-famous Cuttack style soft urad dal vadas soaked in tempered light buttermilk curd, served with spicy aloo dum, ghuguni, and chopped onions.',
+    image: '/images/dishes/Dahibara_Aludam.jpg',
+    isVeg: true,
+    serving: '2 Vadas with Aloo Dum & Ghuguni',
+    tags: ['Cuttack Dahibara', 'World Famous', 'Must-Have Odia Plate'],
+    isPopular: true,
+    isFeatured: true,
+  },
+
+  // -------------------------------------------------------------
+  // 5. MAIN COURSE (9 items)
+  // -------------------------------------------------------------
+  {
+    id: 'veg_pkg_14',
+    orderNumber: 14,
+    name: 'Green peas rice',
+    category: 'Main Course',
+    categoryNumber: 5,
+    categoryHeading: '5. Royal Main Course',
+    description: 'Aromatic extra-long Basmati rice cooked with sweet green peas, whole cloves, star anise, and tempered in pure cow desi ghee.',
+    image: '/images/royal-odia-feast.jpg',
+    isVeg: true,
+    serving: '1 Rice Handi Portion (250g)',
+    tags: ['Basmati Rice', 'Green Peas', 'Desi Ghee Tempered'],
+    isPopular: true,
+  },
+  {
+    id: 'veg_pkg_15',
+    orderNumber: 15,
+    name: 'Rumali roti',
+    category: 'Main Course',
+    categoryNumber: 5,
+    categoryHeading: '5. Royal Main Course',
+    description: 'Ultra-thin, handkerchief-soft Indian flatbread hand-tossed and cooked on an inverted tawa (roomali kadai), served piping hot.',
+    image: '/images/royal-odia-feast.jpg',
+    isVeg: true,
+    serving: '2 Soft Rumali Rotis',
+    tags: ['Handkerchief Soft', 'Live Ulta Tawa', 'Royal Indian Bread'],
+    isFeatured: true,
+  },
+  {
+    id: 'veg_pkg_16',
+    orderNumber: 16,
+    name: 'Yellow Dal fry',
+    category: 'Main Course',
+    categoryNumber: 5,
+    categoryHeading: '5. Royal Main Course',
+    description: 'Golden toor dal slow-boiled to creamy consistency, double-tempered in desi ghee with roasted cumin seeds, garlic, ginger, tomatoes, and dried red chilies.',
+    image: '/images/dishes/odia-dalma.jpg',
+    isVeg: true,
+    serving: '1 Warm Lentil Katori (180ml)',
+    tags: ['Desi Ghee Tadka', 'Toor Dal', 'Classic Comfort'],
+  },
+  {
+    id: 'veg_pkg_17',
+    orderNumber: 17,
+    name: 'Fruits jelly',
+    category: 'Main Course',
+    categoryNumber: 5,
+    categoryHeading: '5. Royal Main Course',
+    description: 'Refreshing sweet palate cleanser prepared with crystal fruit gelatin, fresh pineapple chunks, and natural fruit essences.',
+    image: '/images/dishes/chhena-poda.jpg',
+    isVeg: true,
+    serving: '1 Serving Cup (100g)',
+    tags: ['Pineapple Fruit Jelly', 'Palate Cleanser', 'Sweet Relish'],
+  },
+  {
+    id: 'veg_pkg_18',
+    orderNumber: 18,
+    name: 'Paneer punjabi / hyderabadi',
+    category: 'Main Course',
+    categoryNumber: 5,
+    categoryHeading: '5. Royal Main Course',
+    description: 'Soft cubes of farm cottage cheese simmered in your choice of rich Punjabi butter masala gravy or spicy Hyderabadi spinach-coriander gravy.',
+    image: '/images/dishes/Malai_Paneer_Tikka__PK_007.jpg',
+    isVeg: true,
+    serving: '1 Royal Handi Portion (200g)',
+    tags: ['Shahi Paneer', 'Punjabi Butter Masala', 'Hyderabadi Gravy'],
+    isPopular: true,
+    isFeatured: true,
+  },
+  {
+    id: 'veg_pkg_19',
+    orderNumber: 19,
+    name: 'Navaratna kurma',
+    category: 'Main Course',
+    categoryNumber: 5,
+    categoryHeading: '5. Royal Main Course',
+    description: 'Mughlai royal curry crafted with nine gems — mixed farm vegetables, paneer cubes, cashews, raisins, and dried nuts in a velvety cream sauce.',
+    image: '/images/gourmet-ceramic-curry.jpg',
+    isVeg: true,
+    serving: '1 Shahi Bowl (200g)',
+    tags: ['9 Royal Gems', 'Cashew Cream', 'Mughlai Feast'],
+    isPopular: true,
+  },
+  {
+    id: 'veg_pkg_20',
+    orderNumber: 20,
+    name: 'Seasonal veg',
+    category: 'Main Course',
+    categoryNumber: 5,
+    categoryHeading: '5. Royal Main Course',
+    description: 'Fresh local farm-harvested seasonal vegetables cooked in aromatic Indian spices, lightly roasted with ginger, cumin, and fresh coriander.',
+    image: '/images/gourmet-ceramic-curry.jpg',
+    isVeg: true,
+    serving: '1 Portion (180g)',
+    tags: ['Farm Fresh', 'Seasonal Harvest', 'Wholesome Veg'],
+  },
+  {
+    id: 'veg_pkg_21',
+    orderNumber: 21,
+    name: 'Mushroom chilli',
+    category: 'Main Course',
+    categoryNumber: 5,
+    categoryHeading: '5. Royal Main Course',
+    description: 'Crisp button mushrooms wok-tossed with crunchy bell peppers, onions, green chilies, soya sauce, and spicy garlic sauce.',
+    image: '/images/dishes/chilli-mushroom.jpg',
+    isVeg: true,
+    serving: '1 Wok Platter (180g)',
+    tags: ['Chilli Mushroom', 'Indo-Chinese', 'Spicy & Savory'],
+    isPopular: true,
+  },
+  {
+    id: 'veg_pkg_22',
+    orderNumber: 22,
+    name: 'Finger chips',
+    category: 'Main Course',
+    categoryNumber: 5,
+    categoryHeading: '5. Royal Main Course',
+    description: 'Golden-fried crisp potato batons sprinkled with peri-peri rock salt, a perennial hit with kids and banquet diners alike.',
+    image: '/images/dishes/Pav_bhaji__2.jpg',
+    isVeg: true,
+    serving: '1 Hot Crispy Basket',
+    tags: ['Crispy French Fries', 'Kids Favorite', 'Golden Potatoes'],
+  },
+
+  // -------------------------------------------------------------
+  // 6. SWEET DESSERT (3 items)
+  // -------------------------------------------------------------
+  {
+    id: 'veg_pkg_23',
+    orderNumber: 23,
+    name: 'Khir sagar',
+    category: 'Sweet Dessert',
+    categoryNumber: 6,
+    categoryHeading: '6. Sweet Desserts',
+    description: 'Odisha legendary dessert featuring marble-sized soft chhena dumplings submerged in thickened cardamom, saffron, and condensed sweet milk.',
+    image: '/images/dishes/khir-sagar.jpg',
+    isVeg: true,
+    serving: '2 Dumplings in Saffron Rabdi (120ml)',
+    tags: ['Odia Khir Sagar', 'Chhena Dumplings', 'Condensed Milk', 'Cardamom & Saffron'],
+    isPopular: true,
+    isFeatured: true,
+  },
+  {
+    id: 'veg_pkg_24',
+    orderNumber: 24,
+    name: 'Hot jalebi / gulab jamun',
+    category: 'Sweet Dessert',
+    categoryNumber: 6,
+    categoryHeading: '6. Sweet Desserts',
+    description: 'Live sweet station serving spirals of crispy piping hot desi ghee Jalebis and melt-in-mouth warm Gulab Jamuns soaked in saffron sugar syrup.',
+    image: '/images/dishes/chhena-poda.jpg',
+    isVeg: true,
+    serving: '2 Warm Sweet Portions',
+    tags: ['Live Hot Jalebi', 'Desi Ghee', 'Gulab Jamun', 'Warm Syrup'],
+    isPopular: true,
+    isFeatured: true,
+  },
+  {
+    id: 'veg_pkg_25',
+    orderNumber: 25,
+    name: 'Ice cream',
+    category: 'Sweet Dessert',
+    categoryNumber: 6,
+    categoryHeading: '6. Sweet Desserts',
+    description: 'Rich, velvety churned dairy ice cream served chilled in dessert cups with choice of Vanilla, Butterscotch, or Kesar Pista.',
+    image: '/images/dishes/chhena-poda.jpg',
+    isVeg: true,
+    serving: '1 Chilled Dessert Cup (100ml)',
+    tags: ['Velvety Ice Cream', 'Chilled Delight', 'Dessert Scoop'],
+  },
+
+  // -------------------------------------------------------------
+  // 7. WATER & PAAN INCLUSIONS (2 items)
+  // -------------------------------------------------------------
+  {
+    id: 'veg_pkg_26',
+    orderNumber: 26,
+    name: 'Water bottle',
+    category: 'Special Inclusions',
+    categoryNumber: 7,
+    categoryHeading: '7. Hospitality & Counters',
+    description: 'Individual packaged hygienic sealed 250ml / 500ml mineral water bottles supplied generously throughout the banquet service.',
+    image: '/images/luxury-buffet-setup.jpg',
+    isVeg: true,
+    serving: 'Hygienic Sealed Mineral Water Bottles',
+    tags: ['Packaged Mineral Water', 'Hygienic Sealed', 'Guest Comfort'],
+  },
+  {
+    id: 'veg_pkg_27',
+    orderNumber: 27,
+    name: 'Paan counter',
+    category: 'Special Inclusions',
+    categoryNumber: 7,
+    categoryHeading: '7. Hospitality & Counters',
+    description: 'Regal live Banarasi Paan stall offering silver-leaf coated Meetha Paan, Gulkand, aromatic sweet supari, and digestives to conclude the banquet.',
+    image: '/images/dishes/royal-paan-counter.jpg',
+    isVeg: true,
+    serving: 'Live Meetha Paan Counter for All Guests',
+    tags: ['Live Paan Counter', 'Banarasi Meetha Paan', 'Silver Leaf', 'Royal Digestive'],
+    isPopular: true,
+    isFeatured: true,
+  },
+];
