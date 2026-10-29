@@ -22,12 +22,24 @@ import {
   MessageCircle,
   FileText,
   BadgeCheck,
+  X,
 } from 'lucide-react';
 import { BUSINESS_CONFIG } from '../config/cateringConfig.js';
 
 export const CookService: React.FC = () => {
   const [cookServices, setCookServices] = useState<any[]>([]);
+  const [selectedCookModal, setSelectedCookModal] = useState<any | null>(null);
   const [loading, setLoading] = useState(true);
+
+  const getCookImage = (cook: any) => {
+    const t = (cook.title || '').toLowerCase();
+    if (cook.id === 'srv_7' || t.includes('master home cook') || t.includes('home cook')) return '/images/master-home-cook-service.jpg';
+    if (cook.id === 'srv_9' || t.includes('non-veg') || t.includes('non veg')) return '/images/non-veg-specialist-cook.jpg';
+    if (cook.id === 'srv_10' || t.includes('satvik') || t.includes('pure veg')) return '/images/satvik-pure-veg-cook.jpg';
+    if (cook.id === 'srv_11' || t.includes('bbq') || t.includes('barbecue') || t.includes('weekend bbq')) return '/images/party-weekend-bbq-cook.jpg';
+    if (cook.id === 'srv_12' || t.includes('bulk cooking') || t.includes('event kitchen')) return '/images/bulk-cooking-event-crew.jpg';
+    return cook.image;
+  };
 
   // Quick requirement planner state (No fixed prices)
   const [selectedCookId, setSelectedCookId] = useState<string>('srv_7');
@@ -227,20 +239,25 @@ export const CookService: React.FC = () => {
                   className="rounded-[32px] bg-[#06291C]/85 backdrop-blur-xl border border-[#D4AF37]/40 overflow-hidden flex flex-col justify-between group transition-all duration-300 liquid-shine h-full shadow-[0_16px_45px_rgba(0,0,0,0.6)] text-[#FAF8F5] hover:border-[#D4AF37]"
                 >
                   <div>
-                    <div className="relative h-56 overflow-hidden">
+                    {/* Perfectly proportioned 16:9 Banner Box */}
+                    <div 
+                      className="relative w-full aspect-video overflow-hidden bg-black/60 cursor-pointer"
+                      style={{ aspectRatio: '16/9' }}
+                      onClick={() => setSelectedCookModal(cook)}
+                    >
                       <img
-                        src={cook.image}
+                        src={getCookImage(cook)}
                         alt={cook.title}
                         onError={(e) => {
                           e.currentTarget.onerror = null;
                           e.currentTarget.src = 'https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=800&q=80';
                         }}
-                        className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
+                        className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#041810]/80 via-transparent to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#041810]/75 via-transparent to-transparent pointer-events-none" />
                       
                       {/* Contact-Based Custom Quote Pill Badge */}
-                      <div className="absolute top-4 right-4 px-3.5 py-1.5 rounded-full bg-emerald-950/95 border border-[#D4AF37]/60 text-[11px] font-black text-[#F5CE68] shadow-md flex items-center gap-1.5">
+                      <div className="absolute top-3.5 right-3.5 px-3 py-1 rounded-full bg-emerald-950/95 border border-[#D4AF37]/60 text-[11px] font-black text-[#F5CE68] shadow-md flex items-center gap-1.5 backdrop-blur-md">
                         <Sparkles className="w-3 h-3 text-[#F5CE68]" />
                         <span>Custom Quote</span>
                       </div>
@@ -491,6 +508,76 @@ export const CookService: React.FC = () => {
         </section>
 
       </div>
+
+      {/* Cook Specialization Poster Modal */}
+      {selectedCookModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-xl animate-in fade-in">
+          <div className="relative w-full max-w-3xl rounded-[36px] bg-[#041810]/95 backdrop-blur-2xl border border-[#D4AF37]/60 shadow-[0_30px_90px_rgba(0,0,0,0.85)] overflow-hidden p-6 sm:p-8 space-y-6 liquid-shine text-[#FAF8F5] max-h-[90vh] overflow-y-auto">
+            <button
+              onClick={() => setSelectedCookModal(null)}
+              className="absolute top-5 right-5 p-2 rounded-full bg-[#06291C] hover:bg-emerald-950 text-[#F5CE68] border border-[#D4AF37]/50 shadow-md transition-all z-20"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            {/* Cinematic Full-Width 16:9 Banner Display */}
+            <div 
+              className="relative w-full aspect-video rounded-2xl overflow-hidden border-2 border-[#D4AF37]/60 shadow-2xl bg-black/90"
+              style={{ aspectRatio: '16/9' }}
+            >
+              <img
+                src={getCookImage(selectedCookModal)}
+                alt={selectedCookModal.title}
+                className="w-full h-full object-contain sm:object-cover object-center"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#041810]/80 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute top-3 left-3 px-3.5 py-1 rounded-full bg-[#041810]/90 backdrop-blur-md border border-[#D4AF37]/60 text-[10px] font-black uppercase tracking-wider text-[#F5CE68]">
+                Master Cook Specialization
+              </div>
+            </div>
+
+            <div className="space-y-2">
+              <h3 className="font-display font-bold text-2xl sm:text-3xl text-white">{selectedCookModal.title}</h3>
+              <p className="text-lg sm:text-xl font-black text-[#F5CE68]">
+                Customized Live Cook Proposal
+                <span className="block text-xs text-[#CBD5E1] mt-0.5 font-normal">
+                  Tailored to your dishes, cooking duration & gathering size
+                </span>
+              </p>
+              <p className="text-xs sm:text-sm text-[#CBD5E1] leading-relaxed pt-1 font-normal">
+                {selectedCookModal.description}
+              </p>
+            </div>
+
+            <div className="pt-4 border-t border-[#D4AF37]/30">
+              <h4 className="font-bold text-white text-sm mb-3">Master Cook Inclusions:</h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                {selectedCookModal.features?.map((feat: string, idx: number) => (
+                  <div key={idx} className="flex items-center gap-2 text-xs text-[#CBD5E1]">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                    <span>{feat}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex items-center justify-end gap-3 pt-4 border-t border-[#D4AF37]/30">
+              <button
+                onClick={() => setSelectedCookModal(null)}
+                className="px-5 py-2.5 rounded-xl text-xs font-semibold text-[#CBD5E1] hover:text-white"
+              >
+                Close
+              </button>
+              <Link
+                to={`/booking?type=cook&service=${encodeURIComponent(selectedCookModal.title)}`}
+                className="px-6 py-2.5 rounded-xl gold-gradient-btn text-xs font-black shadow-md text-[#041810]"
+              >
+                Get Custom Quote for This Cook
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

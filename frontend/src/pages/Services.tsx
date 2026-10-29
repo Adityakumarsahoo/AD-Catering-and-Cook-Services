@@ -31,7 +31,40 @@ export const Services: React.FC = () => {
     fetchServices();
   }, []);
 
-  const filtered = services.filter((s) => {
+  const getServiceImage = (srv: any) => {
+    const t = (srv.title || '').toLowerCase();
+    if (srv.id === 'srv_1' || t.includes('wedding')) return '/images/grand-wedding-catering.jpg';
+    if (srv.id === 'srv_2' || t.includes('odia') || t.includes('feast')) return '/images/odia-feast-catering.jpg';
+    if (srv.id === 'srv_light_table' || t.includes('light') || t.includes('led')) return '/images/royal-led-light-table.jpg';
+    if (srv.id === 'srv_3' || t.includes('birth') || t.includes('anniversary')) return '/images/birthday-anniversary-catering.jpg';
+    if (srv.id === 'srv_4' || t.includes('corp')) return '/images/corporate-galas-catering.jpg';
+    if (srv.id === 'srv_5' || t.includes('housewarming') || t.includes('puja')) return '/images/housewarming-puja-catering.jpg';
+    if (srv.id === 'srv_6' || t.includes('outdoor') || t.includes('destination')) return '/images/outdoor-destination-catering.jpg';
+    if (srv.id === 'srv_7' || t.includes('master home cook') || t.includes('home cook')) return '/images/master-home-cook-service.jpg';
+    if (srv.id === 'srv_9' || t.includes('non-veg') || t.includes('non veg')) return '/images/non-veg-specialist-cook.jpg';
+    if (srv.id === 'srv_10' || t.includes('satvik') || t.includes('pure veg')) return '/images/satvik-pure-veg-cook.jpg';
+    if (srv.id === 'srv_11' || t.includes('bbq') || t.includes('barbecue') || t.includes('weekend bbq')) return '/images/party-weekend-bbq-cook.jpg';
+    if (srv.id === 'srv_12' || t.includes('bulk cooking') || t.includes('event kitchen')) return '/images/bulk-cooking-event-crew.jpg';
+    return srv.image;
+  };
+
+  const getServiceTitle = (srv: any) => {
+    const t = (srv.title || '').toLowerCase();
+    if (srv.id === 'srv_2' || t.includes('odia') || t.includes('feast')) return 'Odia Feast Catering';
+    if (srv.id === 'srv_light_table' || t.includes('light') || t.includes('led')) return 'Royal LED Light Table';
+    if (srv.id === 'srv_1' || t.includes('wedding')) return 'Grand Wedding Catering';
+    if (srv.id === 'srv_9' || t.includes('non-veg') || t.includes('non veg')) return 'Non-Veg Specialist Cook';
+    if (srv.id === 'srv_10' || t.includes('satvik') || t.includes('pure veg')) return 'Satvik & Pure Veg Specialist Cook';
+    if (srv.id === 'srv_11' || t.includes('bbq') || t.includes('barbecue')) return 'Party & Weekend BBQ Cook';
+    if (srv.id === 'srv_12' || t.includes('bulk cooking') || t.includes('event kitchen')) return 'Bulk Cooking & Event Kitchen Crew';
+    return srv.title;
+  };
+
+  const filtered = services.map(s => ({
+    ...s,
+    image: getServiceImage(s),
+    title: getServiceTitle(s),
+  })).filter((s) => {
     if (filter === 'all') return true;
     return s.category === filter;
   });
@@ -99,7 +132,12 @@ export const Services: React.FC = () => {
                 className="group rounded-[32px] bg-[#06291C]/85 backdrop-blur-xl border border-[#D4AF37]/40 overflow-hidden flex flex-col justify-between liquid-shine h-full shadow-[0_16px_45px_rgba(0,0,0,0.6)] text-[#FAF8F5] hover:border-[#D4AF37] transition-all"
               >
                 <div>
-                  <div className="relative h-60 overflow-hidden">
+                  {/* Perfectly proportioned 16:9 Banner Box */}
+                  <div 
+                    className="relative w-full aspect-video overflow-hidden bg-black/60 cursor-pointer"
+                    style={{ aspectRatio: '16/9' }}
+                    onClick={() => setSelectedService(service)}
+                  >
                     <img
                       src={service.image}
                       alt={service.title}
@@ -107,15 +145,19 @@ export const Services: React.FC = () => {
                         e.currentTarget.onerror = null;
                         e.currentTarget.src = 'https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=800&q=80';
                       }}
-                      className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
+                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#041810]/80 via-transparent to-transparent" />
-                    <div className="absolute top-4 right-4 px-3.5 py-1 rounded-full bg-emerald-950/90 border border-[#D4AF37]/50 text-xs font-bold text-[#F5CE68] shadow-lg">
-                      {service.category === 'cook' ? 'Custom Quote' : `₹${service.startingPrice} / Plate`}
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#041810]/70 via-transparent to-transparent pointer-events-none" />
+                    <div className="absolute top-3.5 right-3.5 px-3 py-1 rounded-full bg-emerald-950/90 border border-[#D4AF37]/50 text-xs font-bold text-[#F5CE68] shadow-lg backdrop-blur-md">
+                      {service.category === 'cook' ? 'Custom Quote' : 'Bespoke Package'}
                     </div>
-                    {service.category === 'catering' && (
-                      <div className="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-[#041810]/90 border border-[#D4AF37]/50 text-[10px] font-bold text-[#F5CE68]">
+                    {service.category === 'catering' ? (
+                      <div className="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-[#041810]/90 border border-[#D4AF37]/50 text-[10px] font-bold text-[#F5CE68] backdrop-blur-md">
                         Min. 500 Guests
+                      </div>
+                    ) : (
+                      <div className="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-[#041810]/90 border border-[#D4AF37]/50 text-[10px] font-bold text-emerald-400 backdrop-blur-md">
+                        Live On-Site Master Chef
                       </div>
                     )}
                   </div>
@@ -147,7 +189,7 @@ export const Services: React.FC = () => {
                     View Details
                   </button>
                   <Link
-                    to={`/booking?service=${encodeURIComponent(service.title)}`}
+                    to={service.category === 'cook' ? `/booking?type=cook&service=${encodeURIComponent(service.title)}` : `/booking?service=${encodeURIComponent(service.title)}`}
                     className="flex-1 py-2.5 rounded-xl gold-gradient-btn text-[#041810] text-xs font-bold text-center shadow-md"
                   >
                     Book Service
@@ -161,45 +203,51 @@ export const Services: React.FC = () => {
 
       {/* Service Details Liquid Modal */}
       {selectedService && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-xl animate-in fade-in">
-          <div className="relative w-full max-w-2xl rounded-[36px] bg-[#041810]/95 backdrop-blur-2xl border border-[#D4AF37]/60 shadow-[0_30px_90px_rgba(0,0,0,0.85)] overflow-hidden p-6 sm:p-8 space-y-6 liquid-shine text-[#FAF8F5]">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-xl animate-in fade-in">
+          <div className="relative w-full max-w-3xl rounded-[36px] bg-[#041810]/95 backdrop-blur-2xl border border-[#D4AF37]/60 shadow-[0_30px_90px_rgba(0,0,0,0.85)] overflow-hidden p-6 sm:p-8 space-y-6 liquid-shine text-[#FAF8F5] max-h-[90vh] overflow-y-auto">
             <button
               onClick={() => setSelectedService(null)}
-              className="absolute top-5 right-5 p-2 rounded-full bg-[#06291C] hover:bg-emerald-950 text-[#F5CE68] border border-[#D4AF37]/50 shadow-md transition-all"
+              className="absolute top-5 right-5 p-2 rounded-full bg-[#06291C] hover:bg-emerald-950 text-[#F5CE68] border border-[#D4AF37]/50 shadow-md transition-all z-20"
             >
               <X className="w-5 h-5" />
             </button>
 
-            <div className="flex flex-col sm:flex-row gap-6 items-start">
+            {/* Cinematic Full-Width 16:9 Banner Display */}
+            <div 
+              className="relative w-full aspect-video rounded-2xl overflow-hidden border-2 border-[#D4AF37]/60 shadow-2xl bg-black/90"
+              style={{ aspectRatio: '16/9' }}
+            >
               <img
                 src={selectedService.image}
                 alt={selectedService.title}
-                className="w-full sm:w-44 h-44 rounded-2xl object-cover shrink-0 border border-[#D4AF37]/40 shadow-xl bg-black/40"
+                className="w-full h-full object-contain sm:object-cover object-center"
               />
-              <div className="space-y-2">
-                <span className="text-[10px] font-bold text-[#F5CE68] uppercase tracking-wider bg-emerald-950/80 border border-[#D4AF37]/40 px-2.5 py-0.5 rounded-full inline-block">
-                  {selectedService.category === 'cook' ? 'Professional Cook Service' : 'Catering Solution'}
-                </span>
-                <h3 className="font-display font-bold text-2xl text-white">{selectedService.title}</h3>
-                {selectedService.category === 'cook' ? (
-                  <p className="text-xl font-black text-[#F5CE68]">
-                    Custom Personalized Quote
-                    <span className="block text-xs text-[#CBD5E1] mt-0.5 font-normal">
-                      Tailored to your menu, guest count & cooking hours
-                    </span>
-                  </p>
-                ) : (
-                  <p className="text-xl font-black text-[#F5CE68] tabular-nums">
-                    ₹{selectedService.startingPrice}
-                    <span className="text-xs text-[#CBD5E1] ml-1 font-normal">
-                      / Plate
-                    </span>
-                  </p>
-                )}
-                <p className="text-xs text-[#CBD5E1] leading-relaxed pt-1 font-normal">
-                  {selectedService.description}
-                </p>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#041810]/80 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute top-3 left-3 px-3.5 py-1 rounded-full bg-[#041810]/90 backdrop-blur-md border border-[#D4AF37]/60 text-[10px] font-black uppercase tracking-wider text-[#F5CE68]">
+                {selectedService.category === 'cook' ? 'Professional Master Cook' : 'Royal Catering Solution'}
               </div>
+            </div>
+
+            <div className="space-y-2">
+              <h3 className="font-display font-bold text-2xl sm:text-3xl text-white">{selectedService.title}</h3>
+              {selectedService.category === 'cook' ? (
+                <p className="text-lg sm:text-xl font-black text-[#F5CE68]">
+                  Custom Personalized Quote
+                  <span className="block text-xs text-[#CBD5E1] mt-0.5 font-normal">
+                    Tailored to your menu, guest count & cooking hours
+                  </span>
+                </p>
+              ) : (
+                <p className="text-lg sm:text-xl font-black text-[#F5CE68]">
+                  Bespoke Catering Package
+                  <span className="block text-xs text-[#CBD5E1] mt-0.5 font-normal">
+                    Customized quote tailored to your guest count & menu
+                  </span>
+                </p>
+              )}
+              <p className="text-xs sm:text-sm text-[#CBD5E1] leading-relaxed pt-1 font-normal">
+                {selectedService.description}
+              </p>
             </div>
 
             <div className="pt-4 border-t border-[#D4AF37]/30">

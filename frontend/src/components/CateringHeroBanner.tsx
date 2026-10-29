@@ -234,7 +234,7 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
               {rightCardMode === 'LIGHT_TABLE' ? (
                 <>
                   <img
-                    src="/images/royal-light-table.jpg"
+                    src="/images/royal-led-light-table.jpg"
                     alt="Royal LED Light Table & Illuminated Banquet Buffet"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
@@ -259,7 +259,7 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
               ) : (
                 <>
                   <img
-                    src="/images/royal-odia-feast.jpg"
+                    src="/images/odia-feast-catering.jpg"
                     alt="Authentic Royal Odia Banana Leaf Wedding Feast"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
@@ -274,7 +274,7 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
                   {/* Feast text */}
                   <div className="absolute bottom-3 left-3 right-3 text-right">
                     <p className="text-xs font-bold text-white drop-shadow">
-                      Royal Odia Banquet Feast
+                      Odia Feast Catering
                     </p>
                     <p className="text-[10px] text-[#F5CE68]">
                       Dalma, Mutton Kasa, Ghee Anna

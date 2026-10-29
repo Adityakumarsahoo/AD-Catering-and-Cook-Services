@@ -68,8 +68,7 @@ export const Home: React.FC = () => {
           setFeaturedMenu(curated.length > 0 ? curated : menuRes.menuItems.slice(0, 6));
         }
         if (srvRes?.services && srvRes.services.length > 0) {
-          const catOnly = srvRes.services.filter((s: any) => s.category === 'catering');
-          setFeaturedServices(catOnly.length > 0 ? catOnly : srvRes.services);
+          setFeaturedServices(srvRes.services);
         }
         if (pkgRes?.packages && pkgRes.packages.length > 0) {
           setPackages(pkgRes.packages);
@@ -305,6 +304,7 @@ export const Home: React.FC = () => {
           <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-8 no-scrollbar">
             {[
               { id: 'ALL', label: 'All Offerings', icon: <Sparkles className="w-3.5 h-3.5" /> },
+              { id: 'COOK', label: 'Master Cook Hire', icon: <ChefHat className="w-3.5 h-3.5" /> },
               { id: 'WEDDING', label: 'Royal Weddings', icon: <Crown className="w-3.5 h-3.5" /> },
               { id: 'ODIA', label: 'Odia Banana Leaf', icon: <Leaf className="w-3.5 h-3.5" /> },
               { id: 'LIGHT_TABLE', label: 'Live Light Tables', icon: <Sparkles className="w-3.5 h-3.5" /> },
@@ -328,26 +328,96 @@ export const Home: React.FC = () => {
 
           {/* Dynamic Services Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {(featuredServices && featuredServices.length > 0 ? featuredServices : defaultCateringList)
+            {(featuredServices && featuredServices.length > 0 ? featuredServices : defaultServices)
               .filter((srv) => {
                 if (serviceFilter === 'ALL') return true;
-                const t = srv.title.toLowerCase();
+                const t = (srv.title || '').toLowerCase();
+                if (serviceFilter === 'COOK') return srv.category === 'cook' || t.includes('cook');
                 if (serviceFilter === 'WEDDING') return t.includes('wedding');
                 if (serviceFilter === 'ODIA') return t.includes('odia') || t.includes('feast');
                 if (serviceFilter === 'LIGHT_TABLE') return t.includes('light') || t.includes('led');
                 if (serviceFilter === 'PARTIES') return t.includes('birth') || t.includes('anniversary') || t.includes('corp');
                 return true;
               })
-              .slice(0, 4)
+              .slice(0, 8)
               .map((srv) => {
-                const titleLower = srv.title.toLowerCase();
-                const isWedding = titleLower.includes('wedding');
-                const isOdia = titleLower.includes('odia') || titleLower.includes('feast');
-                const isLightTable = titleLower.includes('light') || titleLower.includes('led');
-                const isParty = titleLower.includes('birth') || titleLower.includes('anniversary');
-                const isCorporate = titleLower.includes('corp');
+                const titleLower = (srv.title || '').toLowerCase();
+                const isWedding = srv.id === 'srv_1' || titleLower.includes('wedding');
+                const isOdia = srv.id === 'srv_2' || titleLower.includes('odia') || titleLower.includes('feast');
+                const isLightTable = srv.id === 'srv_light_table' || titleLower.includes('light') || titleLower.includes('led');
+                const isParty = srv.id === 'srv_3' || titleLower.includes('birth') || titleLower.includes('anniversary');
+                const isCorporate = srv.id === 'srv_4' || titleLower.includes('corp');
+                const isHousewarming = srv.id === 'srv_5' || titleLower.includes('housewarming') || titleLower.includes('puja');
+                const isOutdoor = srv.id === 'srv_6' || titleLower.includes('outdoor') || titleLower.includes('destination');
+                const isCook = srv.id === 'srv_7' || titleLower.includes('master home cook') || titleLower.includes('home cook');
+                const isNonVeg = srv.id === 'srv_9' || titleLower.includes('non-veg') || titleLower.includes('non veg');
+                const isSatvik = srv.id === 'srv_10' || titleLower.includes('satvik') || titleLower.includes('pure veg');
+                const isBbq = srv.id === 'srv_11' || titleLower.includes('bbq') || titleLower.includes('barbecue') || titleLower.includes('weekend bbq');
+                const isBulk = srv.id === 'srv_12' || titleLower.includes('bulk cooking') || titleLower.includes('event kitchen');
 
-                const categoryLabel = isWedding
+                // Explicitly applied titles requested by the user
+                const displayTitle = isNonVeg
+                  ? 'Non-Veg Specialist Cook'
+                  : isSatvik
+                  ? 'Satvik & Pure Veg Specialist Cook'
+                  : isBbq
+                  ? 'Party & Weekend BBQ Cook'
+                  : isBulk
+                  ? 'Bulk Cooking & Event Kitchen Crew'
+                  : isOdia
+                  ? 'Odia Feast Catering'
+                  : isLightTable
+                  ? 'Royal LED Light Table'
+                  : isWedding
+                  ? 'Grand Wedding Catering'
+                  : isParty
+                  ? 'Birthday & Anniversary Catering'
+                  : isCorporate
+                  ? 'Corporate Galas & Conferences'
+                  : isHousewarming
+                  ? 'Housewarming & Puja Catering'
+                  : isOutdoor
+                  ? 'Outdoor & Destination Catering'
+                  : isCook
+                  ? 'Master Home Cook Service'
+                  : srv.title;
+
+                // Explicitly assigned images requested by the user
+                const displayImage = isNonVeg
+                  ? '/images/non-veg-specialist-cook.jpg'
+                  : isSatvik
+                  ? '/images/satvik-pure-veg-cook.jpg'
+                  : isBbq
+                  ? '/images/party-weekend-bbq-cook.jpg'
+                  : isBulk
+                  ? '/images/bulk-cooking-event-crew.jpg'
+                  : isWedding
+                  ? '/images/grand-wedding-catering.jpg'
+                  : isOdia
+                  ? '/images/odia-feast-catering.jpg'
+                  : isLightTable
+                  ? '/images/royal-led-light-table.jpg'
+                  : isParty
+                  ? '/images/birthday-anniversary-catering.jpg'
+                  : isCorporate
+                  ? '/images/corporate-galas-catering.jpg'
+                  : isHousewarming
+                  ? '/images/housewarming-puja-catering.jpg'
+                  : isOutdoor
+                  ? '/images/outdoor-destination-catering.jpg'
+                  : isCook
+                  ? '/images/master-home-cook-service.jpg'
+                  : srv.image;
+
+                const categoryLabel = isNonVeg
+                  ? 'Non-Veg Master'
+                  : isSatvik
+                  ? 'Satvik & Pure Veg'
+                  : isBbq
+                  ? 'Live BBQ Grill'
+                  : isBulk
+                  ? 'Mass Event Crew'
+                  : isWedding
                   ? 'Royal Wedding'
                   : isOdia
                   ? 'Heritage Feast'
@@ -357,17 +427,101 @@ export const Home: React.FC = () => {
                   ? 'Social & Birthday'
                   : isCorporate
                   ? 'Executive Gala'
+                  : isHousewarming
+                  ? 'Sacred Puja & Havan'
+                  : isOutdoor
+                  ? 'Outdoor Destination'
+                  : isCook
+                  ? 'Master Chef Hire'
                   : 'Premier Banquet';
 
-                const liveIndicator = isLightTable
+                const luxuryTag = isNonVeg
+                  ? 'Flame & Handi Special'
+                  : isSatvik
+                  ? '100% Vedic Purity'
+                  : isBbq
+                  ? 'Live Charcoal Vibes'
+                  : isBulk
+                  ? 'Mass Feast Masters'
+                  : isWedding
+                  ? 'Royal Signature'
+                  : isOdia
+                  ? 'Authentic Bhoji'
+                  : isLightTable
+                  ? 'Illuminated Glow'
+                  : isParty
+                  ? 'Celebration Special'
+                  : isCorporate
+                  ? 'Executive Gala'
+                  : isHousewarming
+                  ? 'Satvik Purity'
+                  : isOutdoor
+                  ? 'Destination Luxe'
+                  : isCook
+                  ? 'Private Chef Hire'
+                  : 'Bespoke Catering';
+
+                const luxuryIcon = isNonVeg ? (
+                  <Flame className="w-3.5 h-3.5 text-amber-400" />
+                ) : isSatvik ? (
+                  <Leaf className="w-3.5 h-3.5 text-emerald-400" />
+                ) : isBbq ? (
+                  <Flame className="w-3.5 h-3.5 text-orange-400" />
+                ) : isBulk ? (
+                  <Users className="w-3.5 h-3.5 text-[#F5CE68]" />
+                ) : isWedding ? (
+                  <Crown className="w-3.5 h-3.5 text-[#FFDF73]" />
+                ) : isOdia ? (
+                  <Award className="w-3.5 h-3.5 text-[#4ADE80]" />
+                ) : isLightTable ? (
+                  <Sparkles className="w-3.5 h-3.5 text-[#FFDF73] animate-pulse" />
+                ) : isParty ? (
+                  <Cake className="w-3.5 h-3.5 text-[#F472B6]" />
+                ) : isCorporate ? (
+                  <Briefcase className="w-3.5 h-3.5 text-[#60A5FA]" />
+                ) : isHousewarming ? (
+                  <Sparkles className="w-3.5 h-3.5 text-[#F5CE68]" />
+                ) : isOutdoor ? (
+                  <Award className="w-3.5 h-3.5 text-[#38BDF8]" />
+                ) : isCook ? (
+                  <ChefHat className="w-3.5 h-3.5 text-[#4ADE80]" />
+                ) : (
+                  <Sparkles className="w-3.5 h-3.5 text-[#FFDF73]" />
+                );
+
+                const liveIndicator = isNonVeg
+                  ? 'Mutton, Prawn, Fish & Tandoor'
+                  : isSatvik
+                  ? 'No Onion • No Garlic Purity'
+                  : isBbq
+                  ? 'Live Sizzle & Charcoal Grills'
+                  : isBulk
+                  ? 'From 100 to 10,000+ Guests'
+                  : isLightTable
                   ? 'Live Neon Light Counter'
                   : isOdia
                   ? 'Authentic Banana Leaf'
                   : isWedding
                   ? 'Live Steam Warmers & Stewards'
+                  : isParty
+                  ? 'Live Chaat & Dessert Bar'
+                  : isCorporate
+                  ? 'High-Speed Executive Flow'
+                  : isHousewarming
+                  ? '100% Purity Satvik Bhog'
+                  : isOutdoor
+                  ? 'Mobile Outdoor Kitchen'
+                  : isCook
+                  ? 'Certified Chef At Home'
                   : 'Full Turnkey Live Setup';
 
-                const categoryIcon = isWedding ? (
+                const categoryIcon = (isNonVeg || isBbq) ? (
+                  <Flame className="w-3.5 h-3.5 text-[#F5CE68]" />
+                ) : isSatvik ? (
+                  <Leaf className="w-3.5 h-3.5 text-emerald-400" />
+                ) : isBulk ? (
+                  <Users className="w-3.5 h-3.5 text-[#F5CE68]" />
+                ) : isWedding ? (
                   <Crown className="w-3.5 h-3.5 text-[#FFDF73]" />
                 ) : isOdia ? (
                   <Leaf className="w-3.5 h-3.5 text-[#4ADE80]" />
@@ -377,74 +531,120 @@ export const Home: React.FC = () => {
                   <Cake className="w-3.5 h-3.5 text-[#F472B6]" />
                 ) : isCorporate ? (
                   <Briefcase className="w-3.5 h-3.5 text-[#60A5FA]" />
+                ) : isHousewarming ? (
+                  <Leaf className="w-3.5 h-3.5 text-[#F5CE68]" />
+                ) : isOutdoor ? (
+                  <UtensilsCrossed className="w-3.5 h-3.5 text-[#38BDF8]" />
+                ) : isCook ? (
+                  <ChefHat className="w-3.5 h-3.5 text-[#4ADE80]" />
                 ) : (
                   <UtensilsCrossed className="w-3.5 h-3.5 text-[#FFDF73]" />
                 );
 
+                const refinedFeatures = isNonVeg
+                  ? ['Spicy Odia Mutton Kasa', 'Chilika Fish & Crab Kalia', 'Charcoal Chicken Tandoor', 'Fresh Seafood Handling']
+                  : isSatvik
+                  ? ['100% Zero Onion & Garlic', 'Temple Dalma & Kanika Bhog', 'Pure Desi Cow Ghee', 'Sanitized Cooking Protocol']
+                  : isBbq
+                  ? ['Live Charcoal BBQ Station', 'Smoky Chicken & Mutton Tikka', 'Tandoori Veg & Paneer Skewers', 'Cocktail Appetizer Counter']
+                  : isBulk
+                  ? ['100 to 10,000+ Guests', 'Industrial Steam Cauldrons', 'Fast Synchronized Batch Serving', 'Experienced Halwai Battalion']
+                  : isWedding
+                  ? ['Live Counter Stalls', 'Banquet Steward Crew', 'Luxury Crockery Setup', 'Custom Wedding Menu']
+                  : isOdia
+                  ? ['Authentic Banana Leaf', 'Temple Dalma & Besara', 'Hot Chhena Poda', 'Puri Heritage Sweets']
+                  : isLightTable
+                  ? ['Illuminated LED Tables', 'Golden Steam Chafers', 'Live Mocktail Stalls', 'Neon Night Decor']
+                  : isParty
+                  ? ['Live Chaat & Pasta Counter', 'Custom Balloon & Theme Setup', 'Mocktails & Dessert Bar', 'Kid-Friendly Special Menu']
+                  : isCorporate
+                  ? ['Executive Buffet Flow', 'Welcome Drinks & Hi-Tea', 'Live Cooking Stations', 'GST Invoicing Support']
+                  : isHousewarming
+                  ? ['Traditional Satvik Menu', 'Breakfast & Snacks Spread', 'Sweets & Prasad Setup', 'Eco-Friendly Areca Ware']
+                  : isOutdoor
+                  ? ['Beach & Lawn Setups', 'Mobile Tandoors & Woks', 'Resort Destination Banquets', 'Weather-Proof Stations']
+                  : isCook
+                  ? ['In-Home Fresh Preparation', 'Odia & Indian Specials', 'Hygienic Clean Handover', 'Custom Family Flavors']
+                  : (srv.features || []).slice(0, 4);
+
+                const guestRange = isBulk
+                  ? '100 to 10,000+ Guests'
+                  : (isNonVeg || isSatvik || isBbq || isCook)
+                  ? '10 to 500+ Guests'
+                  : '25 to 5,000+ Guests';
+
+                const bookUrl = (isCook || isNonVeg || isSatvik || isBbq || isBulk || srv.category === 'cook')
+                  ? `/booking?type=cook&service=${encodeURIComponent(displayTitle)}`
+                  : `/booking?service=${encodeURIComponent(displayTitle)}`;
+
                 return (
                   <TiltCard key={srv.id} maxTilt={4}>
-                    <div className="group relative rounded-[34px] p-[1.5px] bg-gradient-to-b from-[#D4AF37]/35 via-emerald-800/20 to-[#D4AF37]/45 hover:from-[#F5CE68] hover:via-[#D4AF37] hover:to-[#10B981] transition-all duration-500 hover:-translate-y-2.5 h-full flex flex-col justify-between shadow-[0_20px_50px_rgba(0,0,0,0.7)] hover:shadow-[0_25px_65px_rgba(0,0,0,0.85),0_0_35px_rgba(212,175,55,0.25)] overflow-hidden">
+                    <div className="group relative rounded-[34px] p-[1.5px] bg-gradient-to-b from-[#D4AF37]/40 via-emerald-800/25 to-[#D4AF37]/50 hover:from-[#F5CE68] hover:via-[#D4AF37] hover:to-[#10B981] transition-all duration-500 hover:-translate-y-2.5 h-full flex flex-col justify-between shadow-[0_20px_50px_rgba(0,0,0,0.7)] hover:shadow-[0_25px_65px_rgba(0,0,0,0.85),0_0_35px_rgba(212,175,55,0.3)] overflow-hidden">
                       
                       {/* Ambient Halo Glow on Hover */}
-                      <div className="absolute -inset-1 rounded-[36px] bg-gradient-to-tr from-[#D4AF37]/0 via-[#D4AF37]/15 to-emerald-500/10 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-700 pointer-events-none" />
+                      <div className="absolute -inset-1 rounded-[36px] bg-gradient-to-tr from-[#D4AF37]/0 via-[#D4AF37]/20 to-emerald-500/15 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-700 pointer-events-none" />
 
                       {/* Inner Dark Emerald Glass Container */}
                       <div className="relative rounded-[32.5px] bg-gradient-to-b from-[#062417]/95 via-[#03150E]/98 to-[#020A06] backdrop-blur-2xl flex flex-col justify-between h-full overflow-hidden z-10">
                         
                         <div>
-                          {/* Image Box with Shimmer Sweep */}
-                          <div className="relative h-60 overflow-hidden shimmer-sweep">
+                          {/* Perfectly proportioned 16:9 Banner Poster Box */}
+                          <div 
+                            className="relative w-full aspect-video overflow-hidden shimmer-sweep bg-black/60"
+                            style={{ aspectRatio: '16/9' }}
+                          >
                             <img
-                              src={srv.image}
-                              alt={srv.title}
+                              src={displayImage}
+                              alt={displayTitle}
                               onError={(e) => {
                                 e.currentTarget.onerror = null;
-                                e.currentTarget.src = '/images/royal-light-table.jpg';
+                                e.currentTarget.src = '/images/grand-wedding-catering.jpg';
                               }}
-                              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                              className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-[#020A06] via-[#041810]/35 to-transparent" />
+                            {/* Cinematic dark vignette gradient overlay */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#020A06] via-[#041810]/20 to-black/35 pointer-events-none" />
 
                             {/* Category Badge (Top Left) */}
-                            <div className="absolute top-3 left-3 px-3.5 py-1 rounded-full bg-[#041810]/90 backdrop-blur-md border border-[#D4AF37]/60 shadow-md flex items-center gap-1.5">
+                            <div className="absolute top-3 left-3 px-3.5 py-1 rounded-full bg-[#041810]/85 backdrop-blur-md border border-[#D4AF37]/60 shadow-[0_4px_16px_rgba(0,0,0,0.6)] flex items-center gap-1.5">
                               {categoryIcon}
                               <span className="text-[10px] font-black uppercase tracking-wider text-[#F5CE68]">
                                 {categoryLabel}
                               </span>
                             </div>
 
-                            {/* 3D Gold Price Tag (Top Right) */}
-                            <div className="absolute top-3 right-3 badge-gold-3d px-3.5 py-1 rounded-full text-xs font-black shadow-lg flex items-center gap-1">
-                              <span>Starting ₹{srv.startingPrice}</span>
-                              <span className="text-[9px] font-bold text-[#041810]/80 uppercase tracking-tight">/ Guest</span>
+                            {/* Luxury Prestige Highlight Badge (Top Right - replacing starting price) */}
+                            <div className="absolute top-3 right-3 px-3.5 py-1 rounded-full bg-[#041810]/85 backdrop-blur-md border border-[#D4AF37]/60 shadow-[0_4px_16px_rgba(0,0,0,0.6)] text-[10px] font-black uppercase tracking-wider text-[#F5CE68] flex items-center gap-1.5 group-hover:border-[#F5CE68] group-hover:bg-[#041810]/95 transition-all">
+                              {luxuryIcon}
+                              <span>{luxuryTag}</span>
                             </div>
 
                             {/* Live Status Pill (Bottom Left) */}
-                            <div className="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-[#041810]/85 backdrop-blur-md border border-[#D4AF37]/40 text-[10px] font-bold text-[#CBD5E1] flex items-center gap-1.5 shadow-md">
+                            <div className="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-[#041810]/90 backdrop-blur-md border border-[#D4AF37]/50 text-[10px] font-bold text-[#CBD5E1] flex items-center gap-2 shadow-[0_4px_15px_rgba(0,0,0,0.7)]">
                               <span className="relative flex h-2 w-2">
                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                               </span>
-                              <span className="text-[#A7F3D0]">{liveIndicator}</span>
+                              <span className="text-[#A7F3D0] tracking-wide font-medium">{liveIndicator}</span>
                             </div>
                           </div>
 
                           {/* Card Content Body */}
                           <div className="p-6">
-                            <h3 className="font-display font-black text-xl text-white group-hover:text-[#F5CE68] transition-colors leading-snug line-clamp-1 mb-2">
-                              {srv.title}
+                            <h3 className="font-display font-black text-xl text-white group-hover:text-[#F5CE68] transition-colors leading-tight min-h-[3rem] flex items-center mb-2">
+                              {displayTitle}
                             </h3>
 
-                            <p className="text-xs text-[#94A3B8] line-clamp-2 leading-relaxed mb-4">
+                            <p className="text-xs text-[#94A3B8] line-clamp-2 leading-relaxed mb-4 min-h-[2.5rem]">
                               {srv.description}
                             </p>
 
                             {/* 2x2 Feature Chips */}
                             <div className="grid grid-cols-2 gap-2 mb-4">
-                              {(srv.features || []).slice(0, 4).map((feat: string, idx: number) => (
+                              {refinedFeatures.map((feat: string, idx: number) => (
                                 <div
                                   key={idx}
-                                  className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-emerald-950/45 border border-[#D4AF37]/25 text-[11px] text-[#E2E8F0] font-medium group-hover:border-[#D4AF37]/50 transition-colors shadow-sm"
+                                  className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-gradient-to-r from-emerald-950/60 to-[#041810]/75 border border-[#D4AF37]/25 text-[11px] text-[#E2E8F0] font-medium group-hover:border-[#D4AF37]/50 transition-colors shadow-sm"
                                 >
                                   <CheckCircle2 className="w-3.5 h-3.5 text-[#F5CE68] shrink-0" />
                                   <span className="truncate">{feat}</span>
@@ -454,11 +654,11 @@ export const Home: React.FC = () => {
 
                             {/* Meta Specs Bar */}
                             <div className="flex items-center justify-between border-t border-[#D4AF37]/20 pt-3 text-[11px] text-[#94A3B8]">
-                              <span className="flex items-center gap-1">
+                              <span className="flex items-center gap-1.5">
                                 <Users className="w-3.5 h-3.5 text-[#F5CE68]" />
-                                <span>25 to 5,000+ Guests</span>
+                                <span className="font-medium text-[#CBD5E1]">{guestRange}</span>
                               </span>
-                              <span className="flex items-center gap-1 text-emerald-400 font-semibold">
+                              <span className="flex items-center gap-1.5 text-emerald-400 font-semibold">
                                 <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
                                 <span>100% Purity & Hygiene</span>
                               </span>
@@ -467,9 +667,9 @@ export const Home: React.FC = () => {
                         </div>
 
                         {/* Card Action Footer */}
-                        <div className="p-6 pt-0 flex items-center gap-2">
+                        <div className="p-6 pt-0 flex items-center gap-2.5">
                           <Link
-                            to={`/booking?service=${encodeURIComponent(srv.title)}`}
+                            to={bookUrl}
                             className="flex-1 py-3.5 px-4 rounded-xl gold-gradient-btn text-xs font-black text-[#041810] flex items-center justify-center gap-2 shadow-[0_6px_20px_rgba(212,175,55,0.35)] hover:shadow-[0_10px_30px_rgba(212,175,55,0.55)] active:scale-95 transition-all group/btn text-center"
                           >
                             <span>Book This Service</span>
@@ -478,7 +678,7 @@ export const Home: React.FC = () => {
 
                           <Link
                             to="/menu"
-                            className="px-3.5 py-3.5 rounded-xl bg-[#041810] border border-[#D4AF37]/50 text-[#F5CE68] hover:text-white hover:bg-emerald-950 transition-all shadow-md flex items-center justify-center group/menu shrink-0"
+                            className="px-3.5 py-3.5 rounded-xl bg-[#041810] border border-[#D4AF37]/50 text-[#F5CE68] hover:text-white hover:bg-emerald-950/80 transition-all shadow-md flex items-center justify-center group/menu shrink-0"
                             title="Explore Menu Items"
                           >
                             <UtensilsCrossed className="w-4 h-4 group-hover/menu:scale-110 transition-transform" />
