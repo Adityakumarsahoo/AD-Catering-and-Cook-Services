@@ -238,74 +238,16 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
               ==================================================== */}
           <div className="relative z-10 flex flex-col justify-between p-3.5 sm:p-6 lg:p-8 space-y-4 sm:space-y-6">
             
-            {/* ----------------------------------------------------
-                TOP SUB-HEADER ROW: VISIBLE ON TABLET & DESKTOP (CLEANLY HIDDEN ON MOBILE TO PREVENT DUPLICATION)
-                ---------------------------------------------------- */}
-            <div className="hidden sm:flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-[#D4AF37]/30">
-              
-              {/* Brand Monogram & Name */}
-              <Link
-                to="/"
-                className="flex items-center gap-2.5 sm:gap-3 group/brand transition-transform hover:scale-[1.02]"
+            {/* Top Right Full-Screen Showcase Trigger */}
+            <div className="absolute top-3 sm:top-5 right-3 sm:right-5 z-20">
+              <button
+                type="button"
+                onClick={() => setLightboxOpen(true)}
+                className="p-2 sm:p-2.5 rounded-full bg-white/90 hover:bg-white text-[#0A2318] border border-[#D4AF37]/50 shadow transition-all hover:scale-105"
+                title="View Full Resolution Master Showcase"
               >
-                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#052317] border border-[#D4AF37] flex items-center justify-center text-[#F5CE68] shadow-md group-hover/brand:border-[#FFDF73] shrink-0">
-                  <ChefHat className="w-5 h-5 text-[#F5CE68]" />
-                </div>
-                <div>
-                  <span className="font-serif font-black text-sm sm:text-base text-[#0A2318] tracking-tight block leading-tight">
-                    AD Catering
-                  </span>
-                  <span className="text-[9.5px] sm:text-[10.5px] font-bold text-[#8A6D24] uppercase tracking-wider block">
-                    and Cook Services
-                  </span>
-                </div>
-              </Link>
-
-              {/* Working Navigation Links (XL screens) */}
-              <nav className="hidden xl:flex items-center gap-5 text-xs font-bold text-[#1E3A2F]">
-                <Link to="/" className="hover:text-[#B8860B] transition-colors pb-0.5 border-b-2 border-[#B8860B]">
-                  Home
-                </Link>
-                <Link to="/about" className="hover:text-[#B8860B] transition-colors">
-                  About Us
-                </Link>
-                <Link to="/services" className="hover:text-[#B8860B] transition-colors">
-                  Our Services
-                </Link>
-                <Link to="/menu" className="hover:text-[#B8860B] transition-colors">
-                  Menu
-                </Link>
-                <Link to="/packages" className="hover:text-[#B8860B] transition-colors">
-                  Events
-                </Link>
-                <Link to="/gallery" className="hover:text-[#B8860B] transition-colors">
-                  Gallery
-                </Link>
-                <Link to="/contact" className="hover:text-[#B8860B] transition-colors">
-                  Contact
-                </Link>
-              </nav>
-
-              {/* Top Right Actions: Book Event Button & Lightbox Poster Button */}
-              <div className="flex items-center gap-2">
-                <Link
-                  to="/booking"
-                  className="px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-[#052317] hover:bg-[#083524] text-white text-[11px] sm:text-xs font-black tracking-wide border border-[#D4AF37]/60 shadow-[0_4px_15px_rgba(5,35,23,0.35)] hover:shadow-[0_4px_20px_rgba(212,175,55,0.45)] hover:border-[#F5CE68] transition-all flex items-center gap-2 group/btn"
-                >
-                  <Calendar className="w-3.5 h-3.5 text-[#F5CE68]" />
-                  <span>Book Your Event</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-[#F5CE68] group-hover/btn:translate-x-1 transition-transform" />
-                </Link>
-
-                <button
-                  type="button"
-                  onClick={() => setLightboxOpen(true)}
-                  className="p-2 sm:p-2.5 rounded-full bg-white/90 hover:bg-white text-[#0A2318] border border-[#D4AF37]/50 shadow transition-all hover:scale-105"
-                  title="View Full Screen Showcase"
-                >
-                  <Maximize2 className="w-3.5 h-3.5" />
-                </button>
-              </div>
+                <Maximize2 className="w-3.5 h-3.5 text-[#8C6D1F]" />
+              </button>
             </div>
 
             {/* ----------------------------------------------------
