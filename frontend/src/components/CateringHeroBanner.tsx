@@ -1,233 +1,539 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
+  ChefHat,
+  Crown,
+  Sparkles,
+  ArrowRight,
   CalendarPlus,
   UtensilsCrossed,
-  PhoneCall,
-  ArrowRight,
-  Maximize2,
-  X,
-  ChefHat,
-  Sparkles,
-  Crown,
   Play,
+  PhoneCall,
+  X,
   Award,
   ShieldCheck,
   Heart,
+  CheckCircle2,
+  Users,
+  Briefcase,
+  Leaf,
+  Maximize2,
+  Calendar,
+  HeartHandshake,
+  Flame,
+  Star,
 } from 'lucide-react';
 import { BUSINESS_CONFIG } from '../config/cateringConfig.js';
+import { AnimatedCounter } from './AnimatedCounter.js';
 
 interface CateringHeroBannerProps {
   onOpenBooking?: () => void;
   className?: string;
 }
 
+interface FeatureCardInfo {
+  id: string;
+  title: string;
+  subtitle: string;
+  icon: React.ReactNode;
+  badge: string;
+  tagline: string;
+  highlights: string[];
+  link: string;
+}
+
+interface ShowcaseCardInfo {
+  id: string;
+  title: string;
+  subtitle: string;
+  image: string;
+  icon: React.ReactNode;
+  link: string;
+  description: string;
+  capacity: string;
+  specialty: string;
+}
+
 export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
   className = '',
 }) => {
-  const [lightboxOpen, setLightboxOpen] = useState(false);
   const [storyModalOpen, setStoryModalOpen] = useState(false);
-  const [activeTooltip, setActiveTooltip] = useState<string | null>(null);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [selectedFeature, setSelectedFeature] = useState<FeatureCardInfo | null>(null);
+  const [selectedShowcase, setSelectedShowcase] = useState<ShowcaseCardInfo | null>(null);
+
+  // 5 Vertical Feature Cards (Workable & Interactive)
+  const featureCards: FeatureCardInfo[] = [
+    {
+      id: 'master-cook',
+      title: 'Master Cook Team',
+      subtitle: 'Certified Halwais & Chefs',
+      icon: <ChefHat className="w-5 h-5 text-amber-700" />,
+      badge: 'Heritage Chefs',
+      tagline: 'Centuries-Old Royal Cooking Recipes & Live Kitchen Artisans',
+      highlights: [
+        'Dedicated Master Halwais for Chhena Poda, Rasagola, and Traditional Sweets',
+        'Specialist Tandoor & Mughlai Biryani Chefs',
+        'Hygienic In-Home & Banquet Master Cook Deployment',
+        'Complete Culinary Crew with Assistant Cooks & Cleaners',
+      ],
+      link: '/cook-services',
+    },
+    {
+      id: 'live-buffet',
+      title: 'Live Buffet Counters',
+      subtitle: 'Modern Setup & Service',
+      icon: <UtensilsCrossed className="w-5 h-5 text-emerald-700" />,
+      badge: 'Royal LED Buffets',
+      tagline: 'Illuminated LED Tables, Live Chaat, Dosa & Tawa Fry Stations',
+      highlights: [
+        'High-Gloss Acrylic LED Lit Luxury Table Counters',
+        'Roll-Top Stainless Steel Chafing Warmers',
+        'Interactive Live Dahi Bara Aloo Dum & Puchka Bars',
+        'Uniformed Banquet Stewards & Dedicated Counter Managers',
+      ],
+      link: '/services',
+    },
+    {
+      id: 'all-occasions',
+      title: 'For All Occasions',
+      subtitle: 'Weddings, Functions, Parties',
+      icon: <Users className="w-5 h-5 text-blue-700" />,
+      badge: 'All Event Scales',
+      tagline: 'From Intimate 50-Guest Family Pujas to 3,000+ Guest Grand Weddings',
+      highlights: [
+        'Royal Odia Weddings, Receptions & Engagement Galas',
+        'Corporate Seminars, Executive Dinners & Annual Galas',
+        'Sacred Bratopanayan, Griha Pravesh & Satyanarayan Pujas',
+        'Vibrant Birthday Bashes, Anniversary Parties & Family Get-Togethers',
+      ],
+      link: '/packages',
+    },
+    {
+      id: 'hygienic-food',
+      title: 'Hygienic & Fresh Food',
+      subtitle: 'Pure Ingredients & Quality',
+      icon: <Leaf className="w-5 h-5 text-green-700" />,
+      badge: '100% Purity Certified',
+      tagline: 'Pure Desi Ghee, Zero Recycled Oils, Filtered Water & FSSAI Standards',
+      highlights: [
+        '100% Pure Cow Ghee and Cold-Pressed Oils used in all dishes',
+        'Daily Farm-Fresh Vegetables & Certified Premium Cuts',
+        'RO-Purified Drinking Water for All Cooking & Beverage Prep',
+        'Strict Hairnets, Sanitized Gloves & Stainless Steel Kitchen Vessels',
+      ],
+      link: '/about',
+    },
+    {
+      id: 'menu-planning',
+      title: 'Custom Menu Planning',
+      subtitle: 'As Per Your Requirements',
+      icon: <HeartHandshake className="w-5 h-5 text-rose-700" />,
+      badge: 'Tailored Menus',
+      tagline: 'Personalized Tasting Sessions & Flexible Budget Curation',
+      highlights: [
+        'Over 350+ Signature Odia, North Indian, South Indian & Pan-Asian Delicacies',
+        'Dedicated Satvik (No-Onion, No-Garlic) Brahmin & Temple Cuisine options',
+        'Live Food Tasting Sessions Before Finalizing Your Grand Event',
+        'Dynamic Per-Plate or Lump-Sum Pricing tailored to your guest count',
+      ],
+      link: '/booking',
+    },
+  ];
+
+  // 4 Bottom Showcase Cards (Workable & Interactive)
+  const showcaseCards: ShowcaseCardInfo[] = [
+    {
+      id: 'weddings',
+      title: 'Weddings',
+      subtitle: 'Grand Feasts, Memorable Moments',
+      image: '/images/hero-weddings.jpg',
+      icon: <Crown className="w-4 h-4 text-[#F5CE68]" />,
+      link: '/services',
+      description:
+        'Turn your dream wedding into a regal epic with majestic floral buffet counters, authentic royal Odia bhoji feasts, aromatic biryanis, and decadent artisan dessert bars.',
+      capacity: '200 to 5,000+ Guests',
+      specialty: 'Mutton Kasa, Chenna Jhili, Royal Pulao, Live Chaat Counter',
+    },
+    {
+      id: 'corporate',
+      title: 'Corporate Events',
+      subtitle: 'Professional Catering Solutions',
+      image: '/images/hero-corporate.jpg',
+      icon: <Briefcase className="w-4 h-4 text-[#F5CE68]" />,
+      link: '/services',
+      description:
+        'Punctual, hygienic, executive-class breakfast spreads, working lunches, cocktail appetizers, and formal gala dinners tailored for top corporate organizations.',
+      capacity: '50 to 2,000+ Delegates',
+      specialty: 'Continental Appetizers, Live Pasta Bar, Premium High-Tea & Salads',
+    },
+    {
+      id: 'celebrations',
+      title: 'Functions & Celebrations',
+      subtitle: 'Delicious Food for Every Occasion',
+      image: '/images/hero-celebrations.jpg',
+      icon: <Sparkles className="w-4 h-4 text-[#F5CE68]" />,
+      link: '/services',
+      description:
+        'Warm, joy-filled catering for Birthdays, Anniversaries, Upanayana thread ceremonies, and Housewarmings that leave every guest asking for second helpings.',
+      capacity: '50 to 1,000+ Guests',
+      specialty: 'Crispy Starters, Dahi Vada Aloo Dum, Biryani & Custom Cakes',
+    },
+    {
+      id: 'community',
+      title: 'Community Feeds',
+      subtitle: 'Nutritious Meals in Bulk',
+      image: '/images/hero-community.jpg',
+      icon: <Leaf className="w-4 h-4 text-[#F5CE68]" />,
+      link: '/services',
+      description:
+        'Large-scale, soulful community feasts, temple prasad bhoji, and mass humanitarian gatherings prepared with sacred purity, discipline, and swift service.',
+      capacity: '300 to 10,000+ Servings',
+      specialty: 'Kanika, Authentic Odia Dalma, Besara, Khatta & Kheer',
+    },
+  ];
 
   return (
     <div className={`space-y-4 ${className}`}>
       {/* ====================================================
-          1. CINEMATIC MASTER BANNER (100% MATCHING USER'S MASTER DESIGN)
+          MAIN ROYAL LUXURY BANNER CONTAINER (ALL REAL WORKABLE DOM)
           ==================================================== */}
-      <div className="relative rounded-3xl sm:rounded-[44px] p-[2.5px] bg-gradient-to-b from-[#F5CE68]/70 via-[#D4AF37]/40 to-[#B8860B]/70 shadow-[0_30px_90px_rgba(0,0,0,0.85),0_0_60px_rgba(212,175,55,0.25)] overflow-hidden group">
+      <div className="relative rounded-[28px] sm:rounded-[40px] p-[2.5px] bg-gradient-to-b from-[#F5CE68]/80 via-[#D4AF37]/50 to-[#B8860B]/80 shadow-[0_30px_90px_rgba(0,0,0,0.85),0_0_60px_rgba(212,175,55,0.25)] overflow-hidden group">
         
-        {/* Specular Ambient Glow */}
-        <div className="absolute -inset-1 rounded-[46px] bg-gradient-to-tr from-[#D4AF37]/25 via-emerald-500/15 to-[#D4AF37]/25 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-700 pointer-events-none" />
+        {/* Outer Specular Edge Glow */}
+        <div className="absolute -inset-1 rounded-[42px] bg-gradient-to-tr from-[#D4AF37]/30 via-emerald-500/20 to-[#D4AF37]/30 opacity-60 group-hover:opacity-100 blur-xl transition-opacity duration-700 pointer-events-none" />
 
-        {/* Master Image Frame (Aspect ratio 1024 / 540 matching the image dimensions exactly) */}
-        <div 
-          className="relative w-full rounded-[26px] sm:rounded-[42px] overflow-hidden bg-[#FAF8F5] select-none"
-          style={{ aspectRatio: '1024 / 540' }}
-        >
-          {/* Master Graphic Artwork - Matches User's Design Perfectly */}
-          <img
-            src="/images/hero-luxury-showcase.jpg"
-            alt="AD Catering and Cook Services - Royal Hospitality & Banquet Excellence Odisha"
-            className="w-full h-full object-cover object-center group-hover:scale-[1.01] transition-transform duration-700 ease-out"
-          />
+        {/* Master Canvas with Ivory & Gold Royal Theme */}
+        <div className="relative w-full rounded-[26px] sm:rounded-[38px] overflow-hidden bg-[#FAF8F5] text-[#0A2318] shadow-inner">
+          
+          {/* ====================================================
+              BACKGROUND ARTWORK: MASTER CHEF & ROYAL BANQUET HALL
+              ==================================================== */}
+          <div className="absolute inset-0 z-0 pointer-events-none select-none">
+            {/* Master Chef Photo Backdrop */}
+            <img
+              src="/images/hero-chef-backdrop.jpg"
+              alt="AD Catering Master Chef Plating Gourmet Dish in Grand Banquet"
+              className="w-full h-full object-cover object-[75%_center] sm:object-right transition-transform duration-1000 ease-out group-hover:scale-[1.01]"
+            />
 
-          {/* Shimmer Sweep Animation */}
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none" />
+            {/* Seamless Left Ivory Wash Gradient for Crystal-Clear Typography */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#FAF8F5] via-[#FAF8F5]/95 via-45% sm:via-52% to-[#FAF8F5]/10 sm:to-transparent" />
+
+            {/* Subtle Top & Bottom Vignette for Cinematic Warmth */}
+            <div className="absolute inset-0 bg-gradient-to-b from-[#FAF8F5]/50 via-transparent to-[#FAF8F5]/85 pointer-events-none" />
+
+            {/* Decorative Botanical Branch Line Flourish (Left Corner) */}
+            <svg
+              className="absolute top-2 left-2 w-44 h-44 sm:w-60 sm:h-60 text-[#D4AF37]/25 pointer-events-none"
+              viewBox="0 0 200 200"
+              fill="currentColor"
+            >
+              <path d="M10,10 Q60,20 80,70 Q100,120 70,160 Q40,130 50,80 Q20,60 10,10 Z" opacity="0.25" />
+              <path d="M25,5 Q70,40 60,95 Q90,50 130,40 Q85,85 70,130" fill="none" stroke="currentColor" strokeWidth="1.5" />
+            </svg>
+          </div>
 
           {/* ====================================================
-              2. PIXEL-ALIGNED INTERACTIVE CLICKABLE HOTSPOTS
+              BANNER CONTENT LAYER (100% WORKABLE REAL COMPONENTS)
               ==================================================== */}
-          
-          {/* A. Top Navigation Hotspots */}
-          <Link
-            to="/booking"
-            onMouseEnter={() => setActiveTooltip('Book Your Event')}
-            onMouseLeave={() => setActiveTooltip(null)}
-            className="absolute top-[3%] right-[3%] w-[14%] h-[7%] rounded-full hover:ring-2 hover:ring-[#F5CE68] hover:shadow-[0_0_20px_rgba(212,175,55,0.6)] transition-all z-20 cursor-pointer"
-            title="Book Your Event"
-          >
-            <span className="sr-only">Book Your Event</span>
-          </Link>
+          <div className="relative z-10 flex flex-col justify-between p-4 sm:p-6 lg:p-7 space-y-5 sm:space-y-6">
+            
+            {/* ----------------------------------------------------
+                TOP SUB-HEADER ROW: LOGO, NAV LINKS & BOOK EVENT BUTTON
+                ---------------------------------------------------- */}
+            <div className="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-[#D4AF37]/30">
+              
+              {/* Brand Monogram & Name */}
+              <Link
+                to="/"
+                className="flex items-center gap-2.5 sm:gap-3 group/brand transition-transform hover:scale-[1.02]"
+              >
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#052317] border border-[#D4AF37] flex items-center justify-center text-[#F5CE68] shadow-md group-hover/brand:border-[#FFDF73] shrink-0">
+                  <ChefHat className="w-5 h-5 text-[#F5CE68]" />
+                </div>
+                <div>
+                  <span className="font-serif font-black text-sm sm:text-base text-[#0A2318] tracking-tight block leading-tight">
+                    AD Catering
+                  </span>
+                  <span className="text-[9.5px] sm:text-[10.5px] font-bold text-[#8A6D24] uppercase tracking-wider block">
+                    and Cook Services
+                  </span>
+                </div>
+              </Link>
 
-          {/* B. Primary Action: Explore Our Services Button */}
-          <Link
-            to="/services"
-            onMouseEnter={() => setActiveTooltip('Explore All 12 Catering & Cook Services')}
-            onMouseLeave={() => setActiveTooltip(null)}
-            className="absolute top-[51.5%] left-[7%] w-[16.5%] h-[7%] rounded-full hover:ring-2 hover:ring-[#F5CE68] hover:shadow-[0_0_20px_rgba(212,175,55,0.6)] transition-all z-20 cursor-pointer"
-            title="Explore Our Services"
-          >
-            <span className="sr-only">Explore Our Services</span>
-          </Link>
+              {/* Working Navigation Links */}
+              <nav className="hidden xl:flex items-center gap-5 text-xs font-bold text-[#1E3A2F]">
+                <Link to="/" className="hover:text-[#B8860B] transition-colors pb-0.5 border-b-2 border-[#B8860B]">
+                  Home
+                </Link>
+                <Link to="/about" className="hover:text-[#B8860B] transition-colors">
+                  About Us
+                </Link>
+                <Link to="/services" className="hover:text-[#B8860B] transition-colors">
+                  Our Services
+                </Link>
+                <Link to="/menu" className="hover:text-[#B8860B] transition-colors">
+                  Menu
+                </Link>
+                <Link to="/packages" className="hover:text-[#B8860B] transition-colors">
+                  Events
+                </Link>
+                <Link to="/gallery" className="hover:text-[#B8860B] transition-colors">
+                  Gallery
+                </Link>
+                <Link to="/contact" className="hover:text-[#B8860B] transition-colors">
+                  Contact
+                </Link>
+              </nav>
 
-          {/* C. Secondary Action: Watch Our Story Button */}
-          <button
-            type="button"
-            onClick={() => setStoryModalOpen(true)}
-            onMouseEnter={() => setActiveTooltip('Watch Our Story & Culinary Heritage')}
-            onMouseLeave={() => setActiveTooltip(null)}
-            className="absolute top-[51.5%] left-[24.5%] w-[13.5%] h-[7%] rounded-full hover:ring-2 hover:ring-[#D4AF37] hover:shadow-[0_0_20px_rgba(212,175,55,0.5)] transition-all z-20 cursor-pointer"
-            title="Watch Our Story"
-          >
-            <span className="sr-only">Watch Our Story</span>
-          </button>
+              {/* Top Right Actions: Book Event Button & Lightbox Poster Button */}
+              <div className="flex items-center gap-2">
+                <Link
+                  to="/booking"
+                  className="px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-[#052317] hover:bg-[#083524] text-white text-[11px] sm:text-xs font-black tracking-wide border border-[#D4AF37]/60 shadow-[0_4px_15px_rgba(5,35,23,0.35)] hover:shadow-[0_4px_20px_rgba(212,175,55,0.45)] hover:border-[#F5CE68] transition-all flex items-center gap-2 group/btn"
+                >
+                  <Calendar className="w-3.5 h-3.5 text-[#F5CE68]" />
+                  <span>Book Your Event</span>
+                  <ArrowRight className="w-3.5 h-3.5 text-[#F5CE68] group-hover/btn:translate-x-1 transition-transform" />
+                </Link>
 
-          {/* D. Right Vertical 5 Feature Cards */}
-          {/* Card 1: Master Cook Team */}
-          <Link
-            to="/cook-services"
-            onMouseEnter={() => setActiveTooltip('Master Cook Team — Certified Halwais & Chefs')}
-            onMouseLeave={() => setActiveTooltip(null)}
-            className="absolute top-[13.5%] right-[2%] w-[18%] h-[9.5%] rounded-2xl hover:bg-emerald-500/10 hover:ring-2 hover:ring-[#F5CE68]/70 hover:shadow-[0_0_25px_rgba(212,175,55,0.5)] transition-all z-20 cursor-pointer"
-            title="Master Cook Team"
-          >
-            <span className="sr-only">Master Cook Team</span>
-          </Link>
-
-          {/* Card 2: Live Buffet Counters */}
-          <Link
-            to="/services"
-            onMouseEnter={() => setActiveTooltip('Live Buffet Counters — Modern Setup & Service')}
-            onMouseLeave={() => setActiveTooltip(null)}
-            className="absolute top-[23.5%] right-[2%] w-[18%] h-[9.5%] rounded-2xl hover:bg-emerald-500/10 hover:ring-2 hover:ring-[#F5CE68]/70 hover:shadow-[0_0_25px_rgba(212,175,55,0.5)] transition-all z-20 cursor-pointer"
-            title="Live Buffet Counters"
-          >
-            <span className="sr-only">Live Buffet Counters</span>
-          </Link>
-
-          {/* Card 3: For All Occasions */}
-          <Link
-            to="/services"
-            onMouseEnter={() => setActiveTooltip('For All Occasions — Weddings, Functions, Parties')}
-            onMouseLeave={() => setActiveTooltip(null)}
-            className="absolute top-[33.5%] right-[2%] w-[18%] h-[9.5%] rounded-2xl hover:bg-emerald-500/10 hover:ring-2 hover:ring-[#F5CE68]/70 hover:shadow-[0_0_25px_rgba(212,175,55,0.5)] transition-all z-20 cursor-pointer"
-            title="For All Occasions"
-          >
-            <span className="sr-only">For All Occasions</span>
-          </Link>
-
-          {/* Card 4: Hygienic & Fresh Food */}
-          <Link
-            to="/about"
-            onMouseEnter={() => setActiveTooltip('Hygienic & Fresh Food — Pure Ingredients & Quality')}
-            onMouseLeave={() => setActiveTooltip(null)}
-            className="absolute top-[43.5%] right-[2%] w-[18%] h-[9.5%] rounded-2xl hover:bg-emerald-500/10 hover:ring-2 hover:ring-[#4ADE80]/70 hover:shadow-[0_0_25px_rgba(34,197,94,0.5)] transition-all z-20 cursor-pointer"
-            title="Hygienic & Fresh Food"
-          >
-            <span className="sr-only">Hygienic & Fresh Food</span>
-          </Link>
-
-          {/* Card 5: Custom Menu Planning */}
-          <Link
-            to="/booking"
-            onMouseEnter={() => setActiveTooltip('Custom Menu Planning — As Per Your Requirements')}
-            onMouseLeave={() => setActiveTooltip(null)}
-            className="absolute top-[53.5%] right-[2%] w-[18%] h-[9.5%] rounded-2xl hover:bg-emerald-500/10 hover:ring-2 hover:ring-[#F5CE68]/70 hover:shadow-[0_0_25px_rgba(212,175,55,0.5)] transition-all z-20 cursor-pointer"
-            title="Custom Menu Planning"
-          >
-            <span className="sr-only">Custom Menu Planning</span>
-          </Link>
-
-          {/* E. Bottom Row of 4 Showcase Cards */}
-          {/* Card 1: Weddings */}
-          <Link
-            to="/services"
-            onMouseEnter={() => setActiveTooltip('Weddings — Grand Feasts, Memorable Moments')}
-            onMouseLeave={() => setActiveTooltip(null)}
-            className="absolute top-[62%] left-[2.5%] w-[23%] h-[23%] rounded-2xl sm:rounded-3xl hover:bg-emerald-500/10 hover:ring-2 hover:ring-[#F5CE68]/70 hover:shadow-[0_0_25px_rgba(212,175,55,0.5)] transition-all z-20 cursor-pointer"
-            title="Weddings"
-          >
-            <span className="sr-only">Weddings - Grand Feasts</span>
-          </Link>
-
-          {/* Card 2: Corporate Events */}
-          <Link
-            to="/services"
-            onMouseEnter={() => setActiveTooltip('Corporate Events — Professional Catering Solutions')}
-            onMouseLeave={() => setActiveTooltip(null)}
-            className="absolute top-[62%] left-[26.5%] w-[23%] h-[23%] rounded-2xl sm:rounded-3xl hover:bg-emerald-500/10 hover:ring-2 hover:ring-[#F5CE68]/70 hover:shadow-[0_0_25px_rgba(212,175,55,0.5)] transition-all z-20 cursor-pointer"
-            title="Corporate Events"
-          >
-            <span className="sr-only">Corporate Events</span>
-          </Link>
-
-          {/* Card 3: Functions & Celebrations */}
-          <Link
-            to="/services"
-            onMouseEnter={() => setActiveTooltip('Functions & Celebrations — Delicious Food for Every Occasion')}
-            onMouseLeave={() => setActiveTooltip(null)}
-            className="absolute top-[62%] left-[50.5%] w-[23%] h-[23%] rounded-2xl sm:rounded-3xl hover:bg-emerald-500/10 hover:ring-2 hover:ring-[#F5CE68]/70 hover:shadow-[0_0_25px_rgba(212,175,55,0.5)] transition-all z-20 cursor-pointer"
-            title="Functions & Celebrations"
-          >
-            <span className="sr-only">Functions & Celebrations</span>
-          </Link>
-
-          {/* Card 4: Community Feeds */}
-          <Link
-            to="/services"
-            onMouseEnter={() => setActiveTooltip('Community Feeds — Nutritious Meals in Bulk')}
-            onMouseLeave={() => setActiveTooltip(null)}
-            className="absolute top-[62%] left-[74.5%] w-[23%] h-[23%] rounded-2xl sm:rounded-3xl hover:bg-emerald-500/10 hover:ring-2 hover:ring-[#F5CE68]/70 hover:shadow-[0_0_25px_rgba(212,175,55,0.5)] transition-all z-20 cursor-pointer"
-            title="Community Feeds"
-          >
-            <span className="sr-only">Community Feeds</span>
-          </Link>
-
-          {/* F. Center Brand Logo */}
-          <Link
-            to="/about"
-            onMouseEnter={() => setActiveTooltip('About AD Catering and Cook Services')}
-            onMouseLeave={() => setActiveTooltip(null)}
-            className="absolute top-[2%] left-[12%] w-[16%] h-[7%] rounded-full hover:ring-2 hover:ring-[#F5CE68]/50 transition-all z-20 cursor-pointer"
-            title="AD Catering and Cook Services"
-          >
-            <span className="sr-only">Home</span>
-          </Link>
-
-          {/* Interactive Floating Tooltip Pill */}
-          {activeTooltip && (
-            <div className="absolute top-4 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full bg-[#041810]/95 border border-[#D4AF37] text-[11px] font-black uppercase tracking-wider text-[#F5CE68] shadow-[0_4px_25px_rgba(0,0,0,0.9)] backdrop-blur-md z-30 pointer-events-none flex items-center gap-1.5 animate-in fade-in zoom-in-95 duration-200">
-              <Sparkles className="w-3.5 h-3.5 text-[#FFDF73] animate-pulse" />
-              <span>{activeTooltip}</span>
+                <button
+                  type="button"
+                  onClick={() => setLightboxOpen(true)}
+                  className="p-2 sm:p-2.5 rounded-full bg-white/90 hover:bg-white text-[#0A2318] border border-[#D4AF37]/50 shadow transition-all hover:scale-105"
+                  title="View Full Screen Showcase"
+                >
+                  <Maximize2 className="w-3.5 h-3.5" />
+                </button>
+              </div>
             </div>
-          )}
 
-          {/* Lightbox Enlarge Button (Floating in Top Corner) */}
-          <button
-            type="button"
-            onClick={() => setLightboxOpen(true)}
-            className="absolute top-3 right-3 p-2 rounded-full bg-[#041810]/90 hover:bg-[#06291C] border border-[#D4AF37]/60 text-xs font-bold text-[#F5CE68] shadow-lg backdrop-blur-md flex items-center gap-1.5 transition-all hover:scale-110 z-20"
-            title="View Full Resolution Showcase"
-          >
-            <Maximize2 className="w-3.5 h-3.5" />
-          </button>
+            {/* ----------------------------------------------------
+                CENTER HERO SPLIT: LEFT TYPOGRAPHY & RIGHT 5 CARDS
+                ---------------------------------------------------- */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
+              
+              {/* Left Column: Royal Typography, Motto & Working Buttons (7 cols) */}
+              <div className="lg:col-span-7 space-y-3.5 sm:space-y-4 text-left">
+                
+                {/* Royal Tagline Badge */}
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FAF0DA] border border-[#D4AF37]/60 text-[9.5px] sm:text-[11px] font-black tracking-[0.16em] text-[#8C6D1F] uppercase shadow-sm">
+                  <ChefHat className="w-3.5 h-3.5 text-[#C59B27]" />
+                  <span>Royal Hospitality & Banquet Excellence • Odisha</span>
+                  <Crown className="w-3.5 h-3.5 text-[#C59B27]" />
+                </div>
+
+                {/* Main Headline */}
+                <div className="space-y-0.5">
+                  <h1 className="font-serif font-black text-3xl sm:text-5xl lg:text-[54px] text-[#0A2318] tracking-tight leading-[1.05]">
+                    AD Catering
+                  </h1>
+                  <p className="font-serif italic font-bold text-2xl sm:text-4xl lg:text-[42px] text-gradient-gold tracking-tight leading-tight">
+                    and Cook Services
+                  </p>
+                </div>
+
+                {/* Decorative Motto Divider */}
+                <div className="flex items-center gap-2.5 max-w-lg">
+                  <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-[#C59B27]/60 to-[#C59B27]" />
+                  <span className="text-[9.5px] sm:text-[10.5px] font-black uppercase tracking-[0.2em] text-[#97731F] shrink-0">
+                    Delicious Food For Every Special Occasion
+                  </span>
+                  <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent via-[#C59B27]/60 to-[#C59B27]" />
+                </div>
+
+                {/* Subtitle Description */}
+                <p className="text-xs sm:text-sm lg:text-[14px] text-neutral-700 font-medium leading-relaxed max-w-xl">
+                  Odisha's Premier Choice for Grand Royal Weddings, Authentic Heritage Bhojis, Live LED Buffet Counters & Certified In-Home Master Cook Services.
+                </p>
+
+                {/* Interactive Action Buttons */}
+                <div className="flex flex-wrap items-center gap-3 pt-1">
+                  
+                  {/* Button 1: Explore Our Services */}
+                  <Link
+                    to="/services"
+                    className="px-6 sm:px-7 py-3 rounded-full bg-[#052317] hover:bg-[#073322] border border-[#D4AF37]/60 text-white text-xs sm:text-sm font-black tracking-wide shadow-[0_8px_25px_rgba(5,35,23,0.35)] hover:shadow-[0_10px_30px_rgba(212,175,55,0.4)] hover:border-[#F5CE68] hover:scale-105 active:scale-95 transition-all flex items-center gap-2.5 group/explore"
+                  >
+                    <UtensilsCrossed className="w-4 h-4 text-[#F5CE68]" />
+                    <span>Explore Our Services</span>
+                    <ArrowRight className="w-4 h-4 text-[#F5CE68] group-hover/explore:translate-x-1 transition-transform" />
+                  </Link>
+
+                  {/* Button 2: Watch Our Story (Opens Story Modal) */}
+                  <button
+                    type="button"
+                    onClick={() => setStoryModalOpen(true)}
+                    className="px-5 sm:px-6 py-3 rounded-full bg-white hover:bg-neutral-50 border border-[#D4AF37]/50 text-[#0A2318] text-xs sm:text-sm font-bold shadow-md hover:shadow-lg hover:border-[#C59B27] hover:scale-105 active:scale-95 transition-all flex items-center gap-2.5 group/story"
+                  >
+                    <div className="w-5 h-5 rounded-full bg-[#052317] flex items-center justify-center text-[#F5CE68] shadow shrink-0">
+                      <Play className="w-2.5 h-2.5 fill-current ml-0.5 text-[#F5CE68]" />
+                    </div>
+                    <span>Watch Our Story</span>
+                  </button>
+                </div>
+              </div>
+
+              {/* Right Column: 5 Floating Glass Cards (5 cols) */}
+              <div className="lg:col-span-5 flex flex-col gap-2 sm:gap-2.5 w-full max-w-md lg:ml-auto">
+                {featureCards.map((card) => (
+                  <button
+                    key={card.id}
+                    type="button"
+                    onClick={() => setSelectedFeature(card)}
+                    className="w-full text-left p-2.5 sm:p-3 rounded-2xl bg-white/95 hover:bg-white border border-[#E6DECE] hover:border-[#D4AF37] shadow-[0_4px_14px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_25px_rgba(212,175,55,0.3)] backdrop-blur-md transition-all duration-300 hover:-translate-x-1 flex items-center justify-between gap-3 group/card cursor-pointer"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#FAF5EA] border border-[#D4AF37]/40 flex items-center justify-center shrink-0 group-hover/card:bg-[#052317] group-hover/card:border-[#F5CE68] transition-colors">
+                        {card.icon}
+                      </div>
+                      <div>
+                        <h4 className="text-xs sm:text-sm font-black text-[#0A2318] group-hover/card:text-[#8C6D1F] transition-colors leading-snug">
+                          {card.title}
+                        </h4>
+                        <p className="text-[10.5px] sm:text-[11.5px] text-neutral-600 font-medium leading-snug">
+                          {card.subtitle}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="w-7 h-7 rounded-full bg-[#FAF5EA] group-hover/card:bg-[#052317] text-neutral-400 group-hover/card:text-[#F5CE68] border border-[#D4AF37]/30 flex items-center justify-center shrink-0 transition-colors">
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* ----------------------------------------------------
+                BOTTOM 4 SHOWCASE CARDS: REAL WORKABLE CARDS
+                ---------------------------------------------------- */}
+            <div className="space-y-2 pt-1">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-3.5">
+                {showcaseCards.map((card) => (
+                  <div
+                    key={card.id}
+                    onClick={() => setSelectedShowcase(card)}
+                    className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-[#E6DECE] hover:border-[#D4AF37] bg-white shadow-md hover:shadow-[0_12px_30px_rgba(212,175,55,0.3)] transition-all duration-300 hover:-translate-y-1 group/showcase cursor-pointer flex flex-col"
+                  >
+                    {/* Card Photo */}
+                    <div className="relative w-full h-32 sm:h-36 overflow-hidden bg-neutral-900">
+                      <img
+                        src={card.image}
+                        alt={card.title}
+                        className="w-full h-full object-cover group-hover/showcase:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                      
+                      {/* Floating Badge */}
+                      <div className="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-[#041810]/85 border border-[#D4AF37]/60 text-[9px] font-bold text-[#F5CE68] uppercase tracking-wider backdrop-blur-sm">
+                        {card.capacity}
+                      </div>
+                    </div>
+
+                    {/* Card Bottom Pill */}
+                    <div className="p-3 bg-white flex items-center justify-between gap-2">
+                      <div className="flex items-center gap-2.5 min-w-0">
+                        <div className="w-8 h-8 rounded-full bg-[#052317] text-[#F5CE68] flex items-center justify-center shrink-0 shadow">
+                          {card.icon}
+                        </div>
+                        <div className="min-w-0">
+                          <h4 className="text-xs sm:text-[13px] font-black text-[#0A2318] truncate group-hover/showcase:text-[#8C6D1F] transition-colors leading-tight">
+                            {card.title}
+                          </h4>
+                          <p className="text-[10px] sm:text-[10.5px] text-neutral-600 truncate leading-tight">
+                            {card.subtitle}
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Right Round Arrow Button */}
+                      <div className="w-7 h-7 rounded-full bg-[#FAF5EA] group-hover/showcase:bg-[#052317] text-neutral-600 group-hover/showcase:text-[#F5CE68] border border-[#D4AF37]/40 flex items-center justify-center shrink-0 transition-colors">
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* ----------------------------------------------------
+                BOTTOM TRUST & METRICS BAR (DEEP EMERALD & GOLD)
+                ---------------------------------------------------- */}
+            <div className="rounded-2xl sm:rounded-3xl bg-[#041A12] border border-[#D4AF37]/50 p-3.5 sm:p-4 shadow-xl text-white">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 divide-y md:divide-y-0 md:divide-x divide-[#D4AF37]/25 text-center sm:text-left">
+                
+                {/* Metric 1 */}
+                <div className="flex items-center justify-center sm:justify-start gap-3 px-2 sm:px-4 py-1">
+                  <div className="w-10 h-10 rounded-xl bg-emerald-950/80 border border-[#D4AF37]/40 flex items-center justify-center text-[#F5CE68] shrink-0">
+                    <Users className="w-5 h-5 text-[#F5CE68]" />
+                  </div>
+                  <div>
+                    <div className="text-lg sm:text-xl font-black text-white flex items-center justify-center sm:justify-start">
+                      <AnimatedCounter value={500} suffix="+" />
+                    </div>
+                    <p className="text-[10px] sm:text-[11px] font-bold text-[#CBD5E1] uppercase tracking-wider">
+                      Grand Banquets
+                    </p>
+                  </div>
+                </div>
+
+                {/* Metric 2 */}
+                <div className="flex items-center justify-center sm:justify-start gap-3 px-2 sm:px-4 py-1">
+                  <div className="w-10 h-10 rounded-xl bg-emerald-950/80 border border-[#D4AF37]/40 flex items-center justify-center text-[#F5CE68] shrink-0">
+                    <Award className="w-5 h-5 text-[#F5CE68]" />
+                  </div>
+                  <div>
+                    <div className="text-lg sm:text-xl font-black text-white flex items-center justify-center sm:justify-start">
+                      <AnimatedCounter value={15} suffix="+ Years" />
+                    </div>
+                    <p className="text-[10px] sm:text-[11px] font-bold text-[#CBD5E1] uppercase tracking-wider">
+                      Master Experience
+                    </p>
+                  </div>
+                </div>
+
+                {/* Metric 3 */}
+                <div className="flex items-center justify-center sm:justify-start gap-3 px-2 sm:px-4 py-1">
+                  <div className="w-10 h-10 rounded-xl bg-emerald-950/80 border border-[#D4AF37]/40 flex items-center justify-center text-[#F5CE68] shrink-0">
+                    <UtensilsCrossed className="w-5 h-5 text-[#F5CE68]" />
+                  </div>
+                  <div>
+                    <div className="text-lg sm:text-xl font-black text-white flex items-center justify-center sm:justify-start">
+                      <AnimatedCounter value={100} suffix="%" />
+                    </div>
+                    <p className="text-[10px] sm:text-[11px] font-bold text-[#CBD5E1] uppercase tracking-wider">
+                      Live On-Site Cooking
+                    </p>
+                  </div>
+                </div>
+
+                {/* Metric 4 */}
+                <div className="flex items-center justify-center sm:justify-start gap-3 px-2 sm:px-4 py-1">
+                  <div className="w-10 h-10 rounded-xl bg-emerald-950/80 border border-[#D4AF37]/40 flex items-center justify-center text-[#F5CE68] shrink-0">
+                    <Heart className="w-5 h-5 text-[#F5CE68]" />
+                  </div>
+                  <div>
+                    <div className="text-lg sm:text-xl font-black text-white flex items-center justify-center sm:justify-start">
+                      <AnimatedCounter value={100} suffix="%" />
+                    </div>
+                    <p className="text-[10px] sm:text-[11px] font-bold text-[#CBD5E1] uppercase tracking-wider">
+                      Purity & Hygiene
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
 
       {/* ====================================================
-          3. LUXURY ACTION DECK & QUICK ACCESS
+          LUXURY QUICK ACTION DECK (BELOW BANNER)
           ==================================================== */}
-      <div className="p-3.5 sm:p-5 rounded-2xl sm:rounded-3xl bg-[#03150E]/90 border border-[#D4AF37]/50 shadow-[0_15px_40px_rgba(0,0,0,0.6)] backdrop-blur-xl flex flex-col md:flex-row items-center justify-between gap-4">
+      <div className="p-3.5 sm:p-5 rounded-2xl sm:rounded-3xl bg-[#03150E]/95 border border-[#D4AF37]/50 shadow-[0_15px_40px_rgba(0,0,0,0.6)] backdrop-blur-xl flex flex-col md:flex-row items-center justify-between gap-4">
         
         {/* Left: Brand Promise */}
         <div className="flex items-center gap-3 text-center md:text-left">
@@ -275,7 +581,206 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
       </div>
 
       {/* ====================================================
-          4. FULL-SCREEN LIGHTBOX MODAL
+          MODAL 1: FEATURE DETAIL MODAL (WHEN ANY RIGHT CARD IS CLICKED)
+          ==================================================== */}
+      {selectedFeature && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-2xl animate-in fade-in duration-200">
+          <div className="relative w-full max-w-xl rounded-3xl bg-[#041810] border-2 border-[#D4AF37]/70 shadow-[0_30px_90px_rgba(0,0,0,0.95)] overflow-hidden p-6 sm:p-8 space-y-6 text-[#FAF8F5]">
+            <button
+              type="button"
+              onClick={() => setSelectedFeature(null)}
+              className="absolute top-5 right-5 p-2 rounded-full bg-[#06291C] hover:bg-emerald-950 text-[#F5CE68] border border-[#D4AF37]/50 shadow transition-all"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-[#B8860B] via-[#F5CE68] to-[#FFDF73] flex items-center justify-center text-[#041810] shadow shrink-0">
+                {selectedFeature.icon}
+              </div>
+              <div>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-[#F5CE68]">
+                  {selectedFeature.badge}
+                </span>
+                <h3 className="font-serif font-black text-2xl text-white">
+                  {selectedFeature.title}
+                </h3>
+              </div>
+            </div>
+
+            <p className="text-sm text-[#CBD5E1] leading-relaxed">
+              {selectedFeature.tagline}
+            </p>
+
+            <div className="space-y-2.5 pt-2">
+              <p className="text-xs font-bold text-[#F5CE68] uppercase tracking-wider">
+                Key Features & Guarantees:
+              </p>
+              {selectedFeature.highlights.map((h, i) => (
+                <div key={i} className="flex items-start gap-2.5 text-xs text-[#E2E8F0] p-2.5 rounded-xl bg-emerald-950/40 border border-[#D4AF37]/20">
+                  <CheckCircle2 className="w-4 h-4 text-[#F5CE68] shrink-0 mt-0.5" />
+                  <span>{h}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex items-center justify-end gap-3 pt-4 border-t border-[#D4AF37]/30">
+              <button
+                type="button"
+                onClick={() => setSelectedFeature(null)}
+                className="px-5 py-2.5 rounded-xl text-xs font-semibold text-[#CBD5E1] hover:text-white"
+              >
+                Close
+              </button>
+              <Link
+                to={selectedFeature.link}
+                onClick={() => setSelectedFeature(null)}
+                className="px-6 py-2.5 rounded-xl gold-gradient-btn text-xs font-black text-[#041810] shadow-md flex items-center gap-2"
+              >
+                <span>Book This Service</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ====================================================
+          MODAL 2: SHOWCASE DETAIL MODAL (WHEN ANY BOTTOM CARD IS CLICKED)
+          ==================================================== */}
+      {selectedShowcase && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-2xl animate-in fade-in duration-200">
+          <div className="relative w-full max-w-2xl rounded-3xl bg-[#041810] border-2 border-[#D4AF37]/70 shadow-[0_30px_90px_rgba(0,0,0,0.95)] overflow-hidden p-6 sm:p-8 space-y-5 text-[#FAF8F5]">
+            <button
+              type="button"
+              onClick={() => setSelectedShowcase(null)}
+              className="absolute top-5 right-5 p-2 rounded-full bg-[#06291C] hover:bg-emerald-950 text-[#F5CE68] border border-[#D4AF37]/50 shadow transition-all"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            {/* Showcase Image Banner */}
+            <div className="relative w-full h-48 rounded-2xl overflow-hidden border border-[#D4AF37]/40">
+              <img
+                src={selectedShowcase.image}
+                alt={selectedShowcase.title}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+              <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between">
+                <div>
+                  <h3 className="font-serif font-black text-2xl text-white">
+                    {selectedShowcase.title}
+                  </h3>
+                  <p className="text-xs text-[#F5CE68]">{selectedShowcase.subtitle}</p>
+                </div>
+                <span className="px-3 py-1 rounded-full bg-[#041810]/90 border border-[#D4AF37] text-xs font-bold text-[#F5CE68]">
+                  {selectedShowcase.capacity}
+                </span>
+              </div>
+            </div>
+
+            <p className="text-sm text-[#CBD5E1] leading-relaxed">
+              {selectedShowcase.description}
+            </p>
+
+            <div className="p-3.5 rounded-2xl bg-emerald-950/60 border border-[#D4AF37]/30 text-xs space-y-1">
+              <p className="font-bold text-[#F5CE68] uppercase tracking-wider text-[11px]">
+                Signature Dishes & Highlights:
+              </p>
+              <p className="text-[#CBD5E1] leading-relaxed">
+                {selectedShowcase.specialty}
+              </p>
+            </div>
+
+            <div className="flex items-center justify-end gap-3 pt-4 border-t border-[#D4AF37]/30">
+              <button
+                type="button"
+                onClick={() => setSelectedShowcase(null)}
+                className="px-5 py-2.5 rounded-xl text-xs font-semibold text-[#CBD5E1] hover:text-white"
+              >
+                Close
+              </button>
+              <Link
+                to="/booking"
+                onClick={() => setSelectedShowcase(null)}
+                className="px-6 py-2.5 rounded-xl gold-gradient-btn text-xs font-black text-[#041810] shadow-md flex items-center gap-2"
+              >
+                <span>Reserve Event Date</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ====================================================
+          MODAL 3: "WATCH OUR STORY" CULINARY HERITAGE MODAL
+          ==================================================== */}
+      {storyModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-2xl animate-in fade-in duration-200">
+          <div className="relative w-full max-w-2xl rounded-3xl bg-[#041810] border-2 border-[#D4AF37]/70 shadow-[0_30px_90px_rgba(0,0,0,0.9)] overflow-hidden p-6 sm:p-8 space-y-6 text-[#FAF8F5]">
+            <button
+              type="button"
+              onClick={() => setStoryModalOpen(false)}
+              className="absolute top-5 right-5 p-2 rounded-full bg-[#06291C] hover:bg-emerald-950 text-[#F5CE68] border border-[#D4AF37]/50 shadow transition-all"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-[#B8860B] via-[#F5CE68] to-[#FFDF73] flex items-center justify-center text-[#041810] shadow">
+                <ChefHat className="w-6 h-6 text-[#041810]" />
+              </div>
+              <div>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-[#F5CE68]">
+                  Our Story & Heritage
+                </span>
+                <h3 className="font-serif font-black text-2xl text-white">
+                  15+ Years of Master Culinary Craft
+                </h3>
+              </div>
+            </div>
+
+            <p className="text-sm text-[#CBD5E1] leading-relaxed">
+              Founded with a passion for authentic Odia heritage recipes, royal Mughal-era banquets, and genuine golden hospitality, <strong className="text-[#F5CE68]">AD Catering and Cook Services</strong> has served over 500+ memorable weddings, corporate galas, and sacred puja gatherings across Bhubaneswar, Cuttack, Puri, and all Odisha.
+            </p>
+
+            <div className="grid grid-cols-2 gap-3 pt-2">
+              <div className="p-3.5 rounded-2xl bg-emerald-950/60 border border-[#D4AF37]/30 text-xs">
+                <Award className="w-4 h-4 text-[#F5CE68] mb-1" />
+                <p className="font-bold text-white">Master Halwais</p>
+                <p className="text-[11px] text-[#94A3B8]">Authentic Chhena Poda & Sweets</p>
+              </div>
+              <div className="p-3.5 rounded-2xl bg-emerald-950/60 border border-[#D4AF37]/30 text-xs">
+                <ShieldCheck className="w-4 h-4 text-emerald-400 mb-1" />
+                <p className="font-bold text-white">FSSAI Certified</p>
+                <p className="text-[11px] text-[#94A3B8]">100% Pure Cow Ghee & Hygiene</p>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-end gap-3 pt-4 border-t border-[#D4AF37]/30">
+              <button
+                type="button"
+                onClick={() => setStoryModalOpen(false)}
+                className="px-5 py-2.5 rounded-xl text-xs font-semibold text-[#CBD5E1] hover:text-white"
+              >
+                Close
+              </button>
+              <Link
+                to="/booking"
+                onClick={() => setStoryModalOpen(false)}
+                className="px-6 py-2.5 rounded-xl gold-gradient-btn text-xs font-black text-[#041810] shadow-md"
+              >
+                Book Your Event Now
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ====================================================
+          MODAL 4: FULL-SCREEN LIGHTBOX MODAL
           ==================================================== */}
       {lightboxOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-2xl animate-in fade-in duration-200">
@@ -328,71 +833,6 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
                   Reserve Your Event Date
                 </Link>
               </div>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* ====================================================
-          5. "WATCH OUR STORY" CULINARY HERITAGE MODAL
-          ==================================================== */}
-      {storyModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-2xl animate-in fade-in duration-200">
-          <div className="relative w-full max-w-2xl rounded-3xl bg-[#041810] border-2 border-[#D4AF37]/70 shadow-[0_30px_90px_rgba(0,0,0,0.9)] overflow-hidden p-6 sm:p-8 space-y-6 text-[#FAF8F5]">
-            <button
-              type="button"
-              onClick={() => setStoryModalOpen(false)}
-              className="absolute top-5 right-5 p-2 rounded-full bg-[#06291C] hover:bg-emerald-950 text-[#F5CE68] border border-[#D4AF37]/50 shadow transition-all"
-            >
-              <X className="w-5 h-5" />
-            </button>
-
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-[#B8860B] via-[#F5CE68] to-[#FFDF73] flex items-center justify-center text-[#041810] shadow">
-                <ChefHat className="w-6 h-6 text-[#041810]" />
-              </div>
-              <div>
-                <span className="text-[10px] font-bold uppercase tracking-wider text-[#F5CE68]">
-                  Our Story & Heritage
-                </span>
-                <h3 className="font-display font-black text-2xl text-white">
-                  15+ Years of Master Culinary Craft
-                </h3>
-              </div>
-            </div>
-
-            <p className="text-sm text-[#CBD5E1] leading-relaxed">
-              Founded with a passion for authentic Odia heritage recipes, royal Mughal-era banquets, and genuine golden hospitality, <strong className="text-[#F5CE68]">AD Catering and Cook Services</strong> has served over 500+ memorable weddings, corporate galas, and sacred puja gatherings across Bhubaneswar, Cuttack, Puri, and all Odisha.
-            </p>
-
-            <div className="grid grid-cols-2 gap-3 pt-2">
-              <div className="p-3.5 rounded-2xl bg-emerald-950/60 border border-[#D4AF37]/30 text-xs">
-                <Award className="w-4 h-4 text-[#F5CE68] mb-1" />
-                <p className="font-bold text-white">Master Halwais</p>
-                <p className="text-[11px] text-[#94A3B8]">Authentic Chhena Poda & Sweets</p>
-              </div>
-              <div className="p-3.5 rounded-2xl bg-emerald-950/60 border border-[#D4AF37]/30 text-xs">
-                <ShieldCheck className="w-4 h-4 text-emerald-400 mb-1" />
-                <p className="font-bold text-white">FSSAI Certified</p>
-                <p className="text-[11px] text-[#94A3B8]">100% Pure Cow Ghee & Hygiene</p>
-              </div>
-            </div>
-
-            <div className="flex items-center justify-end gap-3 pt-4 border-t border-[#D4AF37]/30">
-              <button
-                type="button"
-                onClick={() => setStoryModalOpen(false)}
-                className="px-5 py-2.5 rounded-xl text-xs font-semibold text-[#CBD5E1] hover:text-white"
-              >
-                Close
-              </button>
-              <Link
-                to="/booking"
-                onClick={() => setStoryModalOpen(false)}
-                className="px-6 py-2.5 rounded-xl gold-gradient-btn text-xs font-black text-[#041810] shadow-md"
-              >
-                Book Your Event Now
-              </Link>
             </div>
           </div>
         </div>
