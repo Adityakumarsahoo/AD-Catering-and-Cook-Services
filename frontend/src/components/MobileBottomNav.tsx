@@ -28,7 +28,7 @@ export const MobileBottomNav: React.FC = () => {
     },
     {
       to: '/cook-service',
-      label: 'Specializations',
+      label: 'Chefs',
       icon: Flame,
       exact: false,
     },
