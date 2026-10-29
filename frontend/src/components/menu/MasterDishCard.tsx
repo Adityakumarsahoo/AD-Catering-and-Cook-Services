@@ -17,7 +17,7 @@ export const MasterDishCard: React.FC<MasterDishCardProps> = ({ dish, onOpenModa
   const isSelected = isDishSelected(dish.id);
 
   // Determine fallback image based on category
-  const fallbackImg = categoryMeta.fallbackImage || '/images/dishes/chhena-poda.jpg';
+  const fallbackImg = categoryMeta.fallbackImage || '/images/DISHE/Chenna Podo.png';
   const displayImage = imageFailed || !dish.image ? fallbackImg : dish.image;
 
   // Check if dish is Odia Heritage

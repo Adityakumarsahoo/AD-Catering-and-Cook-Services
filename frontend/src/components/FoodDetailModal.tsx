@@ -37,7 +37,7 @@ export const FoodDetailModal: React.FC<FoodDetailModalProps> = ({
   const categoryMeta = getCategoryMeta(item.category || '');
 
   // Determine fallback image based on category
-  const fallbackImg = categoryMeta.fallbackImage || '/images/dishes/chhena-poda.jpg';
+  const fallbackImg = categoryMeta.fallbackImage || '/images/DISHE/Chenna Podo.png';
   const displayImage = imageFailed || !item.image ? fallbackImg : item.image;
 
   const isOdia =

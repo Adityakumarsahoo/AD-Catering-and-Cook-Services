@@ -26,7 +26,7 @@ export const officialVegMenu: OfficialVegItem[] = [
     "categoryNumber": 1,
     "categoryHeading": "1. Welcome Drinks",
     "description": "Rich and velvety chilled gourmet milkshake blended with premium dairy cream and authentic Badam, Mango, Pineapple, or Madagascar Vanilla, served in a tall glass with crushed nuts.",
-    "image": "https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?auto=format&fit=crop&w=800&q=80",
+    "image": "/images/DISHE/Milk Shake (Badam , Mango ,Pineapple ,Vanilla).png",
     "isVeg": true,
     "serving": "1 Tall Glass (300ml)",
     "tags": [
@@ -45,7 +45,7 @@ export const officialVegMenu: OfficialVegItem[] = [
     "categoryNumber": 1,
     "categoryHeading": "1. Welcome Drinks",
     "description": "Traditional comforting hot milk slow-simmered with crushed California almonds, aromatic Kashmiri saffron strands, green cardamom, and pure honey, served piping warm in gold-rimmed glassware.",
-    "image": "/images/dishes/Badam_Milk_Drink.jpg",
+    "image": "/images/DISHE/Hot Badam Milk.png",
     "isVeg": true,
     "serving": "1 Warm Glass (250ml)",
     "tags": [
@@ -63,7 +63,7 @@ export const officialVegMenu: OfficialVegItem[] = [
     "categoryNumber": 1,
     "categoryHeading": "1. Welcome Drinks",
     "description": "Thick, creamy, slow-churned Punjabi sweet curd lassi served in an authentic earthen terracotta kulhad, crowned with a rich layer of fresh malai clotted cream, slivered pistachios, and saffron.",
-    "image": "/images/dishes/sweet-lassi.jpg",
+    "image": "/images/DISHE/Lassi (Sweet).png",
     "isVeg": true,
     "serving": "1 Terracotta Kulhad (350ml)",
     "tags": [
@@ -82,7 +82,7 @@ export const officialVegMenu: OfficialVegItem[] = [
     "categoryNumber": 1,
     "categoryHeading": "1. Welcome Drinks",
     "description": "Refreshing traditional Indian spiced chaas (buttermilk) slow-churned with roasted cumin powder (bhuna jeera), pink rock salt, fresh mint leaves, green chilies, and fragrant coriander garnish.",
-    "image": "/images/dishes/chanch-buttermilk.jpg",
+    "image": "/images/DISHE/Chanch.png",
     "isVeg": true,
     "serving": "1 Clay Glass (300ml)",
     "tags": [
@@ -99,7 +99,7 @@ export const officialVegMenu: OfficialVegItem[] = [
     "categoryNumber": 1,
     "categoryHeading": "1. Welcome Drinks",
     "description": "Vibrant, celebratory blend of freshly pressed mango, sweet pineapple, orange, and pomegranate juices layered over crushed mountain ice with fresh citrus wheels and garden mint.",
-    "image": "https://images.unsplash.com/photo-1546173159-315724a31696?auto=format&fit=crop&w=800&q=80",
+    "image": "/images/DISHE/Fruit Punch.png",
     "isVeg": true,
     "serving": "1 Chilled Highball Glass (300ml)",
     "tags": [
@@ -117,7 +117,7 @@ export const officialVegMenu: OfficialVegItem[] = [
     "categoryNumber": 1,
     "categoryHeading": "1. Welcome Drinks",
     "description": "Authentic royal summer cooler crafted from fire-roasted raw green mangoes, organic jaggery, black salt, and freshly roasted cumin, served ice-cold with fresh mint sprigs.",
-    "image": "/images/dishes/aam-panna.jpg",
+    "image": "/images/DISHE/Aam Panna.png",
     "isVeg": true,
     "serving": "1 Chilled Tumbler (300ml)",
     "tags": [
@@ -135,7 +135,7 @@ export const officialVegMenu: OfficialVegItem[] = [
     "categoryNumber": 1,
     "categoryHeading": "1. Welcome Drinks",
     "description": "Opulent festive royal thandai cold milk drink infused with ground almonds, cashews, fennel seeds, melon seeds, green cardamom, and steeped saffron, adorned with fragrant dried rose petals.",
-    "image": "/images/dishes/kesar-thandai.jpg",
+    "image": "/images/DISHE/Thandai.png",
     "isVeg": true,
     "serving": "1 Crystal Glass (300ml)",
     "tags": [
@@ -153,7 +153,7 @@ export const officialVegMenu: OfficialVegItem[] = [
     "categoryNumber": 1,
     "categoryHeading": "1. Welcome Drinks",
     "description": "Decadent multi-layered royal Indian dessert beverage featuring aromatic Damask rose syrup, soaked cooling sabja (basil) seeds, delicate falooda sev noodles, chilled milk, and a scoop of rich kulfi ice cream.",
-    "image": "/images/dishes/royal-falooda.jpg",
+    "image": "/images/DISHE/Falluda.png",
     "isVeg": true,
     "serving": "1 Sundae Parfait Glass (350ml)",
     "tags": [
@@ -172,7 +172,7 @@ export const officialVegMenu: OfficialVegItem[] = [
     "categoryNumber": 1,
     "categoryHeading": "1. Welcome Drinks",
     "description": "Crisp, invigorating northern Indian cooler made with freshly muddled mint, coriander, roasted cumin seeds, black pepper, dry mango powder, and crispy golden boondi droplets floating on top.",
-    "image": "/images/dishes/spiced-jaljeera.jpg",
+    "image": "/images/DISHE/Jaljeera.png",
     "isVeg": true,
     "serving": "1 Frosted Glass (300ml)",
     "tags": [
@@ -189,7 +189,7 @@ export const officialVegMenu: OfficialVegItem[] = [
     "categoryNumber": 1,
     "categoryHeading": "1. Welcome Drinks",
     "description": "Chilled sparkling fresh lemon soda prepared with freshly squeezed farm lemons, rock salt, crushed ice, and effervescent bubbles, garnished with fresh mint and citrus wheels.",
-    "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=80",
+    "image": "/images/DISHE/Lemon Cold Drinks.png",
     "isVeg": true,
     "serving": "1 Tall Sparkler Glass (300ml)",
     "tags": [
@@ -206,7 +206,7 @@ export const officialVegMenu: OfficialVegItem[] = [
     "categoryNumber": 1,
     "categoryHeading": "1. Welcome Drinks",
     "description": "Chilled premium carbonated soft drinks and sparkling colas served ice-cold in crystal glassware with clear ice cubes, condensation, and lime wedge.",
-    "image": "/images/dishes/cold-drinks-soda.jpg",
+    "image": "/images/DISHE/Cold Drinks.png",
     "isVeg": true,
     "serving": "1 Chilled Glass (300ml)",
     "tags": [
@@ -223,7 +223,7 @@ export const officialVegMenu: OfficialVegItem[] = [
     "categoryNumber": 1,
     "categoryHeading": "1. Welcome Drinks",
     "description": "Spiced Indian banquet street-style cold soda with carbonated cola spiced with black salt, chaat masala, roasted cumin, and fresh lemon juice with a spice-dusted rim.",
-    "image": "/images/dishes/masala-cold-drinks.jpg",
+    "image": "/images/DISHE/Masala Cold Drinks.png",
     "isVeg": true,
     "serving": "1 Spice-Rimmed Highball (300ml)",
     "tags": [
@@ -240,7 +240,7 @@ export const officialVegMenu: OfficialVegItem[] = [
     "categoryNumber": 1,
     "categoryHeading": "1. Welcome Drinks",
     "description": "Exotic handcrafted non-alcoholic signature mocktail crafted with tropical fruit nectars, blue curaçao / grenadine layers, citrus zest, and botanical garnishes.",
-    "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80",
+    "image": "/images/DISHE/Mocktail.png",
     "isVeg": true,
     "serving": "1 Signature Cocktail Glass (300ml)",
     "tags": [
@@ -259,7 +259,7 @@ export const officialVegMenu: OfficialVegItem[] = [
     "categoryNumber": 1,
     "categoryHeading": "1. Welcome Drinks",
     "description": "Creamy, frothy iced coffee blended with freshly brewed dark roasted espresso beans, chilled full-cream milk, and sugar, served with a silky coffee crema swirl in a frosted glass.",
-    "image": "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=800&q=80",
+    "image": "/images/DISHE/Cold Coffee.png",
     "isVeg": true,
     "serving": "1 Tall Frosted Glass (300ml)",
     "tags": [
@@ -277,7 +277,7 @@ export const officialVegMenu: OfficialVegItem[] = [
     "categoryNumber": 1,
     "categoryHeading": "1. Welcome Drinks",
     "description": "Live continuous hot beverage station serving authentic ginger-cardamom Indian masala chai alongside aromatic freshly brewed South Indian filter coffee in warm porcelain mugs.",
-    "image": "https://images.unsplash.com/photo-1561336313-0bd5e0b27ec8?auto=format&fit=crop&w=800&q=80",
+    "image": "/images/DISHE/Tea & Coffee.png",
     "isVeg": true,
     "serving": "Continuous Hot Beverage Counter",
     "tags": [
@@ -294,7 +294,7 @@ export const officialVegMenu: OfficialVegItem[] = [
     "categoryNumber": 2,
     "categoryHeading": "2. Soup",
     "description": "Comforting, velvety Indo-Chinese vegetable soup loaded with golden sweet corn kernels, finely minced garden vegetables, and aromatic white pepper garnished with crispy noodles.",
-    "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&q=80",
+    "image": "/images/DISHE/S  C Soup (Veg. & Non Veg.).png",
     "isVeg": true,
     "serving": "1 Steaming Ceramic Bowl (250ml)",
     "tags": [
@@ -386,7 +386,7 @@ export const officialVegMenu: OfficialVegItem[] = [
     "categoryNumber": 3,
     "categoryHeading": "3. Starter",
     "description": "Crispy fried wheat flour papdis crowned with spiced boiled potatoes, soft chickpeas, whipped sweetened curd, tangy tamarind chutney, and spicy mint-coriander salsa with nylon sev.",
-    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80",
+    "image": "/images/DISHE/Dahi Papdi.png",
     "isVeg": true,
     "serving": "1 Chaat Platter (6 Crisp Papdis)",
     "tags": [
@@ -404,7 +404,7 @@ export const officialVegMenu: OfficialVegItem[] = [
     "categoryNumber": 3,
     "categoryHeading": "3. Starter",
     "description": "Live interactive panipuri counter with paper-thin crisp semolina puris filled with warm spiced potato-black chickpea masala, dipped in ice-chilled spicy mint-coriander and sweet tamarind waters.",
-    "image": "/images/dishes/live-panipuri.jpg",
+    "image": "/images/DISHE/PaniPuri.png",
     "isVeg": true,
     "serving": "Live Counter Service (6 Puris Per Serving)",
     "tags": [
@@ -491,7 +491,7 @@ export const officialVegMenu: OfficialVegItem[] = [
     "categoryNumber": 4,
     "categoryHeading": "4. Plate Counter",
     "description": "Traditional Odisha-style golden fried urad dal vadas soaked in spiced light curd, served with spicy aloo dum gravy, ghugni peas, and sev garnish.",
-    "image": "/images/dishes/Dahibara_Aludam.jpg",
+    "image": "/images/DISHE/Dahiwada Aloudum.png",
     "isVeg": true,
     "serving": "2 Soft Vadas with Aloo Dum & Ghugni",
     "tags": [
@@ -544,7 +544,7 @@ export const officialVegMenu: OfficialVegItem[] = [
     "categoryNumber": 5,
     "categoryHeading": "5. Main Course",
     "description": "Slow-simmered yellow toor and moong lentils tempered with pure cow ghee, whole cumin seeds, garlic slivers, green chilies, and fresh coriander.",
-    "image": "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&q=80",
+    "image": "/images/DISHE/DALEMA.png",
     "isVeg": true,
     "serving": "1 Handi Bowl (300ml)",
     "tags": [
@@ -578,7 +578,7 @@ export const officialVegMenu: OfficialVegItem[] = [
     "categoryNumber": 5,
     "categoryHeading": "5. Main Course",
     "description": "Velvety malai cottage cheese cubes simmered in a royal, rich tomato-cashew makhani gravy enriched with butter, roasted spices, and kasuri methi.",
-    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&q=80",
+    "image": "/images/DISHE/Paneer Butter Masala.png",
     "isVeg": true,
     "serving": "1 Ceramic Handi (350g)",
     "tags": [

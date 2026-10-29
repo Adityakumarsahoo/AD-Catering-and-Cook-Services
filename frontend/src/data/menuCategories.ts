@@ -24,7 +24,7 @@ export const MENU_CATEGORIES: MenuCategoryMeta[] = [
     hindiOdiaHint: 'ସ୍ୱାଗତ ପାନୀୟ (Swagata Paniya)',
     description: 'Chilled artisanal fruit milkshakes, refreshing mocktails, traditional thick sweet lassi, aam panna, and comforting saffron hot badam milk served in royal glassware.',
     iconName: 'GlassWater',
-    fallbackImage: '/images/dishes/Badam_Milk_Drink.jpg',
+    fallbackImage: '/images/DISHE/Hot Badam Milk.png',
   },
   {
     key: 'SOUP',
@@ -34,7 +34,7 @@ export const MENU_CATEGORIES: MenuCategoryMeta[] = [
     hindiOdiaHint: 'ସୁପ୍ ଷ୍ଟେସନ୍ (Garam Soup)',
     description: 'Piping hot, fragrant broths and velvety soups including classic Cream of Tomato, Indo-Chinese Hot & Sour, Sweet Corn, and zesty Lemon Coriander.',
     iconName: 'Soup',
-    fallbackImage: '/images/dishes/spiced-jaljeera.jpg',
+    fallbackImage: '/images/DISHE/Cream of Tomato Soup.png',
   },
   {
     key: 'COUNTER STARTER',
@@ -44,7 +44,7 @@ export const MENU_CATEGORIES: MenuCategoryMeta[] = [
     hindiOdiaHint: 'ଲାଇଭ୍ ଚାଟ୍ କାଉଣ୍ଟର (Live Chaat)',
     description: 'Interactive live banquet counters featuring authentic Cuttacki Dahibara Aludam, crisp Pani Puri with assorted tangy waters, Raj Kachori, Dahi Papdi, and sizzling Pav Bhaji.',
     iconName: 'Store',
-    fallbackImage: '/images/dishes/live-panipuri.jpg',
+    fallbackImage: '/images/DISHE/PaniPuri.png',
   },
   {
     key: 'STARTER (VEG)',
@@ -54,7 +54,7 @@ export const MENU_CATEGORIES: MenuCategoryMeta[] = [
     hindiOdiaHint: 'ଶାକାହାରୀ ଷ୍ଟାର୍ଟର୍ (Veg Starters)',
     description: 'Sizzling tandoor and golden-fried vegetarian appetizers — Crispy Corn, Hara Bhara Kabab, Paneer Stick Tikka, Dragon Paneer, Manchurian, and Spring Rolls.',
     iconName: 'Sparkles',
-    fallbackImage: '/images/dishes/Malai_Paneer_Tikka__PK_007.jpg',
+    fallbackImage: '/images/DISHE/Paneer Butter Masala.png',
   },
   {
     key: 'STARTER (NON-VEG)',
@@ -65,7 +65,7 @@ export const MENU_CATEGORIES: MenuCategoryMeta[] = [
     description: 'Crisp boneless Fish Fingers, Amritsari Fish, Golden Fried Prawns, Tangdi Kebabs, Chicken Malai Tikka, and smoky Tandoori Chicken grilled over live charcoal.',
     iconName: 'Flame',
     isNonVeg: true,
-    fallbackImage: '/images/dishes/odia-mutton-kasa.jpg',
+    fallbackImage: '/images/DISHE/MUTTON CURRY.png',
   },
   {
     key: 'EGGS TO ORDER',
@@ -96,7 +96,7 @@ export const MENU_CATEGORIES: MenuCategoryMeta[] = [
     hindiOdiaHint: 'ଭାତ, ପଲାଉ ଓ ବିରିୟାନି (Rice & Biryani)',
     description: 'Fragrant long-grain Dehradun Basmati rice preparations — Jeera Rice, Royal Kashmiri Pulao, Kaju Pulao, Dum Chicken Biryani, Mutton Biryani, and Chinese Fried Rice.',
     iconName: 'CookingPot',
-    fallbackImage: '/images/royal-odia-feast.jpg',
+    fallbackImage: '/images/DISHE/CHICKEN BIRIYANI.png',
   },
   {
     key: 'DAL',
@@ -106,7 +106,7 @@ export const MENU_CATEGORIES: MenuCategoryMeta[] = [
     hindiOdiaHint: 'ଡାଲି ଓ ତଡକା (Dal & Lentils)',
     description: 'Slow-simmered Punjabi Dal Makhani, Dal Bukhara, Dal Tadka with desi ghee, traditional Odia Khati Mithi Dal, Coconut Dal, and rich Dal Maharani.',
     iconName: 'Soup',
-    fallbackImage: '/images/dishes/odia-dalma.jpg',
+    fallbackImage: '/images/DISHE/DALEMA.png',
   },
   {
     key: 'CHUTNEY & RAITA',
@@ -133,9 +133,9 @@ export const MENU_CATEGORIES: MenuCategoryMeta[] = [
     slug: 'mushroom',
     label: 'Mushroom Specialties',
     shortLabel: 'Mushrooms',
-    hindiOdiaHint: 'ଛତୁ ମସଲା (Mushroom)',
-    description: 'Tender button mushrooms tossed in aromatic gravies — Mushroom Kadai, Mushroom Butter Masala, spicy Mushroom Takatak, Mushroom Hyderabadi, and Odia Mushroom Besar.',
-    iconName: 'Leaf',
+    hindiOdiaHint: 'ଛତୁ ତରକାରୀ (Mushroom Delights)',
+    description: 'Fresh button and straw mushrooms tossed in aromatic spices — Mushroom Masala, Kadhai Mushroom, Butter Masala, Mushroom Do Pyaza, and Mushroom Mattar.',
+    iconName: 'Sparkles',
     fallbackImage: '/images/dishes/chilli-mushroom.jpg',
   },
   {
@@ -146,7 +146,7 @@ export const MENU_CATEGORIES: MenuCategoryMeta[] = [
     hindiOdiaHint: 'ପନିର ସ୍ପେଶାଲ୍ (Paneer Delicacies)',
     description: 'Fresh dairy cottage cheese slow-cooked in rich cashew-tomato gravies — Paneer Butter Masala, Shahi Korma, Paneer Tikka Masala, Pasanda, Palak Paneer, and Tiranga Paneer.',
     iconName: 'Crown',
-    fallbackImage: '/images/dishes/Malai_Paneer_Tikka__PK_007.jpg',
+    fallbackImage: '/images/DISHE/Paneer Butter Masala.png',
   },
   {
     key: 'FISH',
@@ -179,7 +179,7 @@ export const MENU_CATEGORIES: MenuCategoryMeta[] = [
     description: 'Regal banquet poultry dishes — Chicken Butter Masala, Dum Chicken, Chicken Maharaja, Mughlai Chicken, rich Chicken Bharta, and legendary Katki Special Chicken.',
     iconName: 'Drumstick',
     isNonVeg: true,
-    fallbackImage: '/images/dishes/odia-mutton-kasa.jpg',
+    fallbackImage: '/images/DISHE/CHICKEN BIRIYANI.png',
   },
   {
     key: 'MUTTON',
@@ -190,7 +190,7 @@ export const MENU_CATEGORIES: MenuCategoryMeta[] = [
     description: 'Tender baby goat meat slow-simmered in pure desi ghee — Odia Mutton Kasa, Kashmiri Rogan Josh, Mutton Bhuna Roast, Mutton Ghee Roast, and Keema Mutton.',
     iconName: 'Flame',
     isNonVeg: true,
-    fallbackImage: '/images/dishes/odia-mutton-kasa.jpg',
+    fallbackImage: '/images/DISHE/MUTTON CURRY.png',
   },
   {
     key: 'AAMISHA (NON-VEG)',
@@ -213,7 +213,7 @@ export const MENU_CATEGORIES: MenuCategoryMeta[] = [
     description: 'Sacred temple-style and festive Odia preparations — Ghee Arna, Kanika sweet rice, cooling Dahi Pakhala, temple Dalma, Tomato Khajur Khatta, and Awu Khatta.',
     iconName: 'Award',
     isOdiaHeritage: true,
-    fallbackImage: '/images/dishes/dahi-pakhala.jpg',
+    fallbackImage: '/images/DISHE/DALEMA.png',
   },
   {
     key: 'SADDA (VEG)',
@@ -224,7 +224,7 @@ export const MENU_CATEGORIES: MenuCategoryMeta[] = [
     description: 'Authentic homestyle vegetarian preps — Sadda Mahura, Santula, Chhuin Badi Aloo Besar, crunchy Badi Chura, Saga Muga, Potal Aloo Rasa, Aloo Posto, and Baigan Bhaja.',
     iconName: 'Leaf',
     isOdiaHeritage: true,
-    fallbackImage: '/images/dishes/odia-dalma.jpg',
+    fallbackImage: '/images/DISHE/DALEMA.png',
   },
   {
     key: 'CONTINENTAL',
@@ -244,7 +244,7 @@ export const MENU_CATEGORIES: MenuCategoryMeta[] = [
     hindiOdiaHint: 'ମିଠା ଓ ଡେଜର୍ଟ୍ (Royal Odia Mithai)',
     description: 'Legendary Pahala Rasagola, slow-baked Chhena Poda, Nimapada Chhena Jhilli, Kendrapara Rasabali, Kheer Sagar, Shahi Tukda, Baked Boondi, Rabdi, Malpua, and Kulfi.',
     iconName: 'Cake',
-    fallbackImage: '/images/dishes/chhena-poda.jpg',
+    fallbackImage: '/images/DISHE/Chenna Podo.png',
   },
 ];
 
@@ -263,6 +263,6 @@ export function getCategoryMeta(categoryKey: string): MenuCategoryMeta {
     shortLabel: categoryKey,
     description: 'Authentic culinary preparation freshly crafted by AD Catering master chefs.',
     iconName: 'UtensilsCrossed',
-    fallbackImage: '/images/dishes/chhena-poda.jpg',
+    fallbackImage: '/images/DISHE/Chenna Podo.png',
   };
 }
