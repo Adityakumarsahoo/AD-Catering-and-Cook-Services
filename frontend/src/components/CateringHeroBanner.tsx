@@ -48,7 +48,6 @@ interface ShowcaseCardInfo {
   icon: React.ReactNode;
   link: string;
   description: string;
-  capacity: string;
   specialty: string;
 }
 
@@ -149,7 +148,6 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
       link: '/services',
       description:
         'Turn your dream wedding into a regal epic with majestic floral buffet counters, authentic royal Odia bhoji feasts, aromatic biryanis, and decadent artisan dessert bars.',
-      capacity: '200 to 5,000+ Guests',
       specialty: 'Mutton Kasa, Chenna Jhili, Royal Pulao, Live Chaat Counter',
     },
     {
@@ -161,7 +159,6 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
       link: '/services',
       description:
         'Punctual, hygienic, executive-class breakfast spreads, working lunches, cocktail appetizers, and formal gala dinners tailored for top corporate organizations.',
-      capacity: '50 to 2,000+ Delegates',
       specialty: 'Continental Appetizers, Live Pasta Bar, Premium High-Tea & Salads',
     },
     {
@@ -173,7 +170,6 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
       link: '/services',
       description:
         'Warm, joy-filled catering for Birthdays, Anniversaries, Upanayana thread ceremonies, and Housewarmings that leave every guest asking for second helpings.',
-      capacity: '50 to 1,000+ Guests',
       specialty: 'Crispy Starters, Dahi Vada Aloo Dum, Biryani & Custom Cakes',
     },
     {
@@ -185,7 +181,6 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
       link: '/services',
       description:
         'Large-scale, soulful community feasts, temple prasad bhoji, and mass humanitarian gatherings prepared with sacred purity, discipline, and swift service.',
-      capacity: '300 to 10,000+ Servings',
       specialty: 'Kanika, Authentic Odia Dalma, Besara, Khatta & Kheer',
     },
   ];
@@ -409,11 +404,6 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
                         className="w-full h-full object-cover group-hover/showcase:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                      
-                      {/* Floating Badge */}
-                      <div className="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-[#041810]/85 border border-[#D4AF37]/60 text-[9px] font-bold text-[#F5CE68] uppercase tracking-wider backdrop-blur-sm">
-                        {card.capacity}
-                      </div>
                     </div>
 
                     {/* Card Bottom Pill */}
@@ -661,9 +651,6 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
                   </h3>
                   <p className="text-[11px] sm:text-xs text-[#F5CE68]">{selectedShowcase.subtitle}</p>
                 </div>
-                <span className="px-2.5 py-1 rounded-full bg-[#041810]/90 border border-[#D4AF37] text-[10px] sm:text-xs font-bold text-[#F5CE68]">
-                  {selectedShowcase.capacity}
-                </span>
               </div>
             </div>
 
