@@ -131,13 +131,13 @@ export const Home: React.FC = () => {
                   {/* Headline */}
                   <div className="space-y-2">
                     <p className="text-xs sm:text-sm font-black uppercase tracking-widest text-[#F5CE68]">
-                      Royal Odia Hospitality & Grand Banquets
+                      Authentic Flavours & Seamless Execution
                     </p>
                     <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-[1.12]">
-                      <span>Delicious Food for</span>
+                      <span>Unforgettable Royal Feasts</span>
                       <br />
                       <span className="gold-gradient-text drop-shadow-[0_2px_15px_rgba(212,175,55,0.4)]">
-                        Every Special Occasion.
+                        For All Gatherings.
                       </span>
                     </h2>
                   </div>
