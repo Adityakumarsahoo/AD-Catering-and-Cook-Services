@@ -470,7 +470,7 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
                   </div>
                   <div>
                     <div className="text-lg sm:text-xl font-black text-white flex items-center justify-center sm:justify-start">
-                      <AnimatedCounter value={500} suffix="+" />
+                      <AnimatedCounter end={500} suffix="+" triggerOnView={true} />
                     </div>
                     <p className="text-[10px] sm:text-[11px] font-bold text-[#CBD5E1] uppercase tracking-wider">
                       Grand Banquets
@@ -485,7 +485,7 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
                   </div>
                   <div>
                     <div className="text-lg sm:text-xl font-black text-white flex items-center justify-center sm:justify-start">
-                      <AnimatedCounter value={15} suffix="+ Years" />
+                      <AnimatedCounter end={15} suffix="+ Years" triggerOnView={true} />
                     </div>
                     <p className="text-[10px] sm:text-[11px] font-bold text-[#CBD5E1] uppercase tracking-wider">
                       Master Experience
@@ -500,7 +500,7 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
                   </div>
                   <div>
                     <div className="text-lg sm:text-xl font-black text-white flex items-center justify-center sm:justify-start">
-                      <AnimatedCounter value={100} suffix="%" />
+                      <AnimatedCounter end={100} suffix="%" triggerOnView={true} />
                     </div>
                     <p className="text-[10px] sm:text-[11px] font-bold text-[#CBD5E1] uppercase tracking-wider">
                       Live On-Site Cooking
@@ -515,7 +515,7 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
                   </div>
                   <div>
                     <div className="text-lg sm:text-xl font-black text-white flex items-center justify-center sm:justify-start">
-                      <AnimatedCounter value={100} suffix="%" />
+                      <AnimatedCounter end={100} suffix="%" triggerOnView={true} />
                     </div>
                     <p className="text-[10px] sm:text-[11px] font-bold text-[#CBD5E1] uppercase tracking-wider">
                       Purity & Hygiene
