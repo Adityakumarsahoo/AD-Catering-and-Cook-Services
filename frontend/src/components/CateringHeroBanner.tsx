@@ -17,7 +17,6 @@ import {
   Users,
   Briefcase,
   Leaf,
-  Maximize2,
   Calendar,
   HeartHandshake,
   ChevronRight,
@@ -57,7 +56,6 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
   className = '',
 }) => {
   const [storyModalOpen, setStoryModalOpen] = useState(false);
-  const [lightboxOpen, setLightboxOpen] = useState(false);
   const [selectedFeature, setSelectedFeature] = useState<FeatureCardInfo | null>(null);
   const [selectedShowcase, setSelectedShowcase] = useState<ShowcaseCardInfo | null>(null);
 
@@ -238,17 +236,6 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
               ==================================================== */}
           <div className="relative z-10 flex flex-col justify-between p-3.5 sm:p-6 lg:p-8 space-y-4 sm:space-y-6">
             
-            {/* Top Right Full-Screen Showcase Trigger */}
-            <div className="absolute top-3 sm:top-5 right-3 sm:right-5 z-20">
-              <button
-                type="button"
-                onClick={() => setLightboxOpen(true)}
-                className="p-2 sm:p-2.5 rounded-full bg-white/90 hover:bg-white text-[#0A2318] border border-[#D4AF37]/50 shadow transition-all hover:scale-105"
-                title="View Full Resolution Master Showcase"
-              >
-                <Maximize2 className="w-3.5 h-3.5 text-[#8C6D1F]" />
-              </button>
-            </div>
 
             {/* ----------------------------------------------------
                 CENTER HERO SPLIT: TYPOGRAPHY, MOBILE CHEF CARD, & 5 PILLARS
@@ -779,64 +766,6 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
         </div>
       )}
 
-      {/* ====================================================
-          MODAL 4: FULL-SCREEN LIGHTBOX MODAL
-          ==================================================== */}
-      {lightboxOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/90 backdrop-blur-2xl animate-in fade-in duration-200">
-          <div className="relative w-full max-w-6xl rounded-3xl bg-[#041810] border-2 border-[#D4AF37]/70 shadow-[0_30px_90px_rgba(0,0,0,0.9)] overflow-hidden p-3 sm:p-5 space-y-4">
-            
-            <div className="flex items-center justify-between px-2 pt-1 pb-2 border-b border-[#D4AF37]/30">
-              <div className="flex items-center gap-2">
-                <Crown className="w-4 h-4 text-[#F5CE68]" />
-                <span className="text-xs font-black uppercase tracking-wider text-[#F5CE68]">
-                  AD Catering & Cook Services • Official Master Design Showcase
-                </span>
-              </div>
-              <button
-                type="button"
-                onClick={() => setLightboxOpen(false)}
-                className="p-1.5 rounded-full bg-[#06291C] hover:bg-emerald-950 text-[#F5CE68] border border-[#D4AF37]/50 shadow transition-all"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-
-            <div 
-              className="relative w-full rounded-2xl overflow-hidden border border-[#D4AF37]/40 bg-black/80"
-              style={{ aspectRatio: '1024 / 540' }}
-            >
-              <img
-                src="/images/hero-luxury-showcase.jpg"
-                alt="Full Resolution Master Hero Showcase"
-                className="w-full h-full object-contain"
-              />
-            </div>
-
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-3 px-2 pt-1">
-              <p className="text-xs text-[#CBD5E1]">
-                Serving royal weddings, corporate banquets, and master cook hire across Odisha.
-              </p>
-              <div className="flex items-center gap-2.5">
-                <button
-                  type="button"
-                  onClick={() => setLightboxOpen(false)}
-                  className="px-4 py-2 rounded-xl text-xs font-semibold text-[#CBD5E1] hover:text-white"
-                >
-                  Close
-                </button>
-                <Link
-                  to="/booking"
-                  onClick={() => setLightboxOpen(false)}
-                  className="px-6 py-2.5 rounded-xl gold-gradient-btn text-xs font-black text-[#041810] shadow-md"
-                >
-                  Reserve Your Event Date
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
