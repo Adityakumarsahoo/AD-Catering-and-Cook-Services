@@ -64,7 +64,7 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
       id: 'master-cook',
       title: 'Master Cook Team',
       subtitle: 'Certified Halwais & Chefs',
-      icon: <ChefHat className="w-5 h-5 text-amber-700" />,
+      icon: <ChefHat className="w-4 h-4 sm:w-5 sm:h-5 text-[#F5CE68]" />,
       badge: 'Heritage Chefs',
       tagline: 'Centuries-Old Royal Cooking Recipes & Live Kitchen Artisans',
       highlights: [
@@ -79,7 +79,7 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
       id: 'live-buffet',
       title: 'Live Buffet Counters',
       subtitle: 'Modern Setup & Service',
-      icon: <UtensilsCrossed className="w-5 h-5 text-emerald-700" />,
+      icon: <UtensilsCrossed className="w-4 h-4 sm:w-5 sm:h-5 text-[#34D399]" />,
       badge: 'Royal LED Buffets',
       tagline: 'Illuminated LED Tables, Live Chaat, Dosa & Tawa Fry Stations',
       highlights: [
@@ -94,7 +94,7 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
       id: 'all-occasions',
       title: 'For All Occasions',
       subtitle: 'Weddings, Functions, Parties',
-      icon: <Users className="w-5 h-5 text-blue-700" />,
+      icon: <Users className="w-4 h-4 sm:w-5 sm:h-5 text-[#60A5FA]" />,
       badge: 'All Event Scales',
       tagline: 'From Intimate 50-Guest Family Pujas to 3,000+ Guest Grand Weddings',
       highlights: [
@@ -109,7 +109,7 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
       id: 'hygienic-food',
       title: 'Hygienic & Fresh Food',
       subtitle: 'Pure Ingredients & Quality',
-      icon: <Leaf className="w-5 h-5 text-green-700" />,
+      icon: <Leaf className="w-4 h-4 sm:w-5 sm:h-5 text-[#4ADE80]" />,
       badge: '100% Purity Certified',
       tagline: 'Pure Desi Ghee, Zero Recycled Oils, Filtered Water & FSSAI Standards',
       highlights: [
@@ -124,7 +124,7 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
       id: 'menu-planning',
       title: 'Custom Menu Planning',
       subtitle: 'As Per Your Requirements',
-      icon: <HeartHandshake className="w-5 h-5 text-rose-700" />,
+      icon: <HeartHandshake className="w-4 h-4 sm:w-5 sm:h-5 text-[#F472B6]" />,
       badge: 'Tailored Menus',
       tagline: 'Personalized Tasting Sessions & Flexible Budget Curation',
       highlights: [
@@ -144,7 +144,7 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
       title: 'Weddings',
       subtitle: 'Grand Feasts, Memorable Moments',
       image: '/images/hero-weddings.jpg',
-      icon: <Crown className="w-4 h-4 text-[#F5CE68]" />,
+      icon: <Crown className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#F5CE68]" />,
       link: '/services',
       description:
         'Turn your dream wedding into a regal epic with majestic floral buffet counters, authentic royal Odia bhoji feasts, aromatic biryanis, and decadent artisan dessert bars.',
@@ -155,7 +155,7 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
       title: 'Corporate Events',
       subtitle: 'Professional Catering Solutions',
       image: '/images/hero-corporate.jpg',
-      icon: <Briefcase className="w-4 h-4 text-[#F5CE68]" />,
+      icon: <Briefcase className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#60A5FA]" />,
       link: '/services',
       description:
         'Punctual, hygienic, executive-class breakfast spreads, working lunches, cocktail appetizers, and formal gala dinners tailored for top corporate organizations.',
@@ -166,7 +166,7 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
       title: 'Functions & Celebrations',
       subtitle: 'Delicious Food for Every Occasion',
       image: '/images/hero-celebrations.jpg',
-      icon: <Sparkles className="w-4 h-4 text-[#F5CE68]" />,
+      icon: <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#FFDF73]" />,
       link: '/services',
       description:
         'Warm, joy-filled catering for Birthdays, Anniversaries, Upanayana thread ceremonies, and Housewarmings that leave every guest asking for second helpings.',
@@ -177,7 +177,7 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
       title: 'Community Feeds',
       subtitle: 'Nutritious Meals in Bulk',
       image: '/images/hero-community.jpg',
-      icon: <Leaf className="w-4 h-4 text-[#F5CE68]" />,
+      icon: <Leaf className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#4ADE80]" />,
       link: '/services',
       description:
         'Large-scale, soulful community feasts, temple prasad bhoji, and mass humanitarian gatherings prepared with sacred purity, discipline, and swift service.',
@@ -186,17 +186,18 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
   ];
 
   return (
-    <div className={`space-y-4 ${className}`}>
+    <div className={`space-y-3.5 sm:space-y-4 ${className}`}>
       {/* ====================================================
           MAIN ROYAL LUXURY BANNER CONTAINER (100% WORKABLE REAL DOM)
+          STYLISH ROYAL EMERALD GREEN THEME + GOLD ACCENTS
           ==================================================== */}
-      <div className="relative rounded-[24px] sm:rounded-[36px] lg:rounded-[44px] p-[2px] sm:p-[2.5px] bg-gradient-to-b from-[#F5CE68]/85 via-[#D4AF37]/50 to-[#B8860B]/85 shadow-[0_20px_60px_rgba(0,0,0,0.8),0_0_50px_rgba(212,175,55,0.22)] overflow-hidden group">
+      <div className="relative rounded-[20px] sm:rounded-[32px] lg:rounded-[44px] p-[1.5px] sm:p-[2.5px] bg-gradient-to-b from-[#F5CE68]/90 via-[#D4AF37]/60 to-[#B8860B]/90 shadow-[0_20px_70px_rgba(0,0,0,0.85),0_0_45px_rgba(16,185,129,0.22)] overflow-hidden group">
         
-        {/* Specular Ambient Glow */}
-        <div className="absolute -inset-1 rounded-[46px] bg-gradient-to-tr from-[#D4AF37]/25 via-emerald-500/15 to-[#D4AF37]/25 opacity-50 group-hover:opacity-100 blur-xl transition-opacity duration-700 pointer-events-none" />
+        {/* Specular Ambient Green & Gold Glow */}
+        <div className="absolute -inset-1 rounded-[46px] bg-gradient-to-tr from-[#10B981]/25 via-[#D4AF37]/20 to-[#059669]/25 opacity-60 group-hover:opacity-100 blur-xl transition-opacity duration-700 pointer-events-none" />
 
-        {/* Master Canvas with Ivory & Gold Royal Theme */}
-        <div className="relative w-full rounded-[22px] sm:rounded-[34px] lg:rounded-[42px] overflow-hidden bg-[#FAF8F5] text-[#0A2318] shadow-inner">
+        {/* Master Canvas with Stylish Royal Emerald Theme */}
+        <div className="relative w-full rounded-[19px] sm:rounded-[30px] lg:rounded-[42px] overflow-hidden bg-gradient-to-b from-[#062B1D] via-[#031C13] to-[#02120B] text-white shadow-inner">
           
           {/* ====================================================
               BACKGROUND ARTWORK: MASTER CHEF & ROYAL BANQUET HALL
@@ -206,18 +207,18 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
             <img
               src="/images/hero-chef-backdrop.jpg"
               alt="AD Catering Master Chef Plating Gourmet Dish in Grand Banquet"
-              className="w-full h-full object-cover object-[75%_center] sm:object-right transition-transform duration-1000 ease-out group-hover:scale-[1.01]"
+              className="w-full h-full object-cover object-[75%_center] sm:object-right opacity-30 lg:opacity-40 mix-blend-luminosity transition-transform duration-1000 ease-out group-hover:scale-[1.01]"
             />
 
-            {/* Seamless Left Ivory Wash Gradient for Crystal-Clear Typography on Desktop & Tablet */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#FAF8F5] via-[#FAF8F5]/98 via-55% sm:via-52% to-[#FAF8F5]/30 sm:to-transparent" />
+            {/* Seamless Left Emerald Wash Gradient for Crystal-Clear Typography on Desktop & Mobile */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#031C13] via-[#031C13]/98 via-60% sm:via-55% to-[#031C13]/40 lg:to-transparent" />
 
             {/* Subtle Top & Bottom Vignette for Cinematic Warmth */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#FAF8F5]/60 via-transparent to-[#FAF8F5]/90 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#062B1D]/80 via-transparent to-[#02120B]/95 pointer-events-none" />
 
             {/* Decorative Botanical Branch Line Flourish (Left Corner) */}
             <svg
-              className="absolute top-2 left-2 w-36 h-36 sm:w-56 sm:h-56 text-[#D4AF37]/20 pointer-events-none hidden sm:block"
+              className="absolute top-2 left-2 w-32 h-32 sm:w-56 sm:h-56 text-[#D4AF37]/15 pointer-events-none hidden sm:block"
               viewBox="0 0 200 200"
               fill="currentColor"
             >
@@ -229,68 +230,67 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
           {/* ====================================================
               BANNER CONTENT LAYER (AUTO-ADJUSTS ON MOBILE & DESKTOP)
               ==================================================== */}
-          <div className="relative z-10 flex flex-col justify-between p-3.5 sm:p-6 lg:p-8 space-y-4 sm:space-y-6">
+          <div className="relative z-10 flex flex-col justify-between p-3 sm:p-5 lg:p-8 space-y-3 sm:space-y-5">
             
-
             {/* ----------------------------------------------------
-                CENTER HERO SPLIT: TYPOGRAPHY, MOBILE CHEF CARD, & 5 PILLARS
+                CENTER HERO SPLIT: TYPOGRAPHY & 5 PILLARS
                 ---------------------------------------------------- */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-7 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 lg:gap-8 items-start lg:items-center">
               
               {/* Left Column: Royal Typography, Motto & Working Buttons (7 cols on lg) */}
-              <div className="lg:col-span-7 space-y-3 sm:space-y-4 text-left">
+              <div className="lg:col-span-7 space-y-2.5 sm:space-y-4 text-left">
                 
                 {/* Royal Tagline Badge */}
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FAF0DA] border border-[#D4AF37]/60 text-[9px] sm:text-[11px] font-black tracking-[0.14em] text-[#8C6D1F] uppercase shadow-sm">
-                  <ChefHat className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#C59B27]" />
+                <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 rounded-full bg-[#042418]/90 border border-[#D4AF37]/70 text-[8.5px] sm:text-[11px] font-black tracking-[0.14em] text-[#F5CE68] uppercase shadow-sm">
+                  <ChefHat className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#F5CE68]" />
                   <span>Royal Hospitality & Banquet Excellence • Odisha</span>
-                  <Crown className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#C59B27]" />
+                  <Crown className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#F5CE68]" />
                 </div>
 
                 {/* Main Headline */}
                 <div className="space-y-0.5">
-                  <h1 className="font-serif font-black text-3xl sm:text-4xl lg:text-[52px] text-[#0A2318] tracking-tight leading-[1.05]">
+                  <h1 className="font-serif font-black text-2xl sm:text-4xl lg:text-[50px] text-white tracking-tight leading-[1.08] drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
                     AD Catering
                   </h1>
-                  <p className="font-serif italic font-bold text-2xl sm:text-3xl lg:text-[40px] text-gradient-gold tracking-tight leading-tight">
+                  <p className="font-serif italic font-bold text-xl sm:text-3xl lg:text-[38px] gold-gradient-text tracking-tight leading-tight drop-shadow-[0_2px_15px_rgba(212,175,55,0.35)]">
                     and Cook Services
                   </p>
                 </div>
 
                 {/* Decorative Motto Divider */}
                 <div className="flex items-center gap-2 max-w-lg">
-                  <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-[#C59B27]/60 to-[#C59B27]" />
-                  <span className="text-[9px] sm:text-[10.5px] font-black uppercase tracking-[0.18em] text-[#97731F] shrink-0">
+                  <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-[#F5CE68]/60 to-[#F5CE68]" />
+                  <span className="text-[8.5px] sm:text-[10px] lg:text-[11px] font-black uppercase tracking-[0.16em] text-[#F5CE68] shrink-0">
                     Delicious Food For Every Special Occasion
                   </span>
-                  <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent via-[#C59B27]/60 to-[#C59B27]" />
+                  <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent via-[#F5CE68]/60 to-[#F5CE68]" />
                 </div>
 
                 {/* Subtitle Description */}
-                <p className="text-[12.5px] sm:text-sm lg:text-[14px] text-neutral-700 font-medium leading-relaxed max-w-xl">
+                <p className="text-[11.5px] sm:text-sm lg:text-[14px] text-[#CBD5E1] font-medium leading-relaxed max-w-xl">
                   Odisha's Premier Choice for Grand Royal Weddings, Authentic Heritage Bhojis, Live LED Buffet Counters & Certified In-Home Master Cook Services.
                 </p>
 
                 {/* Interactive Action Buttons */}
-                <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 pt-1">
+                <div className="flex flex-wrap items-center gap-2 sm:gap-3 pt-0.5 sm:pt-1">
                   
                   {/* Button 1: Explore Our Services */}
                   <Link
                     to="/services"
-                    className="flex-1 sm:flex-initial px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-[#052317] hover:bg-[#073322] border border-[#D4AF37]/60 text-white text-xs sm:text-sm font-black tracking-wide shadow-[0_6px_20px_rgba(5,35,23,0.35)] hover:shadow-[0_8px_25px_rgba(212,175,55,0.4)] hover:border-[#F5CE68] hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2 group/explore"
+                    className="flex-1 sm:flex-initial px-4 sm:px-6 py-2 sm:py-2.5 lg:py-3 rounded-xl sm:rounded-full gold-gradient-btn text-xs sm:text-sm font-black tracking-wide shadow-[0_6px_20px_rgba(212,175,55,0.4)] hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2 group/explore"
                   >
-                    <UtensilsCrossed className="w-3.5 h-3.5 text-[#F5CE68]" />
+                    <UtensilsCrossed className="w-3.5 h-3.5 text-[#041810]" />
                     <span>Explore Our Services</span>
-                    <ArrowRight className="w-3.5 h-3.5 text-[#F5CE68] group-hover/explore:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-3.5 h-3.5 text-[#041810] group-hover/explore:translate-x-1 transition-transform" />
                   </Link>
 
                   {/* Button 2: Watch Our Story */}
                   <button
                     type="button"
                     onClick={() => setStoryModalOpen(true)}
-                    className="flex-1 sm:flex-initial px-4 sm:px-5 py-2.5 sm:py-3 rounded-full bg-white hover:bg-neutral-50 border border-[#D4AF37]/50 text-[#0A2318] text-xs sm:text-sm font-bold shadow-sm hover:shadow-md hover:border-[#C59B27] hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2 group/story"
+                    className="flex-1 sm:flex-initial px-3.5 sm:px-5 py-2 sm:py-2.5 lg:py-3 rounded-xl sm:rounded-full bg-[#062B1D]/90 hover:bg-[#0A3D2A] border border-[#D4AF37]/60 text-[#F5CE68] hover:text-white text-xs sm:text-sm font-bold shadow-sm hover:shadow-md hover:border-[#F5CE68] hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2 group/story"
                   >
-                    <div className="w-4 h-4 rounded-full bg-[#052317] flex items-center justify-center text-[#F5CE68] shadow shrink-0">
+                    <div className="w-4 h-4 rounded-full bg-[#02120B] border border-[#D4AF37]/60 flex items-center justify-center text-[#F5CE68] shadow shrink-0">
                       <Play className="w-2 h-2 fill-current ml-0.5 text-[#F5CE68]" />
                     </div>
                     <span>Watch Our Story</span>
@@ -298,30 +298,30 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
                 </div>
 
                 {/* ----------------------------------------------------
-                    MOBILE CHEF FEATURE SHOWCASE (ONLY ON MOBILE & TABLET < lg)
-                    Brings the chef plating visual front-and-center on phones
+                    MOBILE CHEF COMPACT SHOWCASE (ONLY ON MOBILE & TABLET < lg)
+                    Sleek, compact and does not crowd the screen!
                     ---------------------------------------------------- */}
-                <div className="lg:hidden relative rounded-2xl overflow-hidden border border-[#D4AF37]/50 shadow-md my-2">
-                  <div className="relative w-full h-44 sm:h-52 bg-neutral-900">
+                <div className="lg:hidden relative rounded-xl overflow-hidden border border-[#D4AF37]/50 shadow-md my-1.5">
+                  <div className="relative w-full h-24 sm:h-32 bg-neutral-900">
                     <img
                       src="/images/hero-chef-backdrop.jpg"
                       alt="AD Catering Master Chef Plating Royal Gourmet Dish"
                       className="w-full h-full object-cover object-[70%_25%]"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#041A12]/95 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#02120B]/95 via-[#02120B]/50 to-transparent" />
                     
-                    {/* Chef Name & Tagline Overlay */}
-                    <div className="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-white">
-                      <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 rounded-full bg-[#052317] border border-[#F5CE68] flex items-center justify-center text-[#F5CE68] shadow">
-                          <ChefHat className="w-4 h-4 text-[#F5CE68]" />
+                    {/* Chef Tag Overlay */}
+                    <div className="absolute bottom-2 left-2.5 right-2.5 flex items-center justify-between text-white">
+                      <div className="flex items-center gap-2 min-w-0">
+                        <div className="w-7 h-7 rounded-full bg-[#031C13] border border-[#F5CE68] flex items-center justify-center text-[#F5CE68] shadow shrink-0">
+                          <ChefHat className="w-3.5 h-3.5 text-[#F5CE68]" />
                         </div>
-                        <div>
-                          <p className="text-xs font-black text-white leading-tight">Master Chef Culinary Artistry</p>
-                          <p className="text-[10px] text-[#F5CE68] font-semibold">AD Catering & Certified Halwais</p>
+                        <div className="min-w-0">
+                          <p className="text-[11px] font-black text-white leading-tight truncate">Master Chef Culinary Artistry</p>
+                          <p className="text-[9px] text-[#F5CE68] font-semibold truncate">AD Catering & Certified Halwais</p>
                         </div>
                       </div>
-                      <span className="px-2.5 py-1 rounded-full bg-[#041810]/90 border border-[#D4AF37]/80 text-[9px] font-black text-[#F5CE68] uppercase tracking-wider backdrop-blur-sm shadow">
+                      <span className="px-2 py-0.5 rounded-full bg-[#031C13]/90 border border-[#D4AF37]/80 text-[8.5px] font-black text-[#F5CE68] uppercase tracking-wider shrink-0 shadow">
                         Live On-Site
                       </span>
                     </div>
@@ -330,42 +330,42 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
 
               </div>
 
-              {/* Right Column: 5 Feature Cards (Mobile: Horizontal Swipe Carousel | Desktop: Vertical 5-Stack) */}
+              {/* Right Column: 5 Feature Cards (ALL 5 OPTIONS ALWAYS FULLY VISIBLE ON MOBILE!) */}
               <div className="lg:col-span-5 w-full">
                 
-                {/* Mobile Section Header with Swipe Hint */}
-                <div className="flex items-center justify-between pb-1.5 lg:hidden">
-                  <span className="text-[11px] font-black uppercase tracking-wider text-[#8C6D1F] flex items-center gap-1.5">
-                    <Sparkles className="w-3.5 h-3.5 text-[#C59B27]" />
-                    <span>Culinary Pillars</span>
+                {/* Section Header with Culinary Pillars */}
+                <div className="flex items-center justify-between pb-1.5">
+                  <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-wider text-[#F5CE68] flex items-center gap-1.5">
+                    <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#F5CE68]" />
+                    <span>5 Culinary Pillars & Guarantees</span>
                   </span>
-                  <span className="text-[10px] text-neutral-500 font-semibold">Swipe cards →</span>
+                  <span className="text-[9px] sm:text-[10px] text-emerald-300/80 font-bold">100% Certified</span>
                 </div>
 
-                {/* Cards Container: Horizontal Scroll on Mobile, Vertical Stack on Desktop */}
-                <div className="flex lg:flex-col gap-2.5 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0 no-scrollbar snap-x snap-mandatory">
+                {/* 5 Cards: Vertically stacked on ALL devices so ALL options are automatically showing! */}
+                <div className="flex flex-col gap-1.5 sm:gap-2 lg:gap-2.5 w-full">
                   {featureCards.map((card) => (
                     <button
                       key={card.id}
                       type="button"
                       onClick={() => setSelectedFeature(card)}
-                      className="w-[250px] sm:w-[270px] lg:w-full shrink-0 snap-start text-left p-2.5 sm:p-3 rounded-2xl bg-white/95 hover:bg-white border border-[#E6DECE] hover:border-[#D4AF37] shadow-[0_4px_14px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_25px_rgba(212,175,55,0.3)] backdrop-blur-md transition-all duration-300 hover:-translate-x-1 flex items-center justify-between gap-2.5 group/card cursor-pointer"
+                      className="w-full text-left p-1.5 sm:p-2.5 lg:p-3 rounded-xl sm:rounded-2xl bg-gradient-to-r from-[#062E1F]/90 via-[#042016]/90 to-[#02130C]/90 hover:from-[#093D2A] hover:to-[#05261A] border border-[#D4AF37]/40 hover:border-[#F5CE68] shadow-[0_4px_16px_rgba(0,0,0,0.5)] hover:shadow-[0_8px_25px_rgba(16,185,129,0.3)] transition-all duration-300 flex items-center justify-between gap-2 group/card cursor-pointer"
                     >
-                      <div className="flex items-center gap-2.5 min-w-0">
-                        <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#FAF5EA] border border-[#D4AF37]/40 flex items-center justify-center shrink-0 group-hover/card:bg-[#052317] group-hover/card:border-[#F5CE68] transition-colors">
+                      <div className="flex items-center gap-2 sm:gap-2.5 min-w-0">
+                        <div className="w-7 h-7 sm:w-8 sm:h-8 lg:w-9 lg:h-9 rounded-full bg-[#031C13] border border-[#D4AF37]/50 flex items-center justify-center shrink-0 group-hover/card:bg-[#062E1F] group-hover/card:border-[#F5CE68] transition-colors shadow-inner">
                           {card.icon}
                         </div>
                         <div className="min-w-0">
-                          <h4 className="text-xs sm:text-sm font-black text-[#0A2318] group-hover/card:text-[#8C6D1F] transition-colors leading-snug truncate">
+                          <h4 className="text-[11px] sm:text-xs lg:text-[13px] font-black text-white group-hover/card:text-[#F5CE68] transition-colors leading-snug truncate">
                             {card.title}
                           </h4>
-                          <p className="text-[10px] sm:text-[11.5px] text-neutral-600 font-medium leading-snug truncate">
+                          <p className="text-[9px] sm:text-[10px] lg:text-[11px] text-[#A7F3D0]/80 group-hover/card:text-[#FAF8F5] transition-colors leading-snug truncate">
                             {card.subtitle}
                           </p>
                         </div>
                       </div>
-                      <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#FAF5EA] group-hover/card:bg-[#052317] text-neutral-400 group-hover/card:text-[#F5CE68] border border-[#D4AF37]/30 flex items-center justify-center shrink-0 transition-colors">
-                        <ChevronRight className="w-3.5 h-3.5" />
+                      <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#031C13] group-hover/card:bg-[#062E1F] text-[#F5CE68] border border-[#D4AF37]/35 flex items-center justify-center shrink-0 transition-colors">
+                        <ChevronRight className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                       </div>
                     </button>
                   ))}
@@ -375,56 +375,56 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
 
             {/* ----------------------------------------------------
                 BOTTOM 4 SHOWCASE CARDS:
-                Mobile: Horizontal Snap Carousel (App Style) | Desktop: 4-Column Grid
+                ALL 4 OPTIONS AUTOMATICALLY SHOWING ON MOBILE (2x2 GRID)!
                 ---------------------------------------------------- */}
-            <div className="space-y-2 pt-1">
+            <div className="space-y-1.5 sm:space-y-2 pt-1 sm:pt-2">
               
-              {/* Mobile Showcase Header with Swipe Hint */}
-              <div className="flex items-center justify-between pb-1 sm:hidden">
-                <span className="text-[11px] font-black uppercase tracking-wider text-[#8C6D1F] flex items-center gap-1.5">
-                  <Crown className="w-3.5 h-3.5 text-[#C59B27]" />
+              {/* Showcase Header */}
+              <div className="flex items-center justify-between pb-0.5">
+                <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-wider text-[#F5CE68] flex items-center gap-1.5">
+                  <Crown className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#F5CE68]" />
                   <span>Grand Banquets & Feasts</span>
                 </span>
-                <span className="text-[10px] text-neutral-500 font-semibold">Swipe to explore →</span>
+                <span className="text-[9px] sm:text-[10px] text-emerald-300/80 font-bold">All Event Types</span>
               </div>
 
-              {/* Showcase Cards List */}
-              <div className="flex sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-3.5 overflow-x-auto sm:overflow-visible pb-2 sm:pb-0 no-scrollbar snap-x snap-mandatory">
+              {/* Showcase Cards: 2x2 on Mobile, 4-Col on Desktop -> ALL 4 ALWAYS VISIBLE! */}
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3 lg:gap-3.5 w-full">
                 {showcaseCards.map((card) => (
                   <div
                     key={card.id}
                     onClick={() => setSelectedShowcase(card)}
-                    className="w-[78vw] max-w-[280px] sm:w-auto shrink-0 snap-center relative rounded-2xl sm:rounded-3xl overflow-hidden border border-[#E6DECE] hover:border-[#D4AF37] bg-white shadow-md hover:shadow-[0_12px_30px_rgba(212,175,55,0.3)] transition-all duration-300 hover:-translate-y-1 group/showcase cursor-pointer flex flex-col"
+                    className="w-full relative rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden border border-[#D4AF37]/40 hover:border-[#F5CE68] bg-gradient-to-b from-[#062E1F] to-[#02130C] shadow-md hover:shadow-[0_10px_25px_rgba(212,175,55,0.3)] transition-all duration-300 hover:-translate-y-1 group/showcase cursor-pointer flex flex-col"
                   >
                     {/* Card Photo */}
-                    <div className="relative w-full h-32 sm:h-36 overflow-hidden bg-neutral-900">
+                    <div className="relative w-full h-20 sm:h-28 lg:h-36 overflow-hidden bg-neutral-900">
                       <img
                         src={card.image}
                         alt={card.title}
                         className="w-full h-full object-cover group-hover/showcase:scale-105 transition-transform duration-500"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#02120B]/90 via-black/30 to-transparent" />
                     </div>
 
                     {/* Card Bottom Pill */}
-                    <div className="p-2.5 sm:p-3 bg-white flex items-center justify-between gap-2">
-                      <div className="flex items-center gap-2 min-w-0">
-                        <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#052317] text-[#F5CE68] flex items-center justify-center shrink-0 shadow">
+                    <div className="p-2 sm:p-2.5 lg:p-3 bg-[#031C13]/95 border-t border-[#D4AF37]/25 flex items-center justify-between gap-1.5">
+                      <div className="flex items-center gap-1.5 sm:gap-2 min-w-0">
+                        <div className="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7 rounded-full bg-[#062E1F] text-[#F5CE68] border border-[#D4AF37]/40 flex items-center justify-center shrink-0 shadow">
                           {card.icon}
                         </div>
                         <div className="min-w-0">
-                          <h4 className="text-xs sm:text-[13px] font-black text-[#0A2318] truncate group-hover/showcase:text-[#8C6D1F] transition-colors leading-tight">
+                          <h4 className="text-[10.5px] sm:text-xs lg:text-[13px] font-black text-white truncate group-hover/showcase:text-[#F5CE68] transition-colors leading-tight">
                             {card.title}
                           </h4>
-                          <p className="text-[9.5px] sm:text-[10.5px] text-neutral-600 truncate leading-tight">
+                          <p className="text-[8.5px] sm:text-[9.5px] lg:text-[10.5px] text-[#A7F3D0]/80 truncate leading-tight">
                             {card.subtitle}
                           </p>
                         </div>
                       </div>
 
                       {/* Right Round Arrow Button */}
-                      <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#FAF5EA] group-hover/showcase:bg-[#052317] text-neutral-600 group-hover/showcase:text-[#F5CE68] border border-[#D4AF37]/40 flex items-center justify-center shrink-0 transition-colors">
-                        <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                      <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#02120B] group-hover/showcase:bg-[#062E1F] text-[#F5CE68] border border-[#D4AF37]/40 flex items-center justify-center shrink-0 transition-colors">
+                        <ArrowRight className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
                       </div>
                     </div>
                   </div>
@@ -436,64 +436,64 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
                 BOTTOM TRUST & METRICS BAR (DEEP EMERALD & GOLD)
                 Mobile: Compact 2x2 Grid | Desktop: Divided 4-Col Row
                 ---------------------------------------------------- */}
-            <div className="rounded-2xl sm:rounded-3xl bg-[#041A12] border border-[#D4AF37]/50 p-3 sm:p-4 shadow-xl text-white">
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 divide-y sm:divide-y-0 sm:divide-x divide-[#D4AF37]/25 text-center sm:text-left">
+            <div className="rounded-xl sm:rounded-2xl lg:rounded-3xl bg-[#02120B]/95 border border-[#D4AF37]/50 p-2 sm:p-3.5 lg:p-4 shadow-xl text-white">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3 lg:gap-4 divide-y sm:divide-y-0 sm:divide-x divide-[#D4AF37]/25 text-center sm:text-left">
                 
                 {/* Metric 1 */}
-                <div className="flex items-center justify-center sm:justify-start gap-2.5 sm:gap-3 px-1 sm:px-4 py-1">
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-emerald-950/80 border border-[#D4AF37]/40 flex items-center justify-center text-[#F5CE68] shrink-0">
-                    <Users className="w-4 h-4 sm:w-5 sm:h-5 text-[#F5CE68]" />
+                <div className="flex items-center justify-center sm:justify-start gap-2 sm:gap-3 px-1 sm:px-3 py-1">
+                  <div className="w-7 h-7 sm:w-9 sm:h-9 lg:w-10 lg:h-10 rounded-xl bg-emerald-950/90 border border-[#D4AF37]/40 flex items-center justify-center text-[#F5CE68] shrink-0">
+                    <Users className="w-3.5 h-3.5 sm:w-4 sm:h-4 lg:w-5 lg:h-5 text-[#F5CE68]" />
                   </div>
                   <div>
-                    <div className="text-base sm:text-xl font-black text-white flex items-center justify-center sm:justify-start">
+                    <div className="text-sm sm:text-lg lg:text-xl font-black text-[#F5CE68] flex items-center justify-center sm:justify-start">
                       <AnimatedCounter end={500} suffix="+" triggerOnView={true} />
                     </div>
-                    <p className="text-[9px] sm:text-[11px] font-bold text-[#CBD5E1] uppercase tracking-wider">
+                    <p className="text-[8px] sm:text-[9.5px] lg:text-[11px] font-bold text-[#CBD5E1] uppercase tracking-wider">
                       Grand Banquets
                     </p>
                   </div>
                 </div>
 
                 {/* Metric 2 */}
-                <div className="flex items-center justify-center sm:justify-start gap-2.5 sm:gap-3 px-1 sm:px-4 py-1">
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-emerald-950/80 border border-[#D4AF37]/40 flex items-center justify-center text-[#F5CE68] shrink-0">
-                    <Award className="w-4 h-4 sm:w-5 sm:h-5 text-[#F5CE68]" />
+                <div className="flex items-center justify-center sm:justify-start gap-2 sm:gap-3 px-1 sm:px-3 py-1">
+                  <div className="w-7 h-7 sm:w-9 sm:h-9 lg:w-10 lg:h-10 rounded-xl bg-emerald-950/90 border border-[#D4AF37]/40 flex items-center justify-center text-[#F5CE68] shrink-0">
+                    <Award className="w-3.5 h-3.5 sm:w-4 sm:h-4 lg:w-5 lg:h-5 text-[#F5CE68]" />
                   </div>
                   <div>
-                    <div className="text-base sm:text-xl font-black text-white flex items-center justify-center sm:justify-start">
+                    <div className="text-sm sm:text-lg lg:text-xl font-black text-white flex items-center justify-center sm:justify-start">
                       <AnimatedCounter end={15} suffix="+ Years" triggerOnView={true} />
                     </div>
-                    <p className="text-[9px] sm:text-[11px] font-bold text-[#CBD5E1] uppercase tracking-wider">
+                    <p className="text-[8px] sm:text-[9.5px] lg:text-[11px] font-bold text-[#CBD5E1] uppercase tracking-wider">
                       Master Experience
                     </p>
                   </div>
                 </div>
 
                 {/* Metric 3 */}
-                <div className="flex items-center justify-center sm:justify-start gap-2.5 sm:gap-3 px-1 sm:px-4 py-1">
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-emerald-950/80 border border-[#D4AF37]/40 flex items-center justify-center text-[#F5CE68] shrink-0">
-                    <UtensilsCrossed className="w-4 h-4 sm:w-5 sm:h-5 text-[#F5CE68]" />
+                <div className="flex items-center justify-center sm:justify-start gap-2 sm:gap-3 px-1 sm:px-3 py-1">
+                  <div className="w-7 h-7 sm:w-9 sm:h-9 lg:w-10 lg:h-10 rounded-xl bg-emerald-950/90 border border-[#D4AF37]/40 flex items-center justify-center text-[#F5CE68] shrink-0">
+                    <UtensilsCrossed className="w-3.5 h-3.5 sm:w-4 sm:h-4 lg:w-5 lg:h-5 text-[#F5CE68]" />
                   </div>
                   <div>
-                    <div className="text-base sm:text-xl font-black text-white flex items-center justify-center sm:justify-start">
+                    <div className="text-sm sm:text-lg lg:text-xl font-black text-[#F5CE68] flex items-center justify-center sm:justify-start">
                       <AnimatedCounter end={100} suffix="%" triggerOnView={true} />
                     </div>
-                    <p className="text-[9px] sm:text-[11px] font-bold text-[#CBD5E1] uppercase tracking-wider">
+                    <p className="text-[8px] sm:text-[9.5px] lg:text-[11px] font-bold text-[#CBD5E1] uppercase tracking-wider">
                       Live On-Site Cooking
                     </p>
                   </div>
                 </div>
 
                 {/* Metric 4 */}
-                <div className="flex items-center justify-center sm:justify-start gap-2.5 sm:gap-3 px-1 sm:px-4 py-1">
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-emerald-950/80 border border-[#D4AF37]/40 flex items-center justify-center text-[#F5CE68] shrink-0">
-                    <Heart className="w-4 h-4 sm:w-5 sm:h-5 text-[#F5CE68]" />
+                <div className="flex items-center justify-center sm:justify-start gap-2 sm:gap-3 px-1 sm:px-3 py-1">
+                  <div className="w-7 h-7 sm:w-9 sm:h-9 lg:w-10 lg:h-10 rounded-xl bg-emerald-950/90 border border-[#D4AF37]/40 flex items-center justify-center text-[#F5CE68] shrink-0">
+                    <Heart className="w-3.5 h-3.5 sm:w-4 sm:h-4 lg:w-5 lg:h-5 text-[#F5CE68]" />
                   </div>
                   <div>
-                    <div className="text-base sm:text-xl font-black text-white flex items-center justify-center sm:justify-start">
+                    <div className="text-sm sm:text-lg lg:text-xl font-black text-white flex items-center justify-center sm:justify-start">
                       <AnimatedCounter end={100} suffix="%" triggerOnView={true} />
                     </div>
-                    <p className="text-[9px] sm:text-[11px] font-bold text-[#CBD5E1] uppercase tracking-wider">
+                    <p className="text-[8px] sm:text-[9.5px] lg:text-[11px] font-bold text-[#CBD5E1] uppercase tracking-wider">
                       Purity & Hygiene
                     </p>
                   </div>

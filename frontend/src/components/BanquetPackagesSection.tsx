@@ -559,7 +559,7 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
             RESPONSIVE 3-CARD GRID: BASIC (₹850), PREMIUM (₹950), DELUXE (₹1050)
             Desktop: 3 side-by-side | Mobile: Stacked vertically
             ==================================================== */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-8 items-stretch">
           {corePackages.map((pkg, idx) => {
             const isBasic = pkg.cleanName === 'BASIC';
             const isPremium = pkg.cleanName === 'PREMIUM';
@@ -568,7 +568,7 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
             return (
               <TiltCard key={pkg.id || idx} maxTilt={isPremium ? 3 : 2}>
                 <div
-                  className={`relative rounded-[36px] p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 liquid-shine h-full ${pkg.cardStyle}`}
+                  className={`relative rounded-3xl sm:rounded-[36px] p-4 sm:p-7 flex flex-col justify-between transition-all duration-300 liquid-shine h-full ${pkg.cardStyle}`}
                 >
                   {/* Popular / VIP / Normal Badge */}
                   {isBasic ? (
@@ -603,7 +603,7 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
                           setActiveModalTab('poster');
                         }
                       }}
-                      className="relative h-48 rounded-2xl overflow-hidden mb-5 border border-[#D4AF37]/40 shadow-sm group cursor-pointer"
+                      className="relative h-36 sm:h-48 rounded-xl sm:rounded-2xl overflow-hidden mb-3.5 sm:mb-5 border border-[#D4AF37]/40 shadow-sm group cursor-pointer"
                       title="Click to view full package poster"
                     >
                       <img
@@ -719,9 +719,9 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
                     </p>
 
                     {/* Price Container with Viewport Entry Animation */}
-                    <div className="my-5 pb-4 border-b border-[#D4AF37]/25 flex items-baseline justify-between gap-2">
+                    <div className="my-3 sm:my-5 pb-3 sm:pb-4 border-b border-[#D4AF37]/25 flex items-baseline justify-between gap-2">
                       <div className="flex items-baseline gap-1.5 whitespace-nowrap shrink-0">
-                        <span className="text-3xl sm:text-4xl lg:text-3xl xl:text-4xl font-display font-black text-[#F5CE68] whitespace-nowrap">
+                        <span className="text-2xl sm:text-4xl lg:text-3xl xl:text-4xl font-display font-black text-[#F5CE68] whitespace-nowrap">
                           <AnimatedCounter
                             end={pkg.pricePerPerson}
                             prefix="₹"
@@ -857,7 +857,7 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
                             </div>
 
                             {/* Categorized Dishes Container with Custom Scroll */}
-                            <div className="max-h-[340px] overflow-y-auto pr-1.5 space-y-3 rounded-2xl bg-[#020F09]/75 border border-[#D4AF37]/30 p-3 shadow-inner">
+                            <div className="max-h-[260px] sm:max-h-[340px] overflow-y-auto pr-1 sm:pr-1.5 space-y-2.5 sm:space-y-3 rounded-xl sm:rounded-2xl bg-[#020F09]/75 border border-[#D4AF37]/30 p-2.5 sm:p-3 shadow-inner">
                               {displayedBasicCategories.map((sec) => (
                                 <div key={sec.id} className="space-y-1.5 pb-2 border-b border-[#D4AF37]/20 last:border-b-0 last:pb-0">
                                   <div className="flex items-center gap-1.5">
@@ -1010,7 +1010,7 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
                             </div>
 
                             {/* Categorized Dishes Container with Custom Scroll */}
-                            <div className="max-h-[340px] overflow-y-auto pr-1.5 space-y-3 rounded-2xl bg-[#020F09]/75 border border-[#D4AF37]/30 p-3 shadow-inner">
+                            <div className="max-h-[260px] sm:max-h-[340px] overflow-y-auto pr-1 sm:pr-1.5 space-y-2.5 sm:space-y-3 rounded-xl sm:rounded-2xl bg-[#020F09]/75 border border-[#D4AF37]/30 p-2.5 sm:p-3 shadow-inner">
                               {displayedCategories.map((sec) => (
                                 <div key={sec.id} className="space-y-1.5 pb-2 border-b border-[#D4AF37]/20 last:border-b-0 last:pb-0">
                                   <div className="flex items-center gap-1.5">
@@ -1151,7 +1151,7 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
                             </div>
 
                             {/* Categorized Dishes Container with Custom Scroll */}
-                            <div className="max-h-[340px] overflow-y-auto pr-1.5 space-y-3 rounded-2xl bg-[#020F09]/75 border border-[#D4AF37]/30 p-3 shadow-inner">
+                            <div className="max-h-[260px] sm:max-h-[340px] overflow-y-auto pr-1 sm:pr-1.5 space-y-2.5 sm:space-y-3 rounded-xl sm:rounded-2xl bg-[#020F09]/75 border border-[#D4AF37]/30 p-2.5 sm:p-3 shadow-inner">
                               {displayedDeluxeCategories.map((sec) => (
                                 <div key={sec.id} className="space-y-1.5 pb-2 border-b border-[#D4AF37]/20 last:border-b-0 last:pb-0">
                                   <div className="flex items-center gap-1.5">

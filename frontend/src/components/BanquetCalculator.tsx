@@ -79,18 +79,18 @@ export const BanquetCalculator: React.FC<BanquetCalculatorProps> = ({
   const guestPresets = [200, 300, 500, 750, 1000, 1500, 2000];
 
   return (
-    <div className={`rounded-[36px] glass-strong border border-[#D4AF37]/50 p-6 sm:p-10 shadow-[0_24px_70px_rgba(0,0,0,0.65)] relative overflow-hidden liquid-shine ${className}`}>
+    <div className={`rounded-2xl sm:rounded-[36px] glass-strong border border-[#D4AF37]/50 p-4 sm:p-8 lg:p-10 shadow-[0_24px_70px_rgba(0,0,0,0.65)] relative overflow-hidden liquid-shine ${className}`}>
       {/* Specular Golden Top Highlight */}
       <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#F5CE68] to-transparent" />
 
       {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#D4AF37]/25">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 pb-4 sm:pb-6 border-b border-[#D4AF37]/25">
         <div>
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#041810]/90 border border-[#D4AF37]/50 text-[11px] font-bold text-[#F5CE68] uppercase tracking-wider mb-2">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#041810]/90 border border-[#D4AF37]/50 text-[10px] sm:text-[11px] font-bold text-[#F5CE68] uppercase tracking-wider mb-2">
             <Calculator className="w-3.5 h-3.5 text-[#F5CE68]" />
             <span>Interactive Event Pricing Estimator</span>
           </div>
-          <h3 className="font-display font-black text-2xl sm:text-3xl text-white tracking-tight">
+          <h3 className="font-display font-black text-xl sm:text-3xl text-white tracking-tight">
             Calculate Your Banquet Budget
           </h3>
           <p className="text-xs sm:text-sm text-[#CBD5E1] mt-1 font-normal">
@@ -98,16 +98,16 @@ export const BanquetCalculator: React.FC<BanquetCalculatorProps> = ({
           </p>
         </div>
 
-        <div className="p-3.5 rounded-2xl bg-[#041810]/80 border border-[#D4AF37]/40 text-right shrink-0">
+        <div className="p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl bg-[#041810]/80 border border-[#D4AF37]/40 text-left sm:text-right shrink-0">
           <p className="text-[10px] uppercase tracking-wider font-bold text-[#F5CE68]">Minimum Booking: 500 Guests</p>
           <p className="text-xs font-black text-white mt-0.5">Per-Plate Pricing • Zero Hidden Extras</p>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-6">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-8 items-center pt-4 sm:pt-6">
         
         {/* Left Column: Package Selector & Guest Slider */}
-        <div className="lg:col-span-7 space-y-6">
+        <div className="lg:col-span-7 space-y-4 sm:space-y-6">
           
           {/* Step 1: Package Selection */}
           <div className="space-y-3">
@@ -261,7 +261,7 @@ export const BanquetCalculator: React.FC<BanquetCalculatorProps> = ({
 
         {/* Right Column: Live Price Card & CTA */}
         <div className="lg:col-span-5">
-          <div className="rounded-[30px] p-6 sm:p-8 bg-gradient-to-br from-[#06291C] via-[#041810] to-[#020D08] text-white shadow-2xl relative overflow-hidden space-y-6 border border-[#D4AF37]/60">
+          <div className="rounded-2xl sm:rounded-[30px] p-4 sm:p-7 bg-gradient-to-br from-[#06291C] via-[#041810] to-[#020D08] text-white shadow-2xl relative overflow-hidden space-y-4 sm:space-y-6 border border-[#D4AF37]/60">
             {/* Ambient gold glow */}
             <div className="absolute top-0 right-0 w-44 h-44 bg-[#D4AF37]/20 rounded-full blur-3xl pointer-events-none" />
 
