@@ -54,7 +54,7 @@ export const MENU_CATEGORIES: MenuCategoryMeta[] = [
     hindiOdiaHint: 'ଶାକାହାରୀ ଷ୍ଟାର୍ଟର୍ (Veg Starters)',
     description: 'Sizzling tandoor and golden-fried vegetarian appetizers — Crispy Corn, Hara Bhara Kabab, Paneer Stick Tikka, Dragon Paneer, Manchurian, and Spring Rolls.',
     iconName: 'Sparkles',
-    fallbackImage: '/images/DISHE/Paneer Butter Masala.png',
+    fallbackImage: '/images/DISHE/Crispy Paneer.png',
   },
   {
     key: 'STARTER (NON-VEG)',
@@ -65,7 +65,7 @@ export const MENU_CATEGORIES: MenuCategoryMeta[] = [
     description: 'Crisp boneless Fish Fingers, Amritsari Fish, Golden Fried Prawns, Tangdi Kebabs, Chicken Malai Tikka, and smoky Tandoori Chicken grilled over live charcoal.',
     iconName: 'Flame',
     isNonVeg: true,
-    fallbackImage: '/images/DISHE/MUTTON CURRY.png',
+    fallbackImage: '/images/DISHE/Chicken Malai Tikka.png',
   },
   {
     key: 'EGGS TO ORDER',
@@ -76,7 +76,7 @@ export const MENU_CATEGORIES: MenuCategoryMeta[] = [
     description: 'Fresh farm eggs prepared on live banquet grills — Boiled Eggs, Poached Eggs, Fluffy Masala Omelettes, Crispy Egg Chops, Egg Scotch, and spicy Egg Pakodas.',
     iconName: 'Egg',
     isNonVeg: true,
-    fallbackImage: '/images/dishes/Dahibara_Aludam.jpg',
+    fallbackImage: '/images/DISHE/Egg Chop.png',
   },
   {
     key: 'ROTI / NAN / PURI',
@@ -86,7 +86,7 @@ export const MENU_CATEGORIES: MenuCategoryMeta[] = [
     hindiOdiaHint: 'ରୁଟି, ନାନ୍ ଏବଂ ପୁରୀ (Breads)',
     description: 'Fresh from the clay tandoor and hot oil — Butter Naan, Garlic Naan, Rumali Roti, traditional Odia Thunka Puri, Chakuli, Biri Kachori, and stuffed Parathas.',
     iconName: 'Utensils',
-    fallbackImage: '/images/royal-odia-feast.jpg',
+    fallbackImage: '/images/DISHE/Naan (Plain Butter).png',
   },
   {
     key: 'RICE / PULAO / BIRYANI',
@@ -116,7 +116,7 @@ export const MENU_CATEGORIES: MenuCategoryMeta[] = [
     hindiOdiaHint: 'ଚଟଣି ଓ ରାଇତା (Relishes)',
     description: 'Tangy and cooling accompaniments — Mango Khajur Chutney, Odia Plastic Chutney, Dahi Baingan, Nadia Pachadi, chilled Boondi Raita, Green Salad, and crisp Papad.',
     iconName: 'Salad',
-    fallbackImage: '/images/dishes/dahi-rashola.jpg',
+    fallbackImage: '/images/DISHE/Dahi Papdi.png',
   },
   {
     key: 'VEGETABLE',
@@ -126,7 +126,7 @@ export const MENU_CATEGORIES: MenuCategoryMeta[] = [
     hindiOdiaHint: 'ସବଜି କୋର୍ମା ଓ ମସଲା (Veg Curries)',
     description: 'Grand royal banquet vegetable creations — Navratan Korma, Mix Veg Butter Masala, Veg Jalfrezi, Kashmiri Dum Aloo, Parwal Korma, and rich Chana Masala.',
     iconName: 'Carrot',
-    fallbackImage: '/images/gourmet-ceramic-curry.jpg',
+    fallbackImage: '/images/DISHE/Vegetable paratha.png',
   },
   {
     key: 'MUSHROOM',
@@ -136,7 +136,7 @@ export const MENU_CATEGORIES: MenuCategoryMeta[] = [
     hindiOdiaHint: 'ଛତୁ ତରକାରୀ (Mushroom Delights)',
     description: 'Fresh button and straw mushrooms tossed in aromatic spices — Mushroom Masala, Kadhai Mushroom, Butter Masala, Mushroom Do Pyaza, and Mushroom Mattar.',
     iconName: 'Sparkles',
-    fallbackImage: '/images/dishes/chilli-mushroom.jpg',
+    fallbackImage: '/images/DISHE/Chilly (Paneer, Mushroom, Gobi, Babycorn).png',
   },
   {
     key: 'PANEER',
@@ -157,7 +157,7 @@ export const MENU_CATEGORIES: MenuCategoryMeta[] = [
     description: 'Fresh freshwater Rohu, Katla, and silver Pomfret cooked in traditional Mustard Fish Besar, rich Fish Kalia, Tawa Fried Pomfret, and coastal Crab Masala.',
     iconName: 'Fish',
     isNonVeg: true,
-    fallbackImage: '/images/dishes/macha-besara.jpg',
+    fallbackImage: '/images/DISHE/Fish Fry.png',
   },
   {
     key: 'PRAWN',
@@ -168,7 +168,7 @@ export const MENU_CATEGORIES: MenuCategoryMeta[] = [
     description: 'Succulent coastal Bay prawns simmered in rich coconut Chingudi Malai Curry, Butter Garlic sauce, spicy Prawn Masala, and traditional Mustard Prawn Besar.',
     iconName: 'Fish',
     isNonVeg: true,
-    fallbackImage: '/images/dishes/macha-besara.jpg',
+    fallbackImage: '/images/DISHE/Crispy Prawn.png',
   },
   {
     key: 'CHICKEN',
@@ -202,7 +202,7 @@ export const MENU_CATEGORIES: MenuCategoryMeta[] = [
     iconName: 'Sparkles',
     isNonVeg: true,
     isOdiaHeritage: true,
-    fallbackImage: '/images/dishes/macha-besara.jpg',
+    fallbackImage: '/images/DISHE/Fish Fry.png',
   },
   {
     key: 'ODISSI SPECIAL',
@@ -234,7 +234,7 @@ export const MENU_CATEGORIES: MenuCategoryMeta[] = [
     hindiOdiaHint: 'କଣ୍ଟିନେଣ୍ଟାଲ୍ (Continental)',
     description: 'Global banquet favorites — Creamy Russian Salad, Street Corn Pasta, Golden Cheese Balls, Saut’e Vegetables, Continental Chicken Roast, and baked Augratin.',
     iconName: 'UtensilsCrossed',
-    fallbackImage: '/images/dishes/Pav_bhaji__2.jpg',
+    fallbackImage: '/images/DISHE/Finger Chips.png',
   },
   {
     key: 'DESERT',

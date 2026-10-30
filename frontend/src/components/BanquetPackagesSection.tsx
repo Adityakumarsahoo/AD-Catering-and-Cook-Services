@@ -61,7 +61,7 @@ export const ROYAL_WEDDING_MENU_CATEGORIES: RoyalMenuCategory[] = [
     category: 'STARTER (VEG)',
     group: 'starters',
     icon: '🍢',
-    image: '/images/DISHE/PaniPuri.png',
+    image: '/images/DISHE/Crispy Paneer.png',
     items: [
       'Papudi Chaat / Aloo Tiki Chaat',
       'Panipuri Counter',
@@ -75,7 +75,7 @@ export const ROYAL_WEDDING_MENU_CATEGORIES: RoyalMenuCategory[] = [
     category: 'STARTER (NON-VEG)',
     group: 'starters',
     icon: '🍗',
-    image: 'https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=600&q=80',
+    image: '/images/DISHE/Assorted Kebab (Tikka Hariyali Malai).png',
     items: ['Chicken (Tikka / Lolipop)', 'Fish Finger', 'Scotch Egg'],
   },
   {
@@ -155,7 +155,7 @@ export const NORMAL_MENU_CATEGORIES: RoyalMenuCategory[] = [
     category: 'STARTER (VEG)',
     group: 'starters',
     icon: '🍢',
-    image: '/images/DISHE/Papdi Chaat.png',
+    image: '/images/DISHE/Veg Cutlet.png',
     items: [
       'Papudi Chaat / Aloo Tiki Chaat',
       'Panipuri Counter',
@@ -169,7 +169,7 @@ export const NORMAL_MENU_CATEGORIES: RoyalMenuCategory[] = [
     category: 'STARTER (NON-VEG)',
     group: 'starters',
     icon: '🍗',
-    image: 'https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=600&q=80',
+    image: '/images/DISHE/Chicken Pokoda.png',
     items: ['Chicken Pakoda', 'Egg Chop'],
   },
   {
@@ -248,7 +248,7 @@ export const DELUX_MENU_CATEGORIES: RoyalMenuCategory[] = [
     category: 'STARTER (VEG)',
     group: 'starters',
     icon: '🍢',
-    image: '/images/DISHE/Pao Bhaji.png',
+    image: '/images/DISHE/Paneer Tikka.png',
     items: [
       'Papudi Chaat / Aloo Tiki Chaat',
       'Gupchup Counter',
@@ -264,7 +264,7 @@ export const DELUX_MENU_CATEGORIES: RoyalMenuCategory[] = [
     category: 'STARTER (NON-VEG)',
     group: 'starters',
     icon: '🍗',
-    image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80',
+    image: '/images/DISHE/Crispy Prawn.png',
     items: ['Garlic Prawn', 'Fish Patrapoda', 'Chicken Kabab (Malai, Reshmi, Hariyali)', 'Egg Devil'],
   },
   {
