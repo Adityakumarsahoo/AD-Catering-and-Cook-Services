@@ -88,11 +88,20 @@ export const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-white text-sm">Direct Phone</h4>
-                    <p className="mt-0.5 leading-relaxed text-[#F5CE68] font-bold">
-                      <a href={BUSINESS_CONFIG.phoneTel} className="hover:underline">
-                        {BUSINESS_CONFIG.phoneDisplay}
-                      </a>
-                    </p>
+                    <div className="mt-1 space-y-1 text-xs">
+                      <p className="text-[#F5CE68] font-bold">
+                        <a href={`tel:${BUSINESS_CONFIG.phonePrimaryRaw}`} className="hover:underline">
+                          {BUSINESS_CONFIG.phonePrimary}
+                        </a>
+                        <span className="text-[11px] ml-1.5 px-1.5 py-0.5 rounded bg-emerald-950 border border-emerald-500/40 text-emerald-300 font-semibold">Primary Call</span>
+                      </p>
+                      <p className="text-[#CBD5E1] font-semibold">
+                        <a href={`tel:${BUSINESS_CONFIG.phoneSecondaryRaw}`} className="hover:underline">
+                          {BUSINESS_CONFIG.phoneSecondary}
+                        </a>
+                        <span className="text-[11px] ml-1.5 px-1.5 py-0.5 rounded bg-black/40 border border-white/10 text-[#CBD5E1] font-semibold">Secondary Call</span>
+                      </p>
+                    </div>
                   </div>
                 </div>
 
@@ -122,23 +131,30 @@ export const Contact: React.FC = () => {
               </div>
 
               {/* Direct Buttons */}
-              <div className="pt-4 border-t border-[#D4AF37]/30 flex flex-col sm:flex-row gap-3">
+              <div className="pt-4 border-t border-[#D4AF37]/30 flex flex-col sm:flex-row gap-2.5">
                 <a
                   href={BUSINESS_CONFIG.whatsappUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex-1 py-3 px-4 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold text-center flex items-center justify-center gap-1.5 transition-all shadow-md"
+                  className="flex-1 py-3 px-3 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold text-center flex items-center justify-center gap-1.5 transition-all shadow-md"
                 >
                   <MessageCircle className="w-4 h-4" />
-                  <span>WhatsApp Chat</span>
+                  <span>WhatsApp</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
                 </a>
                 <a
-                  href={BUSINESS_CONFIG.phoneTel}
-                  className="flex-1 py-3 px-4 rounded-2xl bg-emerald-950/80 hover:bg-emerald-900 border border-[#D4AF37]/50 text-white text-xs font-bold text-center flex items-center justify-center gap-1.5 transition-all shadow-sm"
+                  href={`tel:${BUSINESS_CONFIG.phonePrimaryRaw}`}
+                  className="flex-1 py-3 px-3 rounded-2xl bg-emerald-950/80 hover:bg-emerald-900 border border-[#D4AF37]/50 text-white text-xs font-bold text-center flex items-center justify-center gap-1.5 transition-all shadow-sm"
                 >
                   <Phone className="w-4 h-4 text-[#F5CE68]" />
-                  <span>Call Now</span>
+                  <span>Call Primary</span>
+                </a>
+                <a
+                  href={`tel:${BUSINESS_CONFIG.phoneSecondaryRaw}`}
+                  className="flex-1 py-3 px-3 rounded-2xl bg-emerald-950/80 hover:bg-emerald-900 border border-white/20 text-[#CBD5E1] text-xs font-bold text-center flex items-center justify-center gap-1.5 transition-all shadow-sm"
+                >
+                  <Phone className="w-4 h-4 text-[#CBD5E1]" />
+                  <span>Call Secondary</span>
                 </a>
               </div>
             </div>
@@ -147,7 +163,7 @@ export const Contact: React.FC = () => {
             <div className="rounded-[32px] overflow-hidden bg-[#06291C]/85 border border-[#D4AF37]/40 h-56 shadow-sm p-1">
               <iframe
                 title="AD Catering Location"
-                src="https://maps.google.com/maps?q=Badambadi%20Cuttack%20753012&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                src="https://maps.google.com/maps?q=Arunodaya%20Nagar%20Cuttack%20753012&t=&z=14&ie=UTF8&iwloc=&output=embed"
                 className="w-full h-full rounded-[28px] border-0 filter contrast-[1.05]"
                 loading="lazy"
               />
@@ -185,7 +201,7 @@ export const Contact: React.FC = () => {
                     required
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    placeholder="+91 99377 82778"
+                    placeholder="+91 76848 42778"
                     className="w-full bg-[#041810] border border-[#D4AF37]/40 rounded-2xl px-4 py-2.5 text-xs text-white placeholder-emerald-300/50 focus:outline-none focus:border-[#F5CE68] focus:ring-1 focus:ring-[#D4AF37]/50 shadow-inner transition-all"
                   />
                 </div>

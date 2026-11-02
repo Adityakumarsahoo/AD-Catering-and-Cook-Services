@@ -27,10 +27,10 @@ export const AdminSettings: React.FC = () => {
   const [settings, setSettings] = useState({
     businessName: 'AD Catering and Cook Services',
     tagline: "Odisha's Premier Festive, Wedding & Master Cook Experience",
-    phoneHotline: '+91 99377 82778',
+    phoneHotline: '+91 7684842778',
     whatsappNumber: '+91 7684842778',
     supportEmail: 'contact@adcatering.com',
-    headquartersAddress: 'AT-BISWANATH BHAWAN, LALBAHADUR LANE NEAR SWADHIN BOYS HOSTEL, PO- AD MARKET, PS- BADAMBADI, PIN- 753012, CUTTACK',
+    headquartersAddress: 'Arunodaya Nagar, KATAKA, PIN CODE - 753012',
     operatingHours: 'Monday - Sunday: 7:00 AM - 11:30 PM (IST)',
     logoUrl: '/logo.png',
     socialInstagram: 'https://instagram.com/adcatering_official',
@@ -43,7 +43,7 @@ export const AdminSettings: React.FC = () => {
 
   // Admin profile update
   const [adminName, setAdminName] = useState(user?.name || 'AD Catering and Cook Services');
-  const [adminPhone, setAdminPhone] = useState(user?.phone || '+91 9937782778');
+  const [adminPhone, setAdminPhone] = useState(user?.phone || '+91 7684842778');
   const [adminPassword, setAdminPassword] = useState('');
   const [savingProfile, setSavingProfile] = useState(false);
 

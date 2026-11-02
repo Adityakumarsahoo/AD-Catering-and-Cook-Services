@@ -148,11 +148,22 @@ export const Footer: React.FC = () => {
                 <MapPin className="w-4 h-4 text-[#F5CE68] shrink-0 mt-0.5" />
                 <span className="uppercase">{BUSINESS_CONFIG.address}</span>
               </li>
-              <li className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-[#F5CE68] shrink-0" />
-                <a href={`tel:${BUSINESS_CONFIG.phonePrimaryRaw}`} className="hover:text-[#F5CE68] transition-colors">
-                  {BUSINESS_CONFIG.phoneDisplay}
-                </a>
+              <li className="flex items-start gap-2">
+                <Phone className="w-4 h-4 text-[#F5CE68] shrink-0 mt-0.5" />
+                <div className="flex flex-col gap-1 text-xs">
+                  <div>
+                    <a href={`tel:${BUSINESS_CONFIG.phonePrimaryRaw}`} className="hover:text-[#F5CE68] transition-colors font-medium text-white">
+                      {BUSINESS_CONFIG.phonePrimary}
+                    </a>
+                    <span className="text-[10px] ml-1.5 px-1.5 py-0.5 rounded bg-emerald-950 border border-emerald-500/40 text-[#F5CE68] font-semibold">Primary</span>
+                  </div>
+                  <div>
+                    <a href={`tel:${BUSINESS_CONFIG.phoneSecondaryRaw}`} className="hover:text-[#F5CE68] transition-colors text-[#CBD5E1]">
+                      {BUSINESS_CONFIG.phoneSecondary}
+                    </a>
+                    <span className="text-[10px] ml-1.5 px-1.5 py-0.5 rounded bg-black/40 border border-white/10 text-[#CBD5E1] font-semibold">Secondary</span>
+                  </div>
+                </div>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-[#F5CE68] shrink-0" />
