@@ -913,7 +913,7 @@ export const Home: React.FC = () => {
                       <div className="flex-1 min-w-0">
                         <h4
                           onClick={() => setActiveModalItem(item)}
-                          className="font-display font-bold text-sm sm:text-base text-white truncate group-hover:text-[#F5CE68] transition-colors cursor-pointer"
+                          className="font-display font-bold text-sm sm:text-base text-white line-clamp-2 leading-snug group-hover:text-[#F5CE68] transition-colors cursor-pointer"
                         >
                           {item.name}
                         </h4>

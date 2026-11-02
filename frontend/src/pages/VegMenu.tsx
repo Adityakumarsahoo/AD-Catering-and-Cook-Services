@@ -532,23 +532,24 @@ export const VegMenu: React.FC = () => {
                     </span>
                   </div>
 
-                  {/* Dishes Grid */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                  {/* Dishes Grid - Compact Sleek Proportions */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-3 sm:gap-3.5">
                     {dishes.map((dish) => {
                       const isSelected = isDishSelected(dish.id);
 
                       return (
                         <div
                           key={dish.id}
-                          className={`group relative flex flex-col rounded-3xl overflow-hidden transition-all duration-300 backdrop-blur-xl border ${
+                          className={`group relative flex flex-col rounded-2xl sm:rounded-[22px] overflow-hidden transition-all duration-300 backdrop-blur-xl border ${
                             isSelected
-                              ? 'bg-emerald-950/40 border-emerald-400 shadow-[0_12px_40px_rgba(16,185,129,0.35)] ring-1 ring-emerald-400/50'
-                              : 'bg-[#041A12]/80 hover:bg-[#05261A]/95 border-[#D4AF37]/30 hover:border-[#F5CE68]/70 shadow-lg hover:shadow-[0_15px_40px_rgba(0,0,0,0.8),0_0_25px_rgba(212,175,55,0.2)]'
-                          } hover:-translate-y-1.5`}
+                              ? 'bg-emerald-950/45 border-emerald-400 shadow-[0_8px_30px_rgba(16,185,129,0.3)] ring-1 ring-emerald-400/50'
+                              : 'bg-[#041A12]/85 hover:bg-[#05261A]/95 border-[#D4AF37]/35 hover:border-[#F5CE68]/70 shadow-md hover:shadow-[0_12px_35px_rgba(0,0,0,0.8),0_0_20px_rgba(212,175,55,0.18)]'
+                          } hover:-translate-y-1`}
+                          style={{ willChange: 'transform', transform: 'translateZ(0)' }}
                         >
-                          {/* Image Container */}
+                          {/* Image Container - Compact Proportions */}
                           <div
-                            className="relative w-full aspect-[4/3] overflow-hidden bg-stone-950 cursor-pointer"
+                            className="relative w-full aspect-[16/10] overflow-hidden bg-stone-950 cursor-pointer"
                             onClick={() => setActiveModalItem(dish)}
                           >
                             <img
@@ -560,66 +561,70 @@ export const VegMenu: React.FC = () => {
                                 e.currentTarget.src =
                                   '/images/dishes/Malai_Paneer_Tikka__PK_007.jpg';
                               }}
-                              className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                              className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none" />
 
                             {/* FSSAI Veg Badge */}
-                            <div className="absolute top-3 left-3 z-10 flex items-center gap-1.5 pointer-events-none">
-                              <div className="w-6 h-6 rounded-md bg-stone-950/95 border-2 border-emerald-500 flex items-center justify-center shadow-md">
-                                <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 shadow-[0_0_8px_#10B981]" />
+                            <div className="absolute top-2 left-2 z-10 flex items-center gap-1 pointer-events-none">
+                              <div className="w-5 h-5 rounded-md bg-stone-950/95 border border-emerald-500 flex items-center justify-center shadow backdrop-blur-md">
+                                <div className="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_#10B981]" />
                               </div>
-                              <span className="px-2 py-0.5 rounded-md text-[10px] font-black uppercase tracking-wider bg-emerald-950/90 text-emerald-300 border border-emerald-500/50 shadow-sm">
+                              <span className="px-1.5 py-0.5 rounded text-[9px] font-black uppercase tracking-wider bg-emerald-950/90 text-emerald-300 border border-emerald-500/50 shadow-sm">
                                 100% Veg
                               </span>
                             </div>
 
                             {/* Hover Quick View Trigger */}
-                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-[2px]">
-                              <span className="px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#D4AF37] to-[#F5CE68] text-[#041810] text-xs font-black flex items-center gap-1.5 shadow-xl transition-transform active:scale-95">
-                                <Eye className="w-3.5 h-3.5" />
+                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/45 backdrop-blur-[2px]">
+                              <span className="px-3 py-1.5 rounded-full bg-gradient-to-r from-[#D4AF37] to-[#F5CE68] text-[#041810] text-[11px] font-black flex items-center gap-1.5 shadow-xl transition-transform active:scale-95">
+                                <Eye className="w-3 h-3" />
                                 <span>Recipe Details</span>
                               </span>
                             </div>
                           </div>
 
-                          {/* Body */}
-                          <div className="p-5 flex flex-col flex-1 justify-between gap-3 text-[#FAF8F5]">
-                            <div className="space-y-1.5">
-                              <div className="flex items-center justify-between text-[11px] text-[#F5CE68] font-medium">
-                                <span className="uppercase font-bold tracking-wider text-[10px]">
+                          {/* Body - Compact and Clean */}
+                          <div className="p-3 sm:p-3.5 flex flex-col flex-1 justify-between gap-2 text-[#FAF8F5]">
+                            <div className="space-y-1">
+                              <div className="flex items-center justify-between gap-1 text-[10px] min-h-[18px]">
+                                <span className="uppercase font-bold tracking-wider text-[9px] text-[#F5CE68] truncate">
                                   {dish.category}
                                 </span>
                                 {dish.serving && (
-                                  <span className="text-[10px] text-stone-300 truncate max-w-[140px]">
-                                    {dish.serving}
+                                  <span className="text-[9px] text-stone-300 font-medium shrink-0 flex items-center gap-1 bg-[#020F09]/80 px-1.5 py-0.5 rounded border border-[#D4AF37]/25">
+                                    <UtensilsCrossed className="w-2 h-2 text-[#F5CE68]" />
+                                    <span className="max-w-[120px] truncate">{dish.serving}</span>
                                   </span>
                                 )}
                               </div>
 
                               <h5
                                 onClick={() => setActiveModalItem(dish)}
-                                className="font-serif text-lg font-bold text-white group-hover:text-[#F5CE68] transition-colors cursor-pointer"
+                                className="font-serif text-[13.5px] sm:text-[14.5px] font-bold text-white group-hover:text-[#F5CE68] transition-colors line-clamp-2 leading-snug cursor-pointer min-h-[2.4rem] flex items-center"
+                                title={dish.name}
                               >
                                 {dish.name}
                               </h5>
 
-                              <p className="text-xs text-[#CBD5E1] line-clamp-2 leading-relaxed">
+                              <p className="text-[11px] text-[#CBD5E1] line-clamp-2 leading-relaxed font-normal min-h-[2rem]">
                                 {dish.description}
                               </p>
                             </div>
 
                             {/* Action Footer */}
-                            <div className="pt-3 border-t border-[#D4AF37]/20 flex items-center justify-between gap-2">
+                            <div className="pt-2 border-t border-[#D4AF37]/20 flex items-center justify-between gap-2">
                               <button
+                                type="button"
                                 onClick={() => setActiveModalItem(dish)}
-                                className="text-xs font-medium text-[#F5CE68] hover:text-white flex items-center gap-1 transition-colors"
+                                className="text-[11px] font-semibold text-[#F5CE68] hover:text-white flex items-center gap-1 transition-colors group/btn py-0.5"
                               >
                                 <span>Full Profile</span>
-                                <span className="text-xs">→</span>
+                                <span className="text-xs group-hover/btn:translate-x-0.5 transition-transform">→</span>
                               </button>
 
                               <button
+                                type="button"
                                 onClick={() =>
                                   toggleDish({
                                     id: dish.id,
@@ -628,20 +633,20 @@ export const VegMenu: React.FC = () => {
                                     isVeg: true,
                                   })
                                 }
-                                className={`px-3.5 py-1.5 rounded-xl text-xs font-black flex items-center gap-1.5 transition-all active:scale-95 shadow-md ${
+                                className={`px-2.5 py-1.5 rounded-lg sm:rounded-xl text-[11px] font-black flex items-center gap-1 transition-all active:scale-95 shadow-sm ${
                                   isSelected
-                                    ? 'bg-emerald-500 hover:bg-emerald-400 text-stone-950 font-black'
-                                    : 'bg-[#02110A] hover:bg-[#042618] text-[#F5CE68] border border-[#D4AF37]/50 hover:border-[#FFDF73]'
+                                    ? 'bg-emerald-500 hover:bg-emerald-400 text-stone-950 shadow-emerald-500/20'
+                                    : 'bg-[#02110A] hover:bg-[#042618] text-[#F5CE68] border border-[#D4AF37]/45 hover:border-[#FFDF73]'
                                 }`}
                               >
                                 {isSelected ? (
                                   <>
-                                    <Check className="w-3.5 h-3.5 stroke-[3]" />
-                                    <span>Added to Tray</span>
+                                    <Check className="w-3 h-3 stroke-[3]" />
+                                    <span>Selected</span>
                                   </>
                                 ) : (
                                   <>
-                                    <Plus className="w-3.5 h-3.5" />
+                                    <Plus className="w-3 h-3" />
                                     <span>Add to Tray</span>
                                   </>
                                 )}

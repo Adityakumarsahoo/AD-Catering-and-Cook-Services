@@ -395,8 +395,8 @@ export const Menu: React.FC = () => {
                       </div>
                     </div>
 
-                    {/* Dish Cards Grid */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-5">
+                    {/* Dish Cards Grid - Compact Sleek Proportions */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-3 sm:gap-3.5">
                       {dishes.map((dish) => (
                         <MasterDishCard
                           key={dish.id}

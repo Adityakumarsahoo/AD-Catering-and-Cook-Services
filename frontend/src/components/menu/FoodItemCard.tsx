@@ -103,8 +103,8 @@ export const FoodItemCard: React.FC<FoodItemCardProps> = ({
           </div>
         )}
 
-        {/* Dish Title */}
-        <h4 className="font-display font-black text-base sm:text-lg text-white group-hover:text-[#FFDF73] transition-colors line-clamp-1">
+        {/* Dish Title - Clean line-clamp-2 prevents awkward ellipsis */}
+        <h4 className="font-display font-bold text-[13.5px] sm:text-[14.5px] text-white group-hover:text-[#FFDF73] transition-colors line-clamp-2 leading-snug min-h-[2.4rem] flex items-center">
           {dish.displayName || dish.name}
         </h4>
 
