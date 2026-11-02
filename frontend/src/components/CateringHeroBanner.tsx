@@ -207,6 +207,8 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
             <img
               src="/images/hero-chef-backdrop.jpg"
               alt="AD Catering Master Chef Plating Gourmet Dish in Grand Banquet"
+              loading="eager"
+              decoding="async"
               className="w-full h-full object-cover object-[75%_center] sm:object-right opacity-30 lg:opacity-40 mix-blend-luminosity transition-transform duration-1000 ease-out group-hover:scale-[1.01]"
             />
 
@@ -306,6 +308,8 @@ export const CateringHeroBanner: React.FC<CateringHeroBannerProps> = ({
                     <img
                       src="/images/hero-chef-backdrop.jpg"
                       alt="AD Catering Master Chef Plating Royal Gourmet Dish"
+                      loading="eager"
+                      decoding="async"
                       className="w-full h-full object-cover object-[70%_25%]"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#02120B]/95 via-[#02120B]/50 to-transparent" />

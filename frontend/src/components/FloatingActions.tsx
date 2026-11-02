@@ -28,16 +28,23 @@ export const FloatingActions: React.FC = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      const scrollY = window.scrollY || document.documentElement.scrollTop;
-      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      if (scrollY > 180) {
-        setShowScrollTop(true);
-      } else {
-        setShowScrollTop(false);
-      }
-      if (height > 0) {
-        setScrollProgress(Math.min(100, Math.max(0, (scrollY / height) * 100)));
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const scrollY = window.scrollY || document.documentElement.scrollTop;
+          const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          if (scrollY > 180) {
+            setShowScrollTop(true);
+          } else {
+            setShowScrollTop(false);
+          }
+          if (height > 0) {
+            setScrollProgress(Math.min(100, Math.max(0, (scrollY / height) * 100)));
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
@@ -242,7 +249,11 @@ export const FloatingActions: React.FC = () => {
       )}
 
       {/* Floating Action Cluster (Bottom-Right on Desktop, safely above mobile bottom nav on Mobile) */}
-      <aside aria-label="Quick contact and booking" className="fixed bottom-20 md:bottom-6 right-3 md:right-6 z-40 flex items-center gap-2.5">
+      <aside
+        aria-label="Quick contact and booking"
+        className="fixed bottom-20 md:bottom-6 right-3 md:right-6 z-40 flex items-center gap-2.5"
+        style={{ willChange: 'transform', transform: 'translateZ(0)' }}
+      >
         {/* Royal Circular Progress Scroll-To-Top Button */}
         <div
           className={`relative flex items-center justify-center transition-all duration-500 ease-out ${

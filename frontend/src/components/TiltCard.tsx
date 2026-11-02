@@ -74,7 +74,10 @@ export const TiltCard: React.FC<TiltCardProps> = ({
           transform: isHovered
             ? `rotateX(${tilt.rotateX}deg) rotateY(${tilt.rotateY}deg) translateZ(10px)`
             : 'rotateX(0deg) rotateY(0deg) translateZ(0px)',
-          transition: isHovered ? 'transform 0.1s ease-out' : 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)',
+          transition: isHovered ? 'transform 0.12s cubic-bezier(0.2, 0, 0, 1)' : 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)',
+          willChange: 'transform',
+          backfaceVisibility: 'hidden',
+          WebkitBackfaceVisibility: 'hidden',
         }}
       >
         {children}

@@ -24,14 +24,16 @@ export const CustomCursor: React.FC = () => {
     setEnabled(true);
 
     const onMouseMove = (e: MouseEvent) => {
-      pos.current = { x: e.clientX, y: e.clientY };
-      setHidden(false);
+      pos.current.x = e.clientX;
+      pos.current.y = e.clientY;
+      if (hidden) setHidden(false);
+    };
 
-      // Check element under cursor for interactive hover states
+    const onMouseOver = (e: MouseEvent) => {
       const target = e.target as HTMLElement | null;
       if (!target) return;
 
-      if (target.closest('button, .gold-gradient-btn, .burgundy-gradient-btn, [role="button"]')) {
+      if (target.closest('button, .gold-gradient-btn, .emerald-btn, .ice-btn, [role="button"]')) {
         setCursorState('button');
       } else if (target.closest('img, .gallery-item, [data-cursor="image"]')) {
         setCursorState('image');
@@ -46,14 +48,21 @@ export const CustomCursor: React.FC = () => {
     const onMouseEnter = () => setHidden(false);
 
     window.addEventListener('mousemove', onMouseMove, { passive: true });
+    document.addEventListener('mouseover', onMouseOver, { passive: true });
     document.addEventListener('mouseleave', onMouseLeave);
     document.addEventListener('mouseenter', onMouseEnter);
 
-    // Smooth physics loop with lerp for luxury lag effect
-    const render = () => {
-      // Lerp ring towards dot
-      ringPos.current.x += (pos.current.x - ringPos.current.x) * 0.18;
-      ringPos.current.y += (pos.current.y - ringPos.current.y) * 0.18;
+    let lastTime = performance.now();
+
+    // Smooth physics loop with delta-time aware smoothing for 60Hz/120Hz/144Hz/240Hz
+    const render = (time: number) => {
+      const delta = Math.min((time - lastTime) / 1000, 0.1);
+      lastTime = time;
+
+      // Frame-rate independent exponential lerp (half-life ~ 0.04s)
+      const factor = 1 - Math.exp(-22 * delta);
+      ringPos.current.x += (pos.current.x - ringPos.current.x) * factor;
+      ringPos.current.y += (pos.current.y - ringPos.current.y) * factor;
 
       if (dotRef.current) {
         dotRef.current.style.transform = `translate3d(${pos.current.x}px, ${pos.current.y}px, 0) translate(-50%, -50%)`;
@@ -69,6 +78,7 @@ export const CustomCursor: React.FC = () => {
 
     return () => {
       window.removeEventListener('mousemove', onMouseMove);
+      document.removeEventListener('mouseover', onMouseOver);
       document.removeEventListener('mouseleave', onMouseLeave);
       document.removeEventListener('mouseenter', onMouseEnter);
       if (rafId.current) cancelAnimationFrame(rafId.current);

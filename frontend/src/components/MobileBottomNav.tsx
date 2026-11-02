@@ -52,6 +52,8 @@ export const MobileBottomNav: React.FC = () => {
       className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-gradient-to-t from-[#020C07]/98 via-[#041A12]/96 to-[#020C07]/98 backdrop-blur-2xl border-t border-[#D4AF37]/50 shadow-[0_-10px_35px_rgba(0,0,0,0.8),0_0_25px_rgba(212,175,55,0.18)] transition-transform duration-300"
       style={{
         paddingBottom: 'max(env(safe-area-inset-bottom, 0px), 8px)',
+        willChange: 'transform',
+        transform: 'translateZ(0)',
       }}
     >
       {/* Golden top micro-accent hairline with ambient center shine */}

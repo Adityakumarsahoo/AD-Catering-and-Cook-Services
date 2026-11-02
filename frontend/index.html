@@ -58,10 +58,41 @@
     <link rel="icon" type="image/png" href="/logo.png" />
     <link rel="apple-touch-icon" href="/logo.png" />
     <meta property="og:image" content="/logo.png" />
-    <!-- Google Fonts: Playfair Display + Plus Jakarta Sans -->
+    
+    <!-- Instant Preload of Critical Visual Assets (Zero pop-in & zero blank flash) -->
+    <link rel="preload" href="/logo.png" as="image" fetchpriority="high" />
+    <link rel="preload" href="/images/logo-badge.png" as="image" fetchpriority="high" />
+    <link rel="preload" href="/images/hero-chef-backdrop.jpg" as="image" fetchpriority="high" />
+
+    <!-- Google Fonts: Playfair Display + Plus Jakarta Sans with font-display: swap -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Inline Critical Shell Styles: Prevents Black Screen on Initial Load -->
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      html, body {
+        background-color: #03160E !important;
+        background: radial-gradient(ellipse at top, #0A3324 0%, #041A11 45%, #020B07 100%) no-repeat fixed !important;
+        color: #FAF8F5;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        min-height: 100vh;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+      }
+      #root {
+        min-height: 100vh;
+        width: 100%;
+        background-color: transparent;
+      }
+    </style>
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
@@ -93,7 +124,7 @@
     }
     </script>
   </head>
-  <body class="bg-[#0D0907] text-[#FAF8F5] antialiased selection:bg-[#D4AF37]/30 selection:text-[#FAF8F5]">
+  <body class="bg-[#03160E] text-[#FAF8F5] antialiased selection:bg-[#D4AF37]/30 selection:text-[#FAF8F5]">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

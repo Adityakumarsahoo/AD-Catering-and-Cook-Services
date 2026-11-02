@@ -40,8 +40,15 @@ export const Navbar: React.FC = () => {
   const [categoryDrawerOpen, setCategoryDrawerOpen] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setScrolled(window.scrollY > 15);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 15);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
@@ -71,7 +78,10 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 pt-2 sm:pt-2.5 px-2 sm:px-3 lg:px-4 xl:px-6 transition-all duration-300">
+    <header
+      className="fixed top-0 left-0 right-0 z-50 pt-2 sm:pt-2.5 px-2 sm:px-3 lg:px-4 xl:px-6 transition-all duration-300"
+      style={{ willChange: 'transform, backdrop-filter', transform: 'translateZ(0)' }}
+    >
       <div
         className={`w-full max-w-[1520px] mx-auto rounded-2xl sm:rounded-3xl relative transition-all duration-300 ${
           scrolled

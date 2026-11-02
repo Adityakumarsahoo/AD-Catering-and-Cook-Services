@@ -6,7 +6,6 @@ import { MenuCartProvider } from './context/MenuCartContext.js';
 import { VideoBackground } from './components/VideoBackground.js';
 import { ScrollProgress } from './components/ScrollProgress.js';
 import { CustomCursor } from './components/CustomCursor.js';
-import { IntroSplash } from './components/IntroSplash.js';
 import { Navbar } from './components/Navbar.js';
 import { Footer } from './components/Footer.js';
 import { FloatingActions } from './components/FloatingActions.js';
@@ -201,7 +200,6 @@ function AppContent() {
   // Public website with full existing layout, animations, navbar, and footer untouched
   return (
     <div className="relative min-h-screen bg-[#03160E] text-[#FAF8F5] flex flex-col font-sans selection:bg-[#D4AF37]/40 selection:text-[#FFFFFF]">
-      <IntroSplash />
       <ScrollProgress />
       <CustomCursor />
       <VideoBackground />
