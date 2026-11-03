@@ -7,10 +7,11 @@ import { OptimizedImage } from '../common/OptimizedImage.js';
 
 export interface MasterDishCardProps {
   dish: any;
+  priority?: boolean;
   onOpenModal: (dish: any) => void;
 }
 
-export const MasterDishCard: React.FC<MasterDishCardProps> = ({ dish, onOpenModal }) => {
+export const MasterDishCard: React.FC<MasterDishCardProps> = ({ dish, priority = false, onOpenModal }) => {
   const { toggleDish, isDishSelected } = useMenuCart();
 
   const categoryMeta = getCategoryMeta(dish.category);
@@ -38,7 +39,7 @@ export const MasterDishCard: React.FC<MasterDishCardProps> = ({ dish, onOpenModa
     >
       {/* 1. Compact Proportional Gourmet Image */}
       <div
-        className="relative w-full aspect-[16/11] overflow-hidden cursor-pointer bg-[#031810]"
+        className="relative w-full aspect-[16/11] overflow-hidden cursor-pointer bg-gradient-to-br from-[#072F1F] via-[#0A3D29] to-[#052115]"
         onClick={() => onOpenModal(dish)}
       >
         <OptimizedImage
@@ -49,6 +50,7 @@ export const MasterDishCard: React.FC<MasterDishCardProps> = ({ dish, onOpenModa
           categoryHint={categoryMeta.shortLabel || dish.category}
           aspectRatio="aspect-[16/11]"
           showOverlay={true}
+          priority={priority}
           className="group-hover:scale-108 transition-transform duration-700 ease-out"
         />
 

@@ -535,7 +535,7 @@ export const VegMenu: React.FC = () => {
 
                   {/* Dishes Grid - Compact Sleek Proportions (2-col mobile, 4-5 col desktop) */}
                   <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 sm:gap-3 lg:gap-3.5">
-                    {dishes.map((dish) => {
+                    {dishes.map((dish, dishIdx) => {
                       const isSelected = isDishSelected(dish.id);
 
                       return (
@@ -550,12 +550,13 @@ export const VegMenu: React.FC = () => {
                         >
                           {/* Image Container with Luxury Progressive Emerald Skeleton */}
                           <div
-                            className="relative w-full aspect-[16/11] overflow-hidden cursor-pointer bg-[#031810]"
+                            className="relative w-full aspect-[16/11] overflow-hidden cursor-pointer bg-gradient-to-br from-[#072F1F] via-[#0A3D29] to-[#052115]"
                             onClick={() => setActiveModalItem(dish)}
                           >
                             <OptimizedImage
                               src={dish.image}
                               alt={dish.name}
+                              priority={cat.number === 1 && dishIdx < 8}
                               fallbackSrc="/images/dishes/Malai_Paneer_Tikka__PK_007.jpg"
                               secondaryFallback="/images/DISHE/DALEMA.png"
                               categoryHint={cat?.title || 'Pure Veg'}

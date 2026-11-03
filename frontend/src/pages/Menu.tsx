@@ -397,10 +397,11 @@ export const Menu: React.FC = () => {
 
                     {/* Dish Cards Grid - Compact Sleek Proportions (2-col mobile, 4-5 col desktop) */}
                     <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-2 sm:gap-3 lg:gap-3.5">
-                      {dishes.map((dish) => (
+                      {dishes.map((dish, dishIdx) => (
                         <MasterDishCard
                           key={dish.id}
                           dish={dish}
+                          priority={catIdx === 0 && dishIdx < 8}
                           onOpenModal={setActiveModalDish}
                         />
                       ))}

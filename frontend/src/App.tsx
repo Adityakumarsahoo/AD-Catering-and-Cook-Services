@@ -17,11 +17,11 @@ import { PageSkeleton } from './components/common/PageSkeleton.js';
 // Primary Critical Landing Pages (Immediate Static Import for 0ms initial render)
 import { Home } from './pages/Home.js';
 import { Menu } from './pages/Menu.js';
+import { VegMenu } from './pages/VegMenu.js';
 
 // Lazy-Loaded Public Pages (High-performance code splitting)
 const About = lazy(() => import('./pages/About.js').then((m) => ({ default: m.About })));
 const Services = lazy(() => import('./pages/Services.js').then((m) => ({ default: m.Services })));
-const VegMenu = lazy(() => import('./pages/VegMenu.js').then((m) => ({ default: m.VegMenu })));
 const Packages = lazy(() => import('./pages/Packages.js').then((m) => ({ default: m.Packages })));
 const CookService = lazy(() => import('./pages/CookService.js').then((m) => ({ default: m.CookService })));
 const Gallery = lazy(() => import('./pages/Gallery.js').then((m) => ({ default: m.Gallery })));
