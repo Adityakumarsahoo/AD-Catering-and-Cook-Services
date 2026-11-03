@@ -21,7 +21,7 @@ export const FoodItemCard: React.FC<FoodItemCardProps> = ({
   return (
     <div
       onClick={() => onOpenDetail(dish)}
-      className="group relative rounded-2xl sm:rounded-3xl p-3 sm:p-4 bg-gradient-to-b from-[#041A12]/95 via-[#02130C]/90 to-[#020D08]/95 border border-[#D4AF37]/35 hover:border-[#D4AF37] shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_15px_40px_rgba(212,175,55,0.25)] transition-all duration-300 flex flex-col justify-between cursor-pointer liquid-shine active:scale-[0.99]"
+      className="group relative rounded-xl sm:rounded-2xl p-2.5 sm:p-3 bg-gradient-to-b from-[#041A12]/95 via-[#02130C]/90 to-[#020D08]/95 border border-[#D4AF37]/35 hover:border-[#D4AF37] shadow-[0_6px_20px_rgba(0,0,0,0.5)] hover:shadow-[0_10px_25px_rgba(212,175,55,0.2)] transition-all duration-300 flex flex-col justify-between cursor-pointer liquid-shine active:scale-[0.99] h-full"
       role="button"
       tabIndex={0}
       onKeyDown={(e) => {
@@ -37,7 +37,7 @@ export const FoodItemCard: React.FC<FoodItemCardProps> = ({
 
       <div>
         {/* Image Container with Badges */}
-        <div className="relative h-36 sm:h-40 rounded-xl sm:rounded-2xl overflow-hidden mb-3.5 border border-[#D4AF37]/30 shadow-inner">
+        <div className="relative h-28 sm:h-32 rounded-lg sm:rounded-xl overflow-hidden mb-2.5 border border-[#D4AF37]/30 shadow-inner">
           <OptimizedImage
             src={dish.image}
             alt={dish.displayName || dish.name}
@@ -49,65 +49,53 @@ export const FoodItemCard: React.FC<FoodItemCardProps> = ({
             className="group-hover:scale-110 transition-transform duration-700 ease-out"
           />
 
-          {/* Veg / Non-Veg Indicator Badge (Traditional Indian Food Symbol) */}
-          <div className="absolute top-2.5 left-2.5 z-10">
+          {/* Veg / Non-Veg Indicator Badge */}
+          <div className="absolute top-1.5 left-1.5 z-10">
             {dish.isVeg ? (
-              <span className="w-5 h-5 rounded-md bg-white/95 border border-emerald-600 flex items-center justify-center shadow-md">
-                <span className="w-2.5 h-2.5 rounded-full bg-emerald-600 shadow-sm" />
+              <span className="w-4 h-4 rounded-[3px] bg-white/95 border border-emerald-600 flex items-center justify-center shadow-md">
+                <span className="w-2 h-2 rounded-full bg-emerald-600 shadow-sm" />
               </span>
             ) : (
-              <span className="w-5 h-5 rounded-md bg-white/95 border border-rose-600 flex items-center justify-center shadow-md">
-                <span className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-b-[8px] border-b-rose-600" />
+              <span className="w-4 h-4 rounded-[3px] bg-white/95 border border-rose-600 flex items-center justify-center shadow-md">
+                <span className="w-0 h-0 border-l-[3.5px] border-l-transparent border-r-[3.5px] border-r-transparent border-b-[7px] border-b-rose-600" />
               </span>
             )}
           </div>
 
           {/* Odia Specialty Pill */}
           {dish.isOdiaSpecialty && (
-            <div className="absolute top-2.5 right-2.5 z-10">
-              <span className="px-2 py-0.5 rounded-full bg-gradient-to-r from-[#D4AF37] to-[#F5CE68] text-[#041810] text-[9px] font-black uppercase tracking-wider shadow">
+            <div className="absolute top-1.5 right-1.5 z-10">
+              <span className="px-1.5 py-0.5 rounded-full bg-gradient-to-r from-[#D4AF37] to-[#F5CE68] text-[#041810] text-[8px] font-black uppercase tracking-wider shadow">
                 Odia
               </span>
             </div>
           )}
 
           {/* Hover View Details Eye Capsule */}
-          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/45 backdrop-blur-[2px]">
-            <span className="px-3 py-1.5 rounded-full bg-[#041810]/95 border border-[#D4AF37] text-white text-[11px] font-bold shadow-lg flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition-transform">
-              <Eye className="w-3.5 h-3.5 text-[#FFDF73]" />
-              <span>View Details</span>
+          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/45 backdrop-blur-[1.5px]">
+            <span className="px-2.5 py-1 rounded-full bg-[#041810]/95 border border-[#D4AF37] text-white text-[10px] font-bold shadow-lg flex items-center gap-1 transform translate-y-2 group-hover:translate-y-0 transition-transform">
+              <Eye className="w-3 h-3 text-[#FFDF73]" />
+              <span>Details</span>
             </span>
-          </div>
-
-          {/* Serving / Status Pill at bottom */}
-          <div className="absolute bottom-2 left-2 right-2 flex items-center justify-between text-[10px] font-semibold text-[#CBD5E1]">
-            <span className="px-2 py-0.5 rounded-md bg-[#041810]/85 backdrop-blur-md border border-[#D4AF37]/35 text-[#F5CE68] truncate max-w-[85%]">
-              {dish.isVeg ? 'Pure Veg' : 'Non-Veg'}
-            </span>
-            {dish.price && (
-              <span className="px-2 py-0.5 rounded-md bg-emerald-950/90 text-white border border-emerald-500/40 font-bold shrink-0">
-                ₹{dish.price}
-              </span>
-            )}
           </div>
         </div>
 
         {/* Category Badge if requested */}
         {showCategoryBadge && dish.category && (
-          <div className="mb-1.5">
-            <span className="text-[9.5px] font-black uppercase tracking-wider text-[#F5CE68]">
+          <div className="mb-1">
+            <span className="text-[8.5px] font-black uppercase tracking-wider text-[#F5CE68]">
               {dish.category}
             </span>
           </div>
         )}
 
         {/* Dish Title - Clean line-clamp-2 prevents awkward ellipsis */}
-        <h4 className="font-display font-bold text-[13.5px] sm:text-[14.5px] text-white group-hover:text-[#FFDF73] transition-colors line-clamp-2 leading-snug min-h-[2.4rem] flex items-center">
+        <h4 className="font-display font-bold text-[12px] sm:text-[13.5px] text-white group-hover:text-[#FFDF73] transition-colors line-clamp-2 leading-snug min-h-[1.9rem] sm:min-h-[2.1rem] flex items-center">
           {dish.displayName || dish.name}
         </h4>
 
         {/* Short Description */}
-        <p className="text-xs text-[#94A3B8] group-hover:text-[#CBD5E1] line-clamp-2 mt-1 leading-relaxed transition-colors font-normal">
+        <p className="text-[10px] text-[#94A3B8] group-hover:text-[#CBD5E1] line-clamp-2 mt-0.5 leading-relaxed transition-colors font-normal hidden sm:block">
           {dish.description}
         </p>
       </div>

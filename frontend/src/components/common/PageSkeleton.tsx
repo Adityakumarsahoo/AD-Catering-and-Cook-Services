@@ -32,3 +32,4 @@ export const PageSkeleton: React.FC = () => {
     </div>
   );
 };
+

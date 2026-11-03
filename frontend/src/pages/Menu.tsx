@@ -154,7 +154,7 @@ export const Menu: React.FC = () => {
         }
       },
       {
-        rootMargin: '-20% 0px -70% 0px',
+        rootMargin: '-15% 0px -65% 0px',
         threshold: 0,
       }
     );
@@ -395,8 +395,8 @@ export const Menu: React.FC = () => {
                       </div>
                     </div>
 
-                    {/* Dish Cards Grid - Compact Sleek Proportions */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-3 sm:gap-3.5">
+                    {/* Dish Cards Grid - Compact Sleek Proportions (2-col mobile, 4-5 col desktop) */}
+                    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-2 sm:gap-3 lg:gap-3.5">
                       {dishes.map((dish) => (
                         <MasterDishCard
                           key={dish.id}

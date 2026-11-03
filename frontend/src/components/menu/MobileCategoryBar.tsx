@@ -30,6 +30,15 @@ export const MobileCategoryBar: React.FC<MobileCategoryBarProps> = ({
 }) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [drawerSearch, setDrawerSearch] = useState('');
+  const pillContainerRef = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    if (!pillContainerRef.current) return;
+    const activeBtn = pillContainerRef.current.querySelector<HTMLElement>(`[data-cat-slug="${activeCategorySlug}"]`);
+    if (activeBtn) {
+      activeBtn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    }
+  }, [activeCategorySlug]);
 
   const activeCategory = MENU_CATEGORIES.find((c) => c.slug === activeCategorySlug) || MENU_CATEGORIES[0];
 
@@ -72,8 +81,11 @@ export const MobileCategoryBar: React.FC<MobileCategoryBarProps> = ({
         </button>
       </div>
 
-      {/* 2. Horizontal Scrollable Category Pills */}
-      <div className="overflow-x-auto pb-1 flex items-center gap-1.5 scrollbar-none px-1">
+      {/* 2. Horizontal Scrollable Category Pills with Auto-Scroll to Active */}
+      <div
+        ref={pillContainerRef}
+        className="overflow-x-auto pb-1 flex items-center gap-1.5 scrollbar-none px-1 scroll-smooth"
+      >
         {MENU_CATEGORIES.map((cat) => {
           const isActive = activeCategorySlug === cat.slug;
           const count = categoryCounts[cat.key] || 0;
@@ -81,6 +93,7 @@ export const MobileCategoryBar: React.FC<MobileCategoryBarProps> = ({
           return (
             <button
               key={cat.slug}
+              data-cat-slug={cat.slug}
               onClick={() => onSelectCategory(cat.slug)}
               className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap shrink-0 transition-all flex items-center gap-1.5 ${
                 isActive
