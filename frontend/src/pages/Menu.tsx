@@ -163,6 +163,45 @@ export const Menu: React.FC = () => {
     return () => observer.disconnect();
   }, [filteredDishesByCategory]);
 
+  // 4. Intelligent Preloading: Preload images for Course 1 (Welcome Drinks) immediately on mount
+  useEffect(() => {
+    const welcomeDishes = defaultMenuItems.filter(
+      (d) => (d.category || '').toUpperCase() === 'WELCOME DRINK'
+    );
+    welcomeDishes.forEach((dish) => {
+      if (dish.image) {
+        const img = new Image();
+        img.src = dish.image;
+      }
+    });
+  }, []);
+
+  // 5. Preload Active Category & Next Category in background
+  useEffect(() => {
+    const activeCat = MENU_CATEGORIES.find((c) => c.slug === activeCategorySlug);
+    if (!activeCat) return;
+
+    const dishes = filteredDishesByCategory[activeCat.key] || [];
+    dishes.forEach((dish) => {
+      if (dish.image) {
+        const img = new Image();
+        img.src = dish.image;
+      }
+    });
+
+    const activeIdx = MENU_CATEGORIES.findIndex((c) => c.slug === activeCategorySlug);
+    if (activeIdx >= 0 && activeIdx + 1 < MENU_CATEGORIES.length) {
+      const nextCat = MENU_CATEGORIES[activeIdx + 1];
+      const nextDishes = filteredDishesByCategory[nextCat.key] || [];
+      nextDishes.slice(0, 10).forEach((dish) => {
+        if (dish.image) {
+          const img = new Image();
+          img.src = dish.image;
+        }
+      });
+    }
+  }, [activeCategorySlug, filteredDishesByCategory]);
+
   return (
     <div className="min-h-screen bg-transparent text-[#FAF8F5] selection:bg-[#D4AF37]/40 selection:text-white font-sans">
       {/* Live Ambient Lighting Overlay: Allows VideoBackground & Canvas physics to shine through */}
@@ -401,7 +440,7 @@ export const Menu: React.FC = () => {
                         <MasterDishCard
                           key={dish.id}
                           dish={dish}
-                          priority={catIdx === 0 && dishIdx < 8}
+                          priority={catIdx === 0 || cat.slug === activeCategorySlug || dishIdx < 4}
                           onOpenModal={setActiveModalDish}
                         />
                       ))}

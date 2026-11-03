@@ -4,7 +4,29 @@ import { UtensilsCrossed } from 'lucide-react';
 
 // Global memory cache of decoded image URLs in this session.
 // Once an image has decoded once, any subsequent render or mount of that URL is marked loaded immediately (0ms).
-const GLOBAL_IMAGE_CACHE = new Set<string>();
+export const GLOBAL_IMAGE_CACHE = new Set<string>();
+
+export function isImagePrecached(src: string): boolean {
+  if (!src) return false;
+  if (GLOBAL_IMAGE_CACHE.has(src)) return true;
+  try {
+    if (GLOBAL_IMAGE_CACHE.has(encodeURI(src))) return true;
+  } catch (_) {}
+  if (typeof window !== 'undefined') {
+    try {
+      const img = new Image();
+      img.src = src;
+      if (img.complete && img.naturalWidth > 0) {
+        GLOBAL_IMAGE_CACHE.add(src);
+        try {
+          GLOBAL_IMAGE_CACHE.add(encodeURI(src));
+        } catch (_) {}
+        return true;
+      }
+    } catch (_) {}
+  }
+  return false;
+}
 
 export interface OptimizedImageProps {
   src: string;
@@ -34,7 +56,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   categoryHint,
 }) => {
   const targetSrc = src || fallbackSrc || secondaryFallback;
-  const isPreDecoded = GLOBAL_IMAGE_CACHE.has(targetSrc);
+  const isPreDecoded = isImagePrecached(targetSrc);
 
   const [currentSrc, setCurrentSrc] = useState<string>(targetSrc);
   const [isLoaded, setIsLoaded] = useState<boolean>(isPreDecoded);
@@ -45,8 +67,15 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   // Check if image is already cached or complete on DOM mount
   useEffect(() => {
+    if (isImagePrecached(targetSrc)) {
+      setIsLoaded(true);
+      return;
+    }
     if (imgRef.current && imgRef.current.complete && imgRef.current.naturalWidth > 0) {
       GLOBAL_IMAGE_CACHE.add(targetSrc);
+      try {
+        GLOBAL_IMAGE_CACHE.add(encodeURI(targetSrc));
+      } catch (_) {}
       setIsLoaded(true);
     }
   }, [targetSrc]);
@@ -56,7 +85,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     if (prevSrcRef.current !== targetSrc) {
       prevSrcRef.current = targetSrc;
       setCurrentSrc(targetSrc);
-      if (GLOBAL_IMAGE_CACHE.has(targetSrc)) {
+      if (isImagePrecached(targetSrc)) {
         setIsLoaded(true);
       } else {
         setIsLoaded(false);
@@ -68,6 +97,9 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   const handleLoad = () => {
     GLOBAL_IMAGE_CACHE.add(currentSrc);
+    try {
+      GLOBAL_IMAGE_CACHE.add(encodeURI(currentSrc));
+    } catch (_) {}
     setIsLoaded(true);
   };
 
@@ -89,23 +121,18 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
       className={`relative w-full ${aspectRatio} overflow-hidden bg-gradient-to-br from-[#072F1F] via-[#0A3D29] to-[#052115] select-none ${containerClassName}`}
       onClick={onClick}
     >
-      {/* 1. Appetizing Royal Emerald & Gold Shimmer Skeleton (Never Pitch Black) */}
+      {/* 1. Appetizing Royal Emerald & Gold Ambient Backdrop (Smooth Shimmer, Never Pitch Black) */}
       {!isLoaded && !hasError && (
         <div className="absolute inset-0 z-0 flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#072F1F] via-[#0A3D29] to-[#052115]">
           {/* Subtle Warm Amber Shimmer Beam */}
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#F5CE68]/15 to-transparent animate-[shimmer_1.6s_infinite]" />
           
           {/* Ambient Warm Radial Center Glow */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(245,206,104,0.12)_0%,transparent_70%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(245,206,104,0.14)_0%,transparent_70%)]" />
 
-          {/* Golden Culinary Crest in Skeleton State */}
-          <div className="flex flex-col items-center justify-center gap-1.5 opacity-60">
+          {/* Minimalist subtle culinary watermark */}
+          <div className="opacity-20 flex items-center justify-center pointer-events-none">
             <UtensilsCrossed className="w-5 h-5 text-[#F5CE68]" />
-            {categoryHint && (
-              <span className="text-[9px] font-bold text-[#F5CE68] uppercase tracking-widest text-center px-2">
-                {categoryHint}
-              </span>
-            )}
           </div>
         </div>
       )}

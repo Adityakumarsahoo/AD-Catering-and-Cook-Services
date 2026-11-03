@@ -108,6 +108,16 @@ export const VegMenu: React.FC = () => {
     ];
   }, []);
 
+  // Preload all 27 official Veg Menu package images on mount
+  React.useEffect(() => {
+    officialVegMenu.forEach((dish) => {
+      if (dish.image) {
+        const img = new Image();
+        img.src = dish.image;
+      }
+    });
+  }, []);
+
   // Filtered sections according to pill selection
   const displayedSections = useMemo(() => {
     if (vegCategoryFilter === 'all') return packageSections;
@@ -556,7 +566,7 @@ export const VegMenu: React.FC = () => {
                             <OptimizedImage
                               src={dish.image}
                               alt={dish.name}
-                              priority={cat.number === 1 && dishIdx < 8}
+                              priority={true}
                               fallbackSrc="/images/dishes/Malai_Paneer_Tikka__PK_007.jpg"
                               secondaryFallback="/images/DISHE/DALEMA.png"
                               categoryHint={cat?.title || 'Pure Veg'}
