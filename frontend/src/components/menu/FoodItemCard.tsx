@@ -2,6 +2,7 @@ import React from 'react';
 import { Eye, Plus, Check, Sparkles, UtensilsCrossed } from 'lucide-react';
 import { ResolvedDish } from '../../utils/dishResolver.js';
 import { useMenuCart } from '../../context/MenuCartContext.js';
+import { OptimizedImage } from '../common/OptimizedImage.js';
 
 export interface FoodItemCardProps {
   dish: ResolvedDish;
@@ -36,20 +37,17 @@ export const FoodItemCard: React.FC<FoodItemCardProps> = ({
 
       <div>
         {/* Image Container with Badges */}
-        <div className="relative h-36 sm:h-40 rounded-xl sm:rounded-2xl overflow-hidden mb-3.5 bg-black/50 border border-[#D4AF37]/30 shadow-inner">
-          <img
+        <div className="relative h-36 sm:h-40 rounded-xl sm:rounded-2xl overflow-hidden mb-3.5 border border-[#D4AF37]/30 shadow-inner">
+          <OptimizedImage
             src={dish.image}
             alt={dish.displayName || dish.name}
-            onError={(e) => {
-              e.currentTarget.onerror = null;
-              e.currentTarget.src = dish.isVeg
-                ? '/images/DISHE/Paneer Butter Masala.png'
-                : '/images/DISHE/MUTTON CURRY.png';
-            }}
-            loading="lazy"
-            className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+            fallbackSrc={dish.isVeg ? '/images/DISHE/Paneer Butter Masala.png' : '/images/DISHE/MUTTON CURRY.png'}
+            secondaryFallback={dish.isVeg ? '/images/DISHE/DALEMA.png' : '/images/DISHE/CHICKEN BIRIYANI.png'}
+            aspectRatio="h-full w-full"
+            containerClassName="h-full w-full"
+            showOverlay={true}
+            className="group-hover:scale-110 transition-transform duration-700 ease-out"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#020D08]/85 via-transparent to-transparent pointer-events-none" />
 
           {/* Veg / Non-Veg Indicator Badge (Traditional Indian Food Symbol) */}
           <div className="absolute top-2.5 left-2.5 z-10">

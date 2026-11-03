@@ -10,6 +10,7 @@ import { BanquetCalculator } from '../components/BanquetCalculator.js';
 import { BanquetPackagesSection } from '../components/BanquetPackagesSection.js';
 import { CateringHeroBanner } from '../components/CateringHeroBanner.js';
 import { ADBrandEmblem } from '../components/ADBrandEmblem.js';
+import { OptimizedImage } from '../components/common/OptimizedImage.js';
 import { defaultServices } from '../data/defaultServices.js';
 import { defaultMenuItems } from '../data/defaultMenu.js';
 import { defaultPackages } from '../data/defaultData.js';
@@ -212,8 +213,10 @@ export const Home: React.FC = () => {
                   <div className="relative rounded-2xl sm:rounded-[36px] overflow-hidden glass-strong border border-[#D4AF37]/50 shadow-[0_24px_60px_rgba(0,0,0,0.6)] p-2 sm:p-3">
                     <div className="relative rounded-xl sm:rounded-[28px] overflow-hidden h-[240px] sm:h-[380px] lg:h-[430px]">
                       <img
-                        src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=1000&q=80"
+                        src="/images/grand-wedding-catering.jpg"
                         alt="Grand Wedding Catering Feast"
+                        loading="eager"
+                        decoding="async"
                         className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-108"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#020D08]/90 via-[#020D08]/30 to-transparent" />
@@ -891,10 +894,13 @@ export const Home: React.FC = () => {
                         className="relative w-20 h-20 sm:w-28 sm:h-28 rounded-xl sm:rounded-2xl overflow-hidden shrink-0 border border-[#D4AF37]/40 cursor-pointer shadow-sm"
                         title="Click to view details"
                       >
-                        <img
+                        <OptimizedImage
                           src={item.image}
                           alt={item.name}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-out"
+                          fallbackSrc="/images/DISHE/Chenna Podo.png"
+                          aspectRatio="h-full w-full"
+                          containerClassName="h-full w-full"
+                          className="group-hover:scale-110 transition-transform duration-500 ease-out"
                         />
                         {item.isVeg ? (
                           <span className="absolute top-1.5 left-1.5 w-3.5 h-3.5 sm:w-4 sm:h-4 bg-emerald-900 border border-emerald-400 rounded-md flex items-center justify-center shadow" title="Vegetarian">
@@ -1092,8 +1098,10 @@ export const Home: React.FC = () => {
                 <div className="lg:col-span-5 min-w-0 relative">
                   <div className="relative rounded-2xl sm:rounded-[32px] overflow-hidden border border-[#D4AF37]/60 shadow-2xl h-56 sm:h-80 lg:h-96 group">
                     <img
-                      src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1000&q=80"
+                      src="/images/master-home-cook-service.jpg"
                       alt="Professional Master Chef Cooking"
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#02100A]/95 via-[#02100A]/30 to-transparent" />

@@ -92,6 +92,86 @@
         width: 100%;
         background-color: transparent;
       }
+      .ad-shell-preloader {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+        text-align: center;
+        background: radial-gradient(circle at center, #073523 0%, #03160E 60%, #020B07 100%);
+      }
+      .ad-shell-logo-wrap {
+        position: relative;
+        width: 84px;
+        height: 84px;
+        margin-bottom: 1.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .ad-shell-glow {
+        position: absolute;
+        inset: -12px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(212, 175, 55, 0.4) 0%, transparent 70%);
+        animation: adPulse 2s ease-in-out infinite;
+      }
+      .ad-shell-img {
+        width: 74px;
+        height: 74px;
+        object-fit: contain;
+        border-radius: 50%;
+        border: 2px solid rgba(245, 206, 104, 0.6);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+        position: relative;
+        z-index: 1;
+      }
+      .ad-shell-title {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.25rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        color: #F5CE68;
+        margin: 0 0 0.35rem 0;
+        text-transform: uppercase;
+      }
+      .ad-shell-sub {
+        font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+        font-size: 0.75rem;
+        letter-spacing: 0.22em;
+        color: #A7F3D0;
+        text-transform: uppercase;
+        margin: 0 0 1.25rem 0;
+        opacity: 0.85;
+      }
+      .ad-shell-bar {
+        width: 130px;
+        height: 3px;
+        border-radius: 9999px;
+        background: rgba(212, 175, 55, 0.2);
+        overflow: hidden;
+        position: relative;
+      }
+      .ad-shell-bar-inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 45%;
+        border-radius: 9999px;
+        background: linear-gradient(90deg, #D4AF37, #F5CE68, #10B981);
+        animation: adBar 1.2s ease-in-out infinite alternate;
+      }
+      @keyframes adPulse {
+        0%, 100% { transform: scale(1); opacity: 0.4; }
+        50% { transform: scale(1.15); opacity: 0.85; }
+      }
+      @keyframes adBar {
+        0% { transform: translateX(-15%); }
+        100% { transform: translateX(180%); }
+      }
     </style>
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -125,7 +205,17 @@
     </script>
   </head>
   <body class="bg-[#03160E] text-[#FAF8F5] antialiased selection:bg-[#D4AF37]/30 selection:text-[#FAF8F5]">
-    <div id="root"></div>
+    <div id="root">
+      <div class="ad-shell-preloader">
+        <div class="ad-shell-logo-wrap">
+          <div class="ad-shell-glow"></div>
+          <img src="/logo.png" alt="AD Catering" class="ad-shell-img" width="74" height="74" />
+        </div>
+        <h1 class="ad-shell-title">AD Catering & Cook Services</h1>
+        <p class="ad-shell-sub">Delicious Moments, Perfectly Served • Kataka</p>
+        <div class="ad-shell-bar"><div class="ad-shell-bar-inner"></div></div>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

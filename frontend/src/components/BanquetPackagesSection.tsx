@@ -1767,8 +1767,10 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
                     {/* Dish 1: Mix Veg */}
                     <div className="rounded-2xl overflow-hidden border border-[#D4AF37]/60 shadow group relative">
                       <img
-                        src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=400&q=80"
+                        src="/images/DISHE/65 (Paneer, Mushroom, Babycorn, Gobi).png"
                         alt="Mix Veg Navaratna Punjabi"
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-24 object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-2">
@@ -1779,8 +1781,10 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
                     {/* Dish 2: Paneer Crispy */}
                     <div className="rounded-2xl overflow-hidden border border-[#D4AF37]/60 shadow group relative">
                       <img
-                        src="https://images.unsplash.com/photo-1567184109265-276f5b9d3bfb?auto=format&fit=crop&w=400&q=80"
+                        src="/images/DISHE/Crispy Paneer.png"
                         alt="Paneer Crispy"
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-24 object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-2">
@@ -1791,8 +1795,10 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
                     {/* Dish 3: Mutton Rogan Juice */}
                     <div className="rounded-2xl overflow-hidden border border-[#D4AF37]/60 shadow group relative">
                       <img
-                        src="https://images.unsplash.com/photo-1545247181-516773cae754?auto=format&fit=crop&w=400&q=80"
+                        src="/images/DISHE/MUTTON CURRY.png"
                         alt="Mutton Rogan Juice"
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-24 object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-2">
@@ -1803,8 +1809,10 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
                     {/* Dish 4: Chicken Pakoda */}
                     <div className="rounded-2xl overflow-hidden border border-[#D4AF37]/60 shadow group relative">
                       <img
-                        src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=400&q=80"
+                        src="/images/DISHE/Chicken Pokoda.png"
                         alt="Chicken Pakoda"
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-24 object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-2">
@@ -2742,8 +2750,10 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
                     <div className="rounded-2xl overflow-hidden border border-[#D4AF37]/50 bg-[#160207] p-2 text-center group shadow-md">
                       <div className="h-24 sm:h-28 rounded-xl overflow-hidden mb-1.5">
                         <img
-                          src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=400&q=80"
+                          src="/images/DISHE/Naan (Plain Butter).png"
                           alt="Butter Naan & Chakuli"
+                          loading="lazy"
+                          decoding="async"
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                         />
                       </div>
@@ -2755,8 +2765,10 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
                     <div className="rounded-2xl overflow-hidden border border-[#D4AF37]/50 bg-[#160207] p-2 text-center group shadow-md">
                       <div className="h-24 sm:h-28 rounded-xl overflow-hidden mb-1.5">
                         <img
-                          src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=400&q=80"
+                          src="/images/DISHE/Paneer Butter Masala.png"
                           alt="Paneer Pasinda"
+                          loading="lazy"
+                          decoding="async"
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                         />
                       </div>
@@ -2768,8 +2780,10 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
                     <div className="rounded-2xl overflow-hidden border border-[#D4AF37]/50 bg-[#160207] p-2 text-center group shadow-md">
                       <div className="h-24 sm:h-28 rounded-xl overflow-hidden mb-1.5">
                         <img
-                          src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=400&q=80"
+                          src="/images/DISHE/MUTTON CURRY.png"
                           alt="Mutton Rogan Josh"
+                          loading="lazy"
+                          decoding="async"
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                         />
                       </div>
@@ -2781,8 +2795,10 @@ export const BanquetPackagesSection: React.FC<BanquetPackagesSectionProps> = ({
                     <div className="rounded-2xl overflow-hidden border border-[#D4AF37]/50 bg-[#160207] p-2 text-center group shadow-md">
                       <div className="h-24 sm:h-28 rounded-xl overflow-hidden mb-1.5">
                         <img
-                          src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=400&q=80"
+                          src="/images/DISHE/Chenna Podo.png"
                           alt="Kheer Sagar & Baked Rasgulla"
+                          loading="lazy"
+                          decoding="async"
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                         />
                       </div>

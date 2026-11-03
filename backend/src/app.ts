@@ -44,7 +44,7 @@ export function createApp(): Express {
   app.use(express.json({ limit: '10mb' }));
   app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
-  // Static assets serving (uploaded and local dish photography)
+  // Static assets serving (uploaded and local dish photography) with aggressive immutable caching
   const candidateImageDirs = [
     path.resolve(process.cwd(), '../frontend/public/images'),
     path.resolve(process.cwd(), 'frontend/public/images'),
@@ -52,7 +52,18 @@ export function createApp(): Express {
   ];
   for (const dir of candidateImageDirs) {
     if (fs.existsSync(dir)) {
-      app.use('/images', express.static(dir));
+      app.use(
+        '/images',
+        express.static(dir, {
+          maxAge: '30d',
+          etag: true,
+          lastModified: true,
+          immutable: true,
+          setHeaders: (res) => {
+            res.setHeader('Cache-Control', 'public, max-age=2592000, immutable');
+          },
+        })
+      );
       break;
     }
   }

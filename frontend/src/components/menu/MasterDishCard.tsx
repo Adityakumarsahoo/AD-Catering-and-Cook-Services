@@ -1,8 +1,9 @@
 // frontend/src/components/menu/MasterDishCard.tsx
-import React, { useState } from 'react';
+import React from 'react';
 import { Eye, Plus, Check, Sparkles, Flame, UtensilsCrossed } from 'lucide-react';
 import { useMenuCart } from '../../context/MenuCartContext.js';
 import { getCategoryMeta } from '../../data/menuCategories.js';
+import { OptimizedImage } from '../common/OptimizedImage.js';
 
 export interface MasterDishCardProps {
   dish: any;
@@ -11,14 +12,12 @@ export interface MasterDishCardProps {
 
 export const MasterDishCard: React.FC<MasterDishCardProps> = ({ dish, onOpenModal }) => {
   const { toggleDish, isDishSelected } = useMenuCart();
-  const [imageFailed, setImageFailed] = useState(false);
 
   const categoryMeta = getCategoryMeta(dish.category);
   const isSelected = isDishSelected(dish.id);
 
   // Determine fallback image based on category
-  const fallbackImg = categoryMeta.fallbackImage || '/images/DISHE/Chenna Podo.png';
-  const displayImage = imageFailed || !dish.image ? fallbackImg : dish.image;
+  const fallbackImg = categoryMeta.fallbackImage || (dish.isVeg ? '/images/DISHE/DALEMA.png' : '/images/DISHE/MUTTON CURRY.png');
 
   // Check if dish is Odia Heritage
   const isOdia =
@@ -37,21 +36,21 @@ export const MasterDishCard: React.FC<MasterDishCardProps> = ({ dish, onOpenModa
       } hover:-translate-y-1`}
       style={{ willChange: 'transform', transform: 'translateZ(0)' }}
     >
-      {/* 1. Compact Proportional Image Container */}
+      {/* 1. Compact Proportional Image with Progressive Luxury Emerald/Gold Skeleton */}
       <div
-        className="relative w-full aspect-[16/10] overflow-hidden bg-stone-950 cursor-pointer"
+        className="relative w-full aspect-[16/10] overflow-hidden cursor-pointer"
         onClick={() => onOpenModal(dish)}
       >
-        <img
-          src={displayImage}
+        <OptimizedImage
+          src={dish.image}
           alt={dish.displayName || dish.name}
-          loading="lazy"
-          onError={() => setImageFailed(true)}
-          className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108"
+          fallbackSrc={fallbackImg}
+          secondaryFallback={dish.isVeg ? '/images/DISHE/DALEMA.png' : '/images/DISHE/MUTTON CURRY.png'}
+          categoryHint={categoryMeta.shortLabel || dish.category}
+          aspectRatio="aspect-[16/10]"
+          showOverlay={true}
+          className="group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-
-        {/* Ambient Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none" />
 
         {/* Top Badges Bar */}
         <div className="absolute top-2 left-2 right-2 flex items-center justify-between gap-1.5 z-10 pointer-events-none">

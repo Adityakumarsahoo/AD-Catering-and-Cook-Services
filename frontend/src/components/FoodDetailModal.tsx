@@ -15,6 +15,7 @@ import {
 import { useMenuCart } from '../context/MenuCartContext.js';
 import { Link } from 'react-router-dom';
 import { getCategoryMeta } from '../data/menuCategories.js';
+import { OptimizedImage } from './common/OptimizedImage.js';
 
 export interface FoodDetailModalProps {
   item: any | null;
@@ -86,14 +87,18 @@ export const FoodDetailModal: React.FC<FoodDetailModalProps> = ({
         {/* Main Content Layout */}
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-start">
           {/* Food Image with subtle zoom & badges */}
-          <div className="relative w-full sm:w-56 h-48 sm:h-64 rounded-xl sm:rounded-2xl overflow-hidden shrink-0 border border-[#D4AF37]/40 shadow-2xl bg-[#020F09] group">
-            <img
-              src={displayImage}
+          <div className="relative w-full sm:w-56 h-48 sm:h-64 rounded-xl sm:rounded-2xl overflow-hidden shrink-0 border border-[#D4AF37]/40 shadow-2xl group">
+            <OptimizedImage
+              src={item.image}
               alt={item.name || item.displayName}
-              onError={() => setImageFailed(true)}
-              className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              fallbackSrc={fallbackImg}
+              secondaryFallback={item.isVeg ? '/images/DISHE/DALEMA.png' : '/images/DISHE/MUTTON CURRY.png'}
+              aspectRatio="h-full w-full"
+              containerClassName="h-full w-full"
+              showOverlay={true}
+              priority={true}
+              className="group-hover:scale-105 transition-transform duration-700 ease-out"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#020D08]/90 via-transparent to-transparent pointer-events-none" />
 
             {/* Dietary Badge */}
             <div className="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10">

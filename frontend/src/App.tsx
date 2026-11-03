@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import { AuthProvider } from './context/AuthContext.js';
@@ -12,36 +12,63 @@ import { FloatingActions } from './components/FloatingActions.js';
 import { MobileBottomNav } from './components/MobileBottomNav.js';
 import { ProtectedRoute, AdminRoute } from './components/ProtectedRoute.js';
 import { AdminLayout } from './layouts/AdminLayout.js';
+import { PageSkeleton } from './components/common/PageSkeleton.js';
 
-// Public Pages
+// Primary Critical Landing Pages (Immediate Static Import for 0ms initial render)
 import { Home } from './pages/Home.js';
-import { About } from './pages/About.js';
-import { Services } from './pages/Services.js';
 import { Menu } from './pages/Menu.js';
-import { VegMenu } from './pages/VegMenu.js';
-import { Packages } from './pages/Packages.js';
-import { CookService } from './pages/CookService.js';
-import { Gallery } from './pages/Gallery.js';
-import { Booking } from './pages/Booking.js';
-import { Contact } from './pages/Contact.js';
-import { Login } from './pages/Login.js';
-import { SignUp } from './pages/SignUp.js';
-import { CustomerDashboard } from './pages/CustomerDashboard.js';
-import { NotFound } from './pages/NotFound.js';
 
-// Admin Pages
-import { AdminLogin } from './pages/AdminLogin.js';
-import { AdminDashboardOverview } from './pages/admin/AdminDashboardOverview.js';
-import { AdminHomepage } from './pages/admin/AdminHomepage.js';
-import { AdminAbout } from './pages/admin/AdminAbout.js';
-import { AdminServices } from './pages/admin/AdminServices.js';
-import { AdminMenu } from './pages/admin/AdminMenu.js';
-import { AdminPackages } from './pages/admin/AdminPackages.js';
-import { AdminGallery } from './pages/admin/AdminGallery.js';
-import { AdminTestimonials } from './pages/admin/AdminTestimonials.js';
-import { AdminEnquiries } from './pages/admin/AdminEnquiries.js';
-import { AdminNavigation } from './pages/admin/AdminNavigation.js';
-import { AdminSettings } from './pages/admin/AdminSettings.js';
+// Lazy-Loaded Public Pages (High-performance code splitting)
+const About = lazy(() => import('./pages/About.js').then((m) => ({ default: m.About })));
+const Services = lazy(() => import('./pages/Services.js').then((m) => ({ default: m.Services })));
+const VegMenu = lazy(() => import('./pages/VegMenu.js').then((m) => ({ default: m.VegMenu })));
+const Packages = lazy(() => import('./pages/Packages.js').then((m) => ({ default: m.Packages })));
+const CookService = lazy(() => import('./pages/CookService.js').then((m) => ({ default: m.CookService })));
+const Gallery = lazy(() => import('./pages/Gallery.js').then((m) => ({ default: m.Gallery })));
+const Booking = lazy(() => import('./pages/Booking.js').then((m) => ({ default: m.Booking })));
+const Contact = lazy(() => import('./pages/Contact.js').then((m) => ({ default: m.Contact })));
+const Login = lazy(() => import('./pages/Login.js').then((m) => ({ default: m.Login })));
+const SignUp = lazy(() => import('./pages/SignUp.js').then((m) => ({ default: m.SignUp })));
+const CustomerDashboard = lazy(() =>
+  import('./pages/CustomerDashboard.js').then((m) => ({ default: m.CustomerDashboard }))
+);
+const NotFound = lazy(() => import('./pages/NotFound.js').then((m) => ({ default: m.NotFound })));
+
+// Lazy-Loaded Admin Suite (Saves ~600KB from public visitor bundle)
+const AdminLogin = lazy(() => import('./pages/AdminLogin.js').then((m) => ({ default: m.AdminLogin })));
+const AdminDashboardOverview = lazy(() =>
+  import('./pages/admin/AdminDashboardOverview.js').then((m) => ({ default: m.AdminDashboardOverview }))
+);
+const AdminHomepage = lazy(() =>
+  import('./pages/admin/AdminHomepage.js').then((m) => ({ default: m.AdminHomepage }))
+);
+const AdminAbout = lazy(() =>
+  import('./pages/admin/AdminAbout.js').then((m) => ({ default: m.AdminAbout }))
+);
+const AdminServices = lazy(() =>
+  import('./pages/admin/AdminServices.js').then((m) => ({ default: m.AdminServices }))
+);
+const AdminMenu = lazy(() =>
+  import('./pages/admin/AdminMenu.js').then((m) => ({ default: m.AdminMenu }))
+);
+const AdminPackages = lazy(() =>
+  import('./pages/admin/AdminPackages.js').then((m) => ({ default: m.AdminPackages }))
+);
+const AdminGallery = lazy(() =>
+  import('./pages/admin/AdminGallery.js').then((m) => ({ default: m.AdminGallery }))
+);
+const AdminTestimonials = lazy(() =>
+  import('./pages/admin/AdminTestimonials.js').then((m) => ({ default: m.AdminTestimonials }))
+);
+const AdminEnquiries = lazy(() =>
+  import('./pages/admin/AdminEnquiries.js').then((m) => ({ default: m.AdminEnquiries }))
+);
+const AdminNavigation = lazy(() =>
+  import('./pages/admin/AdminNavigation.js').then((m) => ({ default: m.AdminNavigation }))
+);
+const AdminSettings = lazy(() =>
+  import('./pages/admin/AdminSettings.js').then((m) => ({ default: m.AdminSettings }))
+);
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -59,7 +86,8 @@ function AppContent() {
   if (isAdminRoute && location.pathname !== '/admin/login') {
     return (
       <AdminRoute>
-        <Routes>
+        <Suspense fallback={<PageSkeleton />}>
+          <Routes>
           <Route
             path="/admin/dashboard"
             element={
@@ -183,6 +211,7 @@ function AppContent() {
           />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        </Suspense>
       </AdminRoute>
     );
   }
@@ -192,7 +221,9 @@ function AppContent() {
     return (
       <div className="relative min-h-screen bg-[#03160E] text-[#FAF8F5] flex flex-col font-sans selection:bg-[#D4AF37]/40 selection:text-[#FFFFFF]">
         <VideoBackground />
-        <AdminLogin />
+        <Suspense fallback={<PageSkeleton />}>
+          <AdminLogin />
+        </Suspense>
       </div>
     );
   }
@@ -205,32 +236,34 @@ function AppContent() {
       <VideoBackground />
       <Navbar />
       <main className="flex-1 relative z-10 pb-20 md:pb-0">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/menu" element={<Menu />} />
-          <Route path="/veg-menu" element={<VegMenu />} />
-          <Route path="/packages" element={<Packages />} />
-          <Route path="/cook-service" element={<CookService />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/booking" element={<Booking />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<SignUp />} />
+        <Suspense fallback={<PageSkeleton />}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/menu" element={<Menu />} />
+            <Route path="/veg-menu" element={<VegMenu />} />
+            <Route path="/packages" element={<Packages />} />
+            <Route path="/cook-service" element={<CookService />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/booking" element={<Booking />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
 
-          {/* Protected Customer Dashboard */}
-          <Route
-            path="/dashboard"
-            element={
-              <ProtectedRoute>
-                <CustomerDashboard />
-              </ProtectedRoute>
-            }
-          />
+            {/* Protected Customer Dashboard */}
+            <Route
+              path="/dashboard"
+              element={
+                <ProtectedRoute>
+                  <CustomerDashboard />
+                </ProtectedRoute>
+              }
+            />
 
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
       </main>
       <Footer />
       <FloatingActions />

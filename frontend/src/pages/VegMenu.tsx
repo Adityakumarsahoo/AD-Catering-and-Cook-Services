@@ -5,6 +5,7 @@ import { useMenuCart } from '../context/MenuCartContext.js';
 import { FoodDetailModal } from '../components/FoodDetailModal.js';
 import { MasterMenuFloatingTray } from '../components/menu/MasterMenuFloatingTray.js';
 import { AnimatedCounter } from '../components/AnimatedCounter.js';
+import { OptimizedImage } from '../components/common/OptimizedImage.js';
 import {
   officialVegMenu,
   officialVegCategories,
@@ -547,23 +548,21 @@ export const VegMenu: React.FC = () => {
                           } hover:-translate-y-1`}
                           style={{ willChange: 'transform', transform: 'translateZ(0)' }}
                         >
-                          {/* Image Container - Compact Proportions */}
+                          {/* Image Container with Luxury Progressive Emerald Skeleton */}
                           <div
-                            className="relative w-full aspect-[16/10] overflow-hidden bg-stone-950 cursor-pointer"
+                            className="relative w-full aspect-[16/10] overflow-hidden cursor-pointer"
                             onClick={() => setActiveModalItem(dish)}
                           >
-                            <img
+                            <OptimizedImage
                               src={dish.image}
                               alt={dish.name}
-                              loading="lazy"
-                              onError={(e) => {
-                                e.currentTarget.onerror = null;
-                                e.currentTarget.src =
-                                  '/images/dishes/Malai_Paneer_Tikka__PK_007.jpg';
-                              }}
-                              className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108"
+                              fallbackSrc="/images/dishes/Malai_Paneer_Tikka__PK_007.jpg"
+                              secondaryFallback="/images/DISHE/DALEMA.png"
+                              categoryHint={cat?.title || 'Pure Veg'}
+                              aspectRatio="aspect-[16/10]"
+                              showOverlay={true}
+                              className="group-hover:scale-108 transition-transform duration-700 ease-out"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none" />
 
                             {/* FSSAI Veg Badge */}
                             <div className="absolute top-2 left-2 z-10 flex items-center gap-1 pointer-events-none">
