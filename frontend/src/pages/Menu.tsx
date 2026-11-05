@@ -1,5 +1,5 @@
 // frontend/src/pages/Menu.tsx
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { api } from '../services/api.js';
 import { defaultMenuItems } from '../data/defaultMenu.js';
@@ -126,42 +126,67 @@ export const Menu: React.FC = () => {
     );
   }, [filteredDishesByCategory]);
 
-  // 4. Scroll to category section when selected from left sidebar
+  // 4. Scroll to category section when selected from left sidebar or category bar
+  const isProgrammaticScrollRef = useRef(false);
+  const scrollTimeoutRef = useRef<any>(null);
+
   const handleSelectCategory = (slug: string) => {
     setActiveCategorySlug(slug);
     const element = document.getElementById(`category-${slug}`);
     if (element) {
+      isProgrammaticScrollRef.current = true;
+      if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current);
+
       const yOffset = -120; // clearance for fixed navbar
       const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
+      window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+
+      scrollTimeoutRef.current = setTimeout(() => {
+        isProgrammaticScrollRef.current = false;
+      }, 850);
     }
   };
 
-  // 5. ScrollSpy using IntersectionObserver to highlight left category automatically as user scrolls
+  // 5. ScrollSpy using passive scroll listener with rAF throttle (Zero scroll resets / Zero jumping)
   useEffect(() => {
-    const categoryElements = MENU_CATEGORIES.map((cat) =>
-      document.getElementById(`category-${cat.slug}`)
-    ).filter(Boolean) as HTMLElement[];
+    let ticking = false;
 
-    if (categoryElements.length === 0) return;
+    const handleScrollSpy = () => {
+      if (isProgrammaticScrollRef.current) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visibleEntry = entries.find((e) => e.isIntersecting);
-        if (visibleEntry) {
-          const id = visibleEntry.target.id.replace('category-', '');
-          setActiveCategorySlug(id);
-        }
-      },
-      {
-        rootMargin: '-15% 0px -65% 0px',
-        threshold: 0,
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const scrollPos = window.scrollY + 160; // offset below fixed navbar
+
+          const categories = MENU_CATEGORIES.map((cat) => ({
+            slug: cat.slug,
+            element: document.getElementById(`category-${cat.slug}`),
+          })).filter((c): c is { slug: string; element: HTMLElement } => Boolean(c.element));
+
+          let currentSlug = categories[0]?.slug || 'welcome-drink';
+          for (let i = 0; i < categories.length; i++) {
+            const el = categories[i].element;
+            const top = el.offsetTop;
+            if (scrollPos >= top - 80) {
+              currentSlug = categories[i].slug;
+            } else {
+              break;
+            }
+          }
+
+          setActiveCategorySlug((prev) => (prev !== currentSlug ? currentSlug : prev));
+          ticking = false;
+        });
+        ticking = true;
       }
-    );
+    };
 
-    categoryElements.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, [filteredDishesByCategory]);
+    window.addEventListener('scroll', handleScrollSpy, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScrollSpy);
+      if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current);
+    };
+  }, []);
 
   // 4. Intelligent Preloading: Preload images for Course 1 (Welcome Drinks) immediately on mount
   useEffect(() => {

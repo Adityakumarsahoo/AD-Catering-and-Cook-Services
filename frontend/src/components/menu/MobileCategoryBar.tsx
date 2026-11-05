@@ -33,10 +33,21 @@ export const MobileCategoryBar: React.FC<MobileCategoryBarProps> = ({
   const pillContainerRef = React.useRef<HTMLDivElement>(null);
 
   React.useEffect(() => {
-    if (!pillContainerRef.current) return;
-    const activeBtn = pillContainerRef.current.querySelector<HTMLElement>(`[data-cat-slug="${activeCategorySlug}"]`);
+    const container = pillContainerRef.current;
+    if (!container) return;
+    const activeBtn = container.querySelector<HTMLElement>(`[data-cat-slug="${activeCategorySlug}"]`);
     if (activeBtn) {
-      activeBtn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      // Calculate target horizontal scroll offset strictly inside the pill container
+      const containerWidth = container.clientWidth;
+      const btnLeft = activeBtn.offsetLeft;
+      const btnWidth = activeBtn.clientWidth;
+      const targetLeft = btnLeft - (containerWidth / 2) + (btnWidth / 2);
+
+      // Scroll ONLY the horizontal container, NEVER touching the window/document
+      container.scrollTo({
+        left: Math.max(0, targetLeft),
+        behavior: 'smooth',
+      });
     }
   }, [activeCategorySlug]);
 

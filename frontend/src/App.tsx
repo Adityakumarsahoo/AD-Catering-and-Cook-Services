@@ -72,8 +72,12 @@ const AdminSettings = lazy(() =>
 
 function ScrollToTop() {
   const { pathname } = useLocation();
+  const prevPathRef = React.useRef(pathname);
   React.useEffect(() => {
-    window.scrollTo(0, 0);
+    if (prevPathRef.current !== pathname) {
+      prevPathRef.current = pathname;
+      window.scrollTo(0, 0);
+    }
   }, [pathname]);
   return null;
 }
